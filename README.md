@@ -1,7 +1,10 @@
 # Dreams and Machines for Foundry VTT
-**foundryvtt-dreams-and-machines** is a community contributed and maintained system for playing the [Dreams and Machines][1] RPG with the [Foundry VTT][2] virtual tabletop software produced with the explicit consent of [Modiphius Entertainment][3].
 
-Any copyright assets included in the system are used with the explicit consent of [Modiphius Entertainment][3]. The **foundryvtt-dreams-and-machines** developer community holds no claim to these underlying copyrighted assets.
+Dreams and Machines is a brand new RPG setting where people come together to rebuild their world following a catastrophic war. You will venture into a world of mystery and adventure, a world where slumbering mechs dot the landscape and people build their lives anew in the wreckage of paradise. Take on the role of one of the new tribes of humanity, an Archivist, Dreamer, Everan, River, or Spear, and forge a path for yourself and your people.
+
+This community contributed and maintained system for playing the [Dreams and Machines][1] RPG with the [Foundry VTT][2] virtual tabletop software has been produced with the explicit consent of [Modiphius Entertainment][3].
+
+Any copyright assets included in the system are used with the explicit consent of [Modiphius Entertainment][3]. The system developers hold no claim to these underlying copyrighted assets.
 
 ## Trello Board
 For an overview of in-progress tasks, see the [Project's Trello Board](https://trello.com/b/qr6yQfIl/foundry-dreams-and-machines).
