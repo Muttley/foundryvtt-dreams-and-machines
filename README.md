@@ -1,5 +1,7 @@
-# FVTT: Dreams and Machines
-An unofficial implementation of [Modiphius's Dreams and Machines](https://www.dreamsandmachines.com/) RPG QuickStart.
+# Dreams and Machines for Foundry VTT
+**foundryvtt-dreams-and-machines** is a community contributed and maintained system for playing the [Dreams and Machines][1] RPG with the [Foundry VTT][2] virtual tabletop software produced with the explicit consent of [Modiphius Entertainment][3].
+
+Any copyright assets included in the system are used with the explicit consent of [Modiphius Entertainment][3]. The **foundryvtt-dreams-and-machines** developer community holds no claim to these underlying copyrighted assets.
 
 ## Trello Board
 For an overview of in-progress tasks, see the [Project's Trello Board](https://trello.com/b/qr6yQfIl/foundry-dreams-and-machines).
@@ -43,3 +45,7 @@ The code for this system is licensed under the [Creative Commons Attribution-Sha
 ## Copyright Disclaimer
 
 This project, and the creator of this project, are unaffiliated with Modiphius. This is an unofficial, third-party system implementation built freely as a hobby project.
+
+[1]: https://www.dreamsandmachines.com
+[2]: https://foundryvtt.com
+[3]: https://www.modiphius.net
