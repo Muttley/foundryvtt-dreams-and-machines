@@ -1,0 +1,56 @@
+{
+	"id": "dreams-and-machines",
+	"title": "Dreams and Machines",
+	"description": "Unofficial implementation of the Dreams and Machines QuickStart Rules",
+	"version": "1.2.0",
+	"compatibility": {
+		"minimum": 11,
+		"verified": 11
+	},
+	"templateVersion": 1,
+	"authors": [
+		{
+			"name": "Paul Maskelyne",
+			"discord": "muttley",
+			"email": "mu77ley@gmail.com",
+			"mastodon": "@muttley@dice.camp"
+		},
+		{
+			"name": "Mezryss"
+		}
+	],
+	"scripts": [],
+	"esmodules": [
+		"dreams-and-machines-compiled.mjs"
+	],
+	"styles": [
+		"css/dreams-and-machines.css"
+	],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English (US)",
+			"path": "lang/en-us.json"
+		}
+	],
+	"socket": true,
+	"flags": {
+		"hotReload": {
+			"extensions": [
+				"css", "hbs", "json"
+			],
+			"paths": [
+				"lang",
+				"templates",
+				"css"
+			]
+		}
+	},
+	"url": "https://github.com/Muttley/foundryvtt-dreams-and-machines",
+	"bugs": "https://github.com/Muttley/foundryvtt-dreams-and-machines/issues",
+	"changelog": "https://github.com/Muttley/foundryvtt-dreams-and-machines/blob/main/CHANGELOG.md",
+	"license": "https://github.com/Muttley/foundryvtt-dreams-and-machines/blob/main/LICENSE",
+	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-dreams-and-machines/main/system/system.json",
+	"download": "https://github.com/Muttley/foundryvtt-dreams-and-machines/releases/latest/download/dreams-and-machines.zip",
+	"initiative": null
+}

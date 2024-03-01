@@ -66,7 +66,7 @@ body {
  */
 @font-face {
 	font-family: 'Roboto Flex';
-	src: url('fonts/RobotoFlex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf') format('opentype-variations');
+	src: url('../fonts/RobotoFlex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf') format('opentype-variations');
 	font-optical-sizing: auto;
 	font-weight: 100 1000;
 	font-stretch: 25% 151%;
@@ -96,7 +96,7 @@ body {
 }
 
 .window-app.dnm.sheet .window-content {
-	background-image: url('images/dnm-bg.jpg');
+	background-image: url('../images/dnm-bg.jpg');
 	background-size: 1024px 1024px;
 }
 

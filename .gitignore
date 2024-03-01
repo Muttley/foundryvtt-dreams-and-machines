@@ -1,16 +1,9 @@
-/.idea
-/.vscode
-/foundry
-/node_modules
+.vscode/
+node_modules/
+scratch/
+system/css/
+system/i18n/
+system/packs/
 
-/Dreams-and-Machines.css
-/dreams-and-machines.zip
-
-packs/**/*.log
-packs/**/CURRENT
-packs/**/LOG
-packs/**/*.old
-packs/**/MANIFEST-*
-
-.DS_Store
-yarn-error.log
+*.code-workspace
+dreams-and-machines-compiled*
