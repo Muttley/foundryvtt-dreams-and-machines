@@ -1,0 +1,117 @@
+DNM.Attributes.Insight: Insight
+DNM.Attributes.Might: Might
+DNM.Attributes.Quickness: Quickness
+DNM.Attributes.Resolve: Resolve
+DNM.ChatMessages.SpendMomentum: Spending a point of Momentum!
+DNM.ChatMessages.SpendThreat: Spending a point of Threat!
+DNM.ChatMessages.StoreMomentum: Storing a point of Momentum!
+DNM.ChatMessages.StoreThreat: Storing a point of Threat!
+DNM.Combat.CombatantsTurnDone: Turn Completed
+DNM.Combat.CombatantsTurnNotDone: Turn Not Completed
+DNM.Combat.CombatHasNotStarted: Combat Has Not Started
+DNM.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
+DNM.Labels.Actions: Actions
+DNM.Labels.Actor.AddActions: Drag some Major NPC Actions onto this sheet to add actions this NPC can perform!
+DNM.Labels.Actor.AddArchetype: Drag & Drop an Archetype item onto this sheet to set your archetype!
+DNM.Labels.Actor.AddOrigin: Drag & Drop an Origin item onto this sheet to set your origin!
+DNM.Labels.Actor.AddTemperament: Drag & Drop a Temperament item onto this sheet to set your temperament!
+DNM.Labels.Actor.AddTrait: Add Trait
+DNM.Labels.Actor.Archetype: Archetype
+DNM.Labels.Actor.Attitude: Attitude
+DNM.Labels.Actor.Attributes: Attributes
+DNM.Labels.Actor.Bond: Bond
+DNM.Labels.Actor.Coin: Coin
+DNM.Labels.Actor.Drive: Drive
+DNM.Labels.Actor.Equipment: Equipment
+DNM.Labels.Actor.Exhaustion: Exhaustion
+DNM.Labels.Actor.Goal: Goal
+DNM.Labels.Actor.InjuriesToDefeat: Injuries to Defeat
+DNM.Labels.Actor.Origin: Origin
+DNM.Labels.Actor.PersonalThreat: Personal Threat
+DNM.Labels.Actor.Skills: Skills
+DNM.Labels.Actor.Spirit: Spirit
+DNM.Labels.Actor.SupplyPoints: Supply Points
+DNM.Labels.Actor.Talents: Talents
+DNM.Labels.Actor.Temperament: Temperament
+DNM.Labels.Actor.Truth: Truth
+DNM.Labels.Actor.Truths: Truths
+DNM.Labels.Combat: Combat
+DNM.Labels.Cost: Cost
+DNM.Labels.Current: Current
+DNM.Labels.Default: Default
+DNM.Labels.Description: Description
+DNM.Labels.DicePrompt.Attribute: Attribute
+DNM.Labels.DicePrompt.Complication: Complication Range
+DNM.Labels.DicePrompt.Roll: Roll
+DNM.Labels.DicePrompt.Skill: Skill
+DNM.Labels.Exhaustion.Breathless: Breathless
+DNM.Labels.Exhaustion.Confused: Confused
+DNM.Labels.Exhaustion.Despairing: Despairing
+DNM.Labels.Exhaustion.Weary: Weary
+DNM.Labels.Item.Action: Action
+DNM.Labels.Item.AddArchetypes: Drag & Drop Archetypes onto this sheet to reference them as starting equipment for the origin!
+DNM.Labels.Item.AddQualityPlaceholder: Type to Add Quality
+DNM.Labels.Item.AddStartingGear: Drag & Drop Equipment onto this sheet to reference them as starting equipment for the archetype!
+DNM.Labels.Item.AddToNPC: Add this action to a Major NPC's sheet!
+DNM.Labels.Item.Archetypes: Archetypes
+DNM.Labels.Item.Category: Category
+DNM.Labels.Item.ChooseBetween: Choose Between
+DNM.Labels.Item.Damage: Damage
+DNM.Labels.Item.Delete: Delete Item
+DNM.Labels.Item.DeleteQuality: Delete Quality
+DNM.Labels.Item.Edit: Edit Item
+DNM.Labels.Item.Focus: Focus
+DNM.Labels.Item.GLIF.Complexity: Complexity
+DNM.Labels.Item.HasProtection: Provides Protection
+DNM.Labels.Item.IsGLIF: Is GLIF
+DNM.Labels.Item.IsWeapon: Is Weapon
+DNM.Labels.Item.MissingUUID: (Missing UUID)
+DNM.Labels.Item.Or: Or
+DNM.Labels.Item.Protection: Protection
+DNM.Labels.Item.ProtectionBreaker: Protection (Breaker)
+DNM.Labels.Item.Qualities: Qualities
+DNM.Labels.Item.Quantity: Quantity
+DNM.Labels.Item.Rarity: Rarity
+DNM.Labels.Item.SkillTest: Skill Test
+DNM.Labels.Item.StartingCoin: Starting Coin
+DNM.Labels.Item.StartingGear: Starting Gear
+DNM.Labels.Item.SupplyPointCost: Supply Points
+DNM.Labels.Item.TN: TN
+DNM.Labels.Item.Weapon.Label: Weapon
+DNM.Labels.Item.Weapon.Melee: Melee
+DNM.Labels.Item.Weapon.MeleeRanged: Melee/Ranged
+DNM.Labels.Item.Weapon.Name: Weapon Name
+DNM.Labels.Item.Weapon.or: or
+DNM.Labels.Item.Weapon.Ranged: Ranged
+DNM.Labels.Item.Weapon.Type: Weapon Type
+DNM.Labels.Max: Max
+DNM.Labels.Momentum: Momentum
+DNM.Labels.Notes: Notes
+DNM.Labels.SpecialAbilities: Special Abilities
+DNM.Labels.SpecialActions: Special Actions
+DNM.Labels.TechLevel: Tech Level
+DNM.Labels.Threat: Threat
+DNM.Labels.Value: Coin
+DNM.Labels.Weapons: Weapons
+DNM.Notifications.NotEnoughMomentum: Cannot spend Momentum while the pool is empty! Perhaps you should generate Threat instead?
+DNM.Notifications.NotEnoughThreat: Cannot spend Threat while the pool is empty!
+DNM.Roll.Complication: Complication
+DNM.Roll.Critical: Critical Success
+DNM.Roll.Success: Success
+DNM.Skills.Fight: Fight
+DNM.Skills.Move: Move
+DNM.Skills.Operate: Operate
+DNM.Skills.Sneak: Sneak
+DNM.Skills.Study: Study
+DNM.Skills.Survive: Survive
+DNM.Skills.Talk: Talk
+TYPES.Actor.character: Player Character
+TYPES.Actor.majorNPC: Major NPC
+TYPES.Actor.npc: NPC
+TYPES.Item.archetype: Archetype
+TYPES.Item.item: Equipment
+TYPES.Item.majorNPCAction: Major NPC Action
+TYPES.Item.origin: Origin
+TYPES.Item.specialAbility: Special Ability
+TYPES.Item.talent: Talent
+TYPES.Item.temperament: Temperament
