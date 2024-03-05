@@ -38,7 +38,7 @@ export default class CombatTracker2d20 extends CombatTracker {
 		if (!game.user.isGM) return;
 
 		if (!this.viewed.started) {
-			ui.notifications.warn(game.i18n.localize("Combat.CombatHasNotStarted"));
+			ui.notifications.warn(game.i18n.localize("DNM.Combat.CombatHasNotStarted"));
 			return;
 		}
 

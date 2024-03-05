@@ -5,23 +5,23 @@
 		{{!-- Attributes --}}
 		<div class="grid grid-cols-4">
 			<span class="col-span-4 uppercase text-center font-semibold bg-fuchsia-900 text-white p-1">
-				{{ localize "Labels.Actor.Attributes" }}
+				{{localize "DNM.Labels.Actor.Attributes" }}
 			</span>
 
 			<label class="flex flex-col border-1 border-fuchsia-900 border-solid font-semibold uppercase border-r-0">
-				<span class="w-full text-center text-fuchsia-900 text-lg">{{ localize "Attributes.Might" }}</span>
+				<span class="w-full text-center text-fuchsia-900 text-lg">{{ localize "DNM.Attributes.Might" }}</span>
 				<input type="number" name="system.attributes.might" value="{{ system.attributes.might }}" class="!text-center !font-semibold !text-3xl !border-none !rounded-none !bg-none !mb-1" />
 			</label>
 			<label class="flex flex-col border-1 border-fuchsia-900 border-solid font-semibold uppercase">
-				<span class="w-full text-center text-fuchsia-900 text-lg">{{ localize "Attributes.Quickness" }}</span>
+				<span class="w-full text-center text-fuchsia-900 text-lg">{{ localize "DNM.Attributes.Quickness" }}</span>
 				<input type="number" name="system.attributes.quickness" value="{{ system.attributes.quickness }}" class="!text-center !font-semibold !text-3xl !border-none !rounded-none !bg-none !mb-1" />
 			</label>
 			<label class="flex flex-col border-1 border-fuchsia-900 border-solid font-semibold uppercase border-l-0">
-				<span class="w-full text-center text-fuchsia-900 text-lg">{{ localize "Attributes.Insight" }}</span>
+				<span class="w-full text-center text-fuchsia-900 text-lg">{{ localize "DNM.Attributes.Insight" }}</span>
 				<input type="number" name="system.attributes.insight" value="{{ system.attributes.insight }}" class="!text-center !font-semibold !text-3xl !border-none !rounded-none !bg-none !mb-1" />
 			</label>
 			<label class="flex flex-col border-1 border-fuchsia-900 border-solid font-semibold uppercase border-l-0">
-				<span class="w-full text-center text-fuchsia-900 text-lg">{{ localize "Attributes.Resolve" }}</span>
+				<span class="w-full text-center text-fuchsia-900 text-lg">{{ localize "DNM.Attributes.Resolve" }}</span>
 				<input type="number" name="system.attributes.resolve" value="{{ system.attributes.resolve }}" class="!text-center !font-semibold !text-3xl !border-none !rounded-none !bg-none !mb-1" />
 			</label>
 		</div>
@@ -29,17 +29,17 @@
 		{{!-- Tech Level/Spirit/Supply Poijnts --}}
 		<div class="grid grid-cols-3">
 			<label class="flex flex-col uppercase text-center font-semibold border-1 border-t-0 border-solid border-fuchsia-900">
-				<span class="bg-fuchsia-900 text-white p-1">{{ localize "Labels.TechLevel" }}</span>
+				<span class="bg-fuchsia-900 text-white p-1">{{localize "DNM.Labels.TechLevel" }}</span>
 				<input type="number" name="system.techLevel" value="{{ system.techLevel }}" class="!py-5 !text-center !font-semibold !text-3xl !border-none !rounded-none !bg-none !mb-1" />
 			</label>
 
 			<label class="flex flex-col uppercase text-center font-semibold border-1 border-t-0 border-solid border-fuchsia-900 border-l-0">
-				<span class="bg-fuchsia-900 text-white p-1">{{ localize "Labels.Actor.Spirit" }}</span>
+				<span class="bg-fuchsia-900 text-white p-1">{{localize "DNM.Labels.Actor.Spirit" }}</span>
 				<input type="number" name="system.spirit" value="{{ system.spirit }}" class="!py-5 !text-center !font-semibold !text-3xl !border-none !rounded-none !bg-none !mb-1" />
 			</label>
 
 			<label class="flex flex-col uppercase text-center font-semibold border-1 border-t-0 border-solid border-fuchsia-900 border-l-0">
-				<span class="bg-fuchsia-900 text-white p-1">{{ localize "Labels.Actor.SupplyPoints" }}</span>
+				<span class="bg-fuchsia-900 text-white p-1">{{localize "DNM.Labels.Actor.SupplyPoints" }}</span>
 				<input type="number" name="system.supplyPoints" value="{{ system.supplyPoints }}" class="!py-5 !text-center !font-semibold !text-3xl !border-none !rounded-none !bg-none !mb-1" />
 			</label>
 		</div>
@@ -62,15 +62,15 @@
 		{{!-- Archetypes --}}
 		<div class="flex flex-col">
 			<span class="uppercase text-center font-semibold bg-fuchsia-900 text-white p-1">
-				{{ localize "Labels.Item.Archetypes" }}
+				{{localize "DNM.Labels.Item.Archetypes" }}
 			</span>
 
 			<div class="flex flex-col p-2 items-center">
 				{{#if (eq system.numArchetypes 0)}}
-					<em class="text-center text-lg">{{ localize "Labels.Item.AddArchetypes" }}</em>
+					<em class="text-center text-lg">{{localize "DNM.Labels.Item.AddArchetypes" }}</em>
 				{{else}}
 					{{#if (gt system.numArchetypes 1)}}
-						<span class="uppercase font-semibold text-xl">{{ localize "Labels.Item.ChooseBetween" }}:</span>
+						<span class="uppercase font-semibold text-xl">{{localize "DNM.Labels.Item.ChooseBetween" }}:</span>
 					{{/if}}
 					{{#each archetypes}}
 						<div data-menu="archetype" data-index="{{ @index }}" data-uuid="{{ uuid }}" class="w-full p-1 bg-black text-center text-2xl text-white font-semibold uppercase">
@@ -78,7 +78,7 @@
 						</div>
 
 						{{#unless @last}}
-							<span class="uppercase font-semibold text-xl">{{ localize "Labels.Item.Or" }}</span>
+							<span class="uppercase font-semibold text-xl">{{localize "DNM.Labels.Item.Or" }}</span>
 						{{/unless}}
 					{{/each}}
 				{{/if}}

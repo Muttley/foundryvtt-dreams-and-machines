@@ -7,7 +7,9 @@
 		"minimum": 11,
 		"verified": 11
 	},
-	"templateVersion": 1,
+	"url": "https://github.com/Muttley/foundryvtt-dreams-and-machines",
+	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-dreams-and-machines/main/system/system.json",
+	"download": "https://github.com/Muttley/foundryvtt-dreams-and-machines/releases/latest/download/dreams-and-machines.zip",
 	"authors": [
 		{
 			"name": "Paul Maskelyne",
@@ -29,8 +31,8 @@
 	"languages": [
 		{
 			"lang": "en",
-			"name": "English (US)",
-			"path": "lang/en-us.json"
+			"name": "English",
+			"path": "i18n/en.json"
 		}
 	],
 	"socket": true,
@@ -46,11 +48,10 @@
 			]
 		}
 	},
-	"url": "https://github.com/Muttley/foundryvtt-dreams-and-machines",
 	"bugs": "https://github.com/Muttley/foundryvtt-dreams-and-machines/issues",
 	"changelog": "https://github.com/Muttley/foundryvtt-dreams-and-machines/blob/main/CHANGELOG.md",
 	"license": "https://github.com/Muttley/foundryvtt-dreams-and-machines/blob/main/LICENSE",
-	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-dreams-and-machines/main/system/system.json",
-	"download": "https://github.com/Muttley/foundryvtt-dreams-and-machines/releases/latest/download/dreams-and-machines.zip",
+	"templateVersion": 1,
+	"background": "systems/dreams-and-machines/assets/images/dnm-splash.webp",
 	"initiative": null
 }

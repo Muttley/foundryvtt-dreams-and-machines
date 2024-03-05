@@ -83,13 +83,13 @@ export default class DicePrompt extends Application {
 		if (this.actor.type !== "npc") {
 			attributes = Object.entries(this.actor.system.attributes).map(([k, v]) => ({
 				name: k,
-				label: game.i18n.localize(`Attributes.${k.capitalize()}`),
+				label: game.i18n.localize(`DNM.Attributes.${k.capitalize()}`),
 				value: v.value,
 			}));
 
 			skills = Object.entries(this.actor.system.skills).map(([k, v]) => ({
 				name: k,
-				label: game.i18n.localize(`Skills.${k.capitalize()}`),
+				label: game.i18n.localize(`DNM.Skills.${k.capitalize()}`),
 				value: v,
 			}));
 		}
@@ -206,13 +206,13 @@ export default class DicePrompt extends Application {
 
 			default: {
 				attribute = {
-					label: game.i18n.localize(`Attributes.${this.attribute.capitalize()}`),
+					label: game.i18n.localize(`DNM.Attributes.${this.attribute.capitalize()}`),
 					value: this.actor.system.attributes[this.attribute].value,
 				};
 
 				if (this.skill && this.skill !== "-") {
 					skill = {
-						label: game.i18n.localize(`Skills.${this.skill.capitalize()}`),
+						label: game.i18n.localize(`DNM.Skills.${this.skill.capitalize()}`),
 						value: this.actor.system.skills[this.skill],
 					};
 				}

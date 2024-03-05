@@ -1,48 +1,86 @@
 <form class="{{cssClass}} flex !flex-1 flex-col gap-1">
 	<div class="flex bg-fuchsia-900 w-full p-3 gap-4 items-center">
-		<img class="w-14 h-14 -m-2" src="{{ actor.img }}" data-edit="img" alt="{{ actor.name }}" />
-		<input type="text" name="name" value="{{ actor.name }}" class="!border-0 !text-white !text-3xl !h-full !font-roboto-flex uppercase focus:normal-case" />
+		<img
+			alt="{{ actor.name }}"
+			class="w-14 h-14 -m-2"
+			data-edit="img"
+			src="{{ actor.img }}"
+		/>
+		<input
+			class="!border-0 !text-white !text-3xl !h-full !font-roboto-flex uppercase focus:normal-case"
+			name="name"
+			type="text"
+			value="{{ actor.name }}"
+		/>
 	</div>
 
 	<div class="p-1 flex flex-col gap-4">
 		{{!-- Background --}}
 		<div class="grid grid-cols-2 gap-1">
 			<label class="grid grid-cols-2 gap-1 items-center">
-				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{ localize "Labels.Actor.Origin" }}</span>
+				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">
+					{{localize "DNM.Labels.Actor.Origin" }}
+				</span>
 				{{#if origin}}
-					<a data-action="open-sheet" data-uuid="{{ origin.uuid }}" class="flex items-center justify-center bg-white bg-opacity-75 text-center w-full font-semibold text-fuchsia-900 uppercase border-1 border-opacity-50 border-solid border-black h-full min-h-[1.75rem]">{{ origin.name }}</a>
+					<a
+						data-action="open-sheet"
+						data-uuid="{{ origin.uuid }}"
+						class="flex items-center justify-center bg-white bg-opacity-75 text-center w-full font-semibold text-fuchsia-900 uppercase border-1 border-opacity-50 border-solid border-black h-full min-h-[1.75rem]"
+					>
+						{{ origin.name }}
+					</a>
 				{{else}}
-					<span class="oblique overflow-x-scrollbg-white bg-opacity-75 text-center w-full text-xs text-fuchsia-900">{{ localize "Labels.Actor.AddOrigin" }}</span>
+					<span class="oblique overflow-x-scrollbg-white bg-opacity-75 text-center w-full text-xs text-fuchsia-900">
+						{{localize "DNM.Labels.Actor.AddOrigin" }}
+					</span>
 				{{/if}}
 			</label>
 
 			<label class="grid grid-cols-2 gap-1 items-center">
-				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{ localize "Labels.Actor.Archetype" }}</span>
+				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">
+					{{localize "DNM.Labels.Actor.Archetype" }}
+				</span>
 				{{#if archetype}}
-					<a data-action="open-sheet" data-uuid="{{ archetype.uuid }}" class="flex items-center justify-center bg-white bg-opacity-75 text-center w-full font-semibold text-fuchsia-900 uppercase border-1 border-opacity-50 border-solid border-black h-full min-h-[1.75rem]">{{ archetype.name }}</a>
+					<a
+						data-action="open-sheet"
+						data-uuid="{{ archetype.uuid }}"
+						class="flex items-center justify-center bg-white bg-opacity-75 text-center w-full font-semibold text-fuchsia-900 uppercase border-1 border-opacity-50 border-solid border-black h-full min-h-[1.75rem]"
+					>
+						{{ archetype.name }}
+					</a>
 				{{else}}
-					<span class="oblique overflow-x-scrollbg-white bg-opacity-75 text-center w-full text-xs text-fuchsia-900">{{ localize "Labels.Actor.AddArchetype" }}</span>
+					<span class="oblique overflow-x-scrollbg-white bg-opacity-75 text-center w-full text-xs text-fuchsia-900">
+						{{localize "DNM.Labels.Actor.AddArchetype" }}
+					</span>
 				{{/if}}
 			</label>
 
 			<label class="grid grid-cols-2 gap-1 items-center">
-				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{ localize "Labels.Actor.Temperament" }}</span>
+				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">
+					{{localize "DNM.Labels.Actor.Temperament" }}
+				</span>
 				{{#if temperament}}
-					<a data-action="open-sheet" data-uuid="{{ temperament.uuid }}" class="flex items-center justify-center bg-white bg-opacity-75 text-center w-full font-semibold text-fuchsia-900 uppercase border-1 border-opacity-50 border-solid border-black h-full min-h-[1.75rem]">{{ temperament.name }}</a>
+					<a
+						data-action="open-sheet"
+						data-uuid="{{ temperament.uuid }}"
+						class="flex items-center justify-center bg-white bg-opacity-75 text-center w-full font-semibold text-fuchsia-900 uppercase border-1 border-opacity-50 border-solid border-black h-full min-h-[1.75rem]"
+					>
+						{{ temperament.name }}
+					</a>
 				{{else}}
-					<span class="oblique overflow-x-scrollbg-white bg-opacity-75 text-center w-full text-xs text-fuchsia-900">{{ localize "Labels.Actor.AddTemperament" }}</span>
+					<span class="oblique overflow-x-scrollbg-white bg-opacity-75 text-center w-full text-xs text-fuchsia-900">{{localize "DNM.Labels.Actor.AddTemperament" }}</span>
 				{{/if}}
 			</label>
 
 			<label class="grid grid-cols-2 gap-1 items-center">
-				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{ localize "Labels.Actor.Bond" }}</span>
+				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{localize "DNM.Labels.Actor.Bond" }}</span>
 				<input type="text" name="system.bond" value="{{ system.bond }}" class="!bg-white !rounded-none !bg-opacity-75 !text-center font-semibold !text-fuchsia-900 uppercase focus:normal-case" />
 			</label>
 		</div>
 
 		{{!-- Traits --}}
 		<div class="flex flex-col">
-			<span class="w-full bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{ localize "Labels.Actor.Truths" }}</span>
+			<span class="w-full bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{localize "DNM.Labels.Actor.Truths" }}</span>
 			<div class="grid grid-cols-4 gap-x-2 gap-y-1 w-full h-full bg-white border-1 border-t-0 border-fuchsia-200 p-2">
 				{{#each system.traits}}
 					<div class="border-0 border-b-1 border-solid border-fuchsia-900 pl-2 flex items-center flex-nowrap gap-1 hover:bg-teal-200 hover:bg-opacity-30">
@@ -55,7 +93,7 @@
 				<div class="col-span-4 text-right">
 					<a data-action="add-trait">
 						<i class="fas fa-plus"></i>
-						<span>{{ localize "Labels.Actor.AddTrait" }}</span>
+						<span>{{localize "DNM.Labels.Actor.AddTrait" }}</span>
 					</a>
 				</div>
 			</div>
@@ -63,15 +101,15 @@
 
 		{{!-- Attributes --}}
 		<div class="grid grid-cols-4">
-			<span class="col-span-4 bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{ localize "Labels.Actor.Attributes" }}</span>
+			<span class="col-span-4 bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{localize "DNM.Labels.Actor.Attributes" }}</span>
 
 			<div class="flex flex-col items-center bg-white border-1 border-fuchsia-200 border-solid p-1">
 				{{#if (and exhausted temperament (eq temperament.system.exhaustionType 'Confused'))}}
-					<span class="cursor-not-allowed flex items-baseline gap-1 font-semibold uppercase text-red-700">{{ localize "Attributes.Insight" }}</span>
+					<span class="cursor-not-allowed flex items-baseline gap-1 font-semibold uppercase text-red-700">{{ localize "DNM.Attributes.Insight" }}</span>
 				{{else}}
 					<a data-action="roll" data-attribute="insight" class="flex items-baseline gap-1 font-semibold uppercase text-fuchsia-900">
 						<i class="fas fa-dice-d20"></i>
-						<span>{{ localize "Attributes.Insight" }}</span>
+						<span>{{ localize "DNM.Attributes.Insight" }}</span>
 					</a>
 				{{/if}}
 				<input type="number" name="system.attributes.insight.value" value="{{ system.attributes.insight.value }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-4xl font-semibold !p-2 !py-6 {{#if (and exhausted temperament (eq temperament.system.exhaustionType 'Confused'))}}!text-red-700{{/if}}" />
@@ -79,11 +117,11 @@
 
 			<div class="flex flex-col items-center bg-white border-1 border-fuchsia-200 border-solid p-1">
 				{{#if (and exhausted temperament (eq temperament.system.exhaustionType 'Weary'))}}
-					<span class="cursor-not-allowed flex items-baseline gap-1 font-semibold uppercase text-red-700">{{ localize "Attributes.Might" }}</span>
+					<span class="cursor-not-allowed flex items-baseline gap-1 font-semibold uppercase text-red-700">{{ localize "DNM.Attributes.Might" }}</span>
 				{{else}}
 					<a data-action="roll" data-attribute="might" class="flex items-baseline gap-1 font-semibold uppercase text-fuchsia-900">
 						<i class="fas fa-dice-d20"></i>
-						<span>{{ localize "Attributes.Might" }}</span>
+						<span>{{ localize "DNM.Attributes.Might" }}</span>
 					</a>
 				{{/if}}
 				<input type="number" name="system.attributes.might.value" value="{{ system.attributes.might.value }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-4xl font-semibold !p-2 !py-6  {{#if (and exhausted temperament (eq temperament.system.exhaustionType 'Weary'))}}!text-red-700{{/if}}" />
@@ -91,11 +129,11 @@
 
 			<div class="flex flex-col items-center bg-white border-1 border-fuchsia-200 border-solid p-1">
 				{{#if (and exhausted temperament (eq temperament.system.exhaustionType 'Breathless'))}}
-					<span class="cursor-not-allowed flex items-baseline gap-1 font-semibold uppercase text-red-700">{{ localize "Attributes.Quickness" }}</span>
+					<span class="cursor-not-allowed flex items-baseline gap-1 font-semibold uppercase text-red-700">{{ localize "DNM.Attributes.Quickness" }}</span>
 				{{else}}
 					<a data-action="roll" data-attribute="quickness" class="flex items-baseline gap-1 font-semibold uppercase text-fuchsia-900">
 						<i class="fas fa-dice-d20"></i>
-						<span>{{ localize "Attributes.Quickness" }}</span>
+						<span>{{ localize "DNM.Attributes.Quickness" }}</span>
 					</a>
 				{{/if}}
 				<input type="number" name="system.attributes.quickness.value" value="{{ system.attributes.quickness.value }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-4xl font-semibold !p-2 !py-6 {{#if (and exhausted temperament (eq temperament.system.exhaustionType 'Breathless'))}}!text-red-700{{/if}}" />
@@ -103,11 +141,11 @@
 
 			<div class="flex flex-col items-center bg-white border-1 border-fuchsia-200 border-solid p-1">
 				{{#if (and exhausted temperament (eq temperament.system.exhaustionType 'Despairing'))}}
-					<span class="cursor-not-allowed flex items-baseline gap-1 font-semibold uppercase text-red-700">{{ localize "Attributes.Resolve" }}</span>
+					<span class="cursor-not-allowed flex items-baseline gap-1 font-semibold uppercase text-red-700">{{ localize "DNM.Attributes.Resolve" }}</span>
 				{{else}}
 					<a data-action="roll" data-attribute="resolve" class="flex items-baseline gap-1 font-semibold uppercase text-fuchsia-900">
 						<i class="fas fa-dice-d20"></i>
-						<span>{{ localize "Attributes.Resolve" }}</span>
+						<span>{{ localize "DNM.Attributes.Resolve" }}</span>
 					</a>
 				{{/if}}
 				<input type="number" name="system.attributes.resolve.value" value="{{ system.attributes.resolve.value }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-4xl font-semibold !p-2 !py-6 {{#if (and exhausted temperament (eq temperament.system.exhaustionType 'Despairing'))}}!text-red-700{{/if}}" />
@@ -116,12 +154,12 @@
 
 		{{!-- Skills --}}
 		<div class="grid grid-cols-12">
-			<span class="col-span-12 bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{ localize "Labels.Actor.Skills" }}</span>
+			<span class="col-span-12 bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{localize "DNM.Labels.Actor.Skills" }}</span>
 
 			<div class="col-span-3 flex flex-col items-center bg-white border-1 border-fuchsia-200 border-solid p-1">
 				<a class="flex items-baseline gap-1 font-semibold uppercase text-fuchsia-900" data-action="roll" data-skill="fight">
 					<i class="fas fa-dice-d20"></i>
-					<span>{{ localize "Skills.Fight" }}</span>
+					<span>{{ localize "DNM.Skills.Fight" }}</span>
 				</a>
 				<input type="number" name="system.skills.fight" value="{{ system.skills.fight }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-4xl font-semibold !p-2 !py-6" />
 			</div>
@@ -129,7 +167,7 @@
 			<div class="col-span-3 flex flex-col items-center bg-white border-1 border-fuchsia-200 border-solid p-1">
 				<a class="flex items-baseline gap-1 font-semibold uppercase text-fuchsia-900" data-action="roll" data-skill="move">
 					<i class="fas fa-dice-d20"></i>
-					<span>{{ localize "Skills.Move" }}</span>
+					<span>{{ localize "DNM.Skills.Move" }}</span>
 				</a>
 				<input type="number" name="system.skills.move" value="{{ system.skills.move }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-4xl font-semibold !p-2 !py-6" />
 			</div>
@@ -137,7 +175,7 @@
 			<div class="col-span-3 flex flex-col items-center bg-white border-1 border-fuchsia-200 border-solid p-1">
 				<a class="flex items-baseline gap-1 font-semibold uppercase text-fuchsia-900" data-action="roll" data-skill="operate">
 					<i class="fas fa-dice-d20"></i>
-					<span>{{ localize "Skills.Operate" }}</span>
+					<span>{{ localize "DNM.Skills.Operate" }}</span>
 				</a>
 				<input type="number" name="system.skills.operate" value="{{ system.skills.operate }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-4xl font-semibold !p-2 !py-6" />
 			</div>
@@ -145,7 +183,7 @@
 			<div class="col-span-3 flex flex-col items-center bg-white border-1 border-fuchsia-200 border-solid p-1">
 				<a class="flex items-baseline gap-1 font-semibold uppercase text-fuchsia-900" data-action="roll" data-skill="sneak">
 					<i class="fas fa-dice-d20"></i>
-					<span>{{ localize "Skills.Sneak" }}</span>
+					<span>{{ localize "DNM.Skills.Sneak" }}</span>
 				</a>
 				<input type="number" name="system.skills.sneak" value="{{ system.skills.sneak }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-4xl font-semibold !p-2 !py-6" />
 			</div>
@@ -153,7 +191,7 @@
 			<div class="col-span-4 flex flex-col items-center bg-white border-1 border-fuchsia-200 border-solid p-1">
 				<a class="flex items-baseline gap-1 font-semibold uppercase text-fuchsia-900" data-action="roll" data-skill="study">
 					<i class="fas fa-dice-d20"></i>
-					<span>{{ localize "Skills.Study" }}</span>
+					<span>{{ localize "DNM.Skills.Study" }}</span>
 				</a>
 				<input type="number" name="system.skills.study" value="{{ system.skills.study }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-4xl font-semibold !p-2 !py-6" />
 			</div>
@@ -161,7 +199,7 @@
 			<div class="col-span-4 flex flex-col items-center bg-white border-1 border-fuchsia-200 border-solid p-1">
 				<a class="flex items-baseline gap-1 font-semibold uppercase text-fuchsia-900" data-action="roll" data-skill="survive">
 					<i class="fas fa-dice-d20"></i>
-					<span>{{ localize "Skills.Survive" }}</span>
+					<span>{{ localize "DNM.Skills.Survive" }}</span>
 				</a>
 				<input type="number" name="system.skills.survive" value="{{ system.skills.survive }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-4xl font-semibold !p-2 !py-6" />
 			</div>
@@ -169,7 +207,7 @@
 			<div class="col-span-4 flex flex-col items-center bg-white border-1 border-fuchsia-200 border-solid p-1">
 				<a class="flex items-baseline gap-1 font-semibold uppercase text-fuchsia-900" data-action="roll" data-skill="talk">
 					<i class="fas fa-dice-d20"></i>
-					<span>{{ localize "Skills.Talk" }}</span>
+					<span>{{ localize "DNM.Skills.Talk" }}</span>
 				</a>
 				<input type="number" name="system.skills.talk" value="{{ system.skills.talk }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-4xl font-semibold !p-2 !py-6" />
 			</div>
@@ -178,36 +216,36 @@
 		{{!-- Coin/TL/etc --}}
 		<div class="grid grid-cols-4 gap-4">
 			<label class="flex flex-col bg-white border-1 border-fuchsia-200 border-solid">
-				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{ localize "Labels.Actor.Coin" }}</span>
+				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{localize "DNM.Labels.Actor.Coin" }}</span>
 				<input type="number" name="system.coin" value="{{ system.coin }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-2xl font-semibold !p-2 !h-full" />
 			</label>
 
 			<label class="flex flex-col bg-white border-1 border-fuchsia-200 border-solid">
-				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{ localize "Labels.TechLevel" }}</span>
+				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{localize "DNM.Labels.TechLevel" }}</span>
 				<input type="number" name="system.techLevel" value="{{ system.techLevel }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-2xl font-semibold !p-2 !h-full" />
 			</label>
 
 			<div class="grid grid-cols-2 bg-white border-1 border-fuchsia-200 border-solid">
-				<span class="col-span-2 bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{ localize "Labels.Actor.Spirit" }}</span>
+				<span class="col-span-2 bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{localize "DNM.Labels.Actor.Spirit" }}</span>
 				<label class="flex flex-col border-fuchsia-200 border-0 border-r-1 border-solid">
 					<input type="number" name="system.spirit.value" value="{{ system.spirit.value }}" min="0" max="{{ system.spirit.max }}" class="!border-0 rounded-none !bg-none !text-center !text-2xl font-semibold !p-2 !h-full {{#if exhausted}}!text-red-700{{/if}}" />
-					<span class="border-t-1 border-fuchsia-200 text-fuchsia-900 uppercase text-xs flex items-center justify-center {{#if exhausted}}!text-red-700{{/if}}">{{ localize "Labels.Current" }}</span>
+					<span class="border-t-1 border-fuchsia-200 text-fuchsia-900 uppercase text-xs flex items-center justify-center {{#if exhausted}}!text-red-700{{/if}}">{{localize "DNM.Labels.Current" }}</span>
 				</label>
 				<label class="flex flex-col">
 					<input type="number" name="system.spirit.max" value="{{ system.spirit.max }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-2xl font-semibold !p-2 !h-full" />
-					<span class="border-t-1 border-fuchsia-200 text-fuchsia-900 uppercase text-xs flex items-center justify-center">{{ localize "Labels.Max" }}</span>
+					<span class="border-t-1 border-fuchsia-200 text-fuchsia-900 uppercase text-xs flex items-center justify-center">{{localize "DNM.Labels.Max" }}</span>
 				</label>
 			</div>
 
 			<label class="flex flex-col bg-white border-1 border-fuchsia-200 border-solid">
-				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{ localize "Labels.Actor.SupplyPoints" }}</span>
+				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{localize "DNM.Labels.Actor.SupplyPoints" }}</span>
 				<input type="number" name="system.supplyPoints" value="{{ system.supplyPoints }}" min="0" class="!border-0 rounded-none !bg-none !text-center !text-2xl font-semibold !p-2 !h-full" />
 			</label>
 		</div>
 
 		{{!-- Talents --}}
 		<div class="flex flex-col">
-			<span class="w-full bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{ localize "Labels.Actor.Talents" }}</span>
+			<span class="w-full bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{localize "DNM.Labels.Actor.Talents" }}</span>
 			<div class="w-full h-full bg-white border-1 border-t-0 border-fuchsia-200 p-2">
 				{{!-- Origin Benefit --}}
 				{{#if origin}}
@@ -237,7 +275,7 @@
 
 		{{!-- Equipment --}}
 		<div class="flex flex-col">
-			<span class="w-full bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{ localize "Labels.Actor.Equipment" }}</span>
+			<span class="w-full bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 h-full justify-center">{{localize "DNM.Labels.Actor.Equipment" }}</span>
 			<div class="w-full h-full bg-white border-1 border-t-0 border-fuchsia-200 p-2">
 				{{#each equipment}}
 					<div class="pl-4 border-0 border-b-1 border-dashed border-fuchsia-800 last-of-type:border-b-0">
@@ -256,7 +294,7 @@
 									<a data-action="roll" data-attribute="quickness" data-skill="fight" data-uuid="{{ uuid }}"><i class="fas fa-bow-arrow"></i></a>
 								{{/if}}
 							{{/if}}
-							<a data-action="open-sheet" data-uuid="{{ uuid }}" class="font-bold">{{ name }}{{#if (gt system.techLevel 0)}} (TL{{ system.techLevel }}{{#if system.isWeapon}}, {{localize (concat "Labels.Item.Weapon." system.weapon.type)}}{{/if}}){{else}}{{#if system.isWeapon}} ({{localize (concat "Labels.Item.Weapon." system.weapon.type)}}){{/if}}{{/if}}{{#if system.hasQualities}}:{{else}}.{{/if}}</a>
+							<a data-action="open-sheet" data-uuid="{{ uuid }}" class="font-bold">{{ name }}{{#if (gt system.techLevel 0)}} (TL{{ system.techLevel }}{{#if system.isWeapon}}, {{localize (concat "DNM.Labels.Item.Weapon." system.weapon.type)}}{{/if}}){{else}}{{#if system.isWeapon}} ({{localize (concat "DNM.Labels.Item.Weapon." system.weapon.type)}}){{/if}}{{/if}}{{#if system.hasQualities}}:{{else}}.{{/if}}</a>
 							{{#if system.hasQualities}}
 								<div class="flex flex-wrap whitespace-nowrap gap-x-1 gap-y-0.5 items-center w-full oblique">
 									{{#each system.weapon.damageQualities}}
@@ -294,21 +332,21 @@
 		{{!-- Goal/Attitude/Drive --}}
 		<div class="grid grid-cols-3 gap-4">
 			<div class="flex flex-col bg-white border-1 border-fuchsia-200 border-solid">
-				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{ localize "Labels.Actor.Goal" }}</span>
+				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{localize "DNM.Labels.Actor.Goal" }}</span>
 				<div class="w-full h-full min-h-15 p-2">
 					{{ editor enrichedGoal target="system.goal" button=true editable=editable engine="prosemirror" }}
 				</div>
 			</div>
 
 			<div class="flex flex-col bg-white border-1 border-fuchsia-200 border-solid">
-				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{ localize "Labels.Actor.Attitude" }}</span>
+				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{localize "DNM.Labels.Actor.Attitude" }}</span>
 				<div class="w-full h-full min-h-15 p-2">
 					{{ editor enrichedAttitude target="system.attitude" button=true editable=editable engine="prosemirror" }}
 				</div>
 			</div>
 
 			<div class="flex flex-col bg-white border-1 border-fuchsia-200 border-solid">
-				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{ localize "Labels.Actor.Drive" }}</span>
+				<span class="bg-fuchsia-900 text-white uppercase font-semibold flex items-center px-1 justify-center">{{localize "DNM.Labels.Actor.Drive" }}</span>
 				<div class="w-full h-full min-h-15 p-2">
 					{{ editor enrichedDrive target="system.drive" button=true editable=editable engine="prosemirror" }}
 				</div>

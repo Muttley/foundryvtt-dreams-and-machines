@@ -127,7 +127,7 @@ export default class MomentumTracker extends Application {
 		const momentum = MomentumTracker.instance.momentum;
 
 		if (momentum === 0) {
-			ui.notifications.info(game.i18n.localize("Notifications.NotEnoughMomentum"));
+			ui.notifications.info(game.i18n.localize("DNM.Notifications.NotEnoughMomentum"));
 			return;
 		}
 
@@ -157,7 +157,7 @@ export default class MomentumTracker extends Application {
 		const threat = MomentumTracker.instance.threat;
 
 		if (threat === 0) {
-			ui.notifications.info(game.i18n.localize("Notifications.NotEnoughThreat"));
+			ui.notifications.info(game.i18n.localize("DNM.Notifications.NotEnoughThreat"));
 			return;
 		}
 

@@ -31,11 +31,11 @@
 
 		{{!-- Exhaustion Type --}}
 		<label class="flex flex-col border-0 border-t-1 border-solid border-fuchsia-900">
-			<span class="uppercase text-fuchsia-900 font-semibold">{{ localize "Labels.Actor.Exhaustion" }}:</span>
+			<span class="uppercase text-fuchsia-900 font-semibold">{{localize "DNM.Labels.Actor.Exhaustion" }}:</span>
 			<select name="system.exhaustionType" class="!border-none !rounded-none !text-2xl uppercase text-white !bg-black !p-2 !text-center !h-[unset]">
 				{{#select system.exhaustionType}}
 					{{#each CONFIG.DreamsAndMachines.Exhaustion.all}}
-						<option value="{{ this }}">{{ localize (concat "Labels.Exhaustion." this ) }}</option>
+						<option value="{{ this }}">{{ localize (concat "DNM.Labels.Exhaustion." this ) }}</option>
 					{{/each}}
 				{{/select}}
 			</select>

@@ -87,7 +87,7 @@ export default class ItemDataModel extends foundry.abstract.TypeDataModel {
 		if (this.hasProtection) {
 			protection = [
 				{
-					label: game.i18n.localize("Labels.Item.Protection"),
+					label: game.i18n.localize("DNM.Labels.Item.Protection"),
 					rating: this.protection.value,
 				},
 			];

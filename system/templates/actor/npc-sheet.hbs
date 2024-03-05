@@ -9,7 +9,7 @@
 		{{!-- Truth --}}
 		<label class="flex flex-col items-start w-full">
 			<div class="flex items-center w-full">
-				<span class="text-center bg-purple-600 py-0.5 px-4 text-white font-semibold uppercase">{{ localize "Labels.Actor.Truth" }}</span>
+				<span class="text-center bg-purple-600 py-0.5 px-4 text-white font-semibold uppercase">{{localize "DNM.Labels.Actor.Truth" }}</span>
 			</div>
 			{{#if editable}}
 				<textarea name="system.truth" class="bg-none h-full resize-y border-none text-lg text-center">{{ system.truth }}</textarea>
@@ -23,7 +23,7 @@
 			<label class="flex flex-col">
 				<span class="text-center w-full bg-purple-600 py-0.5 pl-2 text-white font-semibold uppercase">
 					<a data-action="roll"><i class="fas fa-dice-d20"></i></a>
-					<span>{{ localize "Labels.DicePrompt.Attribute" }}</span>
+					<span>{{localize "DNM.Labels.DicePrompt.Attribute" }}</span>
 				</span>
 				{{#if editable}}
 					<input type="number" min="0" name="system.attribute.value" value="{{ system.attribute.value }}" class="!bg-none !rounded-none !border-0 !text-center !text-3xl !font-semibold !h-[unset]" />
@@ -35,7 +35,7 @@
 			<label class="flex flex-col">
 				<span class="text-center w-full bg-purple-600 py-0.5 pl-2 text-white font-semibold uppercase">
 					<a data-action="roll"><i class="fas fa-dice-d20"></i></a>
-					<span>{{ localize "Labels.DicePrompt.Skill" }}</span>
+					<span>{{localize "DNM.Labels.DicePrompt.Skill" }}</span>
 				</span>
 				{{#if editable}}
 					<input type="number" min="0" name="system.skill.value" value="{{ system.skill.value }}" class="!bg-none !rounded-none !border-0 !text-center !text-3xl !font-semibold !h-[unset] !border-l-2 !border-purple-600" />
@@ -47,7 +47,7 @@
 			<label class="flex flex-col">
 				<span class="text-center text-purple-800 font-semibold uppercase border-0 border-t-1 border-purple-600 border-solid">
 					<a data-action="roll-default"><i class="fas fa-dice-d20"></i></a>
-					<span>{{ localize "Labels.Default" }}</span>
+					<span>{{localize "DNM.Labels.Default" }}</span>
 				</span>
 				{{#if editable}}
 					<input type="number" min="0" name="system.attribute.default" value="{{ system.attribute.default }}" class="!bg-none !rounded-none !border-0 !text-center !text-3xl !font-semibold !h-[unset]" />
@@ -59,7 +59,7 @@
 			<label class="flex flex-col">
 				<span class="text-center text-purple-800 font-semibold uppercase border-0 border-t-1 border-l-2 border-purple-600 border-solid">
 					<a data-action="roll-default"><i class="fas fa-dice-d20"></i></a>
-					<span>{{ localize "Labels.Default" }}</span>
+					<span>{{localize "DNM.Labels.Default" }}</span>
 				</span>
 				{{#if editable}}
 					<input type="number" min="0" name="system.skill.default" value="{{ system.skill.default }}" class="!bg-none !rounded-none !border-0 !text-center !text-3xl !font-semibold !h-[unset] !border-l-2 !border-purple-600" />
@@ -72,11 +72,11 @@
 
 	{{!-- Combat --}}
 	<div class="grid grid-cols-2">
-		<label class="col-span-2 text-center w-full bg-purple-600 py-0.5 pl-2 text-white font-semibold uppercase">{{ localize "Labels.Combat" }}</label>
+		<label class="col-span-2 text-center w-full bg-purple-600 py-0.5 pl-2 text-white font-semibold uppercase">{{localize "DNM.Labels.Combat" }}</label>
 
 		{{!-- Weapons --}}
 		<div class="flex flex-col">
-			<span class="text-center text-purple-800 font-semibold uppercase border-0 border-purple-600 border-solid">{{ localize "Labels.Weapons" }}</span>
+			<span class="text-center text-purple-800 font-semibold uppercase border-0 border-purple-600 border-solid">{{localize "DNM.Labels.Weapons" }}</span>
 			{{#each weapons}}
 				<div>
 					<div class="flex items-center px-2">
@@ -84,7 +84,7 @@
 							<a data-action="roll" data-uuid="{{ uuid }}"><i class="fas fa-dice-d20"></i></a>
 
 							<a data-action="open-sheet" data-uuid="{{ uuid }}" class="uppercase font-semibold text-lg">
-								{{ name }} ({{ localize (concat "Labels.Item.Weapon." system.weapon.type) }}):
+								{{ name }} ({{ localize (concat "DNM.Labels.Item.Weapon." system.weapon.type) }}):
 							</a>
 
 							{{#each system.allQualities}}
@@ -102,7 +102,7 @@
 
 		{{!-- Special Actions --}}
 		<div class="flex flex-col border-0 border-l-2 border-purple-600 border-solid">
-			<span class="text-center text-purple-800 font-semibold uppercase border-0 border-purple-600 border-solid">{{ localize "Labels.SpecialActions" }}</span>
+			<span class="text-center text-purple-800 font-semibold uppercase border-0 border-purple-600 border-solid">{{localize "DNM.Labels.SpecialActions" }}</span>
 
 			<div class="w-full h-full min-h-15 p-2">
 				{{ editor enrichedSpecialActions target="system.specialActions" button=true editable=editable engine="prosemirror" }}
@@ -111,7 +111,7 @@
 	</div>
 
 	{{!-- Special Abilities --}}
-	<label class="w-full bg-purple-600 py-0.5 pl-2 text-white font-semibold uppercase">{{ localize "Labels.SpecialAbilities" }}</label>
+	<label class="w-full bg-purple-600 py-0.5 pl-2 text-white font-semibold uppercase">{{localize "DNM.Labels.SpecialAbilities" }}</label>
 	<div class="w-full p-2">
 		{{#each abilities}}
 			<p><strong data-menu="item" data-uuid="{{ uuid }}"><a data-action="open-sheet" data-uuid="{{ uuid }}">{{ name }}</a></strong>: {{{ system.description }}}</p>
@@ -119,7 +119,7 @@
 	</div>
 
 	{{!-- Notes --}}
-	<label class="w-full bg-purple-600 py-0.5 pl-2 text-white font-semibold uppercase">{{ localize "Labels.Notes" }}</label>
+	<label class="w-full bg-purple-600 py-0.5 pl-2 text-white font-semibold uppercase">{{localize "DNM.Labels.Notes" }}</label>
 	<div class="w-full h-full min-h-15 p-2">
 		{{ editor enrichedNotes target="system.notes" button=true editable=editable engine="prosemirror" }}
 	</div>

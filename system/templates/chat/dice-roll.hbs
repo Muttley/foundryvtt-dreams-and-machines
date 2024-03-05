@@ -49,12 +49,12 @@
 
 		{{#if (and item item.system.isWeapon)}}
 			<span class="flex flex-col gap-1 items-center">
-				<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">{{ localize "Labels.Item.Damage" }}</span>
+				<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">{{localize "DNM.Labels.Item.Damage" }}</span>
 				<span class="text-sm flex flex-wrap items-center gap-1 justify-center">
 					{{#if item.system.weapon.damageQualities}}
 						{{#each item.system.weapon.damageQualities}}
 							<span class="oblique font-semibold">{{ label }}{{#if (gt rating 0)}} {{ rating }}{{/if}}</span>
-							{{#unless @last}}<span>{{ localize "Labels.Item.Weapon.or" }}</span>{{/unless}}
+							{{#unless @last}}<span>{{localize "DNM.Labels.Item.Weapon.or" }}</span>{{/unless}}
 						{{/each}}
 					{{else}}
 						—
@@ -63,7 +63,7 @@
 			</span>
 
 			<span class="flex flex-col gap-1 items-center">
-				<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">{{ localize "Labels.Item.Qualities" }}</span>
+				<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">{{localize "DNM.Labels.Item.Qualities" }}</span>
 				<span class="text-sm flex flex-wrap items-center gap-1 justify-center">
 					{{#if item.system.weapon.qualities}}
 						{{#each item.system.weapon.qualities}}
@@ -79,7 +79,7 @@
 
 	<div class="flex justify-center gap-4 text-5xl">
 		{{#each results}}
-			<div class="relative" {{#if (or isCritical isSuccess isComplication)}}data-tooltip="{{#if isCritical}}{{localize 'Roll.Critical' }}{{/if}} {{#if isSuccess}}{{localize 'Roll.Success'}}{{/if}} {{#if isComplication}}{{localize 'Roll.Complication'}}{{/if}}"{{/if}}>
+			<div class="relative" {{#if (or isCritical isSuccess isComplication)}}data-tooltip="{{#if isCritical}}{{localize 'DNM.Roll.Critical' }}{{/if}} {{#if isSuccess}}{{localize 'DNM.Roll.Success'}}{{/if}} {{#if isComplication}}{{localize 'DNM.Roll.Complication'}}{{/if}}"{{/if}}>
 				<i class="fat fa-dice-d20 opacity-25 {{#if ../isGM}}text-teal-600{{else}}text-fuchsia-800{{/if}}"></i>
 				<div class="absolute w-full h-full text-3xl top-2 font-bold text-center {{#unless (or isSuccess isCritical isComplication) }}opacity-40{{/unless}} {{#if isCritical}}{{#if isGM}}text-blue-700{{else}}text-emerald-800{{/if}}{{/if}} {{#if isComplication}}text-rose-900{{/if}}">{{ face }}</div>
 			</div>
