@@ -1,4 +1,3 @@
-import { SETTINGS_KEY_MOMENTUM, SETTINGS_KEY_THREAT } from "./index.mjs";
 import { socketEmit, SocketOperation } from "../socket.mjs";
 
 export default class MomentumTracker extends Application {
@@ -30,14 +29,14 @@ export default class MomentumTracker extends Application {
 	 * @returns {number}
 	 */
 	get momentum() {
-		return game.settings.get("dreams-and-machines", SETTINGS_KEY_MOMENTUM);
+		return game.settings.get(SYSTEM_ID, "momentum");
 	}
 
 	/**
 	 * @returns {number}
 	 */
 	get threat() {
-		return game.settings.get("dreams-and-machines", SETTINGS_KEY_THREAT);
+		return game.settings.get(SYSTEM_ID, "threat");
 	}
 
 	constructor(options = {}) {
@@ -82,6 +81,8 @@ export default class MomentumTracker extends Application {
 				await MomentumTracker.spendThreat();
 				break;
 		}
+
+		MomentumTracker.forceRender();
 	}
 
 	/**
@@ -96,13 +97,14 @@ export default class MomentumTracker extends Application {
 		}
 
 		if (game.user.isGM) {
-			let value = game.settings.get("dreams-and-machines", type) + 1;
+			let value = game.settings.get(SYSTEM_ID, type) + 1;
 
 			if (type === "momentum") {
 				value = Math.min(value, 6);
 			}
 
-			await game.settings.set("dreams-and-machines", type, value);
+			await game.settings.set(SYSTEM_ID, type, value);
+			MomentumTracker.forceRender();
 		}
 		else {
 			socketEmit(SocketOperation.PlayerStoreMomentum);
@@ -132,7 +134,8 @@ export default class MomentumTracker extends Application {
 		}
 
 		if (game.user.isGM) {
-			await game.settings.set("dreams-and-machines", SETTINGS_KEY_MOMENTUM, momentum - 1);
+			await game.settings.set(SYSTEM_ID, "momentum", momentum - 1);
+			MomentumTracker.forceRender();
 		}
 		else {
 			socketEmit(SocketOperation.PlayerSpendMomentum);
@@ -161,7 +164,8 @@ export default class MomentumTracker extends Application {
 			return;
 		}
 
-		await game.settings.set("dreams-and-machines", SETTINGS_KEY_THREAT, threat - 1);
+		await game.settings.set(SYSTEM_ID, "threat", threat - 1);
+		MomentumTracker.forceRender();
 
 		const chatTemplate = await renderTemplate("systems/dreams-and-machines/templates/chat/threat.hbs", { store: false });
 		await ChatMessage.create({

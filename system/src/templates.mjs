@@ -18,7 +18,7 @@ function itemPartial(name) {
  * Preload Foundry templates.
  */
 export default async function registerTemplates() {
-	console.log("Dreams and Machines | Pre-loading Templates...");
+	dreams.logger.debug("Pre-loading Templates...");
 	await loadTemplates([itemPartial("description"), itemPartial("header")]);
-	console.log("Dreams and Machines | Template Loading Complete.");
+	dreams.logger.debug("Template Loading Complete.");
 }

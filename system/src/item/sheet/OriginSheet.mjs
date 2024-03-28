@@ -1,5 +1,5 @@
+import DnMItem from "../DnMItem.mjs";
 import DnMItemSheet from "../DnMItemSheet.mjs";
-import { DnMItem } from "../DnMItem.mjs";
 
 /**
  * Document sheet for origins.

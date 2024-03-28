@@ -16,12 +16,66 @@ export const SocketOperation = {
 	PlayerStoreMomentum: 1,
 };
 
-/**
- * @typedef {object} SocketPayload
- *
- * @property {SocketOperation} operation
- * @property {any} data
- */
+
+export default function listenOnSocket() {
+	game.socket.on(SOCKET_NAME, async payload => {
+		if (!dreams.MomentumTracker.instance) {
+			return;
+		}
+
+		switch (payload.operation) {
+			/**
+				* Player has spent Momentum.
+				*/
+			case SocketOperation.PlayerSpendMomentum: {
+				// Only GM clients should process the operation.
+				if (!game.user.isGM) {
+					return;
+				}
+
+				const momentum = dreams.MomentumTracker.instance.momentum;
+				if (momentum === 0) {
+					return;
+				}
+
+				await game.settings.set(
+					SYSTEM_ID,
+					"momentum",
+					momentum - 1
+				);
+
+				dreams.MomentumTracker.forceRender();
+
+				break;
+			}
+
+			/**
+				* Player has stored Momentum.
+				*/
+			case SocketOperation.PlayerStoreMomentum: {
+				// Only GM clients should process the operation.
+				if (!game.user.isGM) {
+					return;
+				}
+
+				const momentum = dreams.MomentumTracker.instance.momentum;
+				if (momentum === 6) {
+					return;
+				}
+
+				await game.settings.set(
+					SYSTEM_ID,
+					"momentum",
+					momentum + 1
+				);
+
+				dreams.MomentumTracker.forceRender();
+
+				break;
+			}
+		}
+	});
+}
 
 /**
  * Emit a Socket operation.
