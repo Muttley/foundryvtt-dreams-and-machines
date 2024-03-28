@@ -11,6 +11,8 @@ export const readyHook = {
 			dreams.MomentumTracker.forceRender();
 
 			listenOnSocket();
+
+			dreams.utils.showNewReleaseNotes();
 		});
 	},
 };

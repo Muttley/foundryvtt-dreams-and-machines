@@ -1,6 +1,10 @@
 # v1.2.0
-- The full system is out! In preview, at least.
-- This version supports the full release of Dreams and Machines!
+
+## Enhancements
+- [#3] Show release notes journal entries when a new world/version is first loaded
+
+## Chores
+- [#2] Migrate to new home and build process
 
 ---
 

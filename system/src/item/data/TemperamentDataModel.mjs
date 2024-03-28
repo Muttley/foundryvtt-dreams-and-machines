@@ -1,5 +1,5 @@
 import ItemDescription from "./templates/ItemDescription.mjs";
-import Exhaustion from "../../actor/Exhaustion.mjs";
+// import Exhaustion from "../../actor/Exhaustion.mjs";
 
 /**
  * Data Model representing a Temperament that can be assigned to a character.
@@ -36,8 +36,8 @@ export default class TemperamentDataModel extends foundry.abstract.TypeDataModel
 			}),
 
 			exhaustionType: new fields.StringField({
-				initial: Exhaustion.Despairing,
-				choices: Exhaustion.all,
+				initial: "Despairing",
+				choices: Object.keys(CONFIG.DREAMS.EXHAUSTION),
 				nullable: false,
 			}),
 		};

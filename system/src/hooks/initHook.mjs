@@ -14,6 +14,7 @@ import { registerFonts } from "../fonts.mjs";
 
 import Logger from "../utils/Logger.mjs";
 import MomentumTracker from "../momentumTracker/MomentumTracker.mjs";
+import DnMUtils from "../utils/DnMUtils.mjs";
 
 import registerSettings from "../settings.mjs";
 import registerTemplates from "../templates.mjs";
@@ -34,6 +35,7 @@ export async function initHook() {
 	globalThis.dreams = {
 		logger: Logger,
 		MomentumTracker,
+		utils: DnMUtils,
 	};
 
 	registerSettings();

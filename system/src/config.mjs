@@ -9,3 +9,7 @@ DREAMS.EXHAUSTION = {
 	Despairing: "DNM.Labels.Exhaustion.Despairing",
 	Weary: "DNM.Labels.Exhaustion.Weary",
 };
+
+DREAMS.JOURNAL_UUIDS = {
+	releaseNotes: "Compendium.dreams-and-machines.system_documentation.JournalEntry.8mzM4axnEkXJTu6s",
+};

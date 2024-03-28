@@ -99,11 +99,11 @@
 		"types": [
 			"archetype",
 			"item",
+			"majorNPCAction",
 			"origin",
 			"specialAbility",
 			"talent",
-			"temperament",
-			"majorNPCAction"
+			"temperament"
 		],
 		"templates": {
 			"itemDescription": {

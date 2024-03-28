@@ -3,7 +3,12 @@ import { markdown } from "markdown";
 
 import stringify from "json-stable-stringify-pretty";
 
-const docs = [];
+const docs = [
+	{
+		src: "./CHANGELOG.md",
+		dst: "./data/packs/system_documentation.db/release_notes__qz3DbKdzlBNzB4zR.json",
+	},
+];
 
 function compileDocs(cb) {
 	for (const doc of docs) {

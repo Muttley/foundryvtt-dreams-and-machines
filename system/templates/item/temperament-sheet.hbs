@@ -34,8 +34,8 @@
 			<span class="uppercase text-fuchsia-900 font-semibold">{{localize "DNM.Labels.Actor.Exhaustion" }}:</span>
 			<select name="system.exhaustionType" class="!border-none !rounded-none !text-2xl uppercase text-white !bg-black !p-2 !text-center !h-[unset]">
 				{{#select system.exhaustionType}}
-					{{#each CONFIG.DreamsAndMachines.Exhaustion.all}}
-						<option value="{{ this }}">{{ localize (concat "DNM.Labels.Exhaustion." this ) }}</option>
+					{{#each CONFIG.DREAMS.EXHAUSTION as |key levelName|}}
+						<option value="{{ key }}">{{ levelName }}</option>
 					{{/each}}
 				{{/select}}
 			</select>

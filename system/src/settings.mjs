@@ -32,4 +32,13 @@ export default function registerSettings() {
 		default: false,
 		requiresReload: true,
 	});
+
+	game.settings.register(SYSTEM_ID, "systemVersion", {
+		name: "System Version",
+		hint: "Records the current Dreams and Machines system version number (don't modify this unless you know what you are doing)",
+		scope: "world",
+		config: game.settings.get(SYSTEM_ID, "debugEnabled"),
+		default: "",
+		type: String,
+	});
 }
