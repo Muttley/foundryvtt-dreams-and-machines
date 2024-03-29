@@ -2,44 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	/* Unset header styling added by Foundry */
-	h1, h2, h3 {
-		border-bottom: inherit;
-	}
-
-	h1 {
-		@apply text-2xl;
-	}
-
-	h2 {
-		@apply text-xl;
-	}
-
-	h3 {
-		@apply text-lg;
-	}
-
-	em {
-		@apply oblique;
-	}
-
-	button {
-		@apply flex;
-		@apply items-center;
-		@apply whitespace-nowrap;
-		@apply p-1;
-		@apply justify-center;
-		@apply text-black;
-		background-color: rgba(255, 255, 240, 0.8);
-	}
-
-	input::placeholder {
-		@apply text-black;
-		@apply opacity-40;
-	}
-}
-
 @layer utilities {
 	.oblique {
 		font-style: oblique 10deg;
@@ -73,10 +35,90 @@ body {
 	font-style: oblique 0deg 10deg;
 }
 
+button {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0.25rem;
+  justify-content: center;
+  color: black;
+  background-color: rgba(255, 255, 240, 0.8);
+}
+
+input::placeholder {
+  color: black;
+  opacity: 0.4;
+}
+
+h1, h2, h3 {
+  border-bottom: inherit;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+em {
+  font-style: oblique 10deg;
+}
+
 /** Minimum Sheet Sizes */
 .window-app.actor {
 	min-width: 600px;
 	min-height: 400px;
+}
+
+.window-app.actor img {
+	margin: -0.5rem;
+	width: 3.5rem;
+	height: 3.5rem;
+}
+
+.window-app.actor .header {
+	display: flex;
+	padding: 0.75rem;
+	align-items: center;
+	gap: 1rem;
+}
+
+.window-app.actor .header.character {
+	background-color: rgb(112 26 117);
+}
+
+.window-app.actor .header.major-npc {
+	background-color: #369488;
+}
+
+.window-app.actor .header.npc {
+	display: flex;
+	padding: 0.75rem;
+	align-items: center;
+	gap: 1rem;
+	background-color: rgb(147 51 234);
+}
+
+.window-app.actor .name-input {
+	color: #ffffff;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	text-transform: uppercase;
+	height: 100%;
+	border-width: 0;
+}
+
+.window-app.actor .name-input:focus {
+	text-transform: none;
 }
 
 .window-app.item {

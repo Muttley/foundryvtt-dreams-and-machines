@@ -1,13 +1,15 @@
 <form class="{{cssClass}} flex !flex-1 flex-col gap-1">
-	<div class="flex bg-fuchsia-900 w-full p-3 gap-4 items-center">
+	{{!-- <div class="flex bg-fuchsia-900 w-full p-3 gap-4 items-center"> --}}
+	<div class="header character">
 		<img
 			alt="{{ actor.name }}"
-			class="w-14 h-14 -m-2"
+			{{!-- class="w-14 h-14 -m-2" --}}
 			data-edit="img"
 			src="{{ actor.img }}"
 		/>
 		<input
-			class="!border-0 !text-white !text-3xl !h-full !font-roboto-flex uppercase focus:normal-case"
+			{{!-- class="!border-0 !text-white !text-3xl !h-full !font-roboto-flex uppercase focus:normal-case" --}}
+			class="name-input"
 			name="name"
 			type="text"
 			value="{{ actor.name }}"
