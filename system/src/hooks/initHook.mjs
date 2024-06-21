@@ -94,7 +94,7 @@ function registerActorSheets() {
  */
 function registerItemDataModels() {
 	CONFIG.Item.dataModels.archetype = itemDataModels.ArchetypeDataModel;
-	CONFIG.Item.dataModels.item = itemDataModels.ItemDataModel;
+	CONFIG.Item.dataModels.equipment = itemDataModels.EquipmentDataModel;
 	CONFIG.Item.dataModels.majorNPCAction = itemDataModels.MajorNPCActionDataModel;
 	CONFIG.Item.dataModels.origin = itemDataModels.OriginDataModel;
 	CONFIG.Item.dataModels.specialAbility = itemDataModels.SpecialAbilityDataModel;
@@ -124,7 +124,7 @@ function registerItemSheets() {
 	});
 
 	Items.registerSheet("dreams-and-machines", itemSheets.EquipmentSheet, {
-		types: ["item"],
+		types: ["equipment"],
 		makeDefault: true,
 	});
 

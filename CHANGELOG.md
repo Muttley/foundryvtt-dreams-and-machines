@@ -1,7 +1,8 @@
-# v1.2.0
+# v2.0.0
 
 ## Enhancements
 - [#3] Show release notes journal entries when a new world/version is first loaded
+- [#7] Add default item and actor icons and tokens
 
 ## Chores
 - [#2] Migrate to new home and build process

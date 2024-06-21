@@ -50,7 +50,7 @@ export default class DnMActorSheet extends ActorSheet {
 
 		new ContextMenu(/** @type {jQuery} */ html, '[data-menu="item"]', [
 			{
-				name: "Labels.Item.Edit",
+				name: "DNM.Labels.Item.Edit",
 				icon: '<i class="fas fa-pencil"></i>',
 				callback: async i => {
 					const uuid = i.data("uuid");
@@ -63,7 +63,7 @@ export default class DnMActorSheet extends ActorSheet {
 				},
 			},
 			{
-				name: "Labels.Item.Delete",
+				name: "DNM.Labels.Item.Delete",
 				icon: '<i class="fas fa-trash"></i>',
 				callback: async i => {
 					const uuid = i.data("uuid");

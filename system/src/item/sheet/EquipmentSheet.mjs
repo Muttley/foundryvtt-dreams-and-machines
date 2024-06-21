@@ -22,7 +22,7 @@ export default class EquipmentSheet extends DnMItemSheet {
 	static get defaultOptions() {
 		return {
 			...super.defaultOptions,
-			classes: ["dnm", "sheet", "item"],
+			classes: ["dnm", "sheet", "equipment"],
 		};
 	}
 

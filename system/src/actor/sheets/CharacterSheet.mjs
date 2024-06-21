@@ -85,9 +85,10 @@ export default class CharacterSheet extends DnMActorSheet {
 					})
 				)
 		);
+
 		const equipment = await Promise.all(
 			this.actor.items
-				.filter(i => i.type === "item")
+				.filter(i => i.type === "equipment")
 				.map(
 					/**
 					 * @param {DnMItem} item

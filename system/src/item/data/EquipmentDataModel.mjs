@@ -59,7 +59,7 @@ export function ItemQualities() {
  * @property {object} GLIF Details for the GLIF, if the item is in fact a GLIF.
  * @property {number} GLIF.complexity Complexity of the GLIF.
  */
-export default class ItemDataModel extends foundry.abstract.TypeDataModel {
+export default class EquipmentDataModel extends foundry.abstract.TypeDataModel {
 	/**
 	 * Utility for checking for the presence of qualities within Handlebars templates.
 	 *

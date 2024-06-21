@@ -98,7 +98,7 @@
 	"Item": {
 		"types": [
 			"archetype",
-			"item",
+			"equipment",
 			"majorNPCAction",
 			"origin",
 			"specialAbility",
@@ -126,7 +126,7 @@
 			"startingGear": [],
 			"startingCoin": 0
 		},
-		"item": {
+		"equipment": {
 			"templates": ["itemDescription"],
 			"techLevel": 0,
 			"value": 0,

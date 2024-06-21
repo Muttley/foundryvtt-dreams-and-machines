@@ -1,5 +1,5 @@
 import ItemDescription from "./templates/ItemDescription.mjs";
-import { ItemQualities } from "./ItemDataModel.mjs";
+import { ItemQualities } from "./EquipmentDataModel.mjs";
 
 /**
  * @typedef {WeaponDetails} WeaponDetailExpanded

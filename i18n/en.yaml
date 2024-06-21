@@ -109,7 +109,7 @@ TYPES.Actor.character: Player Character
 TYPES.Actor.majorNPC: Major NPC
 TYPES.Actor.npc: NPC
 TYPES.Item.archetype: Archetype
-TYPES.Item.item: Equipment
+TYPES.Item.equipment: Equipment
 TYPES.Item.majorNPCAction: Major NPC Action
 TYPES.Item.origin: Origin
 TYPES.Item.specialAbility: Special Ability
