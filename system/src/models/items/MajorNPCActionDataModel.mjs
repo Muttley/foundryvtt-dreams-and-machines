@@ -1,4 +1,4 @@
-import ItemDescription from "./templates/ItemDescription.mjs";
+import Description from "../_shared/Description.mjs";
 import { ItemQualities } from "./EquipmentDataModel.mjs";
 
 /**
@@ -39,7 +39,7 @@ export default class MajorNPCActionDataModel extends foundry.abstract.TypeDataMo
 		const fields = foundry.data.fields;
 
 		return {
-			...ItemDescription(),
+			...Description(),
 
 			skillTest: new fields.SchemaField({
 				attribute: new fields.StringField({

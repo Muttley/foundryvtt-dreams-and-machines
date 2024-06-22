@@ -1,4 +1,4 @@
-import ItemDescription from "./templates/ItemDescription.mjs";
+import Description from "../_shared/Description.mjs";
 
 /**
  * Data model representing Talents.
@@ -12,7 +12,7 @@ export default class TalentDataModel extends foundry.abstract.TypeDataModel {
 		const fields = foundry.data.fields;
 
 		return {
-			...ItemDescription(),
+			...Description(),
 
 			archetype: new fields.StringField({
 				initial: "",

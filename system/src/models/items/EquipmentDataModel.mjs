@@ -1,4 +1,4 @@
-import ItemDescription from "./templates/ItemDescription.mjs";
+import Description from "../_shared/Description.mjs";
 
 /**
  * @typedef {object} ItemQuality
@@ -100,7 +100,7 @@ export default class EquipmentDataModel extends foundry.abstract.TypeDataModel {
 		const fields = foundry.data.fields;
 
 		return {
-			...ItemDescription(),
+			...Description(),
 
 			techLevel: new fields.NumberField({
 				initial: 0,

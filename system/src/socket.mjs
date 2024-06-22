@@ -19,7 +19,7 @@ export const SocketOperation = {
 
 export default function listenOnSocket() {
 	game.socket.on(SOCKET_NAME, async payload => {
-		if (!dreams.MomentumTracker.instance) {
+		if (!dreams.apps.MomentumTracker.instance) {
 			return;
 		}
 
@@ -33,7 +33,7 @@ export default function listenOnSocket() {
 					return;
 				}
 
-				const momentum = dreams.MomentumTracker.instance.momentum;
+				const momentum = dreams.apps.MomentumTracker.instance.momentum;
 				if (momentum === 0) {
 					return;
 				}
@@ -44,7 +44,7 @@ export default function listenOnSocket() {
 					momentum - 1
 				);
 
-				dreams.MomentumTracker.forceRender();
+				dreams.apps.MomentumTracker.forceRender();
 
 				break;
 			}
@@ -58,7 +58,7 @@ export default function listenOnSocket() {
 					return;
 				}
 
-				const momentum = dreams.MomentumTracker.instance.momentum;
+				const momentum = dreams.apps.MomentumTracker.instance.momentum;
 				if (momentum === 6) {
 					return;
 				}
@@ -69,7 +69,7 @@ export default function listenOnSocket() {
 					momentum + 1
 				);
 
-				dreams.MomentumTracker.forceRender();
+				dreams.apps.MomentumTracker.forceRender();
 
 				break;
 			}

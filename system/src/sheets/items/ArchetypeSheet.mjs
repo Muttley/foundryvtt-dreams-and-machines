@@ -1,4 +1,4 @@
-import DnMItem from "../DnMItem.mjs";
+import DnMItem from "../../documents/DnMItem.mjs";
 import DnMItemSheet from "../DnMItemSheet.mjs";
 
 /**

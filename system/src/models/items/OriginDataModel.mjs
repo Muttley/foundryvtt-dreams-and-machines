@@ -1,4 +1,6 @@
-import ItemDescription from "./templates/ItemDescription.mjs";
+import Attributes from "../_shared/Attributes.mjs";
+import Description from "../_shared/Description.mjs";
+import Skills from "../_shared/Skills.mjs";
 
 /**
  * Data model representing an Origin that can be assigned to a character.
@@ -16,48 +18,16 @@ import ItemDescription from "./templates/ItemDescription.mjs";
  * @property {object} benefit Benefit provided by the origin
  * @property {string} benefit.name
  * @property {string} benefit.description
- * @property {string[]} archetypes A list of archetype Item UUIDs the character can choose from.
  */
 export default class OriginDataModel extends foundry.abstract.TypeDataModel {
-	/**
-	 * Utility method to retrieve the number of assigned archetypes in the template.
-	 */
-	get numArchetypes() {
-		return this.archetypes.length;
-	}
 
 	static defineSchema() {
 		const fields = foundry.data.fields;
 
 		return {
-			...ItemDescription(),
-
-			attributes: new fields.SchemaField({
-				might: new fields.NumberField({
-					initial: 8,
-					integer: true,
-					min: 0,
-					nullable: false,
-				}),
-				quickness: new fields.NumberField({
-					initial: 8,
-					integer: true,
-					min: 0,
-					nullable: false,
-				}),
-				insight: new fields.NumberField({
-					initial: 8,
-					integer: true,
-					min: 0,
-					nullable: false,
-				}),
-				resolve: new fields.NumberField({
-					initial: 8,
-					integer: true,
-					min: 0,
-					nullable: false,
-				}),
-			}),
+			...Attributes(),
+			...Skills(),
+			...Description(),
 
 			techLevel: new fields.NumberField({
 				initial: 1,
@@ -91,17 +61,6 @@ export default class OriginDataModel extends foundry.abstract.TypeDataModel {
 					nullable: false,
 				}),
 			}),
-
-			archetypes: new fields.ArrayField(
-				new fields.StringField({
-					initial: "",
-					nullable: false,
-				}),
-				{
-					initial: [],
-					nullable: false,
-				}
-			),
 		};
 	}
 }

@@ -1,5 +1,3 @@
-import DicePrompt from "../dice/DicePrompt.mjs";
-
 /**
  * Shared base class for all Actor Sheets.
  */
@@ -119,7 +117,7 @@ export default class DnMActorSheet extends ActorSheet {
 			item = await fromUuid(itemUuid);
 		}
 
-		DicePrompt.promptForRoll({
+		dreams.apps.DicePrompt.promptForRoll({
 			actor: this.actor,
 			attribute,
 			skill,

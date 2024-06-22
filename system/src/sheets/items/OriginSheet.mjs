@@ -1,4 +1,4 @@
-import DnMItem from "../DnMItem.mjs";
+import DnMItem from "../../documents/DnMItem.mjs";
 import DnMItemSheet from "../DnMItemSheet.mjs";
 
 /**
@@ -53,11 +53,8 @@ export default class OriginSheet extends DnMItemSheet {
 			this.system.benefit.description
 		);
 
-		const archetypes = await Promise.all(this.system.archetypes.map(i => fromUuid(i)));
-
 		return {
 			...(await super.getData(options)),
-			archetypes,
 			enrichedBenefitDescription,
 		};
 	}

@@ -1,4 +1,4 @@
-import ItemDescription from "./templates/ItemDescription.mjs";
+import Description from "../_shared/Description.mjs";
 // import Exhaustion from "../../actor/Exhaustion.mjs";
 
 /**
@@ -23,7 +23,7 @@ export default class TemperamentDataModel extends foundry.abstract.TypeDataModel
 		const fields = foundry.data.fields;
 
 		return {
-			...ItemDescription(),
+			...Description(),
 
 			spiritEffect: new fields.HTMLField({
 				initial: "",

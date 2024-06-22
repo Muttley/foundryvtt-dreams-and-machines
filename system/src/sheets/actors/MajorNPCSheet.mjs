@@ -1,5 +1,4 @@
 import DnMActorSheet from "../DnMActorSheet.mjs";
-import DicePrompt from "../../dice/DicePrompt.mjs";
 
 /**
  * Major NPC Sheet
@@ -94,7 +93,7 @@ export default class MajorNPCSheet extends DnMActorSheet {
 
 		// let skill = undefined;
 
-		DicePrompt.promptForRoll({
+		dreams.apps.DicePrompt.promptForRoll({
 			actor: this.actor,
 			attribute: actionSystem.skillTest.attribute,
 			skill: actionSystem.skillTest.skill,

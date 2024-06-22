@@ -1,4 +1,4 @@
-import ItemDescription from "./templates/ItemDescription.mjs";
+import Description from "../_shared/Description.mjs";
 
 /**
  * Data model representing Special Abilities.
@@ -12,7 +12,7 @@ export default class SpecialAbilityDataModel extends foundry.abstract.TypeDataMo
 		// const fields = foundry.data.fields;
 
 		return {
-			...ItemDescription(),
+			...Description(),
 		};
 	}
 }

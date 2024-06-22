@@ -1,4 +1,4 @@
-import Combat2d20 from "./combat.mjs";
+import Combat2d20 from "./Combat2d20.mjs";
 
 export default class CombatTracker2d20 extends CombatTracker {
 	static get defaultOptions() {

@@ -4,8 +4,8 @@
 	"description": "An unofficial system for playing Dreams and Machines from Modiphius Entertainment Ltd.",
 	"version": "1.2.0",
 	"compatibility": {
-		"minimum": 11,
-		"verified": 11
+		"minimum": 12,
+		"verified": 12
 	},
 	"authors": [
 		{

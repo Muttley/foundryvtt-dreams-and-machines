@@ -1,5 +1,5 @@
-import ItemDescription from "./templates/ItemDescription.mjs";
-import Skills from "../../actor/data/templates/Skills.mjs";
+import Description from "../_shared/Description.mjs";
+import Skills from "../_shared/Skills.mjs";
 
 /**
  * Data Model representing an Archetype that can be assigned to a character.
@@ -24,7 +24,7 @@ export default class ArchetypeDataModel extends foundry.abstract.TypeDataModel {
 		const fields = foundry.data.fields;
 
 		return {
-			...ItemDescription(),
+			...Description(),
 			...Skills(),
 
 			spirit: new fields.NumberField({

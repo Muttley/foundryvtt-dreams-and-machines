@@ -1,25 +1,26 @@
 import { DREAMS, SYSTEM_ID, SYSTEM_NAME } from "../config.mjs";
 
-import DnMActor from "../actor/DnMActor.mjs";
-import DnMItem from "../item/DnMItem.mjs";
+import DnMActor from "../documents/DnMActor.mjs";
+import DnMItem from "../documents/DnMItem.mjs";
 
-import * as actorDataModels from "../actor/data/_module.mjs";
-import * as actorSheets from "../actor/sheets/_module.mjs";
+import * as actorDataModels from "../models/actors/_module.mjs";
+import * as actorSheets from "../sheets/actors/_module.mjs";
 
-import * as itemDataModels from "../item/data/_module.mjs";
-import * as itemSheets from "../item/sheet/_module.mjs";
+import * as itemDataModels from "../models/items/_module.mjs";
+import * as itemSheets from "../sheets/items/_module.mjs";
 
-import { registerCombatTracker } from "../combat/combat-tracker.mjs";
+import { registerCombatTracker } from "../combat/CombatTracker2d20.mjs";
 import { registerFonts } from "../fonts.mjs";
 
+import DnMUtils from "../utils/DnMUtils.mjs";
 import Logger from "../utils/Logger.mjs";
 import MomentumTracker from "../momentumTracker/MomentumTracker.mjs";
-import DnMUtils from "../utils/DnMUtils.mjs";
 
 import registerSettings from "../settings.mjs";
 import registerTemplates from "../templates.mjs";
 
 import { DnMHooks } from "../system/DnMHooks.mjs";
+import DicePrompt from "../dice/DicePrompt.mjs";
 
 export async function initHook() {
 	console.debug(`${SYSTEM_NAME} | Running init hook`);
@@ -33,8 +34,11 @@ export async function initHook() {
 	// Add utility classes to the global game object so that they're more easily
 	// accessible in global contexts.
 	globalThis.dreams = {
+		apps: {
+			DicePrompt,
+			MomentumTracker,
+		},
 		logger: Logger,
-		MomentumTracker,
 		utils: DnMUtils,
 	};
 
@@ -60,7 +64,7 @@ function registerActorDataModels() {
 	CONFIG.Actor.dataModels.npc = actorDataModels.NPCDataModel;
 }
 
-export function registerActors() {
+function registerActors() {
 	CONFIG.Actor.documentClass = DnMActor;
 
 	registerActorDataModels();
@@ -105,7 +109,7 @@ function registerItemDataModels() {
 /**
  * Handles registration for the DnMItem class, sheets, all data models.
  */
-export function registerItems() {
+function registerItems() {
 	CONFIG.Item.documentClass = DnMItem;
 
 	registerItemDataModels();

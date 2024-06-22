@@ -1,5 +1,4 @@
 import DnMActorSheet from "../DnMActorSheet.mjs";
-import DicePrompt from "../../dice/DicePrompt.mjs";
 
 /**
  * NPC Sheet
@@ -52,7 +51,7 @@ export default class NPCSheet extends DnMActorSheet {
 			item = await fromUuid(itemUuid);
 		}
 
-		DicePrompt.promptForRoll({
+		dreams.apps.DicePrompt.promptForRoll({
 			actor: this.actor,
 			fixedTargetNumber: this.system.attribute.value,
 			fixedFocus: this.system.skill.value,
@@ -64,7 +63,7 @@ export default class NPCSheet extends DnMActorSheet {
 	 * Event Handler; Called when the user clicks to roll for the NPC's default attribute & skill.
 	 */
 	rollDefault() {
-		DicePrompt.promptForRoll({
+		dreams.apps.DicePrompt.promptForRoll({
 			actor: this.actor,
 			fixedTargetNumber: this.system.attribute.default,
 			fixedFocus: this.system.skill.default,
