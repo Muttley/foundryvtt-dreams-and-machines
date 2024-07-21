@@ -2,19 +2,6 @@
  * Shared base class for all Actor Sheets.
  */
 export default class DnMActorSheet extends ActorSheet {
-	/**
-	 * Convenience accessor for the actor's data model
-	 */
-	get system() {
-		return this.actor.system;
-	}
-
-	/**
-	 * @returns {DnMActor}
-	 */
-	get actor() {
-		return super.actor;
-	}
 
 	static get defaultOptions() {
 		return {
@@ -23,16 +10,16 @@ export default class DnMActorSheet extends ActorSheet {
 		};
 	}
 
+
+	get system() {
+		return this.actor.system;
+	}
+
+
 	get template() {
 		return `systems/dreams-and-machines/templates/actor/${this.actor.type}-sheet.hbs`;
 	}
 
-	getData(options = {}) {
-		return {
-			...super.getData(options),
-			system: this.system,
-		};
-	}
 
 	/**
 	 * @param {JQuery} html
@@ -43,10 +30,26 @@ export default class DnMActorSheet extends ActorSheet {
 		html.find('[data-action="open-sheet"]').on("click", this.openSheet.bind(this));
 		html.find("[data-action=roll]").on("click", this.promptForRoll.bind(this));
 
-		html.find("[data-action=add-trait]").on("click", this.addTrait.bind(this));
-		html.find("[data-action=delete-trait]").on("click", this.deleteTrait.bind(this));
+		html.find("[data-action=add-truth]").on("click", this.onTruthAdd.bind(this));
 
-		new ContextMenu(/** @type {jQuery} */ html, '[data-menu="item"]', [
+		new ContextMenu(html, '[data-menu="truth"]', [
+			{
+				icon: '<i class="fas fa-pencil"></i>',
+				name: "DNM.Labels.Actor.EditTruth",
+				callback: t => {
+					this.onTruthEdit(t.data());
+				},
+			},
+			{
+				icon: '<i class="fas fa-trash"></i>',
+				name: "DNM.Labels.Actor.DeleteTruth",
+				callback: t => {
+					this.onTruthDelete(t.data());
+				},
+			},
+		]);
+
+		new ContextMenu(html, '[data-menu="item"]', [
 			{
 				name: "DNM.Labels.Item.Edit",
 				icon: '<i class="fas fa-pencil"></i>',
@@ -76,30 +79,85 @@ export default class DnMActorSheet extends ActorSheet {
 		]);
 	}
 
-	async addTrait() {
-		await this.actor.update({
-			"system.traits": [
-				// Object.values is a workaround for Foundry trying to turn this into an object.
-				...Object.values(this.system.traits),
-				"New Trait",
-			],
-		});
+
+	getData(options = {}) {
+		const context = super.getData(options);
+
+		context.system = this.system;
+
+		// Attribute Data
+		context.attributes = [];
+		for (const attribute of Object.keys(CONFIG.DREAMS.ATTRIBUTES)) {
+			context.attributes.push({
+				key: attribute,
+				name: CONFIG.DREAMS.ATTRIBUTES[attribute],
+				value: this.system.attributes[attribute].value,
+			});
+		}
+		context.attributes.sort((a, b) => a.name.localeCompare(b.name));
+
+		// Skills Data
+		context.skills = [];
+		for (const skill of Object.keys(CONFIG.DREAMS.SKILLS)) {
+			context.skills.push({
+				key: skill,
+				name: CONFIG.DREAMS.SKILLS[skill],
+				value: this.system.skills[skill],
+			});
+		}
+		context.skills.sort((a, b) => a.name.localeCompare(b.name));
+
+		return context;
 	}
+
+
+	async onTruthAdd(event) {
+		event.preventDefault();
+		const actorUuid = this.actor.uuid;
+
+		dreams.dialogs.DialogEditTruth.createDialog({actorUuid});
+	}
+
+
+	async onTruthDelete(data) {
+		const currentTruths = foundry.utils.duplicate(this.actor.system.truths);
+		currentTruths.splice(data.truthIndex, 1);
+
+		this.actor.update({"system.truths": currentTruths});
+	}
+
+
+	async onTruthEdit(data) {
+		const actorUuid = this.actor.uuid;
+
+		const currentTruths = foundry.utils.duplicate(this.actor.system.truths);
+
+		const index = data.truthIndex;
+		const truth = currentTruths[index];
+
+		dreams.dialogs.DialogEditTruth.createDialog({actorUuid, index, truth});
+	}
+
 
 	/**
 	 * @param {MouseEvent} event
 	 */
-	async deleteTrait(event) {
+	async openSheet(event) {
 		const target = $(event.currentTarget);
-		const index = target.data("index");
 
-		const traits = Object.values(this.system.traits);
-		traits.splice(index, 1);
+		const uuid = target.data("uuid");
+		if (!uuid) {
+			return;
+		}
 
-		await this.actor.update({
-			"system.traits": traits,
-		});
+		const item = await fromUuid(uuid);
+		if (!item) {
+			return;
+		}
+
+		await item?.sheet?.render(true);
 	}
+
 
 	/**
 	 * @param {MouseEvent} event
@@ -125,22 +183,4 @@ export default class DnMActorSheet extends ActorSheet {
 		});
 	}
 
-	/**
-	 * @param {MouseEvent} event
-	 */
-	async openSheet(event) {
-		const target = $(event.currentTarget);
-
-		const uuid = target.data("uuid");
-		if (!uuid) {
-			return;
-		}
-
-		const item = await fromUuid(uuid);
-		if (!item) {
-			return;
-		}
-
-		await item?.sheet?.render(true);
-	}
 }

@@ -82,6 +82,9 @@ export default class Combat2d20 extends Combat {
 			tokenId: c ? c.tokenId : null,
 		};
 
+		// One-time initialization of the previous state
+		if (!this.previous) this.previous = this.current;
+
 		// Return the array of prepared turns
 		return (this.turns = turns);
 	}

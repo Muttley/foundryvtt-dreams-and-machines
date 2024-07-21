@@ -1,6 +1,6 @@
 import Attributes from "../_shared/Attributes.mjs";
 import Skills from "../_shared/Skills.mjs";
-import Traits from "../_shared/Traits.mjs";
+import Truths from "../_shared/Truths.mjs";
 
 /**
  * Data Model representing a Player Character
@@ -27,7 +27,12 @@ export default class CharacterDataModel extends foundry.abstract.TypeDataModel {
 		return {
 			...Attributes(),
 			...Skills(),
-			...Traits(),
+			...Truths(),
+
+			attitude: new fields.StringField({
+				initial: "",
+				nullable: false,
+			}),
 
 			bond: new fields.StringField({
 				initial: "",
@@ -40,11 +45,20 @@ export default class CharacterDataModel extends foundry.abstract.TypeDataModel {
 				nullable: false,
 			}),
 
-			techLevel: new fields.NumberField({
+			drive: new fields.StringField({
+				initial: "",
+				nullable: false,
+			}),
+
+			goal: new fields.StringField({
+				initial: "",
+				nullable: false,
+			}),
+
+			growth: new fields.NumberField({
 				initial: 0,
 				integer: true,
 				nullable: false,
-				min: 0,
 			}),
 
 			spirit: new fields.SchemaField({
@@ -68,17 +82,11 @@ export default class CharacterDataModel extends foundry.abstract.TypeDataModel {
 				nullable: false,
 			}),
 
-			goal: new fields.StringField({
-				initial: "",
+			techLevel: new fields.NumberField({
+				initial: 0,
+				integer: true,
 				nullable: false,
-			}),
-			attitude: new fields.StringField({
-				initial: "",
-				nullable: false,
-			}),
-			drive: new fields.StringField({
-				initial: "",
-				nullable: false,
+				min: 0,
 			}),
 		};
 	}

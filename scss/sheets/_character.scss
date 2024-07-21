@@ -1,0 +1,241 @@
+.dnm.sheet.actor.character {
+	min-width: 830px;
+	min-height: 400px;
+
+	input[type="number"] {
+		font-weight: 600;
+		background: none;
+		font-size: 2rem;
+		line-height: 2.25rem;
+		text-align: center;
+		padding: 0.5rem;
+		border: none;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	.rollable {
+		display: grid;
+		grid-template-columns: minmax(100px, 1fr);
+		gap: 0.5rem;
+		background-color: $c-offwhite;
+	}
+
+	.rollable-header {
+		padding-top: 4px;
+		color: $c-character-primary;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.attributes {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+
+	.meta-currencies {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 0.5rem;
+
+		.spirit {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-row: span 2;
+
+			.spirit-value {
+				display: grid;
+				gap: 0.5rem;
+				padding: 4px;
+				background-color: $c-offwhite;
+
+				.spirit-value-header {
+					color: $c-character-primary;
+					text-align: center;
+					text-transform: uppercase;
+				}
+			}
+		}
+
+		.coin {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			grid-template-rows: min-content;
+			grid-column: span 3;
+
+			input[type="number"] {
+				@include p-reset;
+				font-weight: 600;
+				background: $c-offwhite;
+				font-size: 1rem;
+				line-height: 1rem;
+				text-align: center;
+				border: none;
+			}
+		}
+	}
+
+	.sheet-header {
+		display: grid;
+		grid-template-columns: min-content 1fr;
+		padding: 0.25rem;
+		align-items: center;
+		gap: 1rem;
+		background-color: $c-character-primary;
+
+		img.profile {
+			max-width: 48px;
+			height: 48px;
+		}
+
+	}
+
+	.sheet-body {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.5rem;
+
+		@include p-reset;
+		padding: 0.25rem;
+	}
+
+	.truths {
+		display: grid;
+		grid-column: span 3;
+		gap: 0.5rem;
+
+		align-content: baseline;
+
+		.custom-truths {
+			background-color: $c-offwhite;
+
+			.truth-edit {
+				margin: 2px;
+				padding: 2px;
+				text-transform: uppercase;
+				font-weight: bold;
+				text-align: center;
+
+				&:hover {
+					color: $c-character-primary;
+					background-color: $c-character-primary-highlight;
+					cursor: pointer;
+				}
+			}
+
+			.add-truth-row {
+				color: $c-character-primary;
+				text-align: right;
+			}
+		}
+
+	}
+
+	.background {
+		display: grid;
+		grid-template-columns: 1.5fr 2.5fr;
+		gap: 0.5rem;
+
+		align-items: center;
+		text-align: center;
+
+		a,
+		input[type="text"] {
+			display: flex;
+			text-transform: uppercase;
+			font-weight: 600;
+			color: black;
+			background-color: rgba(255 255 255 / 0.75);
+			border-color: rgba(0 0 0 / 0.5);
+			border-style: solid;
+			border-width: 1px;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			min-height: 1.75rem;
+			height: 100%;
+
+		}
+
+		input[type="text"]:focus {
+			text-transform: none;
+		}
+
+		.background-header {
+			display: flex;
+			height: 100%;
+			font-weight: 600;
+
+			padding-left: 0.25rem;
+			padding-right: 0.25rem;
+
+			align-items: center;
+
+			background-color: $c-offwhite;
+			color: $c-character-primary;
+
+			text-transform: uppercase;
+		}
+
+		.placeholder {
+			display: flex;
+			color: $c-character-primary;
+			background-color: rgba(255 255 255 / 0.75);
+			font-size: 0.75rem;
+			line-height: 1;
+			// text-align: center;
+			justify-content: center;
+			align-items: center;
+			font-style: oblique 10deg;
+			width: 100%;
+			min-height: 1.75rem;
+			height: 100%;
+		}
+	}
+
+	.label {
+		display: flex;
+		width: 100%;
+		font-weight: 600;
+
+		padding-left: 0.25rem;
+		padding-right: 0.25rem;
+
+		align-items: center;
+		justify-content: center;
+
+		color: white;
+		background-color: $c-character-primary;
+
+		text-transform: uppercase;
+	}
+
+	.name-input {
+		color: #ffffff;
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+		text-transform: uppercase;
+		height: 100%;
+		border-width: 0;
+
+		&:focus {
+			text-transform: none;
+		}
+	}
+
+	.section-box {
+		display: grid;
+	}
+
+	.skills {
+		display: grid;
+		row-gap: 0.5rem;
+	}
+
+	.growth,
+	.supply,
+	.tech-level {
+		display: grid;
+		background-color: $c-offwhite;
+	}
+}

@@ -3,6 +3,8 @@ import { DREAMS, SYSTEM_ID, SYSTEM_NAME } from "../config.mjs";
 import DnMActor from "../documents/DnMActor.mjs";
 import DnMItem from "../documents/DnMItem.mjs";
 
+import * as dialogs from "../dialogs/_module.mjs";
+
 import * as actorDataModels from "../models/actors/_module.mjs";
 import * as actorSheets from "../sheets/actors/_module.mjs";
 
@@ -11,6 +13,7 @@ import * as itemSheets from "../sheets/items/_module.mjs";
 
 import { registerCombatTracker } from "../combat/CombatTracker2d20.mjs";
 import { registerFonts } from "../fonts.mjs";
+import { registerHandlebarsHelpers } from "../handlebars.mjs";
 
 import DnMUtils from "../utils/DnMUtils.mjs";
 import Logger from "../utils/Logger.mjs";
@@ -38,6 +41,7 @@ export async function initHook() {
 			DicePrompt,
 			MomentumTracker,
 		},
+		dialogs,
 		logger: Logger,
 		utils: DnMUtils,
 	};
@@ -50,6 +54,7 @@ export async function initHook() {
 	registerCombatTracker();
 
 	registerFonts();
+	registerHandlebarsHelpers();
 	registerTemplates();
 
 	DnMHooks.attach();

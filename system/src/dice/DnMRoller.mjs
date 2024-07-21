@@ -42,7 +42,7 @@ export default class DnMRoller {
 		const targetNumber = fixedTargetNumber ?? attribute.value;
 
 		const roll = new Roll(`${numDice}d20`);
-		await roll.evaluate({ async: true });
+		await roll.evaluate();
 		const result = this.parseRoll({
 			roll,
 			skillValue: fixedFocus ?? skill?.value ?? 1,
@@ -67,7 +67,6 @@ export default class DnMRoller {
 			speaker: { actor: actor?.id },
 			rollMode: game.settings.get("core", "rollMode"),
 			content: template,
-			type: CONST.CHAT_MESSAGE_TYPES.ROLL,
 			roll,
 		});
 	}

@@ -1,0 +1,18 @@
+$columns: 6;
+
+%grid-styles {
+	@include p-reset;
+	display: grid;
+	column-gap: 4px;
+}
+
+@mixin grid-x-columns {
+	@for $i from 1 through $columns {
+		.grid-#{$i}-columns {
+			@extend %grid-styles;
+			grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+		}
+	}
+}
+
+@include grid-x-columns;

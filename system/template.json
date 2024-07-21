@@ -43,16 +43,20 @@
 			},
 			"traits": {
 				"traits": []
+			},
+			"truths": {
+				"truths": []
 			}
 		},
 		"character": {
 			"templates": [
 				"attributes",
 				"skills",
-				"traits"
+				"truths"
 			],
 			"bond": "",
 			"coin": 0,
+			"growth": 0,
 			"techLevel": 1,
 			"spirit": {
 				"value": 1,

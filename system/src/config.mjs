@@ -3,6 +3,13 @@ export const SYSTEM_NAME = "Dreams and Machines";
 
 export const DREAMS = {};
 
+DREAMS.ATTRIBUTES = {
+	insight: "DNM.Attributes.Insight",
+	might: "DNM.Attributes.Might",
+	quickness: "DNM.Attributes.Quickness",
+	resolve: "DNM.Attributes.Resolve",
+};
+
 DREAMS.EXHAUSTION = {
 	Breathless: "DNM.Labels.Exhaustion.Breathless",
 	Confused: "DNM.Labels.Exhaustion.Confused",
@@ -12,4 +19,14 @@ DREAMS.EXHAUSTION = {
 
 DREAMS.JOURNAL_UUIDS = {
 	releaseNotes: "Compendium.dreams-and-machines.system_documentation.JournalEntry.8mzM4axnEkXJTu6s",
+};
+
+DREAMS.SKILLS = {
+	fight: "DNM.Skills.Fight",
+	move: "DNM.Skills.Move",
+	operate: "DNM.Skills.Operate",
+	sneak: "DNM.Skills.Sneak",
+	study: "DNM.Skills.Study",
+	survive: "DNM.Skills.Survive",
+	talk: "DNM.Skills.Talk",
 };

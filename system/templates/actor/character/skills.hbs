@@ -1,0 +1,34 @@
+<div class="skills">
+	<span class="label">
+		{{localize "DNM.Labels.Actor.Skills" }}
+	</span>
+
+	{{#each skills}}
+		{{> skillBlock
+			key=this.key
+			name=this.name
+			value=this.value
+		}}
+	{{/each}}
+</div>
+
+{{#*inline "skillBlock"}}
+	<div class="rollable">
+		<a
+			class="rollable-header"
+			data-action="roll"
+			data-skill="{{key}}"
+		>
+			<span>
+				<i class="fas fa-dice-d20"></i>
+				{{name}}
+			</span>
+		</a>
+		<input
+			type="number"
+			name="system.skills.{{key}}"
+			value="{{value}}"
+			min="0"
+		/>
+	</div>
+{{/inline}}

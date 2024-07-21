@@ -117,7 +117,7 @@ export default class MomentumTracker extends Application {
 				actor: game.user.character?.id,
 			},
 			content: chatTemplate,
-			type: CONST.CHAT_MESSAGE_TYPES.OOC,
+			type: CONST.CHAT_MESSAGE_STYLES.OOC,
 		});
 	}
 
@@ -148,7 +148,7 @@ export default class MomentumTracker extends Application {
 				actor: game.user.character?.id,
 			},
 			content: chatTemplate,
-			type: CONST.CHAT_MESSAGE_TYPES.OOC,
+			type: CONST.CHAT_MESSAGE_STYLES.OOC,
 		});
 	}
 
@@ -174,7 +174,7 @@ export default class MomentumTracker extends Application {
 				actor: game.user.character?.id,
 			},
 			content: chatTemplate,
-			type: CONST.CHAT_MESSAGE_TYPES.OOC,
+			type: CONST.CHAT_MESSAGE_STYLES.OOC,
 		});
 	}
 

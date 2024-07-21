@@ -1,0 +1,34 @@
+<div class="attributes">
+	<span class="label" style="grid-column: span 4;">
+		{{localize "DNM.Labels.Actor.Attributes" }}
+	</span>
+
+	{{#each attributes}}
+		{{> attributeBlock
+			key=this.key
+			name=this.name
+			value=this.value
+		}}
+	{{/each}}
+</div>
+
+{{#*inline "attributeBlock"}}
+	<div class="rollable">
+		<a
+			class="rollable-header"
+			data-action="roll"
+			data-attribute="{{key}}"
+		>
+			<span>
+				<i class="fas fa-dice-d20"></i>
+				{{fromConfig "ATTRIBUTES" key}}
+			</span>
+		</a>
+		<input
+			type="number"
+			name="system.attributes.{{key}}.value"
+			value="{{value}}"
+			min="0"
+		/>
+	</div>
+{{/inline}}

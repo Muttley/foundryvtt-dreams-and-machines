@@ -6,7 +6,7 @@ import { deleteAsync } from "del";
 const sass = gulpSass(dartSass);
 
 const CSS_DST_PATH  = ["./system/css"];
-const SCSS_SRC_PATH = ["./scss/fallout.scss"];
+const SCSS_SRC_PATH = ["./scss/dreams-and-machines.scss"];
 const SCSS_WATCH_PATHS = ["./scss/**/*.scss"];
 
 function cleanupCssFiles() {

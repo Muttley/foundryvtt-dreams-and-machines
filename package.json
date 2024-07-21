@@ -11,13 +11,13 @@
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^15.2.3",
 		"@tailwindcss/container-queries": "^0.1.1",
-		"@tailwindcss/typography": "^0.5.10",
+		"@tailwindcss/typography": "^0.5.13",
 		"chalk": "^5.3.0",
 		"classic-level": "^1.4.1",
 		"del": "^7.1.0",
-		"glob": "^10.3.10",
-		"gulp": "^4.0.2",
-		"gulp-eslint-new": "^1.9.1",
+		"glob": "^11.0.0",
+		"gulp": "^5.0.0",
+		"gulp-eslint-new": "^2.2.0",
 		"gulp-if": "^3.0.0",
 		"gulp-sass": "^5.1.0",
 		"gulp-yaml": "^2.0.4",
@@ -27,9 +27,10 @@
 		"markdown": "^0.5.0",
 		"merge-stream": "^2.0.0",
 		"nedb-promises": "^6.2.3",
-		"rollup": "^4.12.0",
-		"tailwindcss": "^3.4.1",
-		"yaml": "^2.4.0",
+		"rollup": "^4.19.0",
+		"sass": "^1.77.8",
+		"tailwindcss": "^3.4.6",
+		"yaml": "^2.4.5",
 		"yargs": "^17.7.2"
 	},
 	"scripts": {
@@ -41,6 +42,6 @@
 		"lang": "gulp compileLang",
 		"lint": "gulp lintJs",
 		"packs": "gulp compilePacks",
-		"tailwind": "tailwindcss -i style/main.css -o system/css/dreams-and-machines.css"
+		"tailwind": "tailwindcss -i style/main.css -o system/css/legacy.css"
 	}
 }

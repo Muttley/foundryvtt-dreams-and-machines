@@ -1,0 +1,80 @@
+<div class="meta-currencies">
+	<div class="spirit">
+		<span class="label" style="grid-column: span 2;">
+			{{localize "DNM.Labels.Actor.SpiritPool"}}
+		</span>
+		<label class="spirit-value">
+			<span class="spirit-value-header">
+				{{localize "DNM.Labels.Actor.CurrentShort"}}
+			</span>
+			<input
+				data-dtype="Number"
+				max="{{system.spirit.max}}"
+				min="0"
+				name="system.spirit.value"
+				type="number"
+				value="{{system.spirit.value}}"
+			/>
+		</label>
+		<label class="spirit-value">
+			<span class="spirit-value-header">
+				{{localize "DNM.Labels.Max"}}
+			</span>
+			<input
+				data-dtype="Number"
+				min="0"
+				name="system.spirit.max"
+				type="number"
+				value="{{system.spirit.max}}"
+			/>
+		</label>
+	</div>
+
+	<div class="coin">
+		<span class="label">
+			{{localize "DNM.Labels.Actor.Coin"}}
+		</span>
+		<input
+			min="0"
+			name="system.coin"
+			type="number"
+			value="{{ system.coin }}"
+		/>
+	</div>
+
+	<div class="tech-level">
+		<span class="label">
+			{{localize "DNM.Labels.TechLevel"}}
+		</span>
+		<input
+			type="number"
+			name="system.techLevel"
+			value="{{system.techLevel}}"
+			min="0"
+		/>
+	</div>
+
+	<div class="supply">
+		<span class="label">
+			{{localize "DNM.Labels.Actor.Supply"}}
+		</span>
+		<input
+			type="number"
+			name="system.supplyPoints"
+			value="{{ system.supplyPoints }}"
+			min="0"
+		/>
+	</div>
+
+	<div class="growth">
+		<span class="label">
+			{{localize "DNM.Labels.Actor.Growth"}}
+		</span>
+		<input
+			type="number"
+			name="system.growth"
+			value="{{ system.growth }}"
+			min="0"
+		/>
+	</div>
+</div>

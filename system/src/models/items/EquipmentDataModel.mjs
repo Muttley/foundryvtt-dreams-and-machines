@@ -61,7 +61,8 @@ export function ItemQualities() {
  */
 export default class EquipmentDataModel extends foundry.abstract.TypeDataModel {
 	/**
-	 * Utility for checking for the presence of qualities within Handlebars templates.
+	 * Utility for checking for the presence of qualities within Handlebars
+	 * templates.
 	 *
 	 * @returns {boolean} Whether the Item has any Qualities in its list.
 	 */

@@ -4,6 +4,14 @@ import DnMActorSheet from "../DnMActorSheet.mjs";
  * Player Character sheet
  */
 export default class CharacterSheet extends DnMActorSheet {
+
+	static get defaultOptions() {
+		return {
+			...super.defaultOptions,
+			classes: ["dnm", "sheet", "actor", "character"],
+		};
+	}
+
 	/** @type {DnMItem|undefined} **/
 	get archetype() {
 		return this.actor.items.find(i => i.type === "archetype");

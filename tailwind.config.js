@@ -10,27 +10,20 @@ module.exports = {
 	theme: {
 		extend: {
 			borderWidth: {
-				1: "1px",
-			},
-			fontFamily: {
-				"roboto-flex": "'Roboto Flex', sans-serif",
+				// 1: "1px",
 			},
 			minHeight: {
-				10: "10rem",
-				15: "15rem",
-				20: "20rem",
+				// 10: "10rem",
+				// 15: "15rem",
+				// 20: "20rem",
 			},
 			gridRow: {
-				"span-7": "span 7 / span 7",
+				// "span-7": "span 7 / span 7",
 			},
-		},
-		fontFamily: {
-			body: ["Roboto Flex", "sans-serif"],
-			sans: ["Roboto Flex", "sans-serif"],
-		},
+		}
 	},
 	plugins: [
-		require("@tailwindcss/container-queries"),
-		require("@tailwindcss/typography"),
+		// require("@tailwindcss/container-queries"),
+		// require("@tailwindcss/typography"),
 	],
 };
