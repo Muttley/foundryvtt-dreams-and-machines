@@ -6,27 +6,16 @@ This community contributed and maintained system for playing the [Dreams and Mac
 
 Any copyright assets included in the system are used with the explicit consent of [Modiphius Entertainment][3]. The system developers hold no claim to these underlying copyrighted assets.
 
-## Trello Board
-For an overview of in-progress tasks, see the [Project's Trello Board](https://trello.com/b/qr6yQfIl/foundry-dreams-and-machines).
+# Community Contributions
 
-## Building
-The only pre-processing done in this project is Tailwind CSS.
+Code and content contributions are welcome. Please feel free to submit issues to the [issue tracker](https://github.com/Muttley/foundryvtt-dreams-and-machines/issues) or submit merge requests for code changes.
 
-```sh
-# Install Tailwind & plugins
-yarn install
-
-# Build CSS
-yarn build
-
-# Optionally auto-build CSS during development
-yarn build --watch
-```
+Details for how to get started hacking on the system can be found in the [Wiki](https://github.com/Muttley/foundryvtt-dreams-and-machines/wiki)
 
 ## Licenses
 The code for this system is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE) license.
 
-#### FontAwesome
+### FontAwesome
 
 > **License:** [Proprietary](https://fontawesome.com/license)
 >
@@ -40,7 +29,7 @@ The code for this system is licensed under the [Creative Commons Attribution-Sha
 > 1. Contributors should not make use of FontAwesome Pro icons in the code they contribute to the project (because FontAwesome licenses are based on individual seats) unless they have a seat on a FontAwesome Pro license.
 > 2. If you fork this project, you are responsible for either removing all uses of FontAwesome Pro icons, or purchasing an appropriate license.
 
-#### Sheet Background Image
+### Sheet Background Image
 > **License:** [Pexels License](https://www.pexels.com/license/)
 >
 > The [image](images/dnm-bg.jpg) used for sheet backgrounds is modified (mostly just lightened, tiled, shrunk, and color-tweaked) from "[Close-up Photo of Gray Wall](https://www.pexels.com/photo/close-up-photo-of-gray-wall-2768398/)" by Milo Textures on Pexels.
