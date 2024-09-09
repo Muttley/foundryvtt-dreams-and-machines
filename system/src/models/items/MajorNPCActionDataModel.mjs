@@ -1,4 +1,4 @@
-import Description from "../_shared/Description.mjs";
+import Description from "../_types/Description.mjs";
 import { ItemQualities } from "./EquipmentDataModel.mjs";
 
 /**

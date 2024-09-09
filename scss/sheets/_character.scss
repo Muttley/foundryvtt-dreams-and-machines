@@ -99,16 +99,18 @@
 		padding: 0.25rem;
 	}
 
+	.goals,
 	.truths {
 		display: grid;
-		grid-column: span 3;
 		gap: 0.5rem;
 
 		align-content: baseline;
 
+		.custom-goals,
 		.custom-truths {
 			background-color: $c-offwhite;
 
+			.goal-edit,
 			.truth-edit {
 				margin: 2px;
 				padding: 2px;
@@ -123,12 +125,17 @@
 				}
 			}
 
+			.add-goal-row,
 			.add-truth-row {
 				color: $c-character-primary;
 				text-align: right;
 			}
 		}
 
+	}
+
+	.goals {
+		padding-top: 0.5em;
 	}
 
 	.background {
@@ -161,22 +168,6 @@
 			text-transform: none;
 		}
 
-		.background-header {
-			display: flex;
-			height: 100%;
-			font-weight: 600;
-
-			padding-left: 0.25rem;
-			padding-right: 0.25rem;
-
-			align-items: center;
-
-			background-color: $c-offwhite;
-			color: $c-character-primary;
-
-			text-transform: uppercase;
-		}
-
 		.placeholder {
 			display: flex;
 			color: $c-character-primary;
@@ -191,6 +182,27 @@
 			min-height: 1.75rem;
 			height: 100%;
 		}
+	}
+
+	.background-header,
+	.goal-header {
+		display: flex;
+		height: 100%;
+		font-weight: 600;
+
+		padding-left: 0.25rem;
+		padding-right: 0.25rem;
+
+		align-items: center;
+
+		background-color: $c-offwhite;
+		color: $c-character-primary;
+
+		text-transform: uppercase;
+	}
+
+	.goal-header {
+		height: unset;
 	}
 
 	.label {

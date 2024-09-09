@@ -1,4 +1,4 @@
-import Description from "../_shared/Description.mjs";
+import Description from "../_types/Description.mjs";
 
 /**
  * Data model representing Special Abilities.

@@ -1,24 +1,25 @@
-import Attributes from "../_shared/Attributes.mjs";
-import Skills from "../_shared/Skills.mjs";
-import Truths from "../_shared/Truths.mjs";
+import Attributes from "../_types/Attributes.mjs";
+import Goals from "../_types/Goals.mjs";
+import Skills from "../_types/Skills.mjs";
+import Truths from "../_types/Truths.mjs";
 
 /**
  * Data Model representing a Player Character
  *
  * @mixes {Attributes}
+ * @mixes {Goals}
  * @mixes {Skills}
  * @mixes {Traits}
  *
+ * @property {string} attitude
  * @property {string} bond
  * @property {number} coin
- * @property {number} techLevel
+ * @property {string} drive
  * @property {object} spirit
  * @property {number} spirit.value
  * @property {number} spirit.max
  * @property {number} supplyPoints
- * @property {string} goal
- * @property {string} attitude
- * @property {string} drive
+ * @property {number} techLevel
  */
 export default class CharacterDataModel extends foundry.abstract.TypeDataModel {
 	static defineSchema() {
@@ -26,6 +27,7 @@ export default class CharacterDataModel extends foundry.abstract.TypeDataModel {
 
 		return {
 			...Attributes(),
+			...Goals(),
 			...Skills(),
 			...Truths(),
 
@@ -46,11 +48,6 @@ export default class CharacterDataModel extends foundry.abstract.TypeDataModel {
 			}),
 
 			drive: new fields.StringField({
-				initial: "",
-				nullable: false,
-			}),
-
-			goal: new fields.StringField({
 				initial: "",
 				nullable: false,
 			}),

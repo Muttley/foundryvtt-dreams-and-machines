@@ -30,7 +30,25 @@ export default class DnMActorSheet extends ActorSheet {
 		html.find('[data-action="open-sheet"]').on("click", this.openSheet.bind(this));
 		html.find("[data-action=roll]").on("click", this.promptForRoll.bind(this));
 
+		html.find("[data-action=add-goal]").on("click", this.onGoalAdd.bind(this));
 		html.find("[data-action=add-truth]").on("click", this.onTruthAdd.bind(this));
+
+		new ContextMenu(html, '[data-menu="goal"]', [
+			{
+				icon: '<i class="fas fa-pencil"></i>',
+				name: "DNM.Labels.Actor.EditGoal",
+				callback: t => {
+					this.onGoalEdit(t.data());
+				},
+			},
+			{
+				icon: '<i class="fas fa-trash"></i>',
+				name: "DNM.Labels.Actor.DeleteGoal",
+				callback: t => {
+					this.onGoalDelete(t.data());
+				},
+			},
+		]);
 
 		new ContextMenu(html, '[data-menu="truth"]', [
 			{
@@ -111,6 +129,49 @@ export default class DnMActorSheet extends ActorSheet {
 	}
 
 
+	async onGoalAdd(event) {
+		event.preventDefault();
+
+		const data = event.currentTarget.dataset;
+
+		const actorUuid = this.actor.uuid;
+		const type = data.type;
+
+		dreams.dialogs.DialogEditGoal.createDialog({actorUuid, type});
+	}
+
+
+	async onGoalDelete(data) {
+		const index = data.index;
+		const type = data.type;
+
+		const currentValues = foundry.utils.duplicate(
+			this.actor.system.goals[type]
+		);
+		currentValues.splice(index, 1);
+
+		const updateData = {};
+		updateData[`system.goals.${type}`] = currentValues;
+
+		this.actor.update(updateData);
+	}
+
+
+	async onGoalEdit(data) {
+		const actorUuid = this.actor.uuid;
+
+		const index = data.index;
+		const type = data.type;
+
+		const currentValues = foundry.utils.duplicate(
+			this.actor.system.goals[type]
+		);
+
+		const value = currentValues[index];
+
+		dreams.dialogs.DialogEditGoal.createDialog({actorUuid, type, index, value});
+	}
+
 	async onTruthAdd(event) {
 		event.preventDefault();
 		const actorUuid = this.actor.uuid;
@@ -120,22 +181,22 @@ export default class DnMActorSheet extends ActorSheet {
 
 
 	async onTruthDelete(data) {
-		const currentTruths = foundry.utils.duplicate(this.actor.system.truths);
-		currentTruths.splice(data.truthIndex, 1);
+		const currentValues = foundry.utils.duplicate(this.actor.system.truths);
+		currentValues.splice(data.index, 1);
 
-		this.actor.update({"system.truths": currentTruths});
+		this.actor.update({"system.truths": currentValues});
 	}
 
 
 	async onTruthEdit(data) {
 		const actorUuid = this.actor.uuid;
 
-		const currentTruths = foundry.utils.duplicate(this.actor.system.truths);
+		const currentValues = foundry.utils.duplicate(this.actor.system.truths);
 
-		const index = data.truthIndex;
-		const truth = currentTruths[index];
+		const index = data.index;
+		const value = currentValues[index];
 
-		dreams.dialogs.DialogEditTruth.createDialog({actorUuid, index, truth});
+		dreams.dialogs.DialogEditTruth.createDialog({actorUuid, index, value});
 	}
 
 

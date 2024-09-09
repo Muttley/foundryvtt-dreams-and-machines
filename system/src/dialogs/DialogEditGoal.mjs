@@ -1,14 +1,20 @@
-export default class DialogEditTruth extends Dialog {
+export default class DialogEditGoal extends Dialog {
 
 	constructor(dialogData = {}, options = {}) {
 		super(dialogData, options);
 	}
 
 
-	static async createDialog({actorUuid, index = -1, value = ""}) {
+	static async createDialog({
+		actorUuid,
+		index = -1,
+		type = "shortTerm",
+		value = "",
+	}) {
 		let dialogData = {
 			actorUuid,
 			index,
+			type,
 			value,
 		};
 
@@ -22,10 +28,10 @@ export default class DialogEditTruth extends Dialog {
 			: game.i18n.localize("DNM.Labels.Dialog.Save");
 
 		const title = index < 0
-			? game.i18n.localize("DNM.Labels.Actor.AddTruth")
-			: game.i18n.localize("DNM.Labels.Actor.EditTruth");
+			? game.i18n.localize("DNM.Labels.Actor.AddGoal")
+			: game.i18n.localize("DNM.Labels.Actor.EditGoal");
 
-		const dialog = new DialogEditTruth({
+		const dialog = new DialogEditGoal({
 			title,
 			content: html,
 			buttons: {
@@ -34,6 +40,7 @@ export default class DialogEditTruth extends Dialog {
 					label,
 					callback: async html => {
 						const actorUuid = html.find(".actorUuid").val() ?? "";
+						const type = html.find(".type").val() ?? "shortTerm";
 						const index = parseInt(html.find(".index").val()) ?? -1;
 
 						let value = html.find(".value").val();
@@ -45,24 +52,28 @@ export default class DialogEditTruth extends Dialog {
 
 						const actor = await fromUuid(actorUuid);
 
-						const currentTruths = foundry.utils.duplicate(
-							actor.system.truths
+						const currentGoals = foundry.utils.duplicate(
+							actor.system.goals[type]
 						) ?? [];
 
 						if (index < 0) {
 							// Append new truth
-							currentTruths.push(value);
+							currentGoals.push(value);
 						}
-						else if (index <= currentTruths.length) {
+						else if (index <= currentGoals.length) {
 							// Replace edited truth
-							currentTruths[index] = value;
+							currentGoals[index] = value;
 						}
 						else {
-							dreams.logger.error("Truth index out of range");
+							dreams.logger.error("Goal index out of range");
 						}
 
-						currentTruths.sort((a, b) => a.localeCompare(b));
-						actor.update({"system.truths": currentTruths});
+						currentGoals.sort((a, b) => a.localeCompare(b));
+
+						const updateData = {};
+						updateData[`system.goals.${type}`] = currentGoals;
+
+						actor.update(updateData);
 					},
 				},
 			},

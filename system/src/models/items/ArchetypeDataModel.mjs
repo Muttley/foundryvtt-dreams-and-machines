@@ -1,5 +1,5 @@
-import Description from "../_shared/Description.mjs";
-import Skills from "../_shared/Skills.mjs";
+import Description from "../_types/Description.mjs";
+import Skills from "../_types/Skills.mjs";
 
 /**
  * Data Model representing an Archetype that can be assigned to a character.

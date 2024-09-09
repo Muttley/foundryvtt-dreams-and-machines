@@ -21,7 +21,10 @@
 
 		<div class="grid-4-columns" style="gap: 0.5rem;">
 			{{> actor/character/skills}}
-			{{> actor/character/truths}}
+			<div style="grid-column: span 3;">
+				{{> actor/character/truths}}
+				{{> actor/character/goals}}
+			</div>
 		</div>
 		{{!-- {{> actor/character/traits}} --}}
 		{{!-- Attributes --}}

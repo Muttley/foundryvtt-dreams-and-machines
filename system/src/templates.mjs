@@ -21,6 +21,7 @@ export default async function registerTemplates() {
 	const partials = [
 		"systems/dreams-and-machines/templates/actor/character/attributes.hbs",
 		"systems/dreams-and-machines/templates/actor/character/drives.hbs",
+		"systems/dreams-and-machines/templates/actor/character/goals.hbs",
 		"systems/dreams-and-machines/templates/actor/character/equipment.hbs",
 		"systems/dreams-and-machines/templates/actor/character/meta-currencies.hbs",
 		"systems/dreams-and-machines/templates/actor/character/skills.hbs",

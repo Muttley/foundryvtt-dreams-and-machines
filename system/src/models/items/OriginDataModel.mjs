@@ -1,6 +1,6 @@
-import Attributes from "../_shared/Attributes.mjs";
-import Description from "../_shared/Description.mjs";
-import Skills from "../_shared/Skills.mjs";
+import Attributes from "../_types/Attributes.mjs";
+import Description from "../_types/Description.mjs";
+import Skills from "../_types/Skills.mjs";
 
 /**
  * Data model representing an Origin that can be assigned to a character.

@@ -13,6 +13,7 @@ DNM.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
 DNM.Labels.Actions: Actions
 DNM.Labels.Actor.AddActions: Drag some Major NPC Actions onto this sheet to add actions this NPC can perform!
 DNM.Labels.Actor.AddArchetype: Drag & Drop an Archetype item onto this sheet to set your archetype!
+DNM.Labels.Actor.AddGoal: Add Goal
 DNM.Labels.Actor.AddOrigin: Drag & Drop an Origin item onto this sheet to set your origin!
 DNM.Labels.Actor.AddTemperament: Drag & Drop a Temperament item onto this sheet to set your temperament!
 DNM.Labels.Actor.AddTrait: Add Trait
@@ -24,17 +25,21 @@ DNM.Labels.Actor.Bond: Bond
 DNM.Labels.Actor.CharacterTruths: Character Truths
 DNM.Labels.Actor.Coin: Coin
 DNM.Labels.Actor.CurrentShort: Curr.
+DNM.Labels.Actor.DeleteGoal: Delete Goal
 DNM.Labels.Actor.DeleteTruth: Delete Truth
 DNM.Labels.Actor.Drive: Drive
+DNM.Labels.Actor.EditGoal: Edit Goal
 DNM.Labels.Actor.EditTruth: Edit Truth
 DNM.Labels.Actor.Equipment: Equipment
 DNM.Labels.Actor.Exhaustion: Exhaustion
-DNM.Labels.Actor.Goal: Goal
+DNM.Labels.Actor.Goals: Goals
 DNM.Labels.Actor.Growth: Growth
 DNM.Labels.Actor.InjuriesToDefeat: Injuries to Defeat
+DNM.Labels.Actor.LongTermGoals: Long-Term
 DNM.Labels.Actor.Max: Max
 DNM.Labels.Actor.Origin: Origin
 DNM.Labels.Actor.PersonalThreat: Personal Threat
+DNM.Labels.Actor.ShortTermGoals: Short-Term
 DNM.Labels.Actor.Skills: Skills
 DNM.Labels.Actor.Spirit: Spirit
 DNM.Labels.Actor.SpiritPool: Spirit Pool

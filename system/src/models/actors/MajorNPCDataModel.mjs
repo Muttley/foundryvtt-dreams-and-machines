@@ -1,6 +1,6 @@
-import Attributes from "../_shared/Attributes.mjs";
-import Skills from "../_shared/Skills.mjs";
-import Traits from "../_shared/Traits.mjs";
+import Attributes from "../_types/Attributes.mjs";
+import Skills from "../_types/Skills.mjs";
+import Traits from "../_types/Traits.mjs";
 
 /**
  * Data Model representing a Major NPC
