@@ -3,5 +3,11 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"i18n-ally.localesPaths": [
+			"i18n",
+			"system/i18n"
+		]
+	}
 }
