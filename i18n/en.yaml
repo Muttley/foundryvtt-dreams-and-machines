@@ -13,27 +13,36 @@ DNM.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
 DNM.Labels.Actions: Actions
 DNM.Labels.Actor.AddActions: Drag some Major NPC Actions onto this sheet to add actions this NPC can perform!
 DNM.Labels.Actor.AddArchetype: Drag & Drop an Archetype item onto this sheet to set your archetype!
+DNM.Labels.Actor.AddBond: Add Bond
 DNM.Labels.Actor.AddGoal: Add Goal
+DNM.Labels.Actor.AddHarm: Add Harm
 DNM.Labels.Actor.AddOrigin: Drag & Drop an Origin item onto this sheet to set your origin!
 DNM.Labels.Actor.AddTemperament: Drag & Drop a Temperament item onto this sheet to set your temperament!
 DNM.Labels.Actor.AddTrait: Add Trait
 DNM.Labels.Actor.AddTruth: Add Truth
 DNM.Labels.Actor.Archetype: Archetype
+DNM.Labels.Actor.ArchetypeGoal: Archetype Goal
 DNM.Labels.Actor.Attitude: Attitude
 DNM.Labels.Actor.Attributes: Attributes
 DNM.Labels.Actor.Bond: Bond
+DNM.Labels.Actor.Bonds: Bonds
 DNM.Labels.Actor.CharacterTruths: Character Truths
 DNM.Labels.Actor.Coin: Coin
 DNM.Labels.Actor.CurrentShort: Curr.
+DNM.Labels.Actor.DeleteBond: Delete Bond
 DNM.Labels.Actor.DeleteGoal: Delete Goal
+DNM.Labels.Actor.DeleteHarm: Delete Harm
 DNM.Labels.Actor.DeleteTruth: Delete Truth
 DNM.Labels.Actor.Drive: Drive
+DNM.Labels.Actor.EditBond: Edit Bond
 DNM.Labels.Actor.EditGoal: Edit Goal
+DNM.Labels.Actor.EditHarm: Edit Harm
 DNM.Labels.Actor.EditTruth: Edit Truth
 DNM.Labels.Actor.Equipment: Equipment
 DNM.Labels.Actor.Exhaustion: Exhaustion
 DNM.Labels.Actor.Goals: Goals
 DNM.Labels.Actor.Growth: Growth
+DNM.Labels.Actor.Harms: Harms
 DNM.Labels.Actor.InjuriesToDefeat: Injuries to Defeat
 DNM.Labels.Actor.LongTermGoals: Long-Term
 DNM.Labels.Actor.Max: Max
@@ -110,6 +119,8 @@ DNM.Labels.Value: Coin
 DNM.Labels.Weapons: Weapons
 DNM.Notifications.NotEnoughMomentum: Cannot spend Momentum while the pool is empty! Perhaps you should generate Threat instead?
 DNM.Notifications.NotEnoughThreat: Cannot spend Threat while the pool is empty!
+DNM.Placeholders.ArchetypeGoal.NoArchetype: No Archetype has been added to the character
+DNM.Placeholders.ArchetypeGoal.NoTemperament: No Temperament has been added to the character
 DNM.Roll.Complication: Complication
 DNM.Roll.Critical: Critical Success
 DNM.Roll.Success: Success
@@ -120,6 +131,11 @@ DNM.Skills.Sneak: Sneak
 DNM.Skills.Study: Study
 DNM.Skills.Survive: Survive
 DNM.Skills.Talk: Talk
+DNM.Tooltips.Actor.AddBond: Add Bond
+DNM.Tooltips.Actor.AddHarm: Add Harm
+DNM.Tooltips.Actor.AddLongTermGoal: Add Long-Term Goal
+DNM.Tooltips.Actor.AddShortTermGoal: Add Short-Term Goal
+DNM.Tooltips.Actor.AddTruth: Add Truth
 TYPES.Actor.character: Player Character
 TYPES.Actor.majorNPC: Major NPC
 TYPES.Actor.npc: NPC

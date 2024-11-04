@@ -1,48 +1,23 @@
-<div class="goals">
+<div class="truths" style="margin-top: 0.5rem;">
 
 	<span class="label">
 		{{localize "DNM.Labels.Actor.Goals"}}
 	</span>
 
-	{{> displayGoals
-		goals=system.goals.shortTerm
+	{{> actor/_partials/custom-truth-list
 		label=(localize "DNM.Labels.Actor.ShortTermGoals")
+		tooltip=(localize "DNM.Tooltips.Actor.AddShortTermGoal")
+		truths=system.goals.shortTerm
+		truthType="goal"
 		type="shortTerm"
 	}}
 
-	{{> displayGoals
-		goals=system.goals.longTerm
+	{{> actor/_partials/custom-truth-list
+		truthType="goal"
+		truths=system.goals.longTerm
 		label=(localize "DNM.Labels.Actor.LongTermGoals")
+		tooltip=(localize "DNM.Tooltips.Actor.AddLongTermGoal")
 		type="longTerm"
 	}}
 
 </div>
-
-
-{{#*inline "displayGoals"}}
-	<div class="custom-goals">
-		<p class="goal-header">
-			{{label}}
-		</p>
-		{{#each goals}}
-			<p
-				class="goal-edit"
-				data-index="{{@index}}"
-				data-type="{{../type}}"
-				data-menu="goal"
-			>
-				{{this}}
-			</p>
-		{{/each}}
-		<div class="add-goal-row">
-			<a
-				class="add-goal"
-				data-action="add-goal"
-				data-type="{{type}}"
-				data-tooltip="{{localize 'DNM.Labels.Actor.AddGoal'}}"
-			>
-				<i class="fa-solid fa-square-plus"></i>
-			</a>
-		</div>
-	</div>
-{{/inline}}

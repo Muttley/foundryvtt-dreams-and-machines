@@ -16,21 +16,37 @@
 	</header>
 
 	<div class="sheet-body">
-		{{> actor/character/attributes}}
-		{{> actor/character/meta-currencies}}
-
-		<div class="grid-4-columns" style="gap: 0.5rem;">
-			{{> actor/character/skills}}
-			<div style="grid-column: span 3;">
-				{{> actor/character/truths}}
-				{{> actor/character/goals}}
+		<div class="grid-2-columns">
+			{{> actor/character/attributes }}
+			{{> actor/character/meta-currencies }}
+			<div class="grid-4-columns" style="gap: 0.5rem;">
+				{{> actor/character/skills }}
+				<div style="grid-column: span 3;">
+					{{> actor/character/truths }}
+					{{> actor/character/goals }}
+					<div class="grid-2-columns">
+						{{> actor/character/bonds }}
+						{{> actor/character/harms }}
+					</div>
+				</div>
+			</div>
+			<div class="grid-1-columns">
+				{{> actor/character/talents }}
+				{{> actor/character/equipment }}
 			</div>
 		</div>
+
 		{{!-- {{> actor/character/traits}} --}}
 		{{!-- Attributes --}}
 		{{!-- Meta Currencies --}}
 		{{!-- Talents --}}
 		{{!-- Equipment --}}
 		{{!-- Drives --}}
+		<div class="sheet-footer grid-3-columns">
+			{{> actor/character/archetype-goal }}
+			{{> actor/character/exhaustion }}
+			{{> actor/character/attitude }}
+		</div>
 	</div>
+
 </form>

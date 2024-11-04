@@ -1,0 +1,15 @@
+<div class="truths" style="margin-top: 0.5rem;">
+
+	<span class="label">
+		{{localize "DNM.Labels.Actor.Bonds"}}
+	</span>
+
+	{{> actor/_partials/custom-truth-list
+		label=""
+		tooltip=(localize "DNM.Tooltips.Actor.AddBond")
+		truths=system.bonds
+		truthType="bond"
+		type="bond"
+	}}
+
+</div>

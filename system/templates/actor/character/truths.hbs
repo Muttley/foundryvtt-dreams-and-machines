@@ -3,63 +3,30 @@
 		{{localize "DNM.Labels.Actor.CharacterTruths"}}
 	</span>
 
-	{{> backgroundItem
+	{{> actor/_partials/background-item
 		item=origin
 		label=(localize "DNM.Labels.Actor.Origin")
 		placeholder=(localize "DNM.Labels.Actor.AddOrigin")
 	}}
 
-	{{> backgroundItem
+	{{> actor/_partials/background-item
 		item=archetype
 		label=(localize "DNM.Labels.Actor.Archetype")
 		placeholder=(localize "DNM.Labels.Actor.AddArchetype")
 	}}
 
-	<div class="custom-truths">
-		{{#each system.truths}}
-			<p
-				class="truth-edit"
-				data-menu="truth"
-				data-index="{{@index}}"
-			>
-				{{this}}
-			</p>
-		{{/each}}
-		<div class="add-truth-row">
-			<a
-				class="add-truth"
-				data-action="add-truth"
-				data-tooltip="{{localize 'DNM.Labels.Actor.AddTruth'}}"
-			>
-				<i class="fa-solid fa-square-plus"></i>
-			</a>
-		</div>
-	</div>
+	{{> actor/_partials/custom-truth-list
+		label=(localize "DNM.Labels.Actor.Truth")
+		tooltip=(localize "DNM.Tooltips.Actor.AddTruth")
+		truths=system.truths
+		truthType="truth"
+		type="truth"
+	}}
 
-	{{> backgroundItem
+	{{> actor/_partials/background-item
 		item=temperament
 		label=(localize "DNM.Labels.Actor.Temperament")
 		placeholder=(localize "DNM.Labels.Actor.AddTemperament")
 	}}
 
 </div>
-
-{{#*inline "backgroundItem"}}
-	<div class="background">
-		<span class="background-header">
-			{{label}}
-		</span>
-		{{#if item}}
-			<a
-				data-action="open-sheet"
-				data-uuid="{{item.uuid}}"
-			>
-				{{item.name}}
-			</a>
-		{{else}}
-			<div class="placeholder">
-				<em>{{placeholder}}</em>
-			</div>
-		{{/if}}
-	</div>
-{{/inline}}

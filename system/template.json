@@ -55,7 +55,7 @@
 				"truths"
 			],
 			"attitude": "",
-			"bond": "",
+			"bonds": [],
 			"coin": 0,
 			"drive": "",
 			"goals": {
@@ -63,6 +63,7 @@
 				"shortTerm": []
 			},
 			"growth": 0,
+			"harms": [],
 			"spirit": {
 				"value": 1,
 				"max": 1

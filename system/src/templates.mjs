@@ -19,10 +19,17 @@ export default async function registerTemplates() {
 	dreams.logger.debug("Pre-loading Templates...");
 
 	const partials = [
+		"systems/dreams-and-machines/templates/actor/_partials/background-item.hbs",
+		"systems/dreams-and-machines/templates/actor/_partials/custom-truth-list.hbs",
+		"systems/dreams-and-machines/templates/actor/character/archetype-goal.hbs",
+		"systems/dreams-and-machines/templates/actor/character/attitude.hbs",
 		"systems/dreams-and-machines/templates/actor/character/attributes.hbs",
+		"systems/dreams-and-machines/templates/actor/character/bonds.hbs",
 		"systems/dreams-and-machines/templates/actor/character/drives.hbs",
-		"systems/dreams-and-machines/templates/actor/character/goals.hbs",
 		"systems/dreams-and-machines/templates/actor/character/equipment.hbs",
+		"systems/dreams-and-machines/templates/actor/character/exhaustion.hbs",
+		"systems/dreams-and-machines/templates/actor/character/goals.hbs",
+		"systems/dreams-and-machines/templates/actor/character/harms.hbs",
 		"systems/dreams-and-machines/templates/actor/character/meta-currencies.hbs",
 		"systems/dreams-and-machines/templates/actor/character/skills.hbs",
 		"systems/dreams-and-machines/templates/actor/character/talents.hbs",
@@ -35,6 +42,7 @@ export default async function registerTemplates() {
 	const paths = {};
 	for (const path of partials) {
 		const [key] = path.split("/").slice(3).join("/").split(".");
+		dreams.logger.debug(`Template name: ${key}`);
 		paths[key] = path;
 	}
 

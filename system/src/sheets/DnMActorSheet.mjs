@@ -27,26 +27,54 @@ export default class DnMActorSheet extends ActorSheet {
 	activateListeners(html) {
 		super.activateListeners(html);
 
+		html.find('[data-action="add-bond"]').on("click", this.onBondAdd.bind(this));
+		html.find('[data-action="add-goal"]').on("click", this.onGoalAdd.bind(this));
+		html.find('[data-action="add-harm"]').on("click", this.onHarmAdd.bind(this));
+		html.find('[data-action="add-truth"]').on("click", this.onTruthAdd.bind(this));
 		html.find('[data-action="open-sheet"]').on("click", this.openSheet.bind(this));
-		html.find("[data-action=roll]").on("click", this.promptForRoll.bind(this));
+		html.find('[data-action="roll"]').on("click", this.promptForRoll.bind(this));
 
-		html.find("[data-action=add-goal]").on("click", this.onGoalAdd.bind(this));
-		html.find("[data-action=add-truth]").on("click", this.onTruthAdd.bind(this));
+		this.attachContextMenus(html);
+	}
+
+
+	attachContextMenus(html) {
+		new ContextMenu(html, '[data-menu="bond"]', [
+			{
+				icon: '<i class="fas fa-pencil"></i>',
+				name: "DNM.Labels.Actor.EditBond",
+				callback: t => this.onBondEdit(t.data()),
+			},
+			{
+				icon: '<i class="fas fa-trash"></i>',
+				name: "DNM.Labels.Actor.DeleteBond",
+				callback: t => this.onBondDelete(t.data()),
+			},
+		]);
 
 		new ContextMenu(html, '[data-menu="goal"]', [
 			{
 				icon: '<i class="fas fa-pencil"></i>',
 				name: "DNM.Labels.Actor.EditGoal",
-				callback: t => {
-					this.onGoalEdit(t.data());
-				},
+				callback: t => this.onGoalEdit(t.data()),
 			},
 			{
 				icon: '<i class="fas fa-trash"></i>',
 				name: "DNM.Labels.Actor.DeleteGoal",
-				callback: t => {
-					this.onGoalDelete(t.data());
-				},
+				callback: t => this.onGoalDelete(t.data()),
+			},
+		]);
+
+		new ContextMenu(html, '[data-menu="harm"]', [
+			{
+				icon: '<i class="fas fa-pencil"></i>',
+				name: "DNM.Labels.Actor.EditHarm",
+				callback: t => this.onHarmEdit(t.data()),
+			},
+			{
+				icon: '<i class="fas fa-trash"></i>',
+				name: "DNM.Labels.Actor.DeleteHarm",
+				callback: t => this.onHarmDelete(t.data()),
 			},
 		]);
 
@@ -54,16 +82,12 @@ export default class DnMActorSheet extends ActorSheet {
 			{
 				icon: '<i class="fas fa-pencil"></i>',
 				name: "DNM.Labels.Actor.EditTruth",
-				callback: t => {
-					this.onTruthEdit(t.data());
-				},
+				callback: t => this.onTruthEdit(t.data()),
 			},
 			{
 				icon: '<i class="fas fa-trash"></i>',
 				name: "DNM.Labels.Actor.DeleteTruth",
-				callback: t => {
-					this.onTruthDelete(t.data());
-				},
+				callback: t => this.onTruthDelete(t.data()),
 			},
 		]);
 
@@ -72,10 +96,9 @@ export default class DnMActorSheet extends ActorSheet {
 				name: "DNM.Labels.Item.Edit",
 				icon: '<i class="fas fa-pencil"></i>',
 				callback: async i => {
+					if (!i.data("uuid")) return;
+
 					const uuid = i.data("uuid");
-					if (!uuid) {
-						return;
-					}
 
 					const item = await fromUuid(uuid);
 					item?.sheet?.render(true);
@@ -85,10 +108,9 @@ export default class DnMActorSheet extends ActorSheet {
 				name: "DNM.Labels.Item.Delete",
 				icon: '<i class="fas fa-trash"></i>',
 				callback: async i => {
+					if (!i.data("uuid")) return;
+
 					const uuid = i.data("uuid");
-					if (!uuid) {
-						return;
-					}
 
 					const item = await fromUuid(uuid);
 					await item?.delete?.();
@@ -96,7 +118,6 @@ export default class DnMActorSheet extends ActorSheet {
 			},
 		]);
 	}
-
 
 	getData(options = {}) {
 		const context = super.getData(options);
@@ -126,6 +147,34 @@ export default class DnMActorSheet extends ActorSheet {
 		context.skills.sort((a, b) => a.name.localeCompare(b.name));
 
 		return context;
+	}
+
+
+	async onBondAdd(event) {
+		event.preventDefault();
+		const actorUuid = this.actor.uuid;
+
+		dreams.dialogs.DialogEditBond.createDialog({actorUuid});
+	}
+
+
+	async onBondDelete(data) {
+		const currentValues = foundry.utils.duplicate(this.actor.system.bonds);
+		currentValues.splice(data.index, 1);
+
+		this.actor.update({"system.bonds": currentValues});
+	}
+
+
+	async onBondEdit(data) {
+		const actorUuid = this.actor.uuid;
+
+		const currentValues = foundry.utils.duplicate(this.actor.system.bonds);
+
+		const index = data.index;
+		const value = currentValues[index];
+
+		dreams.dialogs.DialogEditBond.createDialog({actorUuid, index, value});
 	}
 
 
@@ -170,6 +219,33 @@ export default class DnMActorSheet extends ActorSheet {
 		const value = currentValues[index];
 
 		dreams.dialogs.DialogEditGoal.createDialog({actorUuid, type, index, value});
+	}
+
+	async onHarmAdd(event) {
+		event.preventDefault();
+		const actorUuid = this.actor.uuid;
+
+		dreams.dialogs.DialogEditHarm.createDialog({actorUuid});
+	}
+
+
+	async onHarmDelete(data) {
+		const currentValues = foundry.utils.duplicate(this.actor.system.harms);
+		currentValues.splice(data.index, 1);
+
+		this.actor.update({"system.harms": currentValues});
+	}
+
+
+	async onHarmEdit(data) {
+		const actorUuid = this.actor.uuid;
+
+		const currentValues = foundry.utils.duplicate(this.actor.system.harms);
+
+		const index = data.index;
+		const value = currentValues[index];
+
+		dreams.dialogs.DialogEditHarm.createDialog({actorUuid, index, value});
 	}
 
 	async onTruthAdd(event) {

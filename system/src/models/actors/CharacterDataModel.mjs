@@ -1,5 +1,7 @@
 import Attributes from "../_types/Attributes.mjs";
+import Bonds from "../_types/Bonds.mjs";
 import Goals from "../_types/Goals.mjs";
+import Harms from "../_types/Harms.mjs";
 import Skills from "../_types/Skills.mjs";
 import Truths from "../_types/Truths.mjs";
 
@@ -30,13 +32,10 @@ export default class CharacterDataModel extends foundry.abstract.TypeDataModel {
 			...Goals(),
 			...Skills(),
 			...Truths(),
+			...Bonds(),
+			...Harms(),
 
 			attitude: new fields.StringField({
-				initial: "",
-				nullable: false,
-			}),
-
-			bond: new fields.StringField({
 				initial: "",
 				nullable: false,
 			}),

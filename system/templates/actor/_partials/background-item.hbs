@@ -1,0 +1,17 @@
+<div class="background">
+	<span class="background-header">
+		{{label}}
+	</span>
+	{{#if item}}
+		<a
+			data-action="open-sheet"
+			data-uuid="{{item.uuid}}"
+		>
+			{{item.name}}
+		</a>
+	{{else}}
+		<div class="placeholder">
+			<em>{{placeholder}}</em>
+		</div>
+	{{/if}}
+</div>

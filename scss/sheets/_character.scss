@@ -1,6 +1,6 @@
 .dnm.sheet.actor.character {
 	min-width: 830px;
-	min-height: 400px;
+	min-height: 760px;
 
 	input[type="number"] {
 		font-weight: 600;
@@ -91,26 +91,22 @@
 	}
 
 	.sheet-body {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 0.5rem;
-
 		@include p-reset;
 		padding: 0.25rem;
+		display: grid;
+		// grid-template-columns: repeat(2, minmax(0, 1fr));
+		// gap: 0.5rem;
 	}
 
-	.goals,
 	.truths {
 		display: grid;
 		gap: 0.5rem;
 
 		align-content: baseline;
 
-		.custom-goals,
-		.custom-truths {
+		.custom-truth {
 			background-color: $c-offwhite;
 
-			.goal-edit,
 			.truth-edit {
 				margin: 2px;
 				padding: 2px;
@@ -125,7 +121,6 @@
 				}
 			}
 
-			.add-goal-row,
 			.add-truth-row {
 				color: $c-character-primary;
 				text-align: right;
@@ -168,24 +163,23 @@
 			text-transform: none;
 		}
 
-		.placeholder {
-			display: flex;
-			color: $c-character-primary;
-			background-color: rgba(255 255 255 / 0.75);
-			font-size: 0.75rem;
-			line-height: 1;
-			// text-align: center;
-			justify-content: center;
-			align-items: center;
-			font-style: oblique 10deg;
-			width: 100%;
-			min-height: 1.75rem;
-			height: 100%;
-		}
+	}
+
+	.placeholder {
+		padding: 0.5rem;
+		color: $c-character-primary;
+		background-color: rgba(255 255 255 / 0.75);
+		font-size: 0.75rem;
+		line-height: 1;
+		text-align: center;
+		font-style: oblique;
+		width: 100%;
+		height: 100%;
 	}
 
 	.background-header,
-	.goal-header {
+	.goal-header,
+	.truth-header {
 		display: flex;
 		height: 100%;
 		font-weight: 600;
@@ -201,7 +195,10 @@
 		text-transform: uppercase;
 	}
 
-	.goal-header {
+	.goal-header,
+	.truth-header {
+		margin: 0.1em;
+		padding: 0.1em;
 		height: unset;
 	}
 

@@ -1,0 +1,26 @@
+<div class="custom-truth">
+	<div class="add-truth-row">
+		<p class="truth-header">
+			<a
+				class="add-{{truthType}}"
+				data-action="add-{{truthType}}"
+				data-type="{{type}}"
+				data-tooltip="{{tooltip}}"
+			>
+				<i class="fa-solid fa-square-plus"></i>
+			</a>
+			&nbsp;
+			{{label}}
+		</p>
+	</div>
+	{{#each truths}}
+		<p
+			class="truth-edit"
+			data-index="{{@index}}"
+			data-type="{{../type}}"
+			data-menu="{{../truthType}}"
+		>
+			{{this}}
+		</p>
+	{{/each}}
+</div>
