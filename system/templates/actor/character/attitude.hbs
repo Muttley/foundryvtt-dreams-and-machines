@@ -3,9 +3,15 @@
 		{{localize "DNM.Labels.Actor.Attitude"}}
 	</span>
 
-	<div class="placeholder">
-		<em>
-			{{localize "DNM.Placeholders.ArchetypeGoal.NoTemperament"}}
-		</em>
-	</div>
+	{{#if enrichedAttitude}}
+		<div class="text-block">
+			{{{enrichedAttitude}}}
+		</div>
+	{{else}}
+		<div class="placeholder">
+			<em>
+				{{localize "DNM.Placeholders.ArchetypeGoal.NoTemperament"}}
+			</em>
+		</div>
+	{{/if}}
 </div>

@@ -8,6 +8,33 @@ export function registerHandlebarsHelpers() {
 		return game.settings.get(SYSTEM_ID, arg1);
 	});
 
+	Handlebars.registerHelper("ifCond", function(v1, operator, v2, options) {
+		switch (operator) {
+			case "==":
+				return v1 === v2 ? options.fn(this) : options.inverse(this);
+			case "===":
+				return v1 === v2 ? options.fn(this) : options.inverse(this);
+			case "!=":
+				return v1 !== v2 ? options.fn(this) : options.inverse(this);
+			case "!==":
+				return v1 !== v2 ? options.fn(this) : options.inverse(this);
+			case "<":
+				return v1 < v2 ? options.fn(this) : options.inverse(this);
+			case "<=":
+				return v1 <= v2 ? options.fn(this) : options.inverse(this);
+			case ">":
+				return v1 > v2 ? options.fn(this) : options.inverse(this);
+			case ">=":
+				return v1 >= v2 ? options.fn(this) : options.inverse(this);
+			case "&&":
+				return v1 && v2 ? options.fn(this) : options.inverse(this);
+			case "||":
+				return v1 || v2 ? options.fn(this) : options.inverse(this);
+			default:
+				return options.inverse(this);
+		}
+	});
+
 	Handlebars.registerHelper("select", function(selected, options) {
 		const escapedValue = RegExp.escape(Handlebars.escapeExpression(selected));
 		const rgx = new RegExp(` value=["']${escapedValue}["']`);

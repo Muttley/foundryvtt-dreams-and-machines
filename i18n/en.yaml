@@ -29,14 +29,14 @@ DNM.Labels.Actor.Bonds: Bonds
 DNM.Labels.Actor.CharacterTruths: Character Truths
 DNM.Labels.Actor.Coin: Coin
 DNM.Labels.Actor.CurrentShort: Curr.
-DNM.Labels.Actor.DeleteBond: Delete Bond
-DNM.Labels.Actor.DeleteGoal: Delete Goal
-DNM.Labels.Actor.DeleteHarm: Delete Harm
-DNM.Labels.Actor.DeleteTruth: Delete Truth
+DNM.Labels.Actor.Delete: Delete
 DNM.Labels.Actor.Drive: Drive
+DNM.Labels.Actor.Edit: Edit
 DNM.Labels.Actor.EditBond: Edit Bond
-DNM.Labels.Actor.EditGoal: Edit Goal
+DNM.Labels.Actor.EditLongTermGoal: Edit Long-Term Goal
+DNM.Labels.Actor.EditShortTermGoal: Edit Short-Term Goal
 DNM.Labels.Actor.EditHarm: Edit Harm
+DNM.Labels.Actor.EditString: Edit String
 DNM.Labels.Actor.EditTruth: Edit Truth
 DNM.Labels.Actor.Equipment: Equipment
 DNM.Labels.Actor.Exhaustion: Exhaustion
@@ -113,6 +113,8 @@ DNM.Labels.Momentum: Momentum
 DNM.Labels.Notes: Notes
 DNM.Labels.SpecialAbilities: Special Abilities
 DNM.Labels.SpecialActions: Special Actions
+DNM.Labels.TL: TL
+DNM.Labels.TechLevelShort: Tech Lvl
 DNM.Labels.TechLevel: Tech Level
 DNM.Labels.Threat: Threat
 DNM.Labels.Value: Coin

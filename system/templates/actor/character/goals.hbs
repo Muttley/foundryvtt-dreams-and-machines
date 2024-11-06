@@ -1,23 +1,23 @@
-<div class="truths" style="margin-top: 0.5rem;">
+<div class="strings" style="margin-top: 0.5rem;">
 
 	<span class="label">
 		{{localize "DNM.Labels.Actor.Goals"}}
 	</span>
 
-	{{> actor/_partials/custom-truth-list
-		label=(localize "DNM.Labels.Actor.ShortTermGoals")
-		tooltip=(localize "DNM.Tooltips.Actor.AddShortTermGoal")
-		truths=system.goals.shortTerm
-		truthType="goal"
-		type="shortTerm"
+	{{> actor/_partials/custom-string-list
+		addRowLabel=(localize "DNM.Labels.Actor.ShortTermGoals")
+		currentValues=system.goals.shortTerm
+		key="system.goals.shortTerm"
+		sectionTitle=""
+		titleAdd=(localize "DNM.Tooltips.Actor.AddShortTermGoal")
 	}}
 
-	{{> actor/_partials/custom-truth-list
-		truthType="goal"
-		truths=system.goals.longTerm
-		label=(localize "DNM.Labels.Actor.LongTermGoals")
-		tooltip=(localize "DNM.Tooltips.Actor.AddLongTermGoal")
-		type="longTerm"
+	{{> actor/_partials/custom-string-list
+		addRowLabel=(localize "DNM.Labels.Actor.LongTermGoals")
+		currentValues=system.goals.longTerm
+		key="system.goals.longTerm"
+		sectionTitle=""
+		titleAdd=(localize "DNM.Tooltips.Actor.AddLongTermGoal")
 	}}
 
 </div>

@@ -35,19 +35,9 @@ export default class CharacterDataModel extends foundry.abstract.TypeDataModel {
 			...Bonds(),
 			...Harms(),
 
-			attitude: new fields.StringField({
-				initial: "",
-				nullable: false,
-			}),
-
 			coin: new fields.NumberField({
 				initial: 0,
 				integer: true,
-				nullable: false,
-			}),
-
-			drive: new fields.StringField({
-				initial: "",
 				nullable: false,
 			}),
 

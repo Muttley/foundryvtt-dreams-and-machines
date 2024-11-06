@@ -1,15 +1,23 @@
-export default class DialogEditBond extends Dialog {
+export default class DialogEditString extends Dialog {
 
 	constructor(dialogData = {}, options = {}) {
 		super(dialogData, options);
 	}
 
-
-	static async createDialog({actorUuid, index = -1, value = ""}) {
+	static async createDialog({
+		actorUuid,
+		title,
+		fieldKey,
+		currentValues,
+		index = -1,
+		value = "",
+	}) {
 		let dialogData = {
 			actorUuid,
+			fieldKey,
 			index,
 			value,
+			currentValues,
 		};
 
 		const html = await renderTemplate(
@@ -21,11 +29,7 @@ export default class DialogEditBond extends Dialog {
 			? game.i18n.localize("DNM.Labels.Dialog.Add")
 			: game.i18n.localize("DNM.Labels.Dialog.Save");
 
-		const title = index < 0
-			? game.i18n.localize("DNM.Labels.Actor.AddBond")
-			: game.i18n.localize("DNM.Labels.Actor.EditBond");
-
-		const dialog = new DialogEditBond({
+		const dialog = new DialogEditString({
 			title,
 			content: html,
 			buttons: {
@@ -45,24 +49,24 @@ export default class DialogEditBond extends Dialog {
 
 						const actor = await fromUuid(actorUuid);
 
-						const currentBonds = foundry.utils.duplicate(
-							actor.system.bonds
-						) ?? [];
-
 						if (index < 0) {
 							// Append new truth
-							currentBonds.push(value);
+							currentValues.push(value);
 						}
-						else if (index <= currentBonds.length) {
+						else if (index <= currentValues.length) {
 							// Replace edited truth
-							currentBonds[index] = value;
+							currentValues[index] = value;
 						}
 						else {
 							dreams.logger.error("Truth index out of range");
 						}
 
-						currentBonds.sort((a, b) => a.localeCompare(b));
-						actor.update({"system.bonds": currentBonds});
+						currentValues.sort((a, b) => a.localeCompare(b));
+
+						const updates = {};
+						updates[fieldKey] = currentValues;
+
+						await actor.update(updates);
 					},
 				},
 			},

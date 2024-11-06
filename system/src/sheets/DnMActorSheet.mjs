@@ -27,10 +27,7 @@ export default class DnMActorSheet extends ActorSheet {
 	activateListeners(html) {
 		super.activateListeners(html);
 
-		html.find('[data-action="add-bond"]').on("click", this.onBondAdd.bind(this));
-		html.find('[data-action="add-goal"]').on("click", this.onGoalAdd.bind(this));
-		html.find('[data-action="add-harm"]').on("click", this.onHarmAdd.bind(this));
-		html.find('[data-action="add-truth"]').on("click", this.onTruthAdd.bind(this));
+		html.find('[data-action="add-string"]').on("click", this.onStringAdd.bind(this));
 		html.find('[data-action="open-sheet"]').on("click", this.openSheet.bind(this));
 		html.find('[data-action="roll"]').on("click", this.promptForRoll.bind(this));
 
@@ -39,55 +36,16 @@ export default class DnMActorSheet extends ActorSheet {
 
 
 	attachContextMenus(html) {
-		new ContextMenu(html, '[data-menu="bond"]', [
+		new ContextMenu(html, '[data-action="edit-string"]', [
 			{
 				icon: '<i class="fas fa-pencil"></i>',
-				name: "DNM.Labels.Actor.EditBond",
-				callback: t => this.onBondEdit(t.data()),
+				name: "DNM.Labels.Actor.Edit",
+				callback: t => this.onStringEdit(t.data()),
 			},
 			{
 				icon: '<i class="fas fa-trash"></i>',
-				name: "DNM.Labels.Actor.DeleteBond",
-				callback: t => this.onBondDelete(t.data()),
-			},
-		]);
-
-		new ContextMenu(html, '[data-menu="goal"]', [
-			{
-				icon: '<i class="fas fa-pencil"></i>',
-				name: "DNM.Labels.Actor.EditGoal",
-				callback: t => this.onGoalEdit(t.data()),
-			},
-			{
-				icon: '<i class="fas fa-trash"></i>',
-				name: "DNM.Labels.Actor.DeleteGoal",
-				callback: t => this.onGoalDelete(t.data()),
-			},
-		]);
-
-		new ContextMenu(html, '[data-menu="harm"]', [
-			{
-				icon: '<i class="fas fa-pencil"></i>',
-				name: "DNM.Labels.Actor.EditHarm",
-				callback: t => this.onHarmEdit(t.data()),
-			},
-			{
-				icon: '<i class="fas fa-trash"></i>',
-				name: "DNM.Labels.Actor.DeleteHarm",
-				callback: t => this.onHarmDelete(t.data()),
-			},
-		]);
-
-		new ContextMenu(html, '[data-menu="truth"]', [
-			{
-				icon: '<i class="fas fa-pencil"></i>',
-				name: "DNM.Labels.Actor.EditTruth",
-				callback: t => this.onTruthEdit(t.data()),
-			},
-			{
-				icon: '<i class="fas fa-trash"></i>',
-				name: "DNM.Labels.Actor.DeleteTruth",
-				callback: t => this.onTruthDelete(t.data()),
+				name: "DNM.Labels.Actor.Delete",
+				callback: t => this.onStringDelete(t.data()),
 			},
 		]);
 
@@ -150,129 +108,106 @@ export default class DnMActorSheet extends ActorSheet {
 	}
 
 
-	async onBondAdd(event) {
+	async onStringAdd(event) {
 		event.preventDefault();
 		const actorUuid = this.actor.uuid;
+		const dataset = event.currentTarget.dataset;
 
-		dreams.dialogs.DialogEditBond.createDialog({actorUuid});
+		let currentValues = [];
+		switch (dataset.key) {
+			case "system.bonds":
+				currentValues = foundry.utils.duplicate(this.actor.system.bonds) ?? [];
+				break;
+			case "system.goals.longTerm":
+				currentValues = foundry.utils.duplicate(this.actor.system.goals.longTerm) ?? [];
+				break;
+			case "system.goals.shortTerm":
+				currentValues = foundry.utils.duplicate(this.actor.system.goals.shortTerm) ?? [];
+				break;
+			case "system.harms":
+				currentValues = foundry.utils.duplicate(this.actor.system.harms) ?? [];
+				break;
+			case "system.truths":
+				currentValues = foundry.utils.duplicate(this.actor.system.truths) ?? [];
+				break;
+			default:
+		}
+		dreams.dialogs.DialogEditString.createDialog({
+			actorUuid,
+			currentValues,
+			fieldKey: dataset.key,
+			title: dataset.tooltip,
+		});
 	}
 
 
-	async onBondDelete(data) {
-		const currentValues = foundry.utils.duplicate(this.actor.system.bonds);
+	async onStringDelete(data) {
+		let currentValues = [];
+		switch (data.key) {
+			case "system.bonds":
+				currentValues = foundry.utils.duplicate(this.actor.system.bonds) ?? [];
+				break;
+			case "system.goals.longTerm":
+				currentValues = foundry.utils.duplicate(this.actor.system.goals.longTerm) ?? [];
+				break;
+			case "system.goals.shortTerm":
+				currentValues = foundry.utils.duplicate(this.actor.system.goals.shortTerm) ?? [];
+				break;
+			case "system.harms":
+				currentValues = foundry.utils.duplicate(this.actor.system.harms) ?? [];
+				break;
+			case "system.truths":
+				currentValues = foundry.utils.duplicate(this.actor.system.truths) ?? [];
+				break;
+			default:
+		}
 		currentValues.splice(data.index, 1);
 
-		this.actor.update({"system.bonds": currentValues});
-	}
-
-
-	async onBondEdit(data) {
-		const actorUuid = this.actor.uuid;
-
-		const currentValues = foundry.utils.duplicate(this.actor.system.bonds);
-
-		const index = data.index;
-		const value = currentValues[index];
-
-		dreams.dialogs.DialogEditBond.createDialog({actorUuid, index, value});
-	}
-
-
-	async onGoalAdd(event) {
-		event.preventDefault();
-
-		const data = event.currentTarget.dataset;
-
-		const actorUuid = this.actor.uuid;
-		const type = data.type;
-
-		dreams.dialogs.DialogEditGoal.createDialog({actorUuid, type});
-	}
-
-
-	async onGoalDelete(data) {
-		const index = data.index;
-		const type = data.type;
-
-		const currentValues = foundry.utils.duplicate(
-			this.actor.system.goals[type]
-		);
-		currentValues.splice(index, 1);
-
 		const updateData = {};
-		updateData[`system.goals.${type}`] = currentValues;
+		updateData[data.key] = currentValues;
 
 		this.actor.update(updateData);
 	}
 
-
-	async onGoalEdit(data) {
+	async onStringEdit(data) {
 		const actorUuid = this.actor.uuid;
 
-		const index = data.index;
-		const type = data.type;
+		let currentValues = [];
+		let title = game.i18n.localize("DNM.Labels.Actor.EditString");
+		switch (data.key) {
+			case "system.bonds":
+				currentValues = foundry.utils.duplicate(this.actor.system.bonds) ?? [];
+				title = game.i18n.localize("DNM.Labels.Actor.EditBond");
+				break;
+			case "system.goals.longTerm":
+				currentValues = foundry.utils.duplicate(this.actor.system.goals.longTerm) ?? [];
+				title = game.i18n.localize("DNM.Labels.Actor.EditLongTermGoal");
+				break;
+			case "system.goals.shortTerm":
+				currentValues = foundry.utils.duplicate(this.actor.system.goals.shortTerm) ?? [];
+				title = game.i18n.localize("DNM.Labels.Actor.EditShortTermGoal");
+				break;
+			case "system.harms":
+				currentValues = foundry.utils.duplicate(this.actor.system.harms) ?? [];
+				title = game.i18n.localize("DNM.Labels.Actor.EditHarm");
+				break;
+			case "system.truths":
+				currentValues = this.actor.system.truths ?? [];
+				title = game.i18n.localize("DNM.Labels.Actor.EditTruth");
+				break;
+			default:
+		}
 
-		const currentValues = foundry.utils.duplicate(
-			this.actor.system.goals[type]
-		);
+		const value = currentValues[data.index];
 
-		const value = currentValues[index];
-
-		dreams.dialogs.DialogEditGoal.createDialog({actorUuid, type, index, value});
-	}
-
-	async onHarmAdd(event) {
-		event.preventDefault();
-		const actorUuid = this.actor.uuid;
-
-		dreams.dialogs.DialogEditHarm.createDialog({actorUuid});
-	}
-
-
-	async onHarmDelete(data) {
-		const currentValues = foundry.utils.duplicate(this.actor.system.harms);
-		currentValues.splice(data.index, 1);
-
-		this.actor.update({"system.harms": currentValues});
-	}
-
-
-	async onHarmEdit(data) {
-		const actorUuid = this.actor.uuid;
-
-		const currentValues = foundry.utils.duplicate(this.actor.system.harms);
-
-		const index = data.index;
-		const value = currentValues[index];
-
-		dreams.dialogs.DialogEditHarm.createDialog({actorUuid, index, value});
-	}
-
-	async onTruthAdd(event) {
-		event.preventDefault();
-		const actorUuid = this.actor.uuid;
-
-		dreams.dialogs.DialogEditTruth.createDialog({actorUuid});
-	}
-
-
-	async onTruthDelete(data) {
-		const currentValues = foundry.utils.duplicate(this.actor.system.truths);
-		currentValues.splice(data.index, 1);
-
-		this.actor.update({"system.truths": currentValues});
-	}
-
-
-	async onTruthEdit(data) {
-		const actorUuid = this.actor.uuid;
-
-		const currentValues = foundry.utils.duplicate(this.actor.system.truths);
-
-		const index = data.index;
-		const value = currentValues[index];
-
-		dreams.dialogs.DialogEditTruth.createDialog({actorUuid, index, value});
+		dreams.dialogs.DialogEditString.createDialog({
+			actorUuid,
+			currentValues,
+			fieldKey: data.key,
+			index: data.index,
+			title,
+			value,
+		});
 	}
 
 
@@ -283,14 +218,10 @@ export default class DnMActorSheet extends ActorSheet {
 		const target = $(event.currentTarget);
 
 		const uuid = target.data("uuid");
-		if (!uuid) {
-			return;
-		}
+		if (!uuid) return;
 
 		const item = await fromUuid(uuid);
-		if (!item) {
-			return;
-		}
+		if (!item) return;
 
 		await item?.sheet?.render(true);
 	}

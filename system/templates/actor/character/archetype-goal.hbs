@@ -3,9 +3,15 @@
 		{{localize "DNM.Labels.Actor.ArchetypeGoal"}}
 	</span>
 
-	<div class="placeholder">
-		<em>
-			{{localize "DNM.Placeholders.ArchetypeGoal.NoArchetype"}}
-		</em>
-	</div>
+	{{#if enrichedArchetypeGoal}}
+		<div class="text-block">
+			{{{enrichedArchetypeGoal}}}
+		</div>
+	{{else}}
+		<div class="placeholder">
+			<em>
+				{{localize "DNM.Placeholders.ArchetypeGoal.NoArchetype"}}
+			</em>
+		</div>
+	{{/if}}
 </div>

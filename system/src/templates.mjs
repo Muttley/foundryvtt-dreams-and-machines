@@ -20,7 +20,7 @@ export default async function registerTemplates() {
 
 	const partials = [
 		"systems/dreams-and-machines/templates/actor/_partials/background-item.hbs",
-		"systems/dreams-and-machines/templates/actor/_partials/custom-truth-list.hbs",
+		"systems/dreams-and-machines/templates/actor/_partials/custom-string-list.hbs",
 		"systems/dreams-and-machines/templates/actor/character/archetype-goal.hbs",
 		"systems/dreams-and-machines/templates/actor/character/attitude.hbs",
 		"systems/dreams-and-machines/templates/actor/character/attributes.hbs",

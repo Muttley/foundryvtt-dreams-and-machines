@@ -54,10 +54,8 @@
 				"skills",
 				"truths"
 			],
-			"attitude": "",
 			"bonds": [],
 			"coin": 0,
-			"drive": "",
 			"goals": {
 				"longTerm": [],
 				"shortTerm": []
@@ -120,6 +118,7 @@
 		},
 		"archetype": {
 			"templates": ["itemDescription"],
+			"goal": "",
 			"skills": {
 				"fight": 1,
 				"move": 1,

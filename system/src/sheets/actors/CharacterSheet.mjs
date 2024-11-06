@@ -111,14 +111,21 @@ export default class CharacterSheet extends DnMActorSheet {
 				)
 		);
 
-		let enrichedTemperamentEffect = undefined;
-		let enrichedExhaustionEffect = undefined;
+		let enrichedAttitude = undefined;
+		let enrichedExhaustion = undefined;
 		if (this.temperament) {
-			enrichedTemperamentEffect = await TextEditor.enrichHTML(
+			enrichedAttitude = await TextEditor.enrichHTML(
 				this.temperament.system.spiritEffect, { async: true }
 			);
-			enrichedExhaustionEffect = await TextEditor.enrichHTML(
+			enrichedExhaustion = await TextEditor.enrichHTML(
 				this.temperament.system.exhaustionEffect, { async: true }
+			);
+		}
+
+		let enrichedArchetypeGoal = undefined;
+		if (this.archetype) {
+			enrichedArchetypeGoal = await TextEditor.enrichHTML(
+				this.archetype.system.goal, { async: true }
 			);
 		}
 
@@ -131,14 +138,12 @@ export default class CharacterSheet extends DnMActorSheet {
 
 			talents,
 			equipment,
-			enrichedGoal: await TextEditor.enrichHTML(this.system.goal, { async: true }),
-			enrichedAttitude: await TextEditor.enrichHTML(this.system.attitude, { async: true }),
-			enrichedDrive: await TextEditor.enrichHTML(this.system.drive, { async: true }),
 
 			exhausted: this.system.spirit.value <= 0,
 
-			enrichedTemperamentEffect,
-			enrichedExhaustionEffect,
+			enrichedArchetypeGoal,
+			enrichedAttitude,
+			enrichedExhaustion,
 		};
 	}
 

@@ -1,4 +1,4 @@
-<div class="truths">
+<div class="strings">
 	<span class="label">
 		{{localize "DNM.Labels.Actor.CharacterTruths"}}
 	</span>
@@ -15,18 +15,21 @@
 		placeholder=(localize "DNM.Labels.Actor.AddArchetype")
 	}}
 
-	{{> actor/_partials/custom-truth-list
-		label=(localize "DNM.Labels.Actor.Truth")
-		tooltip=(localize "DNM.Tooltips.Actor.AddTruth")
-		truths=system.truths
-		truthType="truth"
-		type="truth"
-	}}
-
 	{{> actor/_partials/background-item
 		item=temperament
 		label=(localize "DNM.Labels.Actor.Temperament")
 		placeholder=(localize "DNM.Labels.Actor.AddTemperament")
 	}}
 
+	{{> actor/character/archetype-goal }}
+	{{> actor/character/attitude }}
+	{{> actor/character/exhaustion }}
+
+	{{> actor/_partials/custom-string-list
+		addRowLabel=""
+		currentValues=system.truths
+		key="system.truths"
+		sectionTitle=(localize "DNM.Labels.Actor.Truths")
+		titleAdd=(localize "DNM.Tooltips.Actor.AddTruth")
+	}}
 </div>

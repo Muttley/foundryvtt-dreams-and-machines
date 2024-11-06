@@ -4,7 +4,7 @@
 			{{localize "DNM.Labels.Actor.SpiritPool"}}
 		</span>
 		<label class="spirit-value">
-			<span class="spirit-value-header">
+			<span class="sublabel">
 				{{localize "DNM.Labels.Actor.CurrentShort"}}
 			</span>
 			<input
@@ -12,12 +12,15 @@
 				max="{{system.spirit.max}}"
 				min="0"
 				name="system.spirit.value"
+				{{#ifCond system.spirit.value "<=" 0}}
+					style="color: darkred;"
+				{{/ifCond}}
 				type="number"
 				value="{{system.spirit.value}}"
 			/>
 		</label>
 		<label class="spirit-value">
-			<span class="spirit-value-header">
+			<span class="sublabel">
 				{{localize "DNM.Labels.Max"}}
 			</span>
 			<input
@@ -44,7 +47,7 @@
 
 	<div class="tech-level">
 		<span class="label">
-			{{localize "DNM.Labels.TechLevel"}}
+			{{localize "DNM.Labels.TechLevelShort"}}
 		</span>
 		<input
 			type="number"

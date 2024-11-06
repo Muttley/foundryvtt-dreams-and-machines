@@ -6,6 +6,22 @@ $columns: 6;
 	column-gap: 4px;
 }
 
+@mixin grid-colspan {
+	@for $i from 1 through $columns {
+		.grid-colspan-#{$i} {
+			grid-column: span #{$i};
+		}
+	}
+}
+
+@mixin grid-colstart {
+	@for $i from 1 through $columns {
+		.grid-colstart-#{$i} {
+			grid-column-start: #{$i};
+		}
+	}
+}
+
 @mixin grid-x-columns {
 	@for $i from 1 through $columns {
 		.grid-#{$i}-columns {
@@ -15,4 +31,15 @@ $columns: 6;
 	}
 }
 
+@mixin grid-rowspan {
+	@for $i from 1 through $columns {
+		.grid-rowspan-#{$i} {
+			grid-row: span #{$i};
+		}
+	}
+}
+
+@include grid-colspan;
+@include grid-colstart;
+@include grid-rowspan;
 @include grid-x-columns;

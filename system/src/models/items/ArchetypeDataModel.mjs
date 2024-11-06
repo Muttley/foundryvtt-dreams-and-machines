@@ -27,6 +27,11 @@ export default class ArchetypeDataModel extends foundry.abstract.TypeDataModel {
 			...Description(),
 			...Skills(),
 
+			goal: new fields.HTMLField({
+				initial: "",
+				nullable: false,
+			}),
+
 			spirit: new fields.NumberField({
 				initial: 0,
 				integer: true,

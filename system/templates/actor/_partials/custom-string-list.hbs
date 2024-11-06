@@ -1,0 +1,40 @@
+{{#if sectionTitle}}
+	<span class="label">
+		<a
+			data-action="add-string"
+			data-key="{{key}}"
+			data-tooltip="{{titleAdd}}"
+		>
+			<i class="fa-solid fa-plus"></i>
+		</a>
+		&nbsp;
+		{{sectionTitle}}
+	</span>
+{{/if}}
+<div class="custom-string">
+	{{#if addRowLabel}}
+		<div class="add-string-row">
+			<p class="string-header">
+				<a
+					data-action="add-string"
+					data-key="{{key}}"
+					data-tooltip="{{titleAdd}}"
+				>
+					<i class="fa-solid fa-square-plus"></i>
+				</a>
+				&nbsp;
+				{{addRowLabel}}
+			</p>
+		</div>
+	{{/if}}
+	{{#each currentValues}}
+		<p
+			class="string-edit"
+			data-action="edit-string"
+			data-index="{{@index}}"
+			data-key="{{../key}}"
+		>
+			{{this}}
+		</p>
+	{{/each}}
+</div>
