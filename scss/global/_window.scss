@@ -1,3 +1,5 @@
+@use "../mixins" as *;
+
 .window-app .window-content {
 	@include p-reset;
 

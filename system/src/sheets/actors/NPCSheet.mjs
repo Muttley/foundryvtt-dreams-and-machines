@@ -4,12 +4,6 @@ import DnMActorSheet from "../DnMActorSheet.mjs";
  * NPC Sheet
  */
 export default class NPCSheet extends DnMActorSheet {
-	/**
-	 * @returns {NPCDataModel}
-	 */
-	get system() {
-		return super.system;
-	}
 
 	async getData(options = {}) {
 		const enrichedSpecialActions = await TextEditor.enrichHTML(

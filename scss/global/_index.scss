@@ -1,6 +1,6 @@
-@import
-	"dialog",
-	"editor",
-	"flex",
-	"grid",
-	"window";
+@forward "dialog";
+@forward "editor";
+@forward "flex";
+@forward "grid";
+@forward "lists";
+@forward "window";

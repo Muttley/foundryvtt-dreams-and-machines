@@ -7,12 +7,6 @@
  * Shared base class for all Item Sheets.
  */
 export default class DnMItemSheet extends ItemSheet {
-	/**
-	 * Convenience accessor for the item's data model
-	 */
-	get system() {
-		return this.item.system;
-	}
 
 	static get defaultOptions() {
 		return {
@@ -26,32 +20,23 @@ export default class DnMItemSheet extends ItemSheet {
 		};
 	}
 
+
+	get system() {
+		return this.item.system;
+	}
+
+
 	get template() {
 		return `systems/dreams-and-machines/templates/item/${this.item.type}-sheet.hbs`;
 	}
 
-	/**
-	 * @param {JQuery} html
-	 */
+
 	activateListeners(html) {
 		super.activateListeners(html);
 
 		html.find("[data-action=open-sheet]").on("click", this.openSheet.bind(this));
 	}
 
-	/**
-	 * Event Handler; A link to another document was clicked.
-	 * @param {Event} event
-	 */
-	async openSheet(event) {
-		const uuid = $(event.currentTarget).data("uuid");
-		if (!uuid) {
-			return;
-		}
-
-		const document = await fromUuid(uuid);
-		document?.sheet?.render(true);
-	}
 
 	async getData(options = {}) {
 		const enrichedDescription = await TextEditor.enrichHTML(
@@ -64,13 +49,25 @@ export default class DnMItemSheet extends ItemSheet {
 		}
 
 		return {
-			...super.getData(options),
+			...await super.getData(options),
 			system: this.system,
 			enrichedDescription,
 			CONFIG,
 			...enrichedFields,
 		};
 	}
+
+
+	async openSheet(event) {
+		const uuid = $(event.currentTarget).data("uuid");
+		if (!uuid) {
+			return;
+		}
+
+		const document = await fromUuid(uuid);
+		document?.sheet?.render(true);
+	}
+
 
 	async _onDrop(event) {
 		/** @type DropData */
@@ -88,6 +85,7 @@ export default class DnMItemSheet extends ItemSheet {
 		}
 	}
 
+
 	/**
 	 * Called when an ActiveEffect is dropped on the item sheet.
 	 *
@@ -96,6 +94,7 @@ export default class DnMItemSheet extends ItemSheet {
 	 * @protected
 	 */
 	async _onDropActiveEffect(_event, _data) {}
+
 
 	/**
 	 * Called when an Actor is dropped on the item sheet.
@@ -106,14 +105,6 @@ export default class DnMItemSheet extends ItemSheet {
 	 */
 	async _onDropActor(_event, _data) {}
 
-	/**
-	 * Called when an Item is dropped on the item sheet.
-	 *
-	 * @param {DragEvent} _event
-	 * @param {DropData} _data
-	 * @protected
-	 */
-	async _onDropItem(_event, _data) {}
 
 	/**
 	 * Called when a Folder is dropped on the item sheet.
@@ -123,4 +114,15 @@ export default class DnMItemSheet extends ItemSheet {
 	 * @protected
 	 */
 	async _onDropFolder(_event, _data) {}
+
+
+	/**
+	 * Called when an Item is dropped on the item sheet.
+	 *
+	 * @param {DragEvent} _event
+	 * @param {DropData} _data
+	 * @protected
+	 */
+	async _onDropItem(_event, _data) {}
+
 }

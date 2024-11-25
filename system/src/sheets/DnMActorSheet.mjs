@@ -6,7 +6,7 @@ export default class DnMActorSheet extends ActorSheet {
 	static get defaultOptions() {
 		return {
 			...super.defaultOptions,
-			classes: ["dnm", "sheet", "actor"],
+			classes: ["dnm", "sheet", "actor", "npc"],
 		};
 	}
 
@@ -77,12 +77,8 @@ export default class DnMActorSheet extends ActorSheet {
 		]);
 	}
 
-	getData(options = {}) {
-		const context = super.getData(options);
 
-		context.system = this.system;
-
-		// Attribute Data
+	getAttributesAndSkillsData(context) {
 		context.attributes = [];
 		for (const attribute of Object.keys(CONFIG.DREAMS.ATTRIBUTES)) {
 			context.attributes.push({
@@ -93,7 +89,6 @@ export default class DnMActorSheet extends ActorSheet {
 		}
 		context.attributes.sort((a, b) => a.name.localeCompare(b.name));
 
-		// Skills Data
 		context.skills = [];
 		for (const skill of Object.keys(CONFIG.DREAMS.SKILLS)) {
 			context.skills.push({
@@ -103,6 +98,17 @@ export default class DnMActorSheet extends ActorSheet {
 			});
 		}
 		context.skills.sort((a, b) => a.name.localeCompare(b.name));
+	}
+
+
+	getData(options = {}) {
+		const context = super.getData(options);
+
+		context.system = this.system;
+
+		// Simple npc characters do not have all the attributes and skills of
+		// characters or majorNPCs
+		if (this.actor.type !== "npc") this.getAttributesAndSkillsData(context);
 
 		return context;
 	}
@@ -169,6 +175,7 @@ export default class DnMActorSheet extends ActorSheet {
 		this.actor.update(updateData);
 	}
 
+
 	async onStringEdit(data) {
 		const actorUuid = this.actor.uuid;
 
@@ -211,9 +218,6 @@ export default class DnMActorSheet extends ActorSheet {
 	}
 
 
-	/**
-	 * @param {MouseEvent} event
-	 */
 	async openSheet(event) {
 		const target = $(event.currentTarget);
 
@@ -227,9 +231,6 @@ export default class DnMActorSheet extends ActorSheet {
 	}
 
 
-	/**
-	 * @param {MouseEvent} event
-	 */
 	async promptForRoll(event) {
 		const target = $(event.currentTarget);
 
@@ -237,7 +238,7 @@ export default class DnMActorSheet extends ActorSheet {
 		const skill = target.data("skill");
 
 		const itemUuid = target.data("uuid");
-		/** @type DnMItem|undefined */
+
 		let item = undefined;
 		if (itemUuid) {
 			item = await fromUuid(itemUuid);

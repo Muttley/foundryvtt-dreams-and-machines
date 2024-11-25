@@ -12,27 +12,21 @@ export default class CharacterSheet extends DnMActorSheet {
 		};
 	}
 
-	/** @type {DnMItem|undefined} **/
+
 	get archetype() {
 		return this.actor.items.find(i => i.type === "archetype");
 	}
 
-	/** @type {DnMItem|undefined} **/
+
 	get origin() {
 		return this.actor.items.find(i => i.type === "origin");
 	}
 
-	/** @type {DnMItem|undefined} **/
+
 	get temperament() {
 		return this.actor.items.find(i => i.type === "temperament");
 	}
 
-	/**
-	 * @returns {CharacterDataModel}
-	 */
-	get system() {
-		return super.system;
-	}
 
 	activateListeners(html) {
 		super.activateListeners(html);
@@ -41,24 +35,7 @@ export default class CharacterSheet extends DnMActorSheet {
 		html.find("[data-action=decrease-quantity]").on("click", this.decreaseQuantity.bind(this));
 	}
 
-	/**
-	 * @param {Event} event
-	 */
-	async increaseQuantity(event) {
-		const itemUuid = $(event.currentTarget).data("uuid");
-		const item = await fromUuid(itemUuid);
-		if (!item) {
-			return;
-		}
 
-		await item.update({
-			"system.quantity": item.system.quantity + 1,
-		});
-	}
-
-	/**
-	 * @param {Event} event
-	 */
 	async decreaseQuantity(event) {
 		const itemUuid = $(event.currentTarget).data("uuid");
 		const item = await fromUuid(itemUuid);
@@ -75,6 +52,7 @@ export default class CharacterSheet extends DnMActorSheet {
 			});
 		}
 	}
+
 
 	async getData(options = {}) {
 		const talents = await Promise.all(
@@ -147,29 +125,6 @@ export default class CharacterSheet extends DnMActorSheet {
 		};
 	}
 
-	async _onDropItem(event, data) {
-		if (!this.actor.isOwner) return false;
-		const item = await Item.implementation.fromDropData(data);
-
-		switch (item.type) {
-			case "archetype":
-				await this.handleDropArchetype(item.system);
-				break;
-
-			case "origin":
-				await this.handleDropOrigin(item.system);
-				break;
-
-			case "temperament":
-				await this.handleDropTemperament();
-				break;
-
-			default:
-				break;
-		}
-
-		return super._onDropItem(event, data);
-	}
 
 	/**
 	 * Handles a change of character Archetype.
@@ -229,6 +184,7 @@ export default class CharacterSheet extends DnMActorSheet {
 		});
 	}
 
+
 	/**
 	 * Handles a change of character Origin
 	 *
@@ -246,11 +202,11 @@ export default class CharacterSheet extends DnMActorSheet {
 			// since those will be reset anyway.
 
 			// Reduce Spirit and Supply Points.
-			spirit.value -= existingOrigin.system.spirit;
 			spirit.max -= existingOrigin.system.spirit;
+			spirit.value -= existingOrigin.system.spirit;
 			supplyPoints -= existingOrigin.system.supplyPoints;
 
-			await existingOrigin?.delete();
+			await existingOrigin.delete();
 		}
 
 		// 1. Use Origin's Attribute values.
@@ -277,6 +233,7 @@ export default class CharacterSheet extends DnMActorSheet {
 		});
 	}
 
+
 	/**
 	 * Handles a change of character Temperament
 	 */
@@ -288,4 +245,44 @@ export default class CharacterSheet extends DnMActorSheet {
 			await existingTemperament?.delete();
 		}
 	}
+
+
+	async increaseQuantity(event) {
+		const itemUuid = $(event.currentTarget).data("uuid");
+		const item = await fromUuid(itemUuid);
+		if (!item) {
+			return;
+		}
+
+		await item.update({
+			"system.quantity": item.system.quantity + 1,
+		});
+	}
+
+
+	async _onDropItem(event, data) {
+		if (!this.actor.isOwner) return false;
+		const item = await Item.implementation.fromDropData(data);
+
+		switch (item.type) {
+			case "archetype":
+				await this.handleDropArchetype(item.system);
+				break;
+
+			case "origin":
+				await this.handleDropOrigin(item.system);
+				break;
+
+			case "temperament":
+				await this.handleDropTemperament();
+				break;
+
+			default:
+				break;
+		}
+
+		return super._onDropItem(event, data);
+	}
+
+
 }

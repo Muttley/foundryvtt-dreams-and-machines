@@ -1,24 +1,12 @@
 import DnMActorSheet from "../DnMActorSheet.mjs";
 
-/**
- * Major NPC Sheet
- */
 export default class MajorNPCSheet extends DnMActorSheet {
-	/**
-	 * @returns {ManorNPCDataModel}
-	 */
-	get system() {
-		return super.system;
-	}
 
 	async getData(options = {}) {
 		const actions = await Promise.all(
 			this.actor.items
 				.filter(i => i.type === "majorNPCAction")
 				.map(async i => {
-					/** @type {MajorNPCActionDataModel} */
-					// const system = i.system;
-
 					let enrichedDescription = undefined;
 
 					if (i.system.description) {
@@ -73,10 +61,7 @@ export default class MajorNPCSheet extends DnMActorSheet {
 		html.find("[data-action=roll-action]").on("click", this.rollAction.bind(this));
 	}
 
-	/**
-	 * Event Handler; Called when the user clicks to roll an action with a TN > 0
-	 * @param {Event} event
-	 */
+
 	rollAction(event) {
 		const uuid = $(event.currentTarget).data("uuid");
 		if (!uuid) {
@@ -88,10 +73,7 @@ export default class MajorNPCSheet extends DnMActorSheet {
 			return;
 		}
 
-		/** @type MajorNPCActionDataModel */
 		const actionSystem = action.system;
-
-		// let skill = undefined;
 
 		dreams.apps.DicePrompt.promptForRoll({
 			actor: this.actor,

@@ -1,14 +1,7 @@
 import DnMItem from "../../documents/DnMItem.mjs";
 import DnMItemSheet from "../DnMItemSheet.mjs";
 
-/**
- * Document sheet for origins.
- */
 export default class OriginSheet extends DnMItemSheet {
-	/** @type OriginDataModel */
-	get system() {
-		return this.item.system;
-	}
 
 	activateListeners(html) {
 		super.activateListeners(html);
@@ -48,35 +41,32 @@ export default class OriginSheet extends DnMItemSheet {
 		]);
 	}
 
+
 	async getData(options = {}) {
-		const enrichedBenefitDescription = await TextEditor.enrichHTML(
+		const context = await super.getData(options);
+
+		context.enrichedBenefitDescription = await TextEditor.enrichHTML(
 			this.system.benefit.description
 		);
 
-		return {
-			...(await super.getData(options)),
-			enrichedBenefitDescription,
-		};
+		return context;
 	}
+
 
 	async _onDropItem(_event, data) {
 		if (!this.isEditable || !data.uuid) {
 			return;
 		}
 
-		/** @type DnMItem */
 		const droppedItem = await DnMItem.implementation.fromDropData(data);
-		if (droppedItem.type !== "archetype") {
-			return;
-		}
+		if (droppedItem.type !== "archetype") return;
 
 		// Disallow multiples of the same item.
-		if (this.system.archetypes.find(id => id === droppedItem.uuid)) {
-			return;
-		}
+		if (this.system.archetypes.find(id => id === droppedItem.uuid)) return;
 
 		await this.item.update({
 			"system.archetypes": [...this.system.archetypes, droppedItem.uuid],
 		});
 	}
+
 }

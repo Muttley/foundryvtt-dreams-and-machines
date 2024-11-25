@@ -5,19 +5,7 @@ import DnMItemSheet from "../DnMItemSheet.mjs";
  */
 const RATING_INPUT_REGEXP = /(?<label>.*?)(\s(?<rating>\d+))?$/i;
 
-/**
- * Document sheet for carried items and equipment on the character sheet.
- */
 export default class EquipmentSheet extends DnMItemSheet {
-	/**
-	 * Convenience accessor for the item's data model.
-	 * This override is purely here for the sake of type-awareness in editors.
-	 *
-	 * @returns ItemDataModel
-	 */
-	get system() {
-		return super.system;
-	}
 
 	static get defaultOptions() {
 		return {
@@ -26,9 +14,7 @@ export default class EquipmentSheet extends DnMItemSheet {
 		};
 	}
 
-	/**
-	 * @param {JQuery} html
-	 */
+
 	activateListeners(html) {
 		super.activateListeners(html);
 
@@ -36,11 +22,7 @@ export default class EquipmentSheet extends DnMItemSheet {
 		html.find('[data-action="delete-quality"]').on("click", this.deleteQuality.bind(this));
 	}
 
-	/**
-	 * Watches for the Enter key on the Qualities input field.
-	 *
-	 * @param {KeyboardEvent} event
-	 */
+
 	async addQuality(event) {
 		if (event.key !== "Enter") {
 			return;

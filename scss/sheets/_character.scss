@@ -1,3 +1,6 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
 .dnm.sheet.actor.character {
 	min-width: 830px;
 	min-height: 760px;
