@@ -46,7 +46,7 @@ function lintJavascript() {
 
 		return gulp
 			.src(src)
-			.pipe(eslint({ configType: "eslintrc", fix: true }))
+			.pipe(eslint({ fix: true }))
 			.pipe(eslint.format())
 			.pipe(
 				gulpIf(
