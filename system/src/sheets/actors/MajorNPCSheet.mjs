@@ -75,7 +75,7 @@ export default class MajorNPCSheet extends DnMActorSheet {
 
 		const actionSystem = action.system;
 
-		dreams.apps.DicePrompt.promptForRoll({
+		dreams.app.DicePrompt.promptForRoll({
 			actor: this.actor,
 			attribute: actionSystem.skillTest.attribute,
 			skill: actionSystem.skillTest.skill,

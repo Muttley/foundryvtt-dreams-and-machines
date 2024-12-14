@@ -21,7 +21,7 @@ export default class DialogEditString extends Dialog {
 		};
 
 		const html = await renderTemplate(
-			"systems/dreams-and-machines/templates/dialogs/edit-string.hbs",
+			"systems/dreams-and-machines/templates/dialog/edit-string.hbs",
 			dialogData
 		);
 

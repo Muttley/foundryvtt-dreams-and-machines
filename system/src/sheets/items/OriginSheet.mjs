@@ -45,10 +45,6 @@ export default class OriginSheet extends DnMItemSheet {
 	async getData(options = {}) {
 		const context = await super.getData(options);
 
-		context.enrichedBenefitDescription = await TextEditor.enrichHTML(
-			this.system.benefit.description
-		);
-
 		return context;
 	}
 

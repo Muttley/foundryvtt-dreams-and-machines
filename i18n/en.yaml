@@ -1,3 +1,4 @@
+
 DNM.Attributes.Insight: Insight
 DNM.Attributes.Might: Might
 DNM.Attributes.Quickness: Quickness
@@ -33,9 +34,9 @@ DNM.Labels.Actor.Delete: Delete
 DNM.Labels.Actor.Drive: Drive
 DNM.Labels.Actor.Edit: Edit
 DNM.Labels.Actor.EditBond: Edit Bond
+DNM.Labels.Actor.EditHarm: Edit Harm
 DNM.Labels.Actor.EditLongTermGoal: Edit Long-Term Goal
 DNM.Labels.Actor.EditShortTermGoal: Edit Short-Term Goal
-DNM.Labels.Actor.EditHarm: Edit Harm
 DNM.Labels.Actor.EditString: Edit String
 DNM.Labels.Actor.EditTruth: Edit Truth
 DNM.Labels.Actor.Equipment: Equipment
@@ -113,10 +114,10 @@ DNM.Labels.Momentum: Momentum
 DNM.Labels.Notes: Notes
 DNM.Labels.SpecialAbilities: Special Abilities
 DNM.Labels.SpecialActions: Special Actions
-DNM.Labels.TL: TL
-DNM.Labels.TechLevelShort: Tech Lvl
 DNM.Labels.TechLevel: Tech Level
+DNM.Labels.TechLevelShort: Tech Lvl
 DNM.Labels.Threat: Threat
+DNM.Labels.TL: TL
 DNM.Labels.Value: Coin
 DNM.Labels.Weapons: Weapons
 DNM.Notifications.NotEnoughMomentum: Cannot spend Momentum while the pool is empty! Perhaps you should generate Threat instead?
@@ -126,6 +127,14 @@ DNM.Placeholders.ArchetypeGoal.NoTemperament: No Temperament has been added to t
 DNM.Roll.Complication: Complication
 DNM.Roll.Critical: Critical Success
 DNM.Roll.Success: Success
+DNM.Settings.SourceFilters.AllSourcesAllowed: All sources are currently allowed
+DNM.Settings.SourceFilters.AppTitle: Source Filter Configuration
+DNM.Settings.SourceFilters.ButtonLabel: Configure Source Filters
+DNM.Settings.SourceFilters.Hint: If populated, only book sources included in this list will be available for selection in relevant places. Items with no book source set will always be available.
+DNM.Settings.SourceFilters.Name: Source Filters
+DNM.Settings.SourceFilters.OnlyTheseSourcesAllowed: Only the following sources will be allowed
+DNM.Settings.SourceFilters.Prompt: Select Source...
+DNM.Settings.SourceFilters.RemoveSourceFromFilters: Remove Source From Filters
 DNM.Skills.Fight: Fight
 DNM.Skills.Move: Move
 DNM.Skills.Operate: Operate
@@ -133,6 +142,16 @@ DNM.Skills.Sneak: Sneak
 DNM.Skills.Study: Study
 DNM.Skills.Survive: Survive
 DNM.Skills.Talk: Talk
+DNM.Sources.EchoesOfAnAncientEnemy: "Campaign Book: Echoes of an Ancient Enemy"
+DNM.Sources.EmertaValo: "Setting Guide: Emerta Valo"
+DNM.Sources.GamemastersGuide: Gamemaster's Guide
+DNM.Sources.GMToolkit: GM's Toolkit
+DNM.Sources.HomeIsWhereTheThreatIs: Home Is Where the Threat Is
+DNM.Sources.PlayersGuide: Player's Guide
+DNM.Sources.PoisonedWaters: Poisoned Waters
+DNM.Sources.QuickstartGuide: Quickstart Guide
+DNM.Sources.ShadowsInTheDaylight: Shadows in the Daylight
+DNM.Sources.StarterSet: Starter Set
 DNM.Tooltips.Actor.AddBond: Add Bond
 DNM.Tooltips.Actor.AddHarm: Add Harm
 DNM.Tooltips.Actor.AddLongTermGoal: Add Long-Term Goal

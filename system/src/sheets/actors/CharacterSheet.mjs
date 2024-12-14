@@ -212,10 +212,10 @@ export default class CharacterSheet extends DnMActorSheet {
 		// 1. Use Origin's Attribute values.
 		/** @type CharacterAttributes */
 		const attributes = { ...this.system.attributes };
-		attributes.insight.value = originSystem.attributes.insight;
-		attributes.might.value = originSystem.attributes.might;
-		attributes.resolve.value = originSystem.attributes.resolve;
-		attributes.quickness.value = originSystem.attributes.quickness;
+		attributes.insight.value = originSystem.attributes.insight.value;
+		attributes.might.value = originSystem.attributes.might.value;
+		attributes.resolve.value = originSystem.attributes.resolve.value;
+		attributes.quickness.value = originSystem.attributes.quickness.value;
 
 		spirit.value += originSystem.spirit;
 		spirit.max += originSystem.spirit;

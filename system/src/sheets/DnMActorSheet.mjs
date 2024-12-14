@@ -138,7 +138,7 @@ export default class DnMActorSheet extends ActorSheet {
 				break;
 			default:
 		}
-		dreams.dialogs.DialogEditString.createDialog({
+		dreams.dialog.DialogEditString.createDialog({
 			actorUuid,
 			currentValues,
 			fieldKey: dataset.key,
@@ -181,6 +181,7 @@ export default class DnMActorSheet extends ActorSheet {
 
 		let currentValues = [];
 		let title = game.i18n.localize("DNM.Labels.Actor.EditString");
+
 		switch (data.key) {
 			case "system.bonds":
 				currentValues = foundry.utils.duplicate(this.actor.system.bonds) ?? [];
@@ -207,7 +208,7 @@ export default class DnMActorSheet extends ActorSheet {
 
 		const value = currentValues[data.index];
 
-		dreams.dialogs.DialogEditString.createDialog({
+		dreams.dialog.DialogEditString.createDialog({
 			actorUuid,
 			currentValues,
 			fieldKey: data.key,
@@ -244,7 +245,7 @@ export default class DnMActorSheet extends ActorSheet {
 			item = await fromUuid(itemUuid);
 		}
 
-		dreams.apps.DicePrompt.promptForRoll({
+		dreams.app.DicePrompt.promptForRoll({
 			actor: this.actor,
 			attribute,
 			skill,

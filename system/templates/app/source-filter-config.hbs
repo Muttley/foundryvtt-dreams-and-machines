@@ -1,0 +1,58 @@
+<section>
+	<p class="hint">{{localize "DNM.Settings.SourceFilters.Hint"}}</p>
+	<br>
+	<fieldset>
+		<legend>{{localize "DNM.Settings.SourceFilters.Name"}}</legend>
+		<p class="hint">
+			{{#if hasSelectedSources}}
+				<em>{{localize "DNM.Settings.SourceFilters.OnlyTheseSourcesAllowed"}}</em>
+			{{else}}
+				<em>{{localize "DNM.Settings.SourceFilters.AllSourcesAllowed"}}</em>
+			{{/if}}
+		</p>
+		{{#if hasSelectedSources}}
+			<div class="flexrow">
+				{{#each selectedSources}}
+					<a
+						class="content-link"
+						data-type="Item"
+						data-uuid="{{this.uuid}}"
+						style="margin: 2px;"
+					>
+						<i
+							class="fas fa-delete-right delete-selected-item"
+							data-action="removeSourceFilter"
+							data-tooltip="{{localize "DNM.Settings.SourceFilters.RemoveSourceFromFilters"}}"
+							data-uuid="{{this.uuid}}"
+						></i>
+						{{this.name}}
+					</a>
+				{{/each}}
+			</div>
+		{{/if}}
+		<div>
+			<input
+				{{!--
+					list name needs to be unique and match the one used in the
+					datalist below.  Using the item id plus the system data key
+					field here should be unique enough
+				--}}
+				data-choices-key="{{config.choicesKey}}"
+				data-is-item="{{config.isItem}}"
+				list="source_filter_list"
+				name="sourceName"
+				placeholder="{{localize "DNM.Settings.SourceFilters.Prompt"}}"
+				type="text"
+				value=""
+			/>
+			<datalist id="source_filter_list">
+				{{#each unselectedSources}}
+					<option
+						data-uuid="{{this.uuid}}"
+						value="{{this.name}}"
+					></option>
+				{{/each}}
+			</datalist>
+		</div>
+	</fieldset>
+</section>

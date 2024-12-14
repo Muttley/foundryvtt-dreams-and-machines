@@ -3,7 +3,7 @@ import { DREAMS, SYSTEM_ID, SYSTEM_NAME } from "../config.mjs";
 import DnMActor from "../documents/DnMActor.mjs";
 import DnMItem from "../documents/DnMItem.mjs";
 
-import * as dialogs from "../dialogs/_module.mjs";
+import * as dialog from "../dialogs/_module.mjs";
 
 import * as actorDataModels from "../models/actors/_module.mjs";
 import * as actorSheets from "../sheets/actors/_module.mjs";
@@ -15,6 +15,7 @@ import { registerCombatTracker } from "../combat/CombatTracker2d20.mjs";
 import { registerFonts } from "../fonts.mjs";
 import { registerHandlebarsHelpers } from "../handlebars.mjs";
 
+import DnMCompendiums from "../system/DnMCompendiums.mjs";
 import DnMUtils from "../utils/DnMUtils.mjs";
 import Logger from "../utils/Logger.mjs";
 import MomentumTracker from "../momentumTracker/MomentumTracker.mjs";
@@ -37,11 +38,12 @@ export async function initHook() {
 	// Add utility classes to the global game object so that they're more easily
 	// accessible in global contexts.
 	globalThis.dreams = {
-		apps: {
+		app: {
 			DicePrompt,
 			MomentumTracker,
 		},
-		dialogs,
+		compendiums: DnMCompendiums,
+		dialog,
 		logger: Logger,
 		utils: DnMUtils,
 	};

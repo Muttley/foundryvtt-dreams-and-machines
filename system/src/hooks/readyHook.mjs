@@ -7,8 +7,8 @@ export const readyHook = {
 		Hooks.once("ready", async () => {
 			dreams.logger.debug("Running ready hook");
 
-			new dreams.apps.MomentumTracker();
-			dreams.apps.MomentumTracker.forceRender();
+			new dreams.app.MomentumTracker();
+			dreams.app.MomentumTracker.forceRender();
 
 			listenOnSocket();
 
