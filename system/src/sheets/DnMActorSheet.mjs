@@ -39,19 +39,19 @@ export default class DnMActorSheet extends ActorSheet {
 		new ContextMenu(html, '[data-action="edit-string"]', [
 			{
 				icon: '<i class="fas fa-pencil"></i>',
-				name: "DNM.Labels.Actor.Edit",
+				name: "DNM.Labels.Edit",
 				callback: t => this.onStringEdit(t.data()),
 			},
 			{
 				icon: '<i class="fas fa-trash"></i>',
-				name: "DNM.Labels.Actor.Delete",
+				name: "DNM.Labels.Delete",
 				callback: t => this.onStringDelete(t.data()),
 			},
 		]);
 
 		new ContextMenu(html, '[data-menu="item"]', [
 			{
-				name: "DNM.Labels.Item.Edit",
+				name: "DNM.Labels.Edit",
 				icon: '<i class="fas fa-pencil"></i>',
 				callback: async i => {
 					if (!i.data("uuid")) return;
@@ -63,7 +63,7 @@ export default class DnMActorSheet extends ActorSheet {
 				},
 			},
 			{
-				name: "DNM.Labels.Item.Delete",
+				name: "DNM.Labels.Delete",
 				icon: '<i class="fas fa-trash"></i>',
 				callback: async i => {
 					if (!i.data("uuid")) return;
@@ -180,28 +180,28 @@ export default class DnMActorSheet extends ActorSheet {
 		const actorUuid = this.actor.uuid;
 
 		let currentValues = [];
-		let title = game.i18n.localize("DNM.Labels.Actor.EditString");
+		let title = game.i18n.localize("DNM.Labels.EditString");
 
 		switch (data.key) {
 			case "system.bonds":
 				currentValues = foundry.utils.duplicate(this.actor.system.bonds) ?? [];
-				title = game.i18n.localize("DNM.Labels.Actor.EditBond");
+				title = game.i18n.localize("DNM.Labels.EditBond");
 				break;
 			case "system.goals.longTerm":
 				currentValues = foundry.utils.duplicate(this.actor.system.goals.longTerm) ?? [];
-				title = game.i18n.localize("DNM.Labels.Actor.EditLongTermGoal");
+				title = game.i18n.localize("DNM.Labels.EditLongTermGoal");
 				break;
 			case "system.goals.shortTerm":
 				currentValues = foundry.utils.duplicate(this.actor.system.goals.shortTerm) ?? [];
-				title = game.i18n.localize("DNM.Labels.Actor.EditShortTermGoal");
+				title = game.i18n.localize("DNM.Labels.EditShortTermGoal");
 				break;
 			case "system.harms":
 				currentValues = foundry.utils.duplicate(this.actor.system.harms) ?? [];
-				title = game.i18n.localize("DNM.Labels.Actor.EditHarm");
+				title = game.i18n.localize("DNM.Labels.EditHarm");
 				break;
 			case "system.truths":
 				currentValues = this.actor.system.truths ?? [];
-				title = game.i18n.localize("DNM.Labels.Actor.EditTruth");
+				title = game.i18n.localize("DNM.Labels.EditTruth");
 				break;
 			default:
 		}

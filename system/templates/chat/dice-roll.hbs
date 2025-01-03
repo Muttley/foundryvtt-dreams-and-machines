@@ -49,12 +49,12 @@
 
 		{{#if (and item item.system.isWeapon)}}
 			<span class="flex flex-col gap-1 items-center">
-				<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">{{localize "DNM.Labels.Item.Damage" }}</span>
+				<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">{{localize "DNM.Labels.Damage" }}</span>
 				<span class="text-sm flex flex-wrap items-center gap-1 justify-center">
 					{{#if item.system.weapon.damageQualities}}
 						{{#each item.system.weapon.damageQualities}}
 							<span class="oblique font-semibold">{{ label }}{{#if (gt rating 0)}} {{ rating }}{{/if}}</span>
-							{{#unless @last}}<span>{{localize "DNM.Labels.Item.Weapon.or" }}</span>{{/unless}}
+							{{#unless @last}}<span>{{localize "DNM.Labels.Weapon.or" }}</span>{{/unless}}
 						{{/each}}
 					{{else}}
 						—
@@ -63,7 +63,7 @@
 			</span>
 
 			<span class="flex flex-col gap-1 items-center">
-				<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">{{localize "DNM.Labels.Item.Qualities" }}</span>
+				<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">{{localize "DNM.Labels.Qualities" }}</span>
 				<span class="text-sm flex flex-wrap items-center gap-1 justify-center">
 					{{#if item.system.weapon.qualities}}
 						{{#each item.system.weapon.qualities}}

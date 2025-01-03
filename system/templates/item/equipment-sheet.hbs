@@ -8,12 +8,12 @@
 						{{#if rating}}
 							<input type="number" class="!w-10 !text-center !my-0 !h-5" name="{{ ../name }}.{{ @index }}.rating" value="{{ rating }}" />
 						{{/if}}
-						<a class="text-xs" data-action="delete-quality" data-name="{{ ../name }}" data-index="{{ @index }}" title="{{localize "DNM.Labels.Item.DeleteQuality" }}">
+						<a class="text-xs" data-action="delete-quality" data-name="{{ ../name }}" data-index="{{ @index }}" title="{{localize "DNM.Labels.DeleteQuality" }}">
 							<i class="fas fa-trash"></i>
 						</a>
 					</span>
 			{{/each}}
-			<input name="new-quality" type="text" class="min-w-[100px] max-w-[150px] rounded-md" placeholder="{{localize "DNM.Labels.Item.AddQualityPlaceholder" }}" data-action="add-quality" data-name="{{ name }}" />
+			<input name="new-quality" type="text" class="min-w-[100px] max-w-[150px] rounded-md" placeholder="{{localize "DNM.Labels.AddQualityPlaceholder" }}" data-action="add-quality" data-name="{{ name }}" />
 		</label>
 	</div>
 {{/inline}}
@@ -40,7 +40,7 @@
 			<input type="number" class="disabled:!border-1 disabled:!border-solid !text-center !h-10 !text-3xl !rounded-none !w-full !border-fuchsia-900" name="system.techLevel" value="{{ system.techLevel }}" />
 		</label>
 		<label class="flex flex-col items-center font-semibold">
-			<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Item.SupplyPointCost" }}</span>
+			<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.SupplyPoints" }}</span>
 			<input type="text" class="disabled:!border-b-1 disabled:!border-t-1 disabled:!border-r-1 disabled:!border-solid !border-l-0 !text-center !h-10 !text-3xl !rounded-none !w-full !border-fuchsia-900" name="system.supplyPointCost" value="{{ system.supplyPointCost }}" />
 		</label>
 		<label class="flex flex-col items-center font-semibold">
@@ -48,7 +48,7 @@
 			<input type="number" class="disabled:!border-b-1 disabled:!border-t-1 disabled:!border-r-1 disabled:!border-solid !border-l-0 !text-center !h-10 !text-3xl !rounded-none !w-full !border-fuchsia-900" name="system.value" value="{{ system.value }}" />
 		</label>
 		<label class="flex flex-col items-center font-semibold">
-			<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Item.Rarity" }}</span>
+			<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Rarity" }}</span>
 			<input type="number" class="disabled:!border-b-1 disabled:!border-t-1 disabled:!border-r-1 disabled:!border-solid !border-l-0 !text-center !h-10 !text-3xl !rounded-none !w-full !border-fuchsia-900" name="system.rarity" value="{{ system.rarity }}" />
 		</label>
 	</div>
@@ -63,12 +63,12 @@
 			<div class="flex flex-col items-start w-full">
 				<label class="flex items-center">
 					<input type="checkbox" name="system.isGLIF" {{ checked system.isGLIF }} />
-					<span>{{localize "DNM.Labels.Item.IsGLIF" }}</span>
+					<span>{{localize "DNM.Labels.IsGLIF" }}</span>
 				</label>
 
 				<div class="px-1 w-full">
 					<label class="flex flex-col items-center font-semibold">
-						<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Item.GLIF.Complexity" }}</span>
+						<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.GLIF.Complexity" }}</span>
 						<input type="number" class="disabled:!border-1 disabled:!border-solid !text-center !h-10 !text-3xl !rounded-none !w-full !border-fuchsia-900" name="system.GLIF.complexity" value="{{ system.GLIF.complexity }}" />
 					</label>
 				</div>
@@ -77,11 +77,11 @@
 			<div class="p-1 w-full">
 				<div class="grid grid-cols-4 w-full">
 					<label class="flex flex-col items-center font-semibold" style="grid-column: 1 / span 3;">
-						<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Item.Category" }}</span>
+						<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Category" }}</span>
 						<input type="text" class="disabled:!border-1 disabled:!border-solid !text-center !h-10 !text-3xl !rounded-none !w-full !border-fuchsia-900" name="system.category" value="{{ system.category }}" />
 					</label>
 					<label class="flex flex-col items-center font-semibold">
-						<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Item.Quantity" }}</span>
+						<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Quantity" }}</span>
 						<input type="text" class="disabled:!border-b-1 disabled:!border-t-1 disabled:!border-r-1 disabled:!border-solid !border-l-0 !text-center !h-10 !text-3xl !rounded-none !w-full !border-fuchsia-900" name="system.quantity" value="{{ system.quantity }}" />
 					</label>
 				</div>
@@ -91,7 +91,7 @@
 			<div class="flex flex-col items-start w-full">
 				{{!-- Item Qualities --}}
 				<div class="flex flex-col items-center w-full p-1">
-					<div class="py-0.5 w-full text-center font-semibold uppercase text-white bg-fuchsia-900">{{localize "DNM.Labels.Item.Qualities" }}</div>
+					<div class="py-0.5 w-full text-center font-semibold uppercase text-white bg-fuchsia-900">{{localize "DNM.Labels.Qualities" }}</div>
 					<div class="w-full border-1 border-t-0 border-fuchsia-900 border-solid p-1">
 						{{> qualitiesInput value=system.qualities name="system.qualities" }}
 					</div>
@@ -100,7 +100,7 @@
 				<div class="flex flex-col items-start w-full">
 					<label class="flex items-center">
 						<input type="checkbox" name="system.isGLIF" {{ checked system.isGLIF }} />
-						<span>{{localize "DNM.Labels.Item.IsGLIF" }}</span>
+						<span>{{localize "DNM.Labels.IsGLIF" }}</span>
 					</label>
 				</div>
 
@@ -108,15 +108,15 @@
 				<div class="grid grid-cols-2 gap-2 w-full pr-1">
 					<label class="flex items-center">
 						<input type="checkbox" name="system.isWeapon" {{ checked system.isWeapon }} />
-						<span>{{localize "DNM.Labels.Item.IsWeapon" }}</span>
+						<span>{{localize "DNM.Labels.IsWeapon" }}</span>
 					</label>
 
 					{{#if system.isWeapon}}
 						<select name="system.weapon.type" class="!w-full">
 							{{#select system.weapon.type}}
-								<option value="Melee">{{localize "DNM.Labels.Item.Weapon.Melee" }}</option>
-								<option value="Ranged">{{localize "DNM.Labels.Item.Weapon.Ranged" }}</option>
-								<option value="MeleeRanged">{{localize "DNM.Labels.Item.Weapon.MeleeRanged" }}</option>
+								<option value="Melee">{{localize "DNM.Labels.Weapon.Melee" }}</option>
+								<option value="Ranged">{{localize "DNM.Labels.Weapon.Ranged" }}</option>
+								<option value="MeleeRanged">{{localize "DNM.Labels.Weapon.MeleeRanged" }}</option>
 							{{/select}}
 						</select>
 					{{/if}}
@@ -126,11 +126,11 @@
 				{{#if system.isWeapon}}
 					<div class="w-full grid grid-cols-2 p-1">
 						<label class="text-center bg-fuchsia-900 w-full text-white uppercase font-semibold p-1">
-							{{localize "DNM.Labels.Item.Damage" }}
+							{{localize "DNM.Labels.Damage" }}
 						</label>
 
 						<label class="text-center bg-fuchsia-900 w-full text-white uppercase font-semibold p-1">
-							{{localize "DNM.Labels.Item.Qualities" }}
+							{{localize "DNM.Labels.Qualities" }}
 						</label>
 
 						<div class="border-1 border-solid border-t-0 border-fuchsia-900 p-1">
@@ -148,18 +148,18 @@
 			<div class="flex flex-col items-start w-full">
 				<label class="flex items-center">
 					<input type="checkbox" name="system.hasProtection" {{ checked system.hasProtection }} />
-					<span>{{localize "DNM.Labels.Item.HasProtection" }}</span>
+					<span>{{localize "DNM.Labels.HasProtection" }}</span>
 				</label>
 
 				{{#if system.hasProtection}}
 					<div class="p-1 w-full">
 						<div class="grid grid-cols-2 w-full">
 							<label class="flex flex-col items-center font-semibold">
-								<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Item.Protection" }}</span>
+								<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Protection" }}</span>
 								<input type="number" class="disabled:!border-1 disabled:!border-solid !text-center !h-10 !text-3xl !rounded-none !w-full !border-fuchsia-900" name="system.protection.value" value="{{ system.protection.value }}" />
 							</label>
 							<label class="flex flex-col items-center font-semibold">
-								<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Item.ProtectionBreaker" }}</span>
+								<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.ProtectionBreaker" }}</span>
 								<input type="number" class="disabled:!border-b-1 disabled:!border-t-1 disabled:!border-r-1 disabled:!border-solid !border-l-0 !text-center !h-10 !text-3xl !rounded-none !w-full !border-fuchsia-900" name="system.protection.breaker" value="{{ system.protection.breaker }}" />
 							</label>
 						</div>
@@ -187,24 +187,24 @@
 			{{#if system.isWeapon}}
 				<div class="w-full grid grid-cols-2 border-1 border-solid border-fuchsia-900">
 					<label class="col-span-2 text-center w-full p-0.5 bg-fuchsia-900 text-white uppercase font-semibold">
-						{{localize "DNM.Labels.Item.Weapon.Label" }}
+						{{localize "DNM.Labels.Weapon.Label" }}
 					</label>
 					<span class="col-span-2 text-center text-xl font-semibold">
-						{{ item.name }} ({{ localize (concat "DNM.Labels.Item.Weapon." system.weapon.type) }})
+						{{ item.name }} ({{ localize (concat "DNM.Labels.Weapon." system.weapon.type) }})
 					</span>
 
 					<label class="text-center w-full p-0.5 bg-fuchsia-900 text-white uppercase font-semibold">
-						{{localize "DNM.Labels.Item.Damage" }}
+						{{localize "DNM.Labels.Damage" }}
 					</label>
 
 					<label class="text-center w-full p-0.5 bg-fuchsia-900 text-white uppercase font-semibold">
-						{{localize "DNM.Labels.Item.Qualities" }}
+						{{localize "DNM.Labels.Qualities" }}
 					</label>
 
 					<span class="text-lg w-full text-center border-0 border-r-1 border-solid border-fuchsia-900">
 						{{#each system.weapon.damageQualities}}
 							<em class="oblique font-semibold">{{ label }} {{ rating }}</em>
-							{{#unless @last}}{{localize "DNM.Labels.Item.Weapon.or" }}{{/unless}}
+							{{#unless @last}}{{localize "DNM.Labels.Weapon.or" }}{{/unless}}
 						{{/each}}
 					</span>
 
@@ -219,7 +219,7 @@
 
 			{{#if system.hasProtection}}
 				<div class="w-full text-center text-lg">
-					<strong>{{localize "DNM.Labels.Item.Protection" }}:</strong>
+					<strong>{{localize "DNM.Labels.Protection" }}:</strong>
 					{{#if system.protection.notes}}
 						<span>{{ system.protection.value }}, {{{ system.protection.notes }}}</span>
 					{{else}}

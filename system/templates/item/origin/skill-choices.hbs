@@ -1,0 +1,51 @@
+<div class="grid-4-columns">
+
+	<span class="label grid-colspan-4">
+		Skill Choices
+	</span>
+
+	<div class="grid-1-columns grid-colspan-2">
+
+		<div class="grid-2-columns">
+			{{#each skills}}
+				<a
+					{{#if this.selected}}
+						class="selectable-choice selected"
+					{{else}}
+						class="selectable-choice"
+					{{/if}}
+					data-action="toggle-skill-choice"
+					data-skill-id="{{this.id}}"
+				>
+					{{this.name}}
+				</a>
+			{{/each}}
+		</div>
+
+	</div>
+
+	<label class="sublabel">
+		<span>
+			Choices
+		</span>
+		<input
+			data-type="Number"
+			name="system.skillChoices.choiceCount"
+			type="number"
+			value="{{system.skillChoices.choiceCount}}"
+		/>
+	</label>
+
+	<label class="sublabel">
+		<span>
+			Value
+		</span>
+		<input
+			data-type="Number"
+			name="system.skillChoices.value"
+			type="number"
+			value="{{system.skillChoices.value}}"
+		/>
+	</label>
+
+</div>

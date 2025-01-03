@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.dnm.sheet.item {
+
+	input[type="number"] {
+		font-weight: 600;
+		background: none;
+		font-size: 2rem;
+		line-height: 2.25rem;
+		text-align: center;
+		padding: 0.5rem;
+		border: none;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	.sheet-body {
+		@include p-reset;
+		padding: 0.25rem;
+		display: grid;
+		row-gap: 4px;
+	}
+
+	.header {
+		display: grid;
+		grid-template-columns: 3.5rem 1fr;
+		column-gap: 4px;
+		background: black;
+
+		img {
+			box-sizing: border-box;
+			border: 1px solid black;
+			border-radius: 2px;
+			max-width: 100%;
+		}
+	}
+
+	.label {
+		display: flex;
+		width: 100%;
+		font-weight: 600;
+
+		padding-left: 0.25rem;
+		padding-right: 0.25rem;
+
+		align-items: center;
+		justify-content: center;
+
+		color: white;
+		background-color: $c-character-purple;
+
+		text-transform: uppercase;
+	}
+
+	.name-input {
+		color: #ffffff;
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+		text-transform: uppercase;
+		height: 100%;
+		border-width: 0;
+
+		&:focus {
+			text-transform: none;
+		}
+	}
+
+	.selectable-choice {
+		background-color: $c-character-purple-unselected;
+		color: black;
+		font-weight: normal;
+		text-align: center;
+		border-color: $c-character-purple-unselected;
+		border-style: solid;
+		border-radius: 8px;
+		margin: 2px;
+
+		&.selected {
+			font-weight: bold;
+			background-color: black;
+			border-color: black;
+			color: white;
+		}
+	}
+
+	.sublabel {
+		align-self: center;
+		font-weight: 600;
+		color: $c-character-purple;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 1.25rem;
+		line-height: 1.125em;
+		background-color: rgba(255, 255, 255, 0.75);
+	}
+}

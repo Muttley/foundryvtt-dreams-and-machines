@@ -26,6 +26,11 @@ export default class DnMItemSheet extends ItemSheet {
 	}
 
 
+	get title() {
+		return `[${this.item.type}] ${this.item.name}`;
+	}
+
+
 	get template() {
 		return `systems/dreams-and-machines/templates/item/${this.item.type}-sheet.hbs`;
 	}

@@ -5,7 +5,7 @@
 		{{!-- Skills --}}
 		<div class="grid grid-cols-3">
 			<span class="col-span-3 uppercase text-center font-semibold bg-fuchsia-900 text-white p-1">
-				{{localize "DNM.Labels.Actor.Skills" }}
+				{{localize "DNM.Labels.Skills" }}
 			</span>
 
 			<label class="flex flex-col border-1 border-fuchsia-900 border-solid font-semibold uppercase border-r-0">
@@ -46,14 +46,14 @@
 		<div class="grid grid-cols-2">
 			<label class="flex flex-col border-1 border-fuchsia-900 border-solid font-semibold uppercase border-t-0">
 				<span class="uppercase text-center font-semibold bg-fuchsia-900 text-white p-1">
-					{{localize "DNM.Labels.Actor.Spirit" }}
+					{{localize "DNM.Labels.Spirit" }}
 				</span>
 				<input type="number" name="system.spirit" value="{{ system.spirit }}" class="!text-center !font-semibold !text-3xl !border-none !rounded-none !bg-none !mb-1" />
 			</label>
 
 			<label class="flex flex-col border-1 border-fuchsia-900 border-solid font-semibold uppercase border-t-0 border-l-0">
 				<span class="uppercase text-center font-semibold bg-fuchsia-900 text-white p-1">
-					{{localize "DNM.Labels.Actor.SupplyPoints" }}
+					{{localize "DNM.Labels.SupplyPoints" }}
 				</span>
 				<input type="number" name="system.supplyPoints" value="{{ system.supplyPoints }}" class="!text-center !font-semibold !text-3xl !border-none !rounded-none !bg-none !mb-1" />
 			</label>
@@ -61,15 +61,15 @@
 
 		{{!-- Starting Gear --}}
 		<div class="flex flex-col items-center text-center py-4">
-			<span class="font-semibold text-xl">{{localize "DNM.Labels.Item.StartingGear" }}:</span>
+			<span class="font-semibold text-xl">{{localize "DNM.Labels.StartingGear" }}:</span>
 			{{#unless system.hasStartingGear}}
-				<em>{{localize "DNM.Labels.Item.AddStartingGear" }}</em>
+				<em>{{localize "DNM.Labels.AddStartingGear" }}</em>
 			{{/unless}}
 			<div class="flex flex-wrap justify-center gap-1 text-lg">
 				{{#each startingGear}}
 					{{#if (eq this null)}}
 						<span class="oblique text-red-900" data-menu="starting-gear" data-index="{{ @index }}" data-uuid="{{ uuid }}">
-							<a>{{localize "DNM.Labels.Item.MissingUUID" }}</a></span>
+							<a>{{localize "DNM.Labels.MissingUUID" }}</a></span>
 					{{else}}
 						<span data-menu="starting-gear" data-index="{{ @index }}" data-uuid="{{ uuid }}">
 							<a data-action="open-sheet" data-uuid="{{ uuid }}">{{ name }}</a>{{#unless @last}},{{/unless}}
@@ -83,7 +83,7 @@
 		<div class="grid grid-cols-3">
 			<span class="col-span-2"></span>
 			<label class="flex flex-col border-1 border-fuchsia-900 border-solid font-semibold uppercase">
-				<span class="w-full text-center text-fuchsia-900 text-lg">{{localize "DNM.Labels.Item.StartingCoin" }}</span>
+				<span class="w-full text-center text-fuchsia-900 text-lg">{{localize "DNM.Labels.StartingCoin" }}</span>
 				<input type="number" name="system.startingCoin" value="{{ system.startingCoin }}" class="!text-center !font-semibold !text-3xl !border-none !rounded-none !bg-none !mb-1" />
 			</label>
 		</div>

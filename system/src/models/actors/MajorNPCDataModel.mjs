@@ -1,4 +1,4 @@
-import Attributes from "../_types/Attributes.mjs";
+import CharacterAttributes from "../_types/CharacterAttributes.mjs";
 import Skills from "../_types/Skills.mjs";
 import Traits from "../_types/Traits.mjs";
 
@@ -23,7 +23,7 @@ export default class ManorNPCDataModel extends foundry.abstract.TypeDataModel {
 		const fields = foundry.data.fields;
 
 		return {
-			...Attributes(),
+			...CharacterAttributes(),
 			...Skills(),
 			...Traits(),
 

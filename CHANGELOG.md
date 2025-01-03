@@ -7,6 +7,10 @@
 ## Chores
 - [#2] Migrate to new home and build process
 
+**NOTE:** There have been major changes to the data structure used between the quickstart supporting early release on GitHub and this new release though the FoundryVTT package database.  There is no migration path between these versions, so this means you should not attempt to upgrade an old world, and should start fresh with this release.
+
+Going forward any future required schema changes will have full data migration support.
+
 ---
 
 # v1.1.2

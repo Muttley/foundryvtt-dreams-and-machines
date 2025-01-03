@@ -110,6 +110,7 @@ export default class SourceFilterConfig
 		return context;
 	}
 
+
 	static registerSetting() {
 		game.settings.register(SYSTEM_ID, "sourceFilters", {
 			name: "DNM.Settings.SourceFilters.Name",
@@ -121,6 +122,7 @@ export default class SourceFilterConfig
 			default: [],
 		});
 	}
+
 
 	static async removeSourceFilter(event, target) {
 		const removeId = target.dataset.uuid;

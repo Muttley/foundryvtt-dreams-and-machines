@@ -11,57 +11,45 @@ DNM.Combat.CombatantsTurnDone: Turn Completed
 DNM.Combat.CombatantsTurnNotDone: Turn Not Completed
 DNM.Combat.CombatHasNotStarted: Combat Has Not Started
 DNM.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
+DNM.Exhaustion.Breathless: Breathless
+DNM.Exhaustion.Confused: Confused
+DNM.Exhaustion.Despairing: Despairing
+DNM.Exhaustion.Weary: Weary
+DNM.Labels.Action: Action
 DNM.Labels.Actions: Actions
-DNM.Labels.Actor.AddActions: Drag some Major NPC Actions onto this sheet to add actions this NPC can perform!
-DNM.Labels.Actor.AddArchetype: Drag & Drop an Archetype item onto this sheet to set your archetype!
-DNM.Labels.Actor.AddBond: Add Bond
-DNM.Labels.Actor.AddGoal: Add Goal
-DNM.Labels.Actor.AddHarm: Add Harm
-DNM.Labels.Actor.AddOrigin: Drag & Drop an Origin item onto this sheet to set your origin!
-DNM.Labels.Actor.AddTemperament: Drag & Drop a Temperament item onto this sheet to set your temperament!
-DNM.Labels.Actor.AddTrait: Add Trait
-DNM.Labels.Actor.AddTruth: Add Truth
-DNM.Labels.Actor.Archetype: Archetype
-DNM.Labels.Actor.ArchetypeGoal: Archetype Goal
-DNM.Labels.Actor.Attitude: Attitude
-DNM.Labels.Actor.Attributes: Attributes
-DNM.Labels.Actor.Bond: Bond
-DNM.Labels.Actor.Bonds: Bonds
-DNM.Labels.Actor.CharacterTruths: Character Truths
-DNM.Labels.Actor.Coin: Coin
-DNM.Labels.Actor.CurrentShort: Curr.
-DNM.Labels.Actor.Delete: Delete
-DNM.Labels.Actor.Drive: Drive
-DNM.Labels.Actor.Edit: Edit
-DNM.Labels.Actor.EditBond: Edit Bond
-DNM.Labels.Actor.EditHarm: Edit Harm
-DNM.Labels.Actor.EditLongTermGoal: Edit Long-Term Goal
-DNM.Labels.Actor.EditShortTermGoal: Edit Short-Term Goal
-DNM.Labels.Actor.EditString: Edit String
-DNM.Labels.Actor.EditTruth: Edit Truth
-DNM.Labels.Actor.Equipment: Equipment
-DNM.Labels.Actor.Exhaustion: Exhaustion
-DNM.Labels.Actor.Goals: Goals
-DNM.Labels.Actor.Growth: Growth
-DNM.Labels.Actor.Harms: Harms
-DNM.Labels.Actor.InjuriesToDefeat: Injuries to Defeat
-DNM.Labels.Actor.LongTermGoals: Long-Term
-DNM.Labels.Actor.Max: Max
-DNM.Labels.Actor.Origin: Origin
-DNM.Labels.Actor.PersonalThreat: Personal Threat
-DNM.Labels.Actor.ShortTermGoals: Short-Term
-DNM.Labels.Actor.Skills: Skills
-DNM.Labels.Actor.Spirit: Spirit
-DNM.Labels.Actor.SpiritPool: Spirit Pool
-DNM.Labels.Actor.Supply: Supply
-DNM.Labels.Actor.Talents: Talents
-DNM.Labels.Actor.Temperament: Temperament
-DNM.Labels.Actor.Truth: Truth
-DNM.Labels.Actor.Truths: Truths
+DNM.Labels.AddActions: Drag some Major NPC Actions onto this sheet to add actions this NPC can perform!
+DNM.Labels.AddArchetype: Drag & Drop an Archetype item onto this sheet to set your archetype!
+DNM.Labels.AddArchetypes: Drag & Drop Archetypes onto this sheet to reference them as starting equipment for the origin!
+DNM.Labels.AddBond: Add Bond
+DNM.Labels.AddGoal: Add Goal
+DNM.Labels.AddHarm: Add Harm
+DNM.Labels.AddOrigin: Drag & Drop an Origin item onto this sheet to set your origin!
+DNM.Labels.AddQualityPlaceholder: Type to Add Quality
+DNM.Labels.AddStartingGear: Drag & Drop Equipment onto this sheet to reference them as starting equipment for the archetype!
+DNM.Labels.AddTemperament: Drag & Drop a Temperament item onto this sheet to set your temperament!
+DNM.Labels.AddToNPC: Add this action to a Major NPC's sheet!
+DNM.Labels.AddTrait: Add Trait
+DNM.Labels.AddTruth: Add Truth
+DNM.Labels.Archetype: Archetype
+DNM.Labels.ArchetypeGoal: Archetype Goal
+DNM.Labels.Archetypes: Archetypes
+DNM.Labels.Attitude: Attitude
+DNM.Labels.AttributeBonuses: Attribute Bonuses
+DNM.Labels.Attributes: Attributes
+DNM.Labels.Bond: Bond
+DNM.Labels.Bonds: Bonds
+DNM.Labels.Category: Category
+DNM.Labels.CharacterTruths: Character Truths
+DNM.Labels.ChooseBetween: Choose Between
+DNM.Labels.Coin: Coin
 DNM.Labels.Combat: Combat
 DNM.Labels.Cost: Cost
 DNM.Labels.Current: Current
+DNM.Labels.CurrentShort: Curr.
+DNM.Labels.Damage: Damage
 DNM.Labels.Default: Default
+DNM.Labels.Delete: Delete
+DNM.Labels.DeleteQuality: Delete Quality
 DNM.Labels.Description: Description
 DNM.Labels.Dialog.Add: Add
 DNM.Labels.Dialog.Save: Save
@@ -69,56 +57,66 @@ DNM.Labels.DicePrompt.Attribute: Attribute
 DNM.Labels.DicePrompt.Complication: Complication Range
 DNM.Labels.DicePrompt.Roll: Roll
 DNM.Labels.DicePrompt.Skill: Skill
-DNM.Labels.Exhaustion.Breathless: Breathless
-DNM.Labels.Exhaustion.Confused: Confused
-DNM.Labels.Exhaustion.Despairing: Despairing
-DNM.Labels.Exhaustion.Weary: Weary
-DNM.Labels.Item.Action: Action
-DNM.Labels.Item.AddArchetypes: Drag & Drop Archetypes onto this sheet to reference them as starting equipment for the origin!
-DNM.Labels.Item.AddQualityPlaceholder: Type to Add Quality
-DNM.Labels.Item.AddStartingGear: Drag & Drop Equipment onto this sheet to reference them as starting equipment for the archetype!
-DNM.Labels.Item.AddToNPC: Add this action to a Major NPC's sheet!
-DNM.Labels.Item.Archetypes: Archetypes
-DNM.Labels.Item.Category: Category
-DNM.Labels.Item.ChooseBetween: Choose Between
-DNM.Labels.Item.Damage: Damage
-DNM.Labels.Item.Delete: Delete Item
-DNM.Labels.Item.DeleteQuality: Delete Quality
-DNM.Labels.Item.Edit: Edit Item
-DNM.Labels.Item.Focus: Focus
-DNM.Labels.Item.GLIF.Complexity: Complexity
-DNM.Labels.Item.HasProtection: Provides Protection
-DNM.Labels.Item.IsGLIF: Is GLIF
-DNM.Labels.Item.IsWeapon: Is Weapon
-DNM.Labels.Item.MissingUUID: (Missing UUID)
-DNM.Labels.Item.Or: Or
-DNM.Labels.Item.Protection: Protection
-DNM.Labels.Item.ProtectionBreaker: Protection (Breaker)
-DNM.Labels.Item.Qualities: Qualities
-DNM.Labels.Item.Quantity: Quantity
-DNM.Labels.Item.Rarity: Rarity
-DNM.Labels.Item.SkillTest: Skill Test
-DNM.Labels.Item.StartingCoin: Starting Coin
-DNM.Labels.Item.StartingGear: Starting Gear
-DNM.Labels.Item.SupplyPointCost: Supply Points
-DNM.Labels.Item.TN: TN
-DNM.Labels.Item.Weapon.Label: Weapon
-DNM.Labels.Item.Weapon.Melee: Melee
-DNM.Labels.Item.Weapon.MeleeRanged: Melee/Ranged
-DNM.Labels.Item.Weapon.Name: Weapon Name
-DNM.Labels.Item.Weapon.or: or
-DNM.Labels.Item.Weapon.Ranged: Ranged
-DNM.Labels.Item.Weapon.Type: Weapon Type
+DNM.Labels.Drive: Drive
+DNM.Labels.Edit: Edit
+DNM.Labels.EditBond: Edit Bond
+DNM.Labels.EditHarm: Edit Harm
+DNM.Labels.EditLongTermGoal: Edit Long-Term Goal
+DNM.Labels.EditShortTermGoal: Edit Short-Term Goal
+DNM.Labels.EditString: Edit String
+DNM.Labels.EditTruth: Edit Truth
+DNM.Labels.Equipment: Equipment
+DNM.Labels.Exhaustion: Exhaustion
+DNM.Labels.Focus: Focus
+DNM.Labels.GLIF.Complexity: Complexity
+DNM.Labels.Goals: Goals
+DNM.Labels.Growth: Growth
+DNM.Labels.Harms: Harms
+DNM.Labels.HasProtection: Provides Protection
+DNM.Labels.InjuriesToDefeat: Injuries to Defeat
+DNM.Labels.IsGLIF: Is GLIF
+DNM.Labels.IsWeapon: Is Weapon
+DNM.Labels.LongTermGoals: Long-Term
 DNM.Labels.Max: Max
+DNM.Labels.MissingUUID: (Missing UUID)
 DNM.Labels.Momentum: Momentum
 DNM.Labels.Notes: Notes
+DNM.Labels.Or: Or
+DNM.Labels.Origin: Origin
+DNM.Labels.PersonalThreat: Personal Threat
+DNM.Labels.Protection: Protection
+DNM.Labels.ProtectionBreaker: Protection (Breaker)
+DNM.Labels.Qualities: Qualities
+DNM.Labels.Quantity: Quantity
+DNM.Labels.Rarity: Rarity
+DNM.Labels.ShortTermGoals: Short-Term
+DNM.Labels.Skills: Skills
+DNM.Labels.SkillTest: Skill Test
 DNM.Labels.SpecialAbilities: Special Abilities
 DNM.Labels.SpecialActions: Special Actions
+DNM.Labels.Spirit: Spirit
+DNM.Labels.SpiritPool: Spirit Pool
+DNM.Labels.StartingCoin: Starting Coin
+DNM.Labels.StartingGear: Starting Gear
+DNM.Labels.Supply: Supply
+DNM.Labels.SupplyPoints: Supply Points
+DNM.Labels.Talents: Talents
 DNM.Labels.TechLevel: Tech Level
 DNM.Labels.TechLevelShort: Tech Lvl
+DNM.Labels.Temperament: Temperament
 DNM.Labels.Threat: Threat
 DNM.Labels.TL: TL
+DNM.Labels.TN: TN
+DNM.Labels.Truth: Truth
+DNM.Labels.Truths: Truths
 DNM.Labels.Value: Coin
+DNM.Labels.Weapon.Label: Weapon
+DNM.Labels.Weapon.Melee: Melee
+DNM.Labels.Weapon.MeleeRanged: Melee/Ranged
+DNM.Labels.Weapon.Name: Weapon Name
+DNM.Labels.Weapon.or: or
+DNM.Labels.Weapon.Ranged: Ranged
+DNM.Labels.Weapon.Type: Weapon Type
 DNM.Labels.Weapons: Weapons
 DNM.Notifications.NotEnoughMomentum: Cannot spend Momentum while the pool is empty! Perhaps you should generate Threat instead?
 DNM.Notifications.NotEnoughThreat: Cannot spend Threat while the pool is empty!

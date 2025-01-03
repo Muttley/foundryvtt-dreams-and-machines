@@ -37,6 +37,10 @@ export default async function registerTemplates() {
 		"systems/dreams-and-machines/templates/actor/character/truths.hbs",
 		"systems/dreams-and-machines/templates/item/_partials/description.hbs",
 		"systems/dreams-and-machines/templates/item/_partials/header.hbs",
+		"systems/dreams-and-machines/templates/item/origin/attribute-choices.hbs",
+		"systems/dreams-and-machines/templates/item/origin/attributes.hbs",
+		"systems/dreams-and-machines/templates/item/origin/skill-choices.hbs",
+		"systems/dreams-and-machines/templates/item/origin/skills.hbs",
 	];
 
 	const paths = {};

@@ -1,4 +1,4 @@
-import Attributes from "../_types/Attributes.mjs";
+import CharacterAttributes from "../_types/CharacterAttributes.mjs";
 import Bonds from "../_types/Bonds.mjs";
 import Goals from "../_types/Goals.mjs";
 import Harms from "../_types/Harms.mjs";
@@ -28,7 +28,7 @@ export default class CharacterDataModel extends foundry.abstract.TypeDataModel {
 		const fields = foundry.data.fields;
 
 		return {
-			...Attributes(),
+			...CharacterAttributes(),
 			...Goals(),
 			...Skills(),
 			...Truths(),

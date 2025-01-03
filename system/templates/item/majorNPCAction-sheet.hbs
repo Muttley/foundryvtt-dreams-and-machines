@@ -8,12 +8,12 @@
 					{{#if rating}}
 						<input type="number" class="!w-10 !text-center !my-0 !h-5" name="{{ ../name }}.{{ @index }}.rating" value="{{ rating }}" />
 					{{/if}}
-					<a class="text-xs" data-action="delete-quality" data-name="{{ ../name }}" data-index="{{ @index }}" title="{{localize "DNM.Labels.Item.DeleteQuality" }}">
+					<a class="text-xs" data-action="delete-quality" data-name="{{ ../name }}" data-index="{{ @index }}" title="{{localize "DNM.Labels.DeleteQuality" }}">
 							<i class="fas fa-trash"></i>
 						</a>
 					</span>
 			{{/each}}
-			<input name="new-quality" type="text" class="min-w-[100px] max-w-[150px] rounded-md" placeholder="{{localize "DNM.Labels.Item.AddQualityPlaceholder" }}" data-action="add-quality" data-name="{{ name }}" />
+			<input name="new-quality" type="text" class="min-w-[100px] max-w-[150px] rounded-md" placeholder="{{localize "DNM.Labels.AddQualityPlaceholder" }}" data-action="add-quality" data-name="{{ name }}" />
 		</label>
 	</div>
 {{/inline}}
@@ -38,7 +38,7 @@
 
 	<div class="grid grid-cols-4 w-full p-1">
 		<label class="col-span-2 bg-green-600 text-white font-semibold p-1 uppercase border-0 border-l-1 border-solid border-green-600">{{ localize "TYPES.Actor.majorNPC" }}</label>
-		<label class="col-span-2 bg-green-600 text-white font-semibold p-1 uppercase text-center border-0 border-r-1 border-solid border-green-600">{{localize "DNM.Labels.Item.SkillTest" }}</label>
+		<label class="col-span-2 bg-green-600 text-white font-semibold p-1 uppercase text-center border-0 border-r-1 border-solid border-green-600">{{localize "DNM.Labels.SkillTest" }}</label>
 
 		<span class="flex items-center justify-center row-span-2 border-0 border-l-1 border-b-1 border-solid border-green-600 p-1 text-2xl text-center col-span-2">
 			{{#if item.parent}}
@@ -46,7 +46,7 @@
 					<a data-action="open-sheet" data-uuid="{{ uuid }}">{{ name }}</a>
 				{{/with}}
 			{{else}}
-				<em class="text-sm">{{localize "DNM.Labels.Item.AddToNPC" }}</em>
+				<em class="text-sm">{{localize "DNM.Labels.AddToNPC" }}</em>
 			{{/if}}
 		</span>
 
@@ -98,34 +98,34 @@
 	<div class="w-full grid grid-cols-2 p-1">
 		{{#if editable}}
 			<label class="text-center bg-green-600 w-full text-white uppercase font-semibold p-1">
-				{{localize "DNM.Labels.Item.Weapon.Name" }}
+				{{localize "DNM.Labels.Weapon.Name" }}
 			</label>
 
 			<label class="text-center bg-green-600 w-full text-white uppercase font-semibold p-1">
-				{{localize "DNM.Labels.Item.Weapon.Type" }}
+				{{localize "DNM.Labels.Weapon.Type" }}
 			</label>
 
 			<input type="text" name="system.weapon.name" value="{{ system.weapon.name }}" class="!text-lg !text-center !h-full !p-0 !bg-none !rounded-none !border-0 !border-l-1 !border-green-600 !w-full" />
 			<select name="system.weapon.type" class="!text-lg !text-center !h-full !p-0 !bg-none !rounded-none !border-0 !border-x-1 !border-green-600 !w-full">
 				{{#select system.weapon.type}}
-					<option value="Melee">{{localize "DNM.Labels.Item.Weapon.Melee" }}</option>
-					<option value="Ranged">{{localize "DNM.Labels.Item.Weapon.Ranged" }}</option>
+					<option value="Melee">{{localize "DNM.Labels.Weapon.Melee" }}</option>
+					<option value="Ranged">{{localize "DNM.Labels.Weapon.Ranged" }}</option>
 				{{/select}}
 			</select>
 		{{else}}
 			<label class="col-span-2 text-center bg-green-600 w-full text-white uppercase font-semibold p-1">
-				{{localize "DNM.Labels.Item.Weapon.Label" }}
+				{{localize "DNM.Labels.Weapon.Label" }}
 			</label>
 
-			<span class="col-span-2 text-xl border-0 border-x-1 border-solid border-green-600 p-1 text-center">{{ system.weapon.name }} ({{ localize (concat "DNM.Labels.Item.Weapon." system.weapon.type) }})</span>
+			<span class="col-span-2 text-xl border-0 border-x-1 border-solid border-green-600 p-1 text-center">{{ system.weapon.name }} ({{ localize (concat "DNM.Labels.Weapon." system.weapon.type) }})</span>
 		{{/if}}
 
 		<label class="text-center bg-green-600 w-full text-white uppercase font-semibold p-1">
-			{{localize "DNM.Labels.Item.Damage" }}
+			{{localize "DNM.Labels.Damage" }}
 		</label>
 
 		<label class="text-center bg-green-600 w-full text-white uppercase font-semibold p-1">
-			{{localize "DNM.Labels.Item.Qualities" }}
+			{{localize "DNM.Labels.Qualities" }}
 		</label>
 
 		{{#if editable}}
@@ -140,7 +140,7 @@
 			<span class="text-lg w-full text-center border-1 border-t-0 border-r-0 border-solid border-green-600">
 				{{#each system.weapon.damageQualities}}
 					<em class="oblique font-semibold">{{ label }} {{ rating }}</em>
-					{{#unless @last}}{{localize "DNM.Labels.Item.Weapon.or" }}{{/unless}}
+					{{#unless @last}}{{localize "DNM.Labels.Weapon.or" }}{{/unless}}
 				{{/each}}
 				{{#unless system.weapon.damageQualities}}—{{/unless}}
 			</span>

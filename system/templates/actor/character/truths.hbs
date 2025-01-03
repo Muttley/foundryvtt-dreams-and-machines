@@ -1,24 +1,24 @@
 <div class="strings">
 	<span class="label">
-		{{localize "DNM.Labels.Actor.CharacterTruths"}}
+		{{localize "DNM.Labels.CharacterTruths"}}
 	</span>
 
 	{{> actor/_partials/background-item
 		item=origin
-		label=(localize "DNM.Labels.Actor.Origin")
-		placeholder=(localize "DNM.Labels.Actor.AddOrigin")
+		label=(localize "DNM.Labels.Origin")
+		placeholder=(localize "DNM.Labels.AddOrigin")
 	}}
 
 	{{> actor/_partials/background-item
 		item=archetype
-		label=(localize "DNM.Labels.Actor.Archetype")
-		placeholder=(localize "DNM.Labels.Actor.AddArchetype")
+		label=(localize "DNM.Labels.Archetype")
+		placeholder=(localize "DNM.Labels.AddArchetype")
 	}}
 
 	{{> actor/_partials/background-item
 		item=temperament
-		label=(localize "DNM.Labels.Actor.Temperament")
-		placeholder=(localize "DNM.Labels.Actor.AddTemperament")
+		label=(localize "DNM.Labels.Temperament")
+		placeholder=(localize "DNM.Labels.AddTemperament")
 	}}
 
 	{{> actor/character/archetype-goal }}
@@ -29,7 +29,7 @@
 		addRowLabel=""
 		currentValues=system.truths
 		key="system.truths"
-		sectionTitle=(localize "DNM.Labels.Actor.Truths")
+		sectionTitle=(localize "DNM.Labels.Truths")
 		titleAdd=(localize "DNM.Tooltips.Actor.AddTruth")
 	}}
 </div>

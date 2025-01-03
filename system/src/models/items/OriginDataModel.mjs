@@ -1,5 +1,7 @@
-import Attributes from "../_types/Attributes.mjs";
+import BasicAttributes from "./_types/BasicAttributes.mjs";
 import Description from "../_types/Description.mjs";
+import OriginAttributeChoices from "./_types/OriginAttributeChoices.mjs";
+import OriginSkillChoices from "./_types/OriginSkillChoices.mjs";
 import Skills from "../_types/Skills.mjs";
 import SpecialAbilityChoices from "../_types/SpecialAbilityChoices.mjs";
 
@@ -8,12 +10,16 @@ import SpecialAbilityChoices from "../_types/SpecialAbilityChoices.mjs";
  *
  * @mixes ItemDescription
  *
- * @property {object} attributes Initial Attribute values provided by the Origin
+ * @property {OriginAttributeChoices} attributeChoices
+ * @property {number} attributeChoices.choiceCount
+ * @property {string[]} attributeChoices.choices
+ * @property {number} attributeChoices.value
+ * @property {BasicAttributes} attributes Initial Attribute values provided by the Origin
  * @property {number} attributes.insight
  * @property {number} attributes.might
  * @property {number} attributes.quickness
  * @property {number} attributes.resolve
- * @property {object} skills Initial Skill values provided by the Origin
+ * @property {CharacterSkills} skills Initial Skill values provided by the Origin
  * @property {number} skills.fight
  * @property {number} skills.move
  * @property {number} skills.operate
@@ -31,9 +37,11 @@ export default class OriginDataModel extends foundry.abstract.TypeDataModel {
 		const fields = foundry.data.fields;
 
 		return {
-			...Attributes(),
-			...Skills(),
+			...BasicAttributes(),
 			...Description(),
+			...OriginAttributeChoices(),
+			...OriginSkillChoices(),
+			...Skills(),
 			...SpecialAbilityChoices(),
 
 			fixedSpecialAbilities: new fields.ArrayField(

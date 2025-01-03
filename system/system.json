@@ -27,12 +27,28 @@
 	],
 	"packs": [
 		{
-			"label": "System Documentation",
-			"module": "dreams-and-machines",
-			"name": "system_documentation",
-			"path": "packs/system_documentation",
+			"name": "origins",
+			"label": "Origins",
+			"path": "packs/origins",
+			"type": "Item",
 			"system": "dreams-and-machines",
-			"type": "JournalEntry"
+			"ownership": {
+				"PLAYER": "OBSERVER",
+				"ASSISTANT": "OWNER"
+			},
+			"flags": {}
+		},
+		{
+			"name": "system_documentation",
+			"label": "System Documentation",
+			"path": "packs/system_documentation",
+			"type": "JournalEntry",
+			"system": "dreams-and-machines",
+			"ownership": {
+				"PLAYER": "OBSERVER",
+				"ASSISTANT": "OWNER"
+			},
+			"flags": {}
 		}
 	],
 	"packFolders": [
@@ -42,6 +58,16 @@
 			"color": "#5e1966",
 			"packs": [
 				"system_documentation"
+			],
+			"folders": [
+				{
+					"name": "Character Options",
+					"sorting": "a",
+					"color": "#2c0d31",
+					"packs": [
+						"origins"
+					]
+				}
 			]
 		}
 	],

@@ -6,6 +6,18 @@ export default class OriginSheet extends DnMItemSheet {
 	activateListeners(html) {
 		super.activateListeners(html);
 
+		html.find("[data-action=toggle-attribute-choice]").click(event => {
+			event.preventDefault();
+			const dataset = event.currentTarget.dataset;
+			this.#toggleAttributeChoice(dataset.attributeId);
+		});
+
+		html.find("[data-action=toggle-skill-choice]").click(event => {
+			event.preventDefault();
+			const dataset = event.currentTarget.dataset;
+			this.#toggleSkillChoice(dataset.skillId);
+		});
+
 		new ContextMenu(html, "[data-menu=archetype]", [
 			{
 				name: "Labels.Item.Edit",
@@ -45,6 +57,9 @@ export default class OriginSheet extends DnMItemSheet {
 	async getData(options = {}) {
 		const context = await super.getData(options);
 
+		this.#getAttributeData(context);
+		this.#getSkillData(context);
+
 		return context;
 	}
 
@@ -65,4 +80,69 @@ export default class OriginSheet extends DnMItemSheet {
 		});
 	}
 
+
+	#getAttributeData(context) {
+		const attributes = [];
+
+		for (const [id, name] of Object.entries(CONFIG.DREAMS.ATTRIBUTES)) {
+			attributes.push({
+				id,
+				name,
+				selected: this.system.attributeChoices.choices.includes(id),
+			});
+		}
+		context.attributes = attributes.sort(
+			(a, b) => a.name.localeCompare(b.name)
+		);
+	}
+
+
+	#getSkillData(context) {
+		const skills = [];
+
+		for (const [id, name] of Object.entries(CONFIG.DREAMS.SKILLS)) {
+			skills.push({
+				id,
+				name,
+				selected: this.system.skillChoices.choices.includes(id),
+			});
+		}
+		context.skills = skills.sort(
+			(a, b) => a.name.localeCompare(b.name)
+		);
+	}
+
+
+	async #toggleAttributeChoice(attributeId) {
+		const newChoices = this.#toggleChoice(
+			this.system.attributeChoices.choices,
+			attributeId
+		);
+
+		this.item.update({"system.attributeChoices.choices": newChoices});
+	}
+
+
+	#toggleChoice(currentChoices, choiceId) {
+		let newChoices = [];
+
+		if (currentChoices.includes(choiceId)) {
+			newChoices = currentChoices.filter(a => a !== choiceId);
+		}
+		else {
+			newChoices = [...currentChoices, choiceId];
+		}
+
+		return newChoices;
+	}
+
+
+	async #toggleSkillChoice(skillId) {
+		const newChoices = this.#toggleChoice(
+			this.system.skillChoices.choices,
+			skillId
+		);
+
+		this.item.update({"system.skillChoices.choices": newChoices});
+	}
 }

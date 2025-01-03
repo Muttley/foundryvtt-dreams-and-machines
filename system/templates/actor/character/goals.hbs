@@ -1,11 +1,11 @@
 <div class="strings" style="margin-top: 0.5rem;">
 
 	<span class="label">
-		{{localize "DNM.Labels.Actor.Goals"}}
+		{{localize "DNM.Labels.Goals"}}
 	</span>
 
 	{{> actor/_partials/custom-string-list
-		addRowLabel=(localize "DNM.Labels.Actor.ShortTermGoals")
+		addRowLabel=(localize "DNM.Labels.ShortTermGoals")
 		currentValues=system.goals.shortTerm
 		key="system.goals.shortTerm"
 		sectionTitle=""
@@ -13,7 +13,7 @@
 	}}
 
 	{{> actor/_partials/custom-string-list
-		addRowLabel=(localize "DNM.Labels.Actor.LongTermGoals")
+		addRowLabel=(localize "DNM.Labels.LongTermGoals")
 		currentValues=system.goals.longTerm
 		key="system.goals.longTerm"
 		sectionTitle=""

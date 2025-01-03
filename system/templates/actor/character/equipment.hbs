@@ -1,6 +1,6 @@
 <div class="equipment">
 	<span class="label">
-		{{localize "DNM.Labels.Actor.Equipment"}}
+		{{localize "DNM.Labels.Equipment"}}
 	</span>
 
 	<ol class="item-list">
@@ -35,10 +35,10 @@
 				{{name}}
 				{{#if (gt system.techLevel 0)}}
 					(TL{{ system.techLevel }}
-					{{#if system.isWeapon}}, {{localize (concat "DNM.Labels.Item.Weapon." system.weapon.type)}}
+					{{#if system.isWeapon}}, {{localize (concat "DNM.Labels.Weapon." system.weapon.type)}}
 					{{/if}})
 				{{else}}
-					{{#if system.isWeapon}} ({{localize (concat "DNM.Labels.Item.Weapon." system.weapon.type)}})
+					{{#if system.isWeapon}} ({{localize (concat "DNM.Labels.Weapon." system.weapon.type)}})
 					{{/if}}
 				{{/if}}
 				{{#if system.hasQualities}}:{{else}}.{{/if}}</a>

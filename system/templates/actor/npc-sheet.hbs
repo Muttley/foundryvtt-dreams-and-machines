@@ -18,7 +18,7 @@
 		{{!-- Truth --}}
 		<label class="flex flex-col items-start w-full">
 			<div class="flex items-center w-full">
-				<span class="text-center bg-purple-600 py-0.5 px-4 text-white font-semibold uppercase">{{localize "DNM.Labels.Actor.Truth" }}</span>
+				<span class="text-center bg-purple-600 py-0.5 px-4 text-white font-semibold uppercase">{{localize "DNM.Labels.Truth" }}</span>
 			</div>
 			{{#if editable}}
 				<textarea name="system.truth" class="bg-none h-full resize-y border-none text-lg text-center">{{ system.truth }}</textarea>
@@ -93,7 +93,7 @@
 							<a data-action="roll" data-uuid="{{ uuid }}"><i class="fas fa-dice-d20"></i></a>
 
 							<a data-action="open-sheet" data-uuid="{{ uuid }}" class="uppercase font-semibold text-lg">
-								{{ name }} ({{ localize (concat "DNM.Labels.Item.Weapon." system.weapon.type) }}):
+								{{ name }} ({{ localize (concat "DNM.Labels.Weapon." system.weapon.type) }}):
 							</a>
 
 							{{#each system.allQualities}}

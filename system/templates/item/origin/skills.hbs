@@ -1,0 +1,65 @@
+
+<div class="grid-1-columns">
+	<span class="label">
+		Base Skills
+	</span>
+	<div class="grid-4-columns">
+		{{> skillBlock
+			key="fight"
+			name=(localize "DNM.Skills.Fight")
+			value=system.skills.fight
+		}}
+
+		{{> skillBlock
+			key="move"
+			name=(localize "DNM.Skills.Move")
+			value=system.skills.move
+		}}
+
+		{{> skillBlock
+			key="operate"
+			name=(localize "DNM.Skills.Operate")
+			value=system.skills.operate
+		}}
+
+		{{> skillBlock
+			key="sneak"
+			name=(localize "DNM.Skills.Sneak")
+			value=system.skills.sneak
+		}}
+	</div>
+
+	<div class="grid-3-columns">
+		{{> skillBlock
+			key="study"
+			name=(localize "DNM.Skills.Study")
+			value=system.skills.study
+		}}
+
+		{{> skillBlock
+			key="survive"
+			name=(localize "DNM.Skills.Survive")
+			value=system.skills.survive
+		}}
+
+		{{> skillBlock
+			key="talk"
+			name=(localize "DNM.Skills.Talk")
+			value=system.skills.talk
+		}}
+	</div>
+</div>
+
+{{#*inline "skillBlock"}}
+	<label class="sublabel">
+		<span>
+			{{name}}
+		</span>
+		<input
+			data-type="Number"
+			name="system.skills.{{key}}"
+			type="number"
+			value="{{value}}"
+		/>
+	</label>
+{{/inline}}

@@ -11,10 +11,10 @@ DREAMS.ATTRIBUTES = {
 };
 
 DREAMS.EXHAUSTION = {
-	Breathless: "DNM.Labels.Exhaustion.Breathless",
-	Confused: "DNM.Labels.Exhaustion.Confused",
-	Despairing: "DNM.Labels.Exhaustion.Despairing",
-	Weary: "DNM.Labels.Exhaustion.Weary",
+	Breathless: "DNM.Exhaustion.Breathless",
+	Confused: "DNM.Exhaustion.Confused",
+	Despairing: "DNM.Exhaustion.Despairing",
+	Weary: "DNM.Exhaustion.Weary",
 };
 
 DREAMS.JOURNAL_UUIDS = {

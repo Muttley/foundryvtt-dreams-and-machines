@@ -30,7 +30,7 @@ const fields = foundry.data.fields;
  * @mixin
  * @property {CharacterAttributes} attributes
  */
-const Attributes = () => ({
+const CharacterAttributes = () => ({
 	attributes: new fields.SchemaField({
 		insight: new fields.SchemaField({
 			value: new fields.NumberField({
@@ -95,4 +95,4 @@ const Attributes = () => ({
 	}),
 });
 
-export default Attributes;
+export default CharacterAttributes;

@@ -88,7 +88,7 @@ export default class EquipmentDataModel extends foundry.abstract.TypeDataModel {
 		if (this.hasProtection) {
 			protection = [
 				{
-					label: game.i18n.localize("DNM.Labels.Item.Protection"),
+					label: game.i18n.localize("DNM.Labels.Protection"),
 					rating: this.protection.value,
 				},
 			];
