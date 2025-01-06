@@ -254,4 +254,8 @@
 	.right-column {
 		grid-template-rows: min-content auto auto;
 	}
+
+	.window-content {
+		@include p-reset;
+	}
 }

@@ -1,0 +1,69 @@
+@use "../abstracts/" as *;
+
+.momentum-tracker {
+	display: flex;
+	flex-direction: column;
+
+	position: absolute;
+	bottom: -6rem;
+	right: 20rem;
+
+	height: 20rem;
+	width: 16rem;
+
+	gap: 1rem;
+
+	.container {
+		width: 100%;
+		gap: 0.25rem;
+		align-items: center;
+	}
+
+	.controls {
+		text-align: center;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+		font-weight: 700;
+		color: white;
+
+		a {
+			cursor: pointer;
+		}
+	}
+
+	.momentum,
+	.threat {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.25rem;
+		border-radius: 0.5rem;
+		background-color: $c-character-purple;
+		padding: 0.5rem;
+
+		&-label {
+			font-size: 1.5rem;
+			line-height: 2rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			color: rgb(242, 209, 253);
+		}
+
+		&-value {
+			width: 100%;
+			text-align: center;
+			font-size: 2.25rem;
+			line-height: 2.5rem;
+			color: rgb(242, 209, 253);
+		}
+	}
+
+	.threat {
+		background-color: $c-character-primary;
+		&-label,
+		&-value {
+			color: rgb(210, 251, 241);
+		}
+	}
+}
