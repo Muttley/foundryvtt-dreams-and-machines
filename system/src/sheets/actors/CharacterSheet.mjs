@@ -55,7 +55,15 @@ export default class CharacterSheet extends DnMActorSheet {
 
 
 	async getData(options = {}) {
-		const talents = await Promise.all(
+		const context = await super.getData(options);
+
+		context.archetype = this.archetype;
+		context.origin = this.origin;
+		context.temperament = this.temperament;
+
+		context.exhausted = this.system.spirit.value <= 0;
+
+		context.talents = await Promise.all(
 			this.actor.items
 				.filter(i => i.type === "talent")
 				.map(
@@ -72,7 +80,7 @@ export default class CharacterSheet extends DnMActorSheet {
 				)
 		);
 
-		const equipment = await Promise.all(
+		context.equipment = await Promise.all(
 			this.actor.items
 				.filter(i => i.type === "equipment")
 				.map(
@@ -89,40 +97,26 @@ export default class CharacterSheet extends DnMActorSheet {
 				)
 		);
 
-		let enrichedAttitude = undefined;
-		let enrichedExhaustion = undefined;
+		context.enrichedAttitude = undefined;
+		context.enrichedExhaustion = undefined;
 		if (this.temperament) {
-			enrichedAttitude = await TextEditor.enrichHTML(
+			context.enrichedAttitude = await TextEditor.enrichHTML(
 				this.temperament.system.spiritEffect, { async: true }
 			);
-			enrichedExhaustion = await TextEditor.enrichHTML(
+
+			context.enrichedExhaustion = await TextEditor.enrichHTML(
 				this.temperament.system.exhaustionEffect, { async: true }
 			);
 		}
 
-		let enrichedArchetypeGoal = undefined;
+		context.enrichedArchetypeGoal = undefined;
 		if (this.archetype) {
-			enrichedArchetypeGoal = await TextEditor.enrichHTML(
+			context.enrichedArchetypeGoal = await TextEditor.enrichHTML(
 				this.archetype.system.goal, { async: true }
 			);
 		}
 
-		return {
-			...super.getData(options),
-
-			archetype: this.archetype,
-			origin: this.origin,
-			temperament: this.temperament,
-
-			talents,
-			equipment,
-
-			exhausted: this.system.spirit.value <= 0,
-
-			enrichedArchetypeGoal,
-			enrichedAttitude,
-			enrichedExhaustion,
-		};
+		return context;
 	}
 
 
@@ -185,68 +179,6 @@ export default class CharacterSheet extends DnMActorSheet {
 	}
 
 
-	/**
-	 * Handles a change of character Origin
-	 *
-	 * @param {OriginDataModel} originSystem
-	 */
-	async handleDropOrigin(originSystem) {
-		const existingOrigin = this.origin;
-
-		const spirit = this.system.spirit;
-		let supplyPoints = this.system.supplyPoints;
-
-		// Handle replacing an existing origin
-		if (existingOrigin) {
-			// Don't need to un-set the Origin's attributes or tech level,
-			// since those will be reset anyway.
-
-			// Reduce Spirit and Supply Points.
-			spirit.max -= existingOrigin.system.spirit;
-			spirit.value -= existingOrigin.system.spirit;
-			supplyPoints -= existingOrigin.system.supplyPoints;
-
-			await existingOrigin.delete();
-		}
-
-		// 1. Use Origin's Attribute values.
-		/** @type CharacterAttributes */
-		const attributes = { ...this.system.attributes };
-		attributes.insight.value = originSystem.attributes.insight.value;
-		attributes.might.value = originSystem.attributes.might.value;
-		attributes.resolve.value = originSystem.attributes.resolve.value;
-		attributes.quickness.value = originSystem.attributes.quickness.value;
-
-		spirit.value += originSystem.spirit;
-		spirit.max += originSystem.spirit;
-		supplyPoints += originSystem.supplyPoints;
-
-		spirit.value = Math.max(0, spirit.value);
-		spirit.max = Math.max(0, spirit.max);
-		supplyPoints = Math.max(0, supplyPoints);
-
-		await this.actor.update({
-			"system.attributes": attributes,
-			"system.techLevel": originSystem.techLevel,
-			"system.spirit": spirit,
-			"system.supplyPoints": supplyPoints,
-		});
-	}
-
-
-	/**
-	 * Handles a change of character Temperament
-	 */
-	async handleDropTemperament() {
-		const existingTemperament = this.temperament;
-
-		// Handle replacing an existing temperament
-		if (existingTemperament) {
-			await existingTemperament?.delete();
-		}
-	}
-
-
 	async increaseQuantity(event) {
 		const itemUuid = $(event.currentTarget).data("uuid");
 		const item = await fromUuid(itemUuid);
@@ -264,25 +196,85 @@ export default class CharacterSheet extends DnMActorSheet {
 		if (!this.actor.isOwner) return false;
 		const item = await Item.implementation.fromDropData(data);
 
+		let applyBackroundItems = false;
 		switch (item.type) {
 			case "archetype":
-				await this.handleDropArchetype(item.system);
+				applyBackroundItems = true;
+				const existingArchetype = this.archetype;
+				if (existingArchetype) await existingArchetype.delete();
 				break;
 
 			case "origin":
-				await this.handleDropOrigin(item.system);
+				applyBackroundItems = true;
+				const existingOrigin = this.origin;
+				if (existingOrigin) await existingOrigin.delete();
 				break;
 
 			case "temperament":
-				await this.handleDropTemperament();
+				applyBackroundItems = true;
+				const existingTemperament = this.temperament;
+				if (existingTemperament) await existingTemperament.delete();
 				break;
 
 			default:
 				break;
 		}
 
-		return super._onDropItem(event, data);
+		await super._onDropItem(event, data);
+
+		if (applyBackroundItems) await this.#applyBackroundItems();
 	}
 
 
+	async #applyBackroundItems() {
+		await this.#applyOrigin(this.origin?.system);
+		await this.#applyArchetype(this.archetype?.system);
+		await this.#applyTemperament(this.temperament?.system);
+		await this.#applyFinishingTouches();
+	}
+
+
+	async #applyArchetype(archetypeSystem) {
+	}
+
+
+	async #applyFinishingTouches() {}
+
+
+	async #applyOrigin(originSystem) {
+		if (!originSystem) return;
+
+		const attributes = {...this.system.attributes};
+		for (const key of Object.keys(attributes)) {
+			attributes[key].value = originSystem.attributes[key].value;
+		}
+
+		// TODO Handle Attribute choices
+
+		const skills = {...this.system.skills};
+		for (const key of Object.keys(skills)) {
+			skills[key] = originSystem.skills[key];
+		}
+
+		// TODO Handle Skill choices
+
+		const spirit = this.system.spirit;
+		spirit.value = Math.max(0, spirit.value);
+		spirit.max = Math.max(0, spirit.max);
+
+		const supplyPoints = Math.max(0, originSystem.supplyPoints);
+
+		await this.actor.update({
+			"system.attributes": attributes,
+			"system.skills": skills,
+			"system.techLevel": originSystem.techLevel,
+			"system.spirit": spirit,
+			"system.supplyPoints": supplyPoints,
+		});
+
+		// TODO Handle Special Ability choices
+	}
+
+
+	async #applyTemperament(temperamentSystem) {}
 }

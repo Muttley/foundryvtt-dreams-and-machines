@@ -2,23 +2,9 @@ import CharacterAttributes from "../_types/CharacterAttributes.mjs";
 import Skills from "../_types/Skills.mjs";
 import Traits from "../_types/Traits.mjs";
 
-/**
- * Data Model representing a Major NPC
- *
- * @mixes {Attributes}
- * @mixes {Skills}
- * @mixes {Traits}
- *
- * @property {object} threat
- * @property {number} threat.current
- * @property {number} threat.max
- * @property {object} injuries
- * @property {number} injuries.current
- * @property {number} injuries.max
- * @property {string} notes
- * @property {string} description
- */
-export default class ManorNPCDataModel extends foundry.abstract.TypeDataModel {
+export default class ManorNPCDataModel
+	extends foundry.abstract.TypeDataModel {
+
 	static defineSchema() {
 		const fields = foundry.data.fields;
 
@@ -70,4 +56,5 @@ export default class ManorNPCDataModel extends foundry.abstract.TypeDataModel {
 			}),
 		};
 	}
+
 }

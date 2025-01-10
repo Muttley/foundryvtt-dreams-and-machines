@@ -34,12 +34,13 @@ DNM.Labels.Archetype: Archetype
 DNM.Labels.ArchetypeGoal: Archetype Goal
 DNM.Labels.Archetypes: Archetypes
 DNM.Labels.Attitude: Attitude
-DNM.Labels.AttributeBonuses: Attribute Bonuses
+DNM.Labels.AttributeChoices: Attribute Choices
 DNM.Labels.Attributes: Attributes
 DNM.Labels.Bond: Bond
 DNM.Labels.Bonds: Bonds
 DNM.Labels.Category: Category
 DNM.Labels.CharacterTruths: Character Truths
+DNM.Labels.Choices: Choices
 DNM.Labels.ChooseBetween: Choose Between
 DNM.Labels.Coin: Coin
 DNM.Labels.Combat: Combat
@@ -92,6 +93,7 @@ DNM.Labels.Rarity: Rarity
 DNM.Labels.ShortTermGoals: Short-Term
 DNM.Labels.Skills: Skills
 DNM.Labels.SkillTest: Skill Test
+DNM.Labels.Source: Source
 DNM.Labels.SpecialAbilities: Special Abilities
 DNM.Labels.SpecialActions: Special Actions
 DNM.Labels.Spirit: Spirit
@@ -109,7 +111,7 @@ DNM.Labels.TL: TL
 DNM.Labels.TN: TN
 DNM.Labels.Truth: Truth
 DNM.Labels.Truths: Truths
-DNM.Labels.Value: Coin
+DNM.Labels.Value: Value
 DNM.Labels.Weapon.Label: Weapon
 DNM.Labels.Weapon.Melee: Melee
 DNM.Labels.Weapon.MeleeRanged: Melee/Ranged

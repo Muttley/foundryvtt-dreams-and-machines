@@ -44,7 +44,7 @@
 			<input type="text" class="disabled:!border-b-1 disabled:!border-t-1 disabled:!border-r-1 disabled:!border-solid !border-l-0 !text-center !h-10 !text-3xl !rounded-none !w-full !border-fuchsia-900" name="system.supplyPointCost" value="{{ system.supplyPointCost }}" />
 		</label>
 		<label class="flex flex-col items-center font-semibold">
-			<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Value" }}</span>
+			<span class="text-center py-0.5 w-full whitespace-nowrap bg-fuchsia-900 text-white uppercase">{{localize "DNM.Labels.Coin" }}</span>
 			<input type="number" class="disabled:!border-b-1 disabled:!border-t-1 disabled:!border-r-1 disabled:!border-solid !border-l-0 !text-center !h-10 !text-3xl !rounded-none !w-full !border-fuchsia-900" name="system.value" value="{{ system.value }}" />
 		</label>
 		<label class="flex flex-col items-center font-semibold">
@@ -54,8 +54,8 @@
 	</div>
 {{/inline}}
 
-<form class="{{ cssClass }} flex !flex-1 flex-col gap-1 items-center min-h-10">
-	{{> item/_partials/header }}
+<form class="{{ cssClass }}" autocomplete="off" spellcheck="false">
+	{{> item/_shared-partials/header }}
 
 	{{!-- Editable Sheet --}}
 	{{#if editable}}
@@ -174,7 +174,6 @@
 		{{/if}}
 
 		{{!-- Description --}}
-		{{> item/_partials/description }}
 	{{!-- Non-Editable Sheet --}}
 	{{else}}
 		<div class="px-2 flex flex-col gap-2">

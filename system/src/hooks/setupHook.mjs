@@ -1,9 +1,9 @@
 export const setupHook = {
 	attach: () => {
-		dreams.logger.debug("Attaching setup hook");
+		dreams.debug("Attaching setup hook");
 
 		Hooks.once("setup", () => {
-			dreams.logger.debug("Running setup hook");
+			dreams.debug("Running setup hook");
 
 			// Go through the CONFIG object and attempt to localize any Strings
 			// up front

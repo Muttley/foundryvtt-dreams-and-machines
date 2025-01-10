@@ -1,54 +1,25 @@
-<form class="{{cssClass}}" autocomplete="off">
-	{{> item/_partials/header}}
+<form class="{{cssClass}}" autocomplete="off" spellcheck="false">
+
+	{{> item/_shared-partials/header}}
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="attributes">
+			{{localize "DNM.Labels.Attributes"}}
+		</a>
+
+        <a class="item" data-tab="description">
+			{{localize "DNM.Labels.Description"}}
+		</a>
+
+        <a class="item" data-tab="source">
+			{{localize "DNM.Labels.Source"}}
+		</a>
+    </nav>
 
 	<div class="sheet-body">
-		{{> item/origin/attributes}}
-		<br>
-		{{> item/origin/attribute-choices}}
-		<br>
-		{{> item/origin/skills}}
-		<br>
-		{{> item/origin/skill-choices}}
-		<br>
-
-		{{!-- Tech Level/Spirit/Supply Points --}}
-		<div class="grid-3-columns">
-			<label class="sublabel">
-				<span class="label">
-					{{localize "DNM.Labels.TechLevel"}}
-				</span>
-				<input
-					data-type="Number"
-					name="system.techLevel"
-					type="number"
-					value="{{system.techLevel}}"
-				/>
-			</label>
-
-			<label class="sublabel">
-				<span class="label">
-					{{localize "DNM.Labels.Spirit"}}
-				</span>
-				<input
-					data-type="Number"
-					name="system.spirit"
-					type="number"
-					value="{{system.spirit}}"
-				/>
-			</label>
-
-			<label class="sublabel">
-				<span class="label">
-					{{localize "DNM.Labels.SupplyPoints"}}
-				</span>
-				<input
-					data-type="Number"
-					name="system.supplyPoints"
-					type="number"
-					value="{{system.supplyPoints}}"
-				/>
-			</label>
-		</div>
-
+		{{> item/origin/attributes-tab}}
+		{{> item/_shared-partials/description-tab}}
+		{{> item/_shared-partials/source-tab}}
 	</div>
+
 </form>

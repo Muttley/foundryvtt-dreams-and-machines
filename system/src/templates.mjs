@@ -16,7 +16,7 @@
  * @returns {Promise}
  */
 export default async function registerTemplates() {
-	dreams.logger.debug("Pre-loading Templates...");
+	dreams.debug("Pre-loading Templates...");
 
 	const partials = [
 		"systems/dreams-and-machines/templates/actor/_partials/background-item.hbs",
@@ -35,22 +35,24 @@ export default async function registerTemplates() {
 		"systems/dreams-and-machines/templates/actor/character/talents.hbs",
 		"systems/dreams-and-machines/templates/actor/character/traits.hbs",
 		"systems/dreams-and-machines/templates/actor/character/truths.hbs",
-		"systems/dreams-and-machines/templates/item/_partials/description.hbs",
-		"systems/dreams-and-machines/templates/item/_partials/header.hbs",
-		"systems/dreams-and-machines/templates/item/origin/attribute-choices.hbs",
-		"systems/dreams-and-machines/templates/item/origin/attributes.hbs",
-		"systems/dreams-and-machines/templates/item/origin/skill-choices.hbs",
-		"systems/dreams-and-machines/templates/item/origin/skills.hbs",
+		"systems/dreams-and-machines/templates/item/_shared-partials/description-tab.hbs",
+		"systems/dreams-and-machines/templates/item/_shared-partials/header.hbs",
+		"systems/dreams-and-machines/templates/item/_shared-partials/source-tab.hbs",
+		"systems/dreams-and-machines/templates/item/origin/_partials/attribute-choices.hbs",
+		"systems/dreams-and-machines/templates/item/origin/_partials/attributes.hbs",
+		"systems/dreams-and-machines/templates/item/origin/_partials/skill-choices.hbs",
+		"systems/dreams-and-machines/templates/item/origin/_partials/skills.hbs",
+		"systems/dreams-and-machines/templates/item/origin/attributes-tab.hbs",
 	];
 
 	const paths = {};
 	for (const path of partials) {
 		const [key] = path.split("/").slice(3).join("/").split(".");
-		dreams.logger.debug(`Template name: ${key}`);
+		dreams.debug(`Template name: ${key}`);
 		paths[key] = path;
 	}
 
 	await loadTemplates(paths);
 
-	dreams.logger.debug("Template Loading Complete.");
+	dreams.debug("Template Loading Complete.");
 }

@@ -58,7 +58,7 @@ export default class DialogEditString extends Dialog {
 							currentValues[index] = value;
 						}
 						else {
-							dreams.logger.error("Truth index out of range");
+							dreams.error("Truth index out of range");
 						}
 
 						currentValues.sort((a, b) => a.localeCompare(b));

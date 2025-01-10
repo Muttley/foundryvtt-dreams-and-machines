@@ -5,25 +5,9 @@ import Harms from "../_types/Harms.mjs";
 import Skills from "../_types/Skills.mjs";
 import Truths from "../_types/Truths.mjs";
 
-/**
- * Data Model representing a Player Character
- *
- * @mixes {Attributes}
- * @mixes {Goals}
- * @mixes {Skills}
- * @mixes {Traits}
- *
- * @property {string} attitude
- * @property {string} bond
- * @property {number} coin
- * @property {string} drive
- * @property {object} spirit
- * @property {number} spirit.value
- * @property {number} spirit.max
- * @property {number} supplyPoints
- * @property {number} techLevel
- */
-export default class CharacterDataModel extends foundry.abstract.TypeDataModel {
+export default class CharacterDataModel
+	extends foundry.abstract.TypeDataModel {
+
 	static defineSchema() {
 		const fields = foundry.data.fields;
 
@@ -76,4 +60,5 @@ export default class CharacterDataModel extends foundry.abstract.TypeDataModel {
 			}),
 		};
 	}
+
 }

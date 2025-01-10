@@ -11,7 +11,9 @@
  * @property {string} specialActions
  * @property {string} notes
  */
-export default class NPCDataModel extends foundry.abstract.TypeDataModel {
+export default class NPCDataModel
+	extends foundry.abstract.TypeDataModel {
+
 	static defineSchema() {
 		const fields = foundry.data.fields;
 
@@ -64,4 +66,5 @@ export default class NPCDataModel extends foundry.abstract.TypeDataModel {
 			}),
 		};
 	}
+
 }

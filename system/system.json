@@ -84,9 +84,9 @@
 				"css", "hbs", "json"
 			],
 			"paths": [
-				"lang",
-				"templates",
-				"css"
+				"css",
+				"i18n",
+				"templates"
 			]
 		}
 	},

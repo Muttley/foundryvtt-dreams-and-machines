@@ -1,0 +1,47 @@
+<div class="tab attributes" data-group="primary" data-tab="attributes">
+	{{> item/origin/_partials/attributes}}
+	{{> item/origin/_partials/attribute-choices}}
+	<br>
+	{{> item/origin/_partials/skills}}
+	{{> item/origin/_partials/skill-choices}}
+	<br>
+
+	{{!-- Tech Level/Spirit/Supply Points --}}
+	<div class="grid-3-columns">
+		<label class="sublabel">
+			<span class="label">
+				{{localize "DNM.Labels.TechLevel"}}
+			</span>
+			<input
+				data-type="Number"
+				name="system.techLevel"
+				type="number"
+				value="{{system.techLevel}}"
+			/>
+		</label>
+
+		<label class="sublabel">
+			<span class="label">
+				{{localize "DNM.Labels.Spirit"}}
+			</span>
+			<input
+				data-type="Number"
+				name="system.spirit"
+				type="number"
+				value="{{system.spirit}}"
+			/>
+		</label>
+
+		<label class="sublabel">
+			<span class="label">
+				{{localize "DNM.Labels.SupplyPoints"}}
+			</span>
+			<input
+				data-type="Number"
+				name="system.supplyPoints"
+				type="number"
+				value="{{system.supplyPoints}}"
+			/>
+		</label>
+	</div>
+</div>

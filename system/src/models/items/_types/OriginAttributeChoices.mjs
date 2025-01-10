@@ -1,17 +1,5 @@
-/**
- * @typedef {object} OriginAttributeChoices
- *
- * @property {number} choiceCount
- * @property {string[]} choices
- * @property {number} value
- */
-
 const fields = foundry.data.fields;
 
-/**
- * @mixin
- * @property {OriginAttributeChoices} attributeChoices
- */
 const OriginAttributeChoices = () => ({
 	attributeChoices: new fields.SchemaField({
 		choiceCount: new fields.NumberField({
@@ -21,6 +9,19 @@ const OriginAttributeChoices = () => ({
 			nullable: false,
 		}),
 		choices: new fields.ArrayField(
+			new fields.StringField({
+				blank: false,
+				choices: () => {
+					return Object.keys(CONFIG.DREAMS.ATTRIBUTES);
+				},
+				nullable: false,
+			}),
+			{
+				initial: [],
+				nullable: false,
+			}
+		),
+		chosen: new fields.ArrayField(
 			new fields.StringField({
 				blank: false,
 				choices: () => {

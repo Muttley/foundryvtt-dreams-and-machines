@@ -11,20 +11,20 @@ import * as actorSheets from "../sheets/actors/_module.mjs";
 import * as itemDataModels from "../models/items/_module.mjs";
 import * as itemSheets from "../sheets/items/_module.mjs";
 
+import * as app from "../app/_module.mjs";
+
 import { registerCombatTracker } from "../combat/CombatTracker2d20.mjs";
 import { registerFonts } from "../fonts.mjs";
 import { registerHandlebarsHelpers } from "../handlebars.mjs";
 
 import DnMCompendiums from "../system/DnMCompendiums.mjs";
+import DnMHooks from "../system/DnMHooks.mjs";
 import DnMUtils from "../utils/DnMUtils.mjs";
 import Logger from "../utils/Logger.mjs";
-import MomentumTracker from "../momentumTracker/MomentumTracker.mjs";
 
 import registerSettings from "../settings.mjs";
 import registerTemplates from "../templates.mjs";
 
-import { DnMHooks } from "../system/DnMHooks.mjs";
-import DicePrompt from "../dice/DicePrompt.mjs";
 
 export async function initHook() {
 	console.debug(`${SYSTEM_NAME} | Running init hook`);
@@ -38,14 +38,15 @@ export async function initHook() {
 	// Add utility classes to the global game object so that they're more easily
 	// accessible in global contexts.
 	globalThis.dreams = {
-		app: {
-			DicePrompt,
-			MomentumTracker,
-		},
+		app,
 		compendiums: DnMCompendiums,
 		dialog,
-		logger: Logger,
 		utils: DnMUtils,
+		// Logger shortcuts
+		debug: Logger.log,
+		error: Logger.error,
+		log: Logger.log,
+		warn: Logger.warn,
 	};
 
 	registerSettings();
@@ -129,6 +130,11 @@ function registerItems() {
 function registerItemSheets() {
 	Items.unregisterSheet("core", ItemSheet);
 
+	Items.registerSheet("dreams-and-machines", itemSheets.DnMItemSheet, {
+		types: ["talent", "temperament"],
+		makeDefault: true,
+	});
+
 	Items.registerSheet("dreams-and-machines", itemSheets.ArchetypeSheet, {
 		types: ["archetype"],
 		makeDefault: true,
@@ -139,18 +145,18 @@ function registerItemSheets() {
 		makeDefault: true,
 	});
 
+	Items.registerSheet("dreams-and-machines", itemSheets.MajorNPCActionSheet, {
+		types: ["majorNPCAction"],
+		makeDefault: true,
+	});
+
 	Items.registerSheet("dreams-and-machines", itemSheets.OriginSheet, {
 		types: ["origin"],
 		makeDefault: true,
 	});
 
-	Items.registerSheet("dreams-and-machines", itemSheets.DnMItemSheet, {
-		types: ["specialAbility", "talent", "temperament"],
-		makeDefault: true,
-	});
-
-	Items.registerSheet("dreams-and-machines", itemSheets.MajorNPCActionSheet, {
-		types: ["majorNPCAction"],
+	Items.registerSheet("dreams-and-machines", itemSheets.SpecialAbilitySheet, {
+		types: ["specialAbility"],
 		makeDefault: true,
 	});
 }

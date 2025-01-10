@@ -1,4 +1,4 @@
-import DnMRoller from "./DnMRoller.mjs";
+import DnMRoller from "../dice/DnMRoller.mjs";
 
 export default class DicePrompt extends Application {
 	/**

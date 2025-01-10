@@ -11,12 +11,18 @@ export default class DnMItemSheet extends ItemSheet {
 	static get defaultOptions() {
 		return {
 			...super.defaultOptions,
+			width: 586,
 			classes: ["dnm", "sheet", "item"],
 			dragDrop: [
 				{
 					dragSelector: ".item-list .item",
 				},
 			],
+			tabs: [{
+				navSelector: ".sheet-tabs",
+				contentSelector: ".sheet-body",
+				initial: "attributes",
+			}],
 		};
 	}
 
@@ -27,7 +33,8 @@ export default class DnMItemSheet extends ItemSheet {
 
 
 	get title() {
-		return `[${this.item.type}] ${this.item.name}`;
+		const itemType = game.i18n.localize(`TYPES.Item.${this.item.type}`);
+		return `[${itemType}] ${this.item.name}`;
 	}
 
 
@@ -53,8 +60,11 @@ export default class DnMItemSheet extends ItemSheet {
 			enrichedFields[key] = await TextEditor.enrichHTML(enrichedFields[key]);
 		}
 
+		const allSources = await dreams.compendiums.sources();
+
 		return {
 			...await super.getData(options),
+			allSources,
 			system: this.system,
 			enrichedDescription,
 			CONFIG,

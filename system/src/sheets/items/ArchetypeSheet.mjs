@@ -5,10 +5,6 @@ import DnMItemSheet from "../DnMItemSheet.mjs";
  * Document sheet for archetypes.
  */
 export default class ArchetypeSheet extends DnMItemSheet {
-	/** @type ArchetypeDataModel */
-	get system() {
-		return this.item.system;
-	}
 
 	activateListeners(html) {
 		super.activateListeners(html);

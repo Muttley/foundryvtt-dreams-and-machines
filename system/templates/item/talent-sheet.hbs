@@ -1,15 +1,7 @@
-<form class="{{ cssClass }} flex !flex-1 flex-col gap-1 items-center min-h-10">
-	{{> item/_partials/header }}
+<form class="{{ cssClass }}" autocomplete="off" spellcheck="false">
+	{{> item/_shared-partials/header }}
 
-	{{!-- Description --}}
-	{{#if editable}}
-		{{> item/_partials/description }}
-	{{else}}
-		<div class="text-center text-lg p-1">
-			{{{ enrichedDescription }}}
-		</div>
-	{{/if}}
+	{{> item/_shared-partials/description-tab }}
 
-	{{!-- Archetype --}}
 	<input type="text" name="system.archetype" value="{{ system.archetype }}" class="!py-5 !bg-black uppercase focus:normal-case !text-3xl !text-center !text-white placeholder:text-white placeholder:oblique placeholder:opacity-80 placeholder:text-xl" placeholder="{{ localize "TYPES.Item.archetype" }}" />
 </form>

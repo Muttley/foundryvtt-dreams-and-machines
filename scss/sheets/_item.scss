@@ -15,6 +15,13 @@
 		padding-bottom: 1rem;
 	}
 
+	.editor-container {
+		height: 100%;
+		min-height: 15rem;
+		width: 100%;
+		padding: 0.5rem;
+	}
+
 	.sheet-body {
 		@include p-reset;
 		padding: 0.25rem;
@@ -22,19 +29,19 @@
 		row-gap: 4px;
 	}
 
-	.header {
-		display: grid;
-		grid-template-columns: 3.5rem 1fr;
-		column-gap: 4px;
-		background: black;
+	// .header {
+	// 	display: grid;
+	// 	grid-template-columns: 3.5rem 1fr;
+	// 	column-gap: 4px;
+	// 	background: black;
 
-		img {
-			box-sizing: border-box;
-			border: 1px solid black;
-			border-radius: 2px;
-			max-width: 100%;
-		}
-	}
+	// 	img {
+	// 		box-sizing: border-box;
+	// 		border: 1px solid black;
+	// 		border-radius: 2px;
+	// 		max-width: 100%;
+	// 	}
+	// }
 
 	.label {
 		display: flex;
@@ -84,6 +91,21 @@
 		}
 	}
 
+	.sheet-header {
+		display: grid;
+		grid-template-columns: min-content 1fr;
+		padding: 0.25rem;
+		align-items: center;
+		gap: 1rem;
+		background-color: black;
+
+		img.item-image {
+			max-width: 64px;
+			height: 64px;
+		}
+
+	}
+
 	.sublabel {
 		align-self: center;
 		font-weight: 600;
@@ -93,5 +115,9 @@
 		font-size: 1.25rem;
 		line-height: 1.125em;
 		background-color: rgba(255, 255, 255, 0.75);
+	}
+
+	.window-content {
+		@include p-reset;
 	}
 }

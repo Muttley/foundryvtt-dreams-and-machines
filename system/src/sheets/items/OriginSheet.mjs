@@ -1,4 +1,3 @@
-import DnMItem from "../../documents/DnMItem.mjs";
 import DnMItemSheet from "../DnMItemSheet.mjs";
 
 export default class OriginSheet extends DnMItemSheet {
@@ -60,24 +59,9 @@ export default class OriginSheet extends DnMItemSheet {
 		this.#getAttributeData(context);
 		this.#getSkillData(context);
 
+		this.#getSpecialAbilitySelectorConfigs(context);
+
 		return context;
-	}
-
-
-	async _onDropItem(_event, data) {
-		if (!this.isEditable || !data.uuid) {
-			return;
-		}
-
-		const droppedItem = await DnMItem.implementation.fromDropData(data);
-		if (droppedItem.type !== "archetype") return;
-
-		// Disallow multiples of the same item.
-		if (this.system.archetypes.find(id => id === droppedItem.uuid)) return;
-
-		await this.item.update({
-			"system.archetypes": [...this.system.archetypes, droppedItem.uuid],
-		});
 	}
 
 
@@ -110,6 +94,15 @@ export default class OriginSheet extends DnMItemSheet {
 		context.skills = skills.sort(
 			(a, b) => a.name.localeCompare(b.name)
 		);
+	}
+
+
+	async #getSpecialAbilitySelectorConfigs(context) {
+		// const [fixedAbilities, availableFixedAbilities] =
+		// 	await dreams.utils.getDedupedSelectedItems(
+		// 		await dreams.compendiums.specialAbilities(),
+		// 		this.item.system.fixedSpecialAbilities ?? []
+		// 	);
 	}
 
 

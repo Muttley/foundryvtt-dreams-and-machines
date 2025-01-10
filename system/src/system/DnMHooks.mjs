@@ -1,9 +1,9 @@
 import { readyHook } from "../hooks/readyHook.mjs";
 import { setupHook } from "../hooks/setupHook.mjs";
 
-export const DnMHooks = {
+const DnMHooks = {
 	attach: () => {
-		dreams.logger.debug("Attaching hooks");
+		dreams.debug("Attaching hooks");
 
 		const listeners = [
 			readyHook,
@@ -15,3 +15,5 @@ export const DnMHooks = {
 		}
 	},
 };
+
+export default DnMHooks;

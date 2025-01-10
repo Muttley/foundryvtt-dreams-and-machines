@@ -1,35 +1,5 @@
-/**
- * @typedef {object} CharacterAttributes
- *
- * @property {object} insight
- * @property {number} insight.value
- * @property {boolean} insight.exhaustion
- * @property {boolean} insight.confused
- *
- * @property {object} might
- * @property {number} might.value
- * @property {boolean} might.exhaustion
- * @property {boolean} might.weary
- *
- * @property {object} quickness
- * @property {number} quickness.value
- * @property {boolean} quickness.exhaustion
- * @property {boolean} quickness.breathless
- *
- * @property {object} resolve
- * @property {number} resolve.value
- * @property {boolean} resolve.exhaustion
- * @property {boolean} resolve.despairing
- */
-
 const fields = foundry.data.fields;
 
-/**
- * Data model template providing Attributes for actors.
- *
- * @mixin
- * @property {CharacterAttributes} attributes
- */
 const CharacterAttributes = () => ({
 	attributes: new fields.SchemaField({
 		insight: new fields.SchemaField({

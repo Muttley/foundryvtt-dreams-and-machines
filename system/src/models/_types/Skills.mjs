@@ -1,23 +1,5 @@
-/**
- * @typedef {object} CharacterSkills
- *
- * @property {number} fight
- * @property {number} move
- * @property {number} operate
- * @property {number} sneak
- * @property {number} study
- * @property {number} survive
- * @property {number} talk
- */
-
 const fields = foundry.data.fields;
 
-/**
- * Data model template providing Skills for actors.
- *
- * @mixin
- * @property {CharacterSkills} skills
- */
 const Skills = () => ({
 	skills: new fields.SchemaField({
 		fight: new fields.NumberField({

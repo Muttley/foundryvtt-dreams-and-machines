@@ -1,15 +1,28 @@
 <div class="attributes">
 	<span class="label" style="grid-column: span 4;">
-		{{localize "DNM.Labels.Attributes" }}
+		{{localize "DNM.Labels.Attributes"}}
 	</span>
 
-	{{#each attributes}}
-		{{> attributeBlock
-			key=this.key
-			name=this.name
-			value=this.value
-		}}
-	{{/each}}
+	{{> attributeBlock
+		key="might"
+		value=system.attributes.might.value
+	}}
+
+	{{> attributeBlock
+		key="quickness"
+		value=system.attributes.quickness.value
+	}}
+
+	{{> attributeBlock
+		key="insight"
+		value=system.attributes.insight.value
+	}}
+
+	{{> attributeBlock
+		key="resolve"
+		value=system.attributes.resolve.value
+	}}
+
 </div>
 
 {{#*inline "attributeBlock"}}

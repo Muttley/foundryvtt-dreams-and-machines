@@ -1,5 +1,20 @@
-<form class="{{ cssClass }} flex !flex-1 flex-col items-center min-h-10">
-	{{> item/_partials/header }}
+<form class="{{ cssClass }}" autocomplete="off" spellcheck="false">
+
+	{{> item/_shared-partials/header }}
+
+    <nav class="sheet-tabs tabs" data-group="primary"></nav>
+        <a class="item" data-tab="attributes">
+			{{localize "DNM.Labels.Attributes"}}
+		</a>
+
+        <a class="item" data-tab="description">
+			{{localize "DNM.Labels.Description"}}
+		</a>
+
+        <a class="item" data-tab="source">
+			{{localize "DNM.Labels.Source"}}
+		</a>
+    </nav>
 
 	<div class="w-full h-full p-1">
 		{{!-- Skills --}}

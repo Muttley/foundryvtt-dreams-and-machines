@@ -7,14 +7,6 @@ const RATING_INPUT_REGEXP = /(?<label>.*?)(\s(?<rating>\d+))?$/i;
 
 export default class EquipmentSheet extends DnMItemSheet {
 
-	static get defaultOptions() {
-		return {
-			...super.defaultOptions,
-			classes: ["dnm", "sheet", "equipment"],
-		};
-	}
-
-
 	activateListeners(html) {
 		super.activateListeners(html);
 

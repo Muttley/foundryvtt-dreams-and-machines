@@ -1,15 +1,6 @@
+import BookSource from "./_types/BookSource.mjs";
 import Description from "../_types/Description.mjs";
-// import Exhaustion from "../../actor/Exhaustion.mjs";
 
-/**
- * Data Model representing a Temperament that can be assigned to a character.
- *
- * @mixes ItemDescription
- *
- * @property {string} spiritEffect
- * @property {string} exhaustionEffect
- * @property {Exhaustion} exhaustionType
- */
 export default class TemperamentDataModel extends foundry.abstract.TypeDataModel {
 	/** @type {{ [key: string]: string}} */
 	get enrichedFields() {
@@ -23,6 +14,7 @@ export default class TemperamentDataModel extends foundry.abstract.TypeDataModel
 		const fields = foundry.data.fields;
 
 		return {
+			...BookSource(),
 			...Description(),
 
 			spiritEffect: new fields.HTMLField({

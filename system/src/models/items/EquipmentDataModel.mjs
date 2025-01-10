@@ -1,65 +1,10 @@
+import BookSource from "./_types/BookSource.mjs";
 import Description from "../_types/Description.mjs";
+import ItemQualities from "./_types/ItemQualities.mjs";
 
-/**
- * @typedef {object} ItemQuality
- * @property {string} label String label that describes the quality.
- * @property {number|null} rating A numerical rating for qualities that are rated, null otherwise.
- */
+export default class EquipmentDataModel
+	extends foundry.abstract.TypeDataModel {
 
-/**
- * @typedef {object} WeaponDetails
- * @property {'Melee'|'Ranged'|'MeleeRanged'} type Whether the weapon is a Melee or Ranged weapon.
- * @property {ItemQuality[]} damageQualities Quality and rating applied for damage.
- * @property {ItemQuality[]} qualities Weapon Qualities
- */
-
-/**
- * @typedef {object} ProtectionDetails
- * @property {number} value Normal protection value
- * @property {number} breaker Protection against Breaker attacks
- */
-
-/**
- * Wrapper utility for specifying Item Qualities properties.
- */
-export function ItemQualities() {
-	const fields = foundry.data.fields;
-
-	return new fields.ArrayField(
-		new fields.SchemaField({
-			label: new fields.StringField({
-				initial: "New Quality",
-				nullable: false,
-			}),
-
-			rating: new fields.NumberField({
-				initial: null,
-				nullable: true,
-			}),
-		}),
-		{
-			initial: [],
-			nullable: false,
-		}
-	);
-}
-
-/**
- * Data Model representing an Item type that is actually held in a character's inventory.
- *
- * @mixes ItemDescription
- *
- * @property {number} techLevel Tech level of the item, which may make use easier or more difficult.
- * @property {ItemQuality[]} qualities A list of Qualities added to the item.
- * @property {boolean} hasProtection Whether the Item provides Protection.
- * @property {ProtectionDetails} protection Protection provided by the item if it's a type of armor.
- * @property {boolean} isWeapon Whether the Item is a weapon.
- * @property {WeaponDetails} weapon Details for the weapon, if the item is in fact a weapon.
- * @property {boolean} isGLIF Whether the Item is a GLIF.
- * @property {object} GLIF Details for the GLIF, if the item is in fact a GLIF.
- * @property {number} GLIF.complexity Complexity of the GLIF.
- */
-export default class EquipmentDataModel extends foundry.abstract.TypeDataModel {
 	/**
 	 * Utility for checking for the presence of qualities within Handlebars
 	 * templates.
@@ -101,6 +46,7 @@ export default class EquipmentDataModel extends foundry.abstract.TypeDataModel {
 		const fields = foundry.data.fields;
 
 		return {
+			...BookSource(),
 			...Description(),
 
 			techLevel: new fields.NumberField({
