@@ -86,4 +86,9 @@ export default class DnMCompendiums {
 		return sources.sort((a, b) => a.name.localeCompare(b.name));
 	}
 
+
+	static async specialAbilities(filterSources=true) {
+		return DnMCompendiums.#documents("Item", "specialAbility", filterSources);
+	}
+
 }

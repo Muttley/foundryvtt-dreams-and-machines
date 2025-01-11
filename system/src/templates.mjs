@@ -35,6 +35,7 @@ export default async function registerTemplates() {
 		"systems/dreams-and-machines/templates/actor/character/talents.hbs",
 		"systems/dreams-and-machines/templates/actor/character/traits.hbs",
 		"systems/dreams-and-machines/templates/actor/character/truths.hbs",
+		"systems/dreams-and-machines/templates/item/_shared-partials/choice-selector.hbs",
 		"systems/dreams-and-machines/templates/item/_shared-partials/description-tab.hbs",
 		"systems/dreams-and-machines/templates/item/_shared-partials/header.hbs",
 		"systems/dreams-and-machines/templates/item/_shared-partials/source-tab.hbs",
@@ -42,6 +43,7 @@ export default async function registerTemplates() {
 		"systems/dreams-and-machines/templates/item/origin/_partials/attributes.hbs",
 		"systems/dreams-and-machines/templates/item/origin/_partials/skill-choices.hbs",
 		"systems/dreams-and-machines/templates/item/origin/_partials/skills.hbs",
+		"systems/dreams-and-machines/templates/item/origin/_partials/special-abilities.hbs",
 		"systems/dreams-and-machines/templates/item/origin/attributes-tab.hbs",
 	];
 

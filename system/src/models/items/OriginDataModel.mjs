@@ -4,7 +4,7 @@ import Description from "../_types/Description.mjs";
 import OriginAttributeChoices from "./_types/OriginAttributeChoices.mjs";
 import OriginSkillChoices from "./_types/OriginSkillChoices.mjs";
 import Skills from "../_types/Skills.mjs";
-import SpecialAbilityChoices from "../_types/SpecialAbilityChoices.mjs";
+import SpecialAbilityChoices from "./_types/SpecialAbilityChoices.mjs";
 
 export default class OriginDataModel extends foundry.abstract.TypeDataModel {
 

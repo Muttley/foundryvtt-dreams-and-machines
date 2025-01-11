@@ -68,6 +68,7 @@ DNM.Labels.EditString: Edit String
 DNM.Labels.EditTruth: Edit Truth
 DNM.Labels.Equipment: Equipment
 DNM.Labels.Exhaustion: Exhaustion
+DNM.Labels.Fixed: Fixed
 DNM.Labels.Focus: Focus
 DNM.Labels.GLIF.Complexity: Complexity
 DNM.Labels.Goals: Goals
@@ -90,11 +91,13 @@ DNM.Labels.ProtectionBreaker: Protection (Breaker)
 DNM.Labels.Qualities: Qualities
 DNM.Labels.Quantity: Quantity
 DNM.Labels.Rarity: Rarity
+DNM.Labels.SelectSpecialAbility: Select Special Ability...
 DNM.Labels.ShortTermGoals: Short-Term
 DNM.Labels.Skills: Skills
 DNM.Labels.SkillTest: Skill Test
 DNM.Labels.Source: Source
 DNM.Labels.SpecialAbilities: Special Abilities
+DNM.Labels.SpecialAbility: Special Ability
 DNM.Labels.SpecialActions: Special Actions
 DNM.Labels.Spirit: Spirit
 DNM.Labels.SpiritPool: Spirit Pool
@@ -111,6 +114,7 @@ DNM.Labels.TL: TL
 DNM.Labels.TN: TN
 DNM.Labels.Truth: Truth
 DNM.Labels.Truths: Truths
+DNM.Labels.StartTyping: Start Typing...
 DNM.Labels.Value: Value
 DNM.Labels.Weapon.Label: Weapon
 DNM.Labels.Weapon.Melee: Melee

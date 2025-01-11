@@ -59,7 +59,7 @@ export default class OriginSheet extends DnMItemSheet {
 		this.#getAttributeData(context);
 		this.#getSkillData(context);
 
-		this.#getSpecialAbilitySelectorConfigs(context);
+		await this.#getSpecialAbilitySelectorConfigs(context);
 
 		return context;
 	}
@@ -98,11 +98,35 @@ export default class OriginSheet extends DnMItemSheet {
 
 
 	async #getSpecialAbilitySelectorConfigs(context) {
-		// const [fixedAbilities, availableFixedAbilities] =
-		// 	await dreams.utils.getDedupedSelectedItems(
-		// 		await dreams.compendiums.specialAbilities(),
-		// 		this.item.system.fixedSpecialAbilities ?? []
-		// 	);
+		const [fixedAbilities, availableFixedAbilities] =
+			await dreams.utils.getDedupedSelectedItems(
+				await dreams.compendiums.specialAbilities(),
+				this.item.system.fixedSpecialAbilities ?? []
+			);
+
+		context.fixedAbilitiesConfig = {
+			availableItems: availableFixedAbilities,
+			choicesKey: "fixedSpecialAbilities",
+			isItem: true,
+			label: game.i18n.localize("DNM.Labels.SpecialAbilities"),
+			prompt: game.i18n.localize("DNM.Labels.SelectSpecialAbility"),
+			selectedItems: fixedAbilities,
+		};
+
+		const [selectedAbilities, availableAbilities] =
+			await dreams.utils.getDedupedSelectedItems(
+				await dreams.compendiums.specialAbilities(),
+				this.item.system.specialAbilityChoices.choices ?? []
+			);
+
+		context.abilityChoicesConfig = {
+			availableItems: availableAbilities,
+			choicesKey: "specialAbilityChoices.choices",
+			isItem: true,
+			label: game.i18n.localize("DNM.Labels.SpecialAbilities"),
+			prompt: game.i18n.localize("DNM.Labels.SelectSpecialAbility"),
+			selectedItems: selectedAbilities,
+		};
 	}
 
 

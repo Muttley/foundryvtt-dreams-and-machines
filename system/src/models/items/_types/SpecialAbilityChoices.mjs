@@ -8,16 +8,20 @@ const SpecialAbilityChoices = () => ({
 			min: 0,
 			nullable: false,
 		}),
-		specialAbilities: new fields.ArrayField(
-			new fields.SchemaField({
-				uuid: new fields.DocumentUUIDField({
-					initial: "",
-					nullable: false,
-				}),
-				selected: new fields.BooleanField({
-					initial: false,
-					nullable: false,
-				}),
+		selected: new fields.ArrayField(
+			new fields.DocumentUUIDField({
+				initial: "",
+				nullable: false,
+			}),
+			{
+				initial: [],
+				nullable: false,
+			}
+		),
+		choices: new fields.ArrayField(
+			new fields.DocumentUUIDField({
+				initial: "",
+				nullable: false,
 			}),
 			{
 				initial: [],

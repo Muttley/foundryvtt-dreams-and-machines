@@ -29,27 +29,15 @@
 		row-gap: 4px;
 	}
 
-	// .header {
-	// 	display: grid;
-	// 	grid-template-columns: 3.5rem 1fr;
-	// 	column-gap: 4px;
-	// 	background: black;
-
-	// 	img {
-	// 		box-sizing: border-box;
-	// 		border: 1px solid black;
-	// 		border-radius: 2px;
-	// 		max-width: 100%;
-	// 	}
-	// }
-
 	.label {
-		display: flex;
+		display: block;
 		width: 100%;
 		font-weight: 600;
 
 		padding-left: 0.25rem;
 		padding-right: 0.25rem;
+
+		margin-bottom: 2px;
 
 		align-items: center;
 		justify-content: center;
@@ -58,6 +46,7 @@
 		background-color: $c-character-purple;
 
 		text-transform: uppercase;
+		text-align: center;
 	}
 
 	.name-input {
@@ -103,11 +92,10 @@
 			max-width: 64px;
 			height: 64px;
 		}
-
 	}
 
 	.sublabel {
-		align-self: center;
+		align-self: baseline;
 		font-weight: 600;
 		color: $c-character-purple;
 		text-transform: uppercase;

@@ -43,10 +43,109 @@ export default class DnMItemSheet extends ItemSheet {
 	}
 
 
+	/**
+	 * Deletes an Item/Skill choice from this item, using the data stored
+	 * on the target element
+	 *
+	 * @param {event} Event The triggered event
+	 */
+	_deleteChoiceItem(event) {
+		if (!this.isEditable) return;
+
+		event.preventDefault();
+		event.stopPropagation();
+
+		const deleteUuid = $(event.currentTarget).data("uuid");
+		const choicesKey = $(event.currentTarget).data("choices-key");
+
+		// handles cases where choicesKey is nested property.
+		const currentChoices = choicesKey
+			.split(".")
+			.reduce((obj, path) => obj ? obj[path]: [], this.item.system);
+
+		const newChoices = [];
+		for (const itemUuid of currentChoices) {
+			if (itemUuid === deleteUuid) continue;
+			newChoices.push(itemUuid);
+		}
+
+		const dataKey = `system.${choicesKey}`;
+		this.item.update({[dataKey]: newChoices});
+	}
+
+
+	async _onChangeChoiceList(event, choicesKey, isItem) {
+		const options = event.target.list.options;
+		const value = event.target.value;
+
+		let uuid = null;
+		for (const option of options) {
+			if (option.value === value) {
+				uuid = option.getAttribute("data-uuid");
+				break;
+			}
+		}
+
+		if (uuid === null) return;
+
+		// handles cases where choicesKey is nested property.
+		let currentChoices = choicesKey
+			.split(".")
+			.reduce((obj, path) => obj ? obj[path]: [], this.item.system);
+
+		if (currentChoices.includes(uuid)) return; // No duplicates
+
+		currentChoices.push(uuid);
+
+		const choiceItems = [];
+		for (const itemUuid of currentChoices) {
+			if (isItem) {
+				choiceItems.push(await fromUuid(itemUuid));
+			}
+			else {
+				choiceItems.push(itemUuid);
+			}
+		}
+
+		if (isItem) {
+			choiceItems.sort((a, b) => a.name.localeCompare(b.name));
+		}
+		else {
+			choiceItems.sort((a, b) => a.localeCompare(b));
+		}
+
+		const sortedChoiceUuids = isItem
+			? choiceItems.map(item => item.uuid)
+			: choiceItems;
+
+		const updateData = {};
+		updateData[`system.${choicesKey}`] = sortedChoiceUuids;
+
+		return this.item.update(updateData);
+	}
+
+
+	/** @inheritdoc */
+	async _onChangeInput(event) {
+		const choicesKey = event.currentTarget.dataset.choicesKey;
+		const isItem = event.currentTarget.dataset.isItem === "true";
+
+		if (event.target.list && choicesKey) {
+			return await this._onChangeChoiceList(event, choicesKey, isItem);
+		}
+
+		await super._onChangeInput(event);
+	}
+
+
 	activateListeners(html) {
 		super.activateListeners(html);
 
 		html.find("[data-action=open-sheet]").on("click", this.openSheet.bind(this));
+
+		html.find("[data-action=delete-choice]").click(
+			event => this._deleteChoiceItem(event)
+		);
 	}
 
 

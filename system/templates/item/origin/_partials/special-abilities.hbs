@@ -1,0 +1,41 @@
+<div class="grid-5-columns">
+	<div class="grid-colspan-2">
+		<span class="label">
+			{{localize "DNM.Labels.Fixed"}}
+			{{localize "DNM.Labels.SpecialAbilities"}}
+		</span>
+	</div>
+	<div class="grid-colspan-3">
+		<span class="label">
+			{{localize "DNM.Labels.SpecialAbility"}}
+			{{localize "DNM.Labels.Choices"}}
+		</span>
+	</div>
+	<div class="grid-colspan-2">
+		{{> item/_shared-partials/choice-selector
+			config=fixedAbilitiesConfig
+			editable=editable
+		}}
+	</div>
+	<div class="grid-colspan-3">
+		<div class="grid-3-columns">
+			<div class="grid-colspan-2">
+				{{> item/_shared-partials/choice-selector
+					config=abilityChoicesConfig
+					editable=editable
+				}}
+			</div>
+			<label class="sublabel" style="display: block;">
+				<span>
+					{{localize "DNM.Labels.Choices"}}
+				</span>
+				<input
+					data-type="Number"
+					name="system.specialAbilityChoices.maxChoices"
+					type="number"
+					value="{{system.specialAbilityChoices.maxChoices}}"
+				/>
+			</label>
+		</div>
+	</div>
+</div>
