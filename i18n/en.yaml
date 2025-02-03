@@ -44,6 +44,8 @@ DNM.Labels.Choices: Choices
 DNM.Labels.ChooseBetween: Choose Between
 DNM.Labels.Coin: Coin
 DNM.Labels.Combat: Combat
+DNM.Labels.Complications: Complications
+DNM.Labels.ConfigureOrigin: Configure {origin} Origin
 DNM.Labels.Cost: Cost
 DNM.Labels.Current: Current
 DNM.Labels.CurrentShort: Curr.
@@ -103,9 +105,12 @@ DNM.Labels.Spirit: Spirit
 DNM.Labels.SpiritPool: Spirit Pool
 DNM.Labels.StartingCoin: Starting Coin
 DNM.Labels.StartingGear: Starting Gear
+DNM.Labels.StartTyping: Start Typing...
+DNM.Labels.Successes: Successes
 DNM.Labels.Supply: Supply
 DNM.Labels.SupplyPoints: Supply Points
 DNM.Labels.Talents: Talents
+DNM.Labels.TargetNumber: Target Number
 DNM.Labels.TechLevel: Tech Level
 DNM.Labels.TechLevelShort: Tech Lvl
 DNM.Labels.Temperament: Temperament
@@ -114,7 +119,7 @@ DNM.Labels.TL: TL
 DNM.Labels.TN: TN
 DNM.Labels.Truth: Truth
 DNM.Labels.Truths: Truths
-DNM.Labels.StartTyping: Start Typing...
+DNM.Labels.Unknown: Unknown
 DNM.Labels.Value: Value
 DNM.Labels.Weapon.Label: Weapon
 DNM.Labels.Weapon.Melee: Melee
@@ -130,6 +135,7 @@ DNM.Placeholders.ArchetypeGoal.NoArchetype: No Archetype has been added to the c
 DNM.Placeholders.ArchetypeGoal.NoTemperament: No Temperament has been added to the character
 DNM.Roll.Complication: Complication
 DNM.Roll.Critical: Critical Success
+DNM.Roll.Fail: Fail
 DNM.Roll.Success: Success
 DNM.Settings.SourceFilters.AllSourcesAllowed: All sources are currently allowed
 DNM.Settings.SourceFilters.AppTitle: Source Filter Configuration
@@ -161,6 +167,9 @@ DNM.Tooltips.Actor.AddHarm: Add Harm
 DNM.Tooltips.Actor.AddLongTermGoal: Add Long-Term Goal
 DNM.Tooltips.Actor.AddShortTermGoal: Add Short-Term Goal
 DNM.Tooltips.Actor.AddTruth: Add Truth
+DNM.Tooltips.Actor.LockActor: Lock Actor
+DNM.Tooltips.Actor.UnlockActor: Unlock Actor
+DNM.Tooltips.Item.RemoveSelectedItem: Remove Selected Item
 TYPES.Actor.character: Player Character
 TYPES.Actor.majorNPC: Major NPC
 TYPES.Actor.npc: NPC

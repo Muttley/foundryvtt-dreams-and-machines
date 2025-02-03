@@ -95,7 +95,7 @@ function registerActorSheets() {
 		makeDefault: true,
 	});
 
-	Actors.registerSheet("dreams-and-machines", actorSheets.NPCSheet, {
+	Actors.registerSheet("dreams-and-machines", actorSheets.NPCSheetV2, {
 		types: ["npc"],
 		makeDefault: true,
 	});

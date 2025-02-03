@@ -1,0 +1,69 @@
+<div class="grid-2-columns">
+	<div>
+		<span class="label attribute rollable-attribute">
+			<a
+				{{!-- class="roll" --}}
+				data-action="onRoll"
+				data-type="main"
+			>
+				<i class="fas fa-dice-d20"></i>
+				&nbsp;
+				{{system.truth}}
+			</a>
+		</span>
+		<div class="grid-2-columns sublabel">
+			<input
+				class="lockable"
+				data-type="Number"
+				name="system.mainAttribute.attribute"
+				placeholder="0"
+				type="number"
+				value="{{system.mainAttribute.attribute}}"
+				{{disabled editModeDisabled}}
+			>
+			<input
+				class="lockable"
+				data-type="Number"
+				name="system.mainAttribute.skill"
+				type="number"
+				placeholder="0"
+				value="{{system.mainAttribute.skill}}"
+				{{disabled editModeDisabled}}
+			>
+		</div>
+	</div>
+
+	<div>
+		<span class="label attribute">
+			<a
+				{{!-- class="roll" --}}
+				data-action="onRoll"
+				data-type="default"
+			>
+				<i class="fas fa-dice-d20"></i>
+				&nbsp;
+				{{localize "DNM.Labels.Default"}}
+			</a>
+		</span>
+		<div class="grid-2-columns sublabel">
+			<input
+				class="lockable"
+				data-type="Number"
+				name="system.defaultAttribute.attribute"
+				type="number"
+				placeholder="0"
+				value="{{system.defaultAttribute.attribute}}"
+				{{disabled editModeDisabled}}
+			>
+			<input
+				class="lockable"
+				data-type="Number"
+				name="system.defaultAttribute.skill"
+				type="number"
+				placeholder="0"
+				value="{{system.defaultAttribute.skill}}"
+				{{disabled editModeDisabled}}
+			>
+		</div>
+	</div>
+</div>

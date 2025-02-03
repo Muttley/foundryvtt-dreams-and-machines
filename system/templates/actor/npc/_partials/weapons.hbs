@@ -1,0 +1,26 @@
+<div>
+	<span class="label">
+		{{localize "DNM.Labels.Weapons"}}
+	</span>
+
+	<ol class="item-list">
+		{{#each weapons}}
+			<li
+				class="item"
+				data-menu="item"
+				data-uuid="{{this.uuid}}"
+			>
+				<a
+					data-action="onRoll"
+					data-type="main"
+					data-uuid="{{this.uuid}}"
+				>
+					{{!-- <i class="fas fa-dice-d20"></i> --}}
+					<i class="fa-solid fa-swords"></i>
+					<b style="text-transform: uppercase">{{this.name}} ({{this.system.weapon.type}})</b>:
+					<i>Qualities go here...</i>
+				</a>
+			</li>
+		{{/each}}
+	</ol>
+</div>

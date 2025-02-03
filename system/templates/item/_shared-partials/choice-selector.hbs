@@ -14,11 +14,11 @@
 						{{/if}}
 						data-type="Item"
 						data-uuid="{{this.uuid}}"
-						title="Item"
 					>
 						{{#if ../editable}}
 							<i
 								class="delete-choice fas fa-delete-right"
+								data-tooltip="{{localize 'DNM.Tooltips.Item.RemoveSelectedItem'}}"
 								data-action="delete-choice"
 								data-choices-key="{{../config.choicesKey}}"
 								data-uuid="{{this.uuid}}"

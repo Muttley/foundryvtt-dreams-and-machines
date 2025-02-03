@@ -8,6 +8,9 @@
  */
 export default class DnMItemSheet extends ItemSheet {
 
+	_editModeEnabled = false;
+
+
 	static get defaultOptions() {
 		return {
 			...super.defaultOptions,
@@ -138,6 +141,13 @@ export default class DnMItemSheet extends ItemSheet {
 	}
 
 
+	async _onToggleEditMode(event) {
+		this._editModeEnabled = !this._editModeEnabled;
+		await this.submit();
+		this.render();
+	}
+
+
 	activateListeners(html) {
 		super.activateListeners(html);
 
@@ -146,6 +156,9 @@ export default class DnMItemSheet extends ItemSheet {
 		html.find("[data-action=delete-choice]").click(
 			event => this._deleteChoiceItem(event)
 		);
+
+		html.find("[data-action=toggleEditMode]")
+			.click(event => this._onToggleEditMode(event));
 	}
 
 

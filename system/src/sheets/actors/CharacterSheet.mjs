@@ -14,25 +14,31 @@ export default class CharacterSheet extends DnMActorSheet {
 
 
 	get archetype() {
-		return this.actor.items.find(i => i.type === "archetype");
+		return this.actor.archetype;
 	}
 
 
 	get origin() {
-		return this.actor.items.find(i => i.type === "origin");
+		return this.actor.origin;
 	}
 
 
 	get temperament() {
-		return this.actor.items.find(i => i.type === "temperament");
+		return this.actor.temperament;
 	}
 
 
 	activateListeners(html) {
 		super.activateListeners(html);
 
-		html.find("[data-action=increase-quantity]").on("click", this.increaseQuantity.bind(this));
-		html.find("[data-action=decrease-quantity]").on("click", this.decreaseQuantity.bind(this));
+		html.find("[data-action=decrease-quantity]").click(
+			event => this.decreaseQuantity(event)
+		);
+
+		html.find("[data-action=increase-quantity]").click(
+			event => this.increaseQuantity(event)
+		);
+
 	}
 
 
@@ -63,39 +69,8 @@ export default class CharacterSheet extends DnMActorSheet {
 
 		context.exhausted = this.system.spirit.value <= 0;
 
-		context.talents = await Promise.all(
-			this.actor.items
-				.filter(i => i.type === "talent")
-				.map(
-					/**
-					 * @param {DnMItem} i
-					 */
-					async i => ({
-						uuid: i.uuid,
-						name: i.name,
-						description: await TextEditor.enrichHTML(
-							i.system.description, { async: true }
-						),
-					})
-				)
-		);
-
-		context.equipment = await Promise.all(
-			this.actor.items
-				.filter(i => i.type === "equipment")
-				.map(
-					/**
-					 * @param {DnMItem} item
-					 */
-					async item => {
-						item.system.description = await TextEditor.enrichHTML(
-							item.system.description, { async: true }
-						);
-
-						return item;
-					}
-				)
-		);
+		context.talents = await this.actor.getTalents();
+		context.equipment = await this.actor.getEquipment();
 
 		context.enrichedAttitude = undefined;
 		context.enrichedExhaustion = undefined;
@@ -196,22 +171,16 @@ export default class CharacterSheet extends DnMActorSheet {
 		if (!this.actor.isOwner) return false;
 		const item = await Item.implementation.fromDropData(data);
 
-		let applyBackroundItems = false;
 		switch (item.type) {
 			case "archetype":
-				applyBackroundItems = true;
 				const existingArchetype = this.archetype;
 				if (existingArchetype) await existingArchetype.delete();
 				break;
 
 			case "origin":
-				applyBackroundItems = true;
-				const existingOrigin = this.origin;
-				if (existingOrigin) await existingOrigin.delete();
-				break;
+				return new dreams.app.ConfigureOrigin(this.actor, item).render(true);
 
 			case "temperament":
-				applyBackroundItems = true;
 				const existingTemperament = this.temperament;
 				if (existingTemperament) await existingTemperament.delete();
 				break;
@@ -221,28 +190,27 @@ export default class CharacterSheet extends DnMActorSheet {
 		}
 
 		await super._onDropItem(event, data);
-
-		if (applyBackroundItems) await this.#applyBackroundItems();
 	}
 
 
-	async #applyBackroundItems() {
-		await this.#applyOrigin(this.origin?.system);
-		await this.#applyArchetype(this.archetype?.system);
-		await this.#applyTemperament(this.temperament?.system);
+	async _applyBackroundItems() {
+		await this.#applyOrigin(this.origin);
+		await this.#applyArchetype(this.archetype);
+		await this.#applyTemperament(this.temperament);
 		await this.#applyFinishingTouches();
 	}
 
 
-	async #applyArchetype(archetypeSystem) {
-	}
+	async #applyArchetype(archetype) {}
 
 
 	async #applyFinishingTouches() {}
 
 
-	async #applyOrigin(originSystem) {
-		if (!originSystem) return;
+	async #applyOrigin(origin) {
+		if (!origin) return;
+
+		const originSystem = origin.system;
 
 		const attributes = {...this.system.attributes};
 		for (const key of Object.keys(attributes)) {
@@ -269,12 +237,13 @@ export default class CharacterSheet extends DnMActorSheet {
 			"system.skills": skills,
 			"system.techLevel": originSystem.techLevel,
 			"system.spirit": spirit,
-			"system.supplyPoints": supplyPoints,
+			"system.supplyPoints.max": supplyPoints,
+			"system.supplyPoints.value": supplyPoints,
 		});
 
 		// TODO Handle Special Ability choices
 	}
 
 
-	async #applyTemperament(temperamentSystem) {}
+	async #applyTemperament(temperament) {}
 }

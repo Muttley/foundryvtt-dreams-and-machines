@@ -1,0 +1,14 @@
+<section class="tab {{tab.cssClass}}" data-group="primary" data-tab="attributes">
+	<div class="tab-body">
+		{{> (template "actor/npc/_partials/truth") }}
+		{{> (template "actor/npc/_partials/attributes") }}
+
+		<div class="grid-2-columns">
+			{{> (template "actor/npc/_partials/weapons") }}
+			{{> (template "actor/npc/_partials/actions") }}
+		</div>
+
+		{{> (template "actor/npc/_partials/special-abilities") }}
+	</div>
+</section>
+

@@ -25,10 +25,12 @@
 			</span>
 		</a>
 		<input
+			class="lockable"
 			type="number"
 			name="system.skills.{{key}}"
 			value="{{value}}"
 			min="0"
+			{{disabled @root.editModeDisabled}}
 		/>
 	</div>
 {{/inline}}

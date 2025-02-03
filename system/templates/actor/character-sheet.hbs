@@ -1,40 +1,28 @@
 <form class="{{cssClass}}" autocomplete="off">
 
-	<header class="sheet-header">
-		<img
-			alt="{{actor.name}}"
-			class="profile"
-			data-edit="img"
-			src="{{actor.img}}"
-		/>
-		<input
-			class="name-input"
-			name="name"
-			type="text"
-			value="{{actor.name}}"
-		/>
-	</header>
+	{{> actor/_partials/header}}
 
 	<div class="sheet-body">
 		<div class="grid-2-columns">
-			{{> actor/character/attributes }}
-			{{> actor/character/meta-currencies }}
-			<div class="grid-4-columns" style="gap: 0.5rem;">
-				{{> actor/character/skills }}
-				<div style="grid-column: span 3;">
-					{{> actor/character/truths }}
-					{{> actor/character/goals }}
+			{{> actor/character/attributes}}
+			{{> actor/character/meta-currencies}}
+			<div class="grid-4-columns">
+				{{> actor/_partials/skills}}
+				<div class="grid-colspan-3">
+					{{> actor/character/truths}}
+					{{> actor/character/goals}}
 				</div>
 			</div>
 			<div class="grid-1-columns right-column">
 				<div class="grid-2-columns">
-					{{> actor/character/bonds }}
-					{{> actor/character/harms }}
+					{{> actor/character/bonds}}
+					{{> actor/character/harms}}
 				</div>
-				{{> actor/character/talents }}
-				{{> actor/character/equipment }}
+				{{> actor/character/talents}}
+				{{> actor/character/equipment}}
 			</div>
 		</div>
 	</div>
 
 </form>
+

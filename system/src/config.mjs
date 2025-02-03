@@ -3,12 +3,17 @@ export const SYSTEM_NAME = "Dreams and Machines";
 
 export const DREAMS = {};
 
+globalThis.systemPath = path => `systems/${SYSTEM_ID}/${path ?? ""}`;
+globalThis.templatePath = path => path ? systemPath(`templates/${path}.hbs`) : systemPath("templates");
+
+
 DREAMS.ATTRIBUTES = {
 	insight: "DNM.Attributes.Insight",
 	might: "DNM.Attributes.Might",
 	quickness: "DNM.Attributes.Quickness",
 	resolve: "DNM.Attributes.Resolve",
 };
+
 
 DREAMS.EXHAUSTION = {
 	Breathless: "DNM.Exhaustion.Breathless",
@@ -17,9 +22,11 @@ DREAMS.EXHAUSTION = {
 	Weary: "DNM.Exhaustion.Weary",
 };
 
+
 DREAMS.JOURNAL_UUIDS = {
 	releaseNotes: "Compendium.dreams-and-machines.system_documentation.JournalEntry.8mzM4axnEkXJTu6s",
 };
+
 
 DREAMS.OFFICIAL_SOURCES = {
 	EchoesOfAnAncientEnemy: "DNM.Sources.EchoesOfAnAncientEnemy",
@@ -33,6 +40,7 @@ DREAMS.OFFICIAL_SOURCES = {
 	ShadowsInTheDaylight: "DNM.Sources.ShadowsInTheDaylight",
 	StarterSet: "DNM.Sources.StarterSet",
 };
+
 
 DREAMS.SKILLS = {
 	fight: "DNM.Skills.Fight",

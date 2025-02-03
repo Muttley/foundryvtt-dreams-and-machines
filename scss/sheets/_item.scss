@@ -2,64 +2,23 @@
 @use "../mixins" as *;
 
 .dnm.sheet.item {
-
-	input[type="number"] {
-		font-weight: 600;
-		background: none;
-		font-size: 2rem;
-		line-height: 2.25rem;
-		text-align: center;
-		padding: 0.5rem;
-		border: none;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
+	.sheet-header {
+		background-color: $c-character-purple;
 	}
 
-	.editor-container {
-		height: 100%;
-		min-height: 15rem;
-		width: 100%;
-		padding: 0.5rem;
-	}
+	.content-link {
+		background-color: black;
+		color: white;
+		font-weight: bold;
+		line-height: 1;
 
-	.sheet-body {
-		@include p-reset;
-		padding: 0.25rem;
-		display: grid;
-		row-gap: 4px;
+		border-radius: 8px;
+		margin: 2px;
+		padding: 4px;
 	}
 
 	.label {
-		display: block;
-		width: 100%;
-		font-weight: 600;
-
-		padding-left: 0.25rem;
-		padding-right: 0.25rem;
-
-		margin-bottom: 2px;
-
-		align-items: center;
-		justify-content: center;
-
-		color: white;
 		background-color: $c-character-purple;
-
-		text-transform: uppercase;
-		text-align: center;
-	}
-
-	.name-input {
-		color: #ffffff;
-		font-size: 1.875rem;
-		line-height: 2.25rem;
-		text-transform: uppercase;
-		height: 100%;
-		border-width: 0;
-
-		&:focus {
-			text-transform: none;
-		}
 	}
 
 	.selectable-choice {
@@ -80,20 +39,6 @@
 		}
 	}
 
-	.sheet-header {
-		display: grid;
-		grid-template-columns: min-content 1fr;
-		padding: 0.25rem;
-		align-items: center;
-		gap: 1rem;
-		background-color: black;
-
-		img.item-image {
-			max-width: 64px;
-			height: 64px;
-		}
-	}
-
 	.sublabel {
 		align-self: baseline;
 		font-weight: 600;
@@ -103,9 +48,5 @@
 		font-size: 1.25rem;
 		line-height: 1.125em;
 		background-color: rgba(255, 255, 255, 0.75);
-	}
-
-	.window-content {
-		@include p-reset;
 	}
 }

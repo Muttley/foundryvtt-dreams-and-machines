@@ -1,0 +1,49 @@
+<div>
+	<span class="label">
+		{{localize "DNM.Labels.Attributes"}}
+	</span>
+
+	<div class="grid-2-columns">
+		{{> attributeBlock
+			key="might"
+			value=system.attributes.might.value
+		}}
+
+		{{> attributeBlock
+			key="quickness"
+			value=system.attributes.quickness.value
+		}}
+
+		{{> attributeBlock
+			key="insight"
+			value=system.attributes.insight.value
+		}}
+
+		{{> attributeBlock
+			key="resolve"
+			value=system.attributes.resolve.value
+		}}
+	</div>
+
+</div>
+
+{{#*inline "attributeBlock"}}
+	<div class="rollable">
+		<a
+			class="rollable-header"
+			data-action="roll"
+			data-attribute="{{key}}"
+		>
+			<span class="sublabel">
+				<i class="fas fa-dice-d20"></i>
+				{{fromConfig "ATTRIBUTES" key}}
+			</span>
+		</a>
+		<input
+			type="number"
+			name="system.attributes.{{key}}.value"
+			value="{{value}}"
+			min="0"
+		/>
+	</div>
+{{/inline}}

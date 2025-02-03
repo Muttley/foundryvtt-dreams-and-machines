@@ -27,14 +27,18 @@
 			</p>
 		</div>
 	{{/if}}
-	{{#each currentValues}}
-		<p
-			class="string-edit"
-			data-action="edit-string"
-			data-index="{{@index}}"
-			data-key="{{../key}}"
-		>
-			{{this}}
-		</p>
-	{{/each}}
+	{{#if currentValues}}
+		{{#each currentValues}}
+			<p
+				class="string-edit"
+				data-action="edit-string"
+				data-index="{{@index}}"
+				data-key="{{../key}}"
+			>
+				{{this}}
+			</p>
+		{{/each}}
+	{{else}}
+		<p></p>
+	{{/if}}
 </div>

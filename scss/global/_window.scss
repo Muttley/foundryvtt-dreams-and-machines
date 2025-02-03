@@ -1,5 +1,6 @@
 @use "../mixins" as *;
 
+.application .window-content,
 .window-app .window-content {
 	@include p-reset;
 
@@ -7,15 +8,10 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    // background: url(../ui/parchment.jpg) repeat;
     padding: 8px;
     color: var(--color-text-dark-primary);
     overflow-y: auto;
     overflow-x: hidden;
 
 	background: url('../assets/ui/dnm-bg.jpg') repeat;
-	// background-size: 1024px 1024px;
-	// height: 100%;
-	// flex: unset;
-	// padding: unset;
 }

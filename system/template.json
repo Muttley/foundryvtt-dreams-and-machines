@@ -85,19 +85,6 @@
 			},
 			"notes": "",
 			"description": ""
-		},
-		"npc": {
-			"truth": "",
-			"attribute": {
-				"value": 8,
-				"default": 7
-			} ,
-			"skill": {
-				"value": 3,
-				"default": 1
-			},
-			"specialActions": "",
-			"notes": ""
 		}
 	},
 

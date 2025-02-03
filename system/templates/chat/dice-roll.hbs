@@ -1,55 +1,72 @@
-<div class="flex flex-col gap-1 w-full p-2">
+<div class="dnm chat-message">
 	{{#if item}}
-		<span class="border-1 border-solid text-xl uppercase font-semibold text-center rounded-md {{#if isGM}}text-teal-600 border-teal-600{{else}}text-fuchsia-800 border-fuchsia-800{{/if}}">
+		<span class="item-name">
 			{{!-- Show the weapon name, rather than Action name, for Major NPC actions. --}}
 			{{#if (and item.system.weapon item.system.weapon.name)}}
-				{{ item.system.weapon.name }}
+				{{item.system.weapon.name}}
 			{{else}}
-				{{ item.name }}
+				{{item.name}}
 			{{/if}}
 		</span>
 	{{/if}}
 
-	<span class="text-lg font-semibold text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">
-		{{#if fixedTargetNumber}}
-			{{#if fixedFocus}}
-				Rolling TN {{fixedTargetNumber}} / Focus {{ fixedFocus }}
-			{{else}}
-				Rolling TN {{fixedTargetNumber}}
-			{{/if}}
+	<span class="chat-description">
+		{{#if npcRoll}}
+			{{rollTitle}}
 		{{else}}
 			{{#if skill}}
-				Rolling {{ attribute }} + {{ skill }}
+				{{attribute}} + {{skill}}
 			{{else}}
-				Rolling {{ attribute }}
+				{{attribute}}
 			{{/if}}
 		{{/if}}
 	</span>
 
-	<span class="grid grid-cols-2 gap-1 whitespace-nowrap">
-		<span class="flex flex-col gap-1 items-center">
-			<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">Target Number</span>
-			<span class="text-xl">{{ targetNumber }}</span>
+	<span class="result-grid">
+		<span class="result-item">
+			<span class="result-item-header">
+				{{localize "DNM.Labels.TargetNumber"}}
+			</span>
+			{{targetNumber}}
+			({{skillValue}})
 		</span>
 
-		<span class="flex flex-col gap-1 items-center">
-			<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">Complication Range</span>
-			<span class="text-xl">{{ complicationRange }}{{#if (lt complicationRange 20)}}–20{{/if}}</span>
+		<span class="result-item">
+			<span class="result-item-header">
+				{{localize "DNM.Labels.DicePrompt.Complication"}}
+			</span>
+			{{#if (lt complicationRange 20)}}
+				{{complicationRange}}&dash;20
+			{{else}}
+				{{complicationRange}}
+			{{/if}}
 		</span>
 
-		<span class="flex flex-col gap-1 items-center">
-			<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">Successes</span>
-			<span class="text-xl">{{ successes }}</span>
+		<span class="result-item">
+			<span class="result-item-header">
+				{{localize "DNM.Labels.Successes"}}
+			</span>
+			<span>{{ successes }}</span>
 		</span>
 
-		<span class="flex flex-col gap-1 items-center">
-			<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if (gt complications 0)}}bg-rose-800{{else}}{{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}{{/if}}">Complications</span>
-			<span class="text-xl">{{ complications }}</span>
+		<span class="result-item">
+			<span
+				{{#ifCond complications "===" 0}}
+					class="result-item-header"
+				{{else}}
+					class="result-item-header complication"
+				{{/ifCond}}
+			>
+				{{localize "DNM.Labels.Complications"}}
+			</span>
+			{{complications}}
 		</span>
 
 		{{#if (and item item.system.isWeapon)}}
-			<span class="flex flex-col gap-1 items-center">
-				<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">{{localize "DNM.Labels.Damage" }}</span>
+			<span class="result-item">
+				<span class="result-item-header">
+					{{localize "DNM.Labels.Damage" }}
+				</span>
 				<span class="text-sm flex flex-wrap items-center gap-1 justify-center">
 					{{#if item.system.weapon.damageQualities}}
 						{{#each item.system.weapon.damageQualities}}
@@ -57,31 +74,45 @@
 							{{#unless @last}}<span>{{localize "DNM.Labels.Weapon.or" }}</span>{{/unless}}
 						{{/each}}
 					{{else}}
-						—
+						&mdash;
 					{{/if}}
 				</span>
 			</span>
 
-			<span class="flex flex-col gap-1 items-center">
-				<span class="text-sm font-semibold w-full text-center rounded-md text-white {{#if isGM}}bg-teal-600{{else}}bg-fuchsia-800{{/if}}">{{localize "DNM.Labels.Qualities" }}</span>
+			<span class="result-item">
+				<span class="result-item-header">
+					{{localize "DNM.Labels.Qualities" }}
+				</span>
 				<span class="text-sm flex flex-wrap items-center gap-1 justify-center">
 					{{#if item.system.weapon.qualities}}
 						{{#each item.system.weapon.qualities}}
 							<span class="oblique font-semibold">{{ label }}{{#if (gt rating 0)}} {{ rating }}{{/if}}{{#unless @last}},{{/unless}}</span>
 						{{/each}}
 					{{else}}
-						—
+						&mdash;
 					{{/if}}
 				</span>
 			</span>
 		{{/if}}
 	</span>
 
-	<div class="flex justify-center gap-4 text-5xl">
+	<div class="dice-list">
 		{{#each results}}
-			<div class="relative" {{#if (or isCritical isSuccess isComplication)}}data-tooltip="{{#if isCritical}}{{localize 'DNM.Roll.Critical' }}{{/if}} {{#if isSuccess}}{{localize 'DNM.Roll.Success'}}{{/if}} {{#if isComplication}}{{localize 'DNM.Roll.Complication'}}{{/if}}"{{/if}}>
-				<i class="fat fa-dice-d20 opacity-25 {{#if ../isGM}}text-teal-600{{else}}text-fuchsia-800{{/if}}"></i>
-				<div class="absolute w-full h-full text-3xl top-2 font-bold text-center {{#unless (or isSuccess isCritical isComplication) }}opacity-40{{/unless}} {{#if isCritical}}{{#if isGM}}text-blue-700{{else}}text-emerald-800{{/if}}{{/if}} {{#if isComplication}}text-rose-900{{/if}}">{{ face }}</div>
+			<div style="position: relative;" data-tooltip="{{tooltip}}">
+				<i class="fat fa-dice-d20 dice-icon"></i>
+				<div
+					{{#if isFail}}
+						class="dice-number failure"
+					{{/if}}
+					{{#if isComplication}}
+						class="dice-number complication"
+					{{/if}}
+					{{#if isSuccess}}
+						class="dice-number"
+					{{/if}}
+				>
+					{{face}}
+				</div>
 			</div>
 		{{/each}}
 	</div>

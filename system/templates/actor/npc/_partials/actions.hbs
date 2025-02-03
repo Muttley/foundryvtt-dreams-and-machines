@@ -1,0 +1,23 @@
+<div>
+	<span class="label">
+		{{localize "DNM.Labels.Actions"}}
+	</span>
+	<ol class="item-list">
+		{{#each actions}}
+			<li
+				class="item"
+				data-menu="item"
+				data-uuid="{{this.uuid}}"
+			>
+				<a
+					data-action="roll"
+					data-attribute="might"
+					data-skill="fight"
+					data-uuid="{{uuid}}"
+				>
+					<i class="fas fa-sword"></i>
+				</a>
+			</li>
+		{{/each}}
+	</ol>
+</div>

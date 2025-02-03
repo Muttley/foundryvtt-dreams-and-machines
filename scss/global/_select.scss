@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+.dnm.sheet {
+	.multi-select {
+		input[type="text"] {
+			font-weight: 600;
+			background: rgba(255, 255, 255, 0.8);
+			text-align: left;
+
+			&::placeholder {
+				font-style: italic;
+				color: rgba(0, 0, 0, 0.4);
+			}
+		}
+
+		.delete-choice {
+			color: $c-character-primary;
+
+			&:hover {
+				color: white;
+			}
+		}
+
+		.items {
+			margin: 4px;
+		}
+
+		.selected-item {
+			margin-bottom: 4px;
+		}
+	}
+}

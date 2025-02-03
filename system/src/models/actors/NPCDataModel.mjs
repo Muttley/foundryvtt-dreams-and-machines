@@ -1,16 +1,6 @@
-/**
- * Data Model representing a Non-Player Character
- *
- * @property {string} truth
- * @property {object} attribute
- * @property {number} attribute.value
- * @property {number} attribute.default
- * @property {object} skill
- * @property {number} skill.value
- * @property {number} skill.default
- * @property {string} specialActions
- * @property {string} notes
- */
+import BookSource from "../items/_types/BookSource.mjs";
+import Description from "../_types/Description.mjs";
+
 export default class NPCDataModel
 	extends foundry.abstract.TypeDataModel {
 
@@ -18,20 +8,22 @@ export default class NPCDataModel
 		const fields = foundry.data.fields;
 
 		return {
+			...BookSource(),
+			...Description(),
+
 			truth: new fields.StringField({
-				initial: "",
+				initial: "Truth",
 				nullable: false,
 			}),
 
-			attribute: new fields.SchemaField({
-				value: new fields.NumberField({
+			mainAttribute: new fields.SchemaField({
+				attribute: new fields.NumberField({
 					initial: 8,
 					integer: true,
 					min: 0,
 					nullable: false,
 				}),
-
-				default: new fields.NumberField({
+				skill: new fields.NumberField({
 					initial: 1,
 					integer: true,
 					min: 0,
@@ -39,15 +31,14 @@ export default class NPCDataModel
 				}),
 			}),
 
-			skill: new fields.SchemaField({
-				value: new fields.NumberField({
-					initial: 1,
+			defaultAttribute: new fields.SchemaField({
+				attribute: new fields.NumberField({
+					initial: 8,
 					integer: true,
 					min: 0,
 					nullable: false,
 				}),
-
-				default: new fields.NumberField({
+				skill: new fields.NumberField({
 					initial: 1,
 					integer: true,
 					min: 0,
@@ -60,10 +51,6 @@ export default class NPCDataModel
 				nullable: false,
 			}),
 
-			notes: new fields.HTMLField({
-				initial: "",
-				nullable: false,
-			}),
 		};
 	}
 

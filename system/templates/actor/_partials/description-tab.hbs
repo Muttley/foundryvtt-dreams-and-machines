@@ -1,0 +1,16 @@
+<section class="tab {{tab.cssClass}}" data-group="primary" data-tab="description">
+	<div class="tab-body">
+		<div class="editor-container">
+			{{#if editModeEnabled}}
+				{{formGroup systemFields.description
+					enriched=enrichedDescription
+					value=systemSource.description
+					documentUUID=actor.uuid
+					height=300
+				}}
+			{{else}}
+				{{{enrichedDescription}}}
+			{{/if}}
+		</div>
+	</div>
+</section>

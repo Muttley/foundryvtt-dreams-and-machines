@@ -1,5 +1,6 @@
 import BasicAttributes from "./_types/BasicAttributes.mjs";
 import BookSource from "./_types/BookSource.mjs";
+import Configured from "./_types/Configured.mjs";
 import Description from "../_types/Description.mjs";
 import OriginAttributeChoices from "./_types/OriginAttributeChoices.mjs";
 import OriginSkillChoices from "./_types/OriginSkillChoices.mjs";
@@ -14,6 +15,7 @@ export default class OriginDataModel extends foundry.abstract.TypeDataModel {
 		return {
 			...BasicAttributes(),
 			...BookSource(),
+			...Configured(),
 			...Description(),
 			...OriginAttributeChoices(),
 			...OriginSkillChoices(),

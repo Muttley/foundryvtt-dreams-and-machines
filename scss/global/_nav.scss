@@ -2,6 +2,11 @@
 @use "../mixins" as *;
 
 .dnm.sheet {
+	nav {
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+
 	.sheet-tabs {
 		font-size: 16px;
 		font-family: 'Bruno Ace';
@@ -14,6 +19,7 @@
 			background: $c-character-purple-unselected;
 			color: $c-character-purple;
 			border-radius: 16px;
+			flex: none;
 		}
 
 		.active {

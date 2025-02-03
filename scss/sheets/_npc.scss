@@ -1,0 +1,49 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.dnm.sheet.actor.npc {
+	// min-width: 830px;
+	// min-height: 760px;
+
+	.label {
+		background-color: $c-character-purple;
+	}
+
+	.right-column {
+		grid-template-rows: min-content auto auto ;
+	}
+
+	// .sheet-body {
+	// 	@include p-reset;
+	// 	padding: 0.25rem;
+	// 	display: grid;
+	// }
+
+	.sheet-header {
+		background-color: $c-character-purple;
+	}
+
+	.sublabel {
+		background-color: rgba(255, 255, 255, 0.75);
+		padding: 4px;
+		color: $c-character-purple;
+	}
+
+	.truth {
+		input[type="text"] {
+			font-weight: 600;
+			background: white;
+			text-align: center;
+			border: none;
+			padding: 0.5rem;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			text-transform: uppercase;
+			color: black;
+
+			&:focus {
+				text-transform: none;
+			}
+		}
+	}
+}

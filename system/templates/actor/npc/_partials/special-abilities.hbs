@@ -1,0 +1,22 @@
+<div>
+	<span class="label">
+		{{localize "DNM.Labels.SpecialAbilities"}}
+	</span>
+
+	<ol class="item-list">
+		{{#each specialAbilities}}
+			<li
+				class="item"
+				data-menu="item"
+				data-uuid="{{this.uuid}}"
+			>
+				<a
+					data-action="useSpecialAbility"
+					data-uuid="{{uuid}}"
+				>
+					{{this.name}}
+				</a>
+			</li>
+		{{/each}}
+	</ol>
+</div>

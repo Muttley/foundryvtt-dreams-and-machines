@@ -32,20 +32,24 @@ export default class DnMRoller {
 	static async roll({
 		actor,
 		attribute,
-		skill,
-		numDice,
 		complicationRange,
-		fixedTargetNumber,
 		fixedFocus,
+		fixedTargetNumber,
 		item,
+		numDice,
+		rollTitle,
+		skill,
 	}) {
 		const targetNumber = fixedTargetNumber ?? attribute.value;
+		const skillValue = fixedFocus ?? skill?.value ?? 1;
+
+		const npcRoll = fixedTargetNumber + fixedFocus > 0;
 
 		const roll = new Roll(`${numDice}d20`);
 		await roll.evaluate();
 		const result = this.parseRoll({
 			roll,
-			skillValue: fixedFocus ?? skill?.value ?? 1,
+			skillValue,
 			targetNumber,
 			complicationRange,
 		});
@@ -53,13 +57,14 @@ export default class DnMRoller {
 		const template = await renderTemplate("systems/dreams-and-machines/templates/chat/dice-roll.hbs", {
 			...result,
 			attribute: attribute?.label,
-			skill: skill?.label,
-			isGM: game.user.isGM,
-			targetNumber,
 			complicationRange,
-			fixedTargetNumber,
-			fixedFocus,
+			isGM: game.user.isGM,
 			item,
+			npcRoll,
+			rollTitle,
+			skill: skill?.label,
+			skillValue,
+			targetNumber,
 		});
 
 		await ChatMessage.create({
@@ -90,26 +95,40 @@ export default class DnMRoller {
 				let isCritical = false;
 				let isSuccess = false;
 				let isComplication = false;
+				let isFail = false;
 
-				if (result.result <= skillValue) {
-					successes += 2;
-					isCritical = true;
-				}
-				else if (result.result <= targetNumber) {
+				let tooltip = "";
+
+				if (result.result <= targetNumber) {
 					successes += 1;
 					isSuccess = true;
+					tooltip = game.i18n.localize("DNM.Roll.Success");
+				}
+				else {
+					isFail = true;
+					tooltip = game.i18n.localize("DNM.Roll.Fail");
+				}
+
+				if (result.result <= skillValue) {
+					successes += 1;
+					isCritical = true;
+					tooltip = game.i18n.localize("DNM.Roll.Critical");
 				}
 
 				if (result.result >= complicationRange) {
 					complications += 1;
 					isComplication = true;
+					isFail = false;
+					tooltip = game.i18n.localize("DNM.Roll.Complication");
 				}
 
 				results.push({
 					face: result.result,
-					isCritical,
-					isSuccess,
 					isComplication,
+					isCritical,
+					isFail,
+					isSuccess,
+					tooltip,
 				});
 			});
 		});

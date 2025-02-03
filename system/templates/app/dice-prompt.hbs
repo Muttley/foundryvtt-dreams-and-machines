@@ -1,65 +1,94 @@
-<div class="flex flex-col min-w-[450px] !p-1 gap-3 whitespace-nowrap">
-	<div class="grid grid-cols-3 gap-1">
-		<label class="flex flex-col items-center gap-1 rounded-md p-2 pt-1 {{#if isGM}}bg-teal-600 text-teal-50{{else}}bg-fuchsia-800 text-fuchsia-200{{/if}}">
-			<span class="text-lg font-semibold">
+{{!-- <div class="flex flex-col min-w-[450px] !p-1 gap-3 whitespace-nowrap"> --}}
+<div class="dice-prompt-body">
+	<div class="grid-3-columns dice-prompt-wrapper">
+		<label>
+			<span>
 				{{localize "DNM.Labels.DicePrompt.Attribute" }}
 			</span>
 			{{#if fixedTargetNumber}}
-				<input type="number" name="fixedTargetNumber" value="{{ fixedTargetNumber }}" min="1" max="20" class="!bg-white !border-none !text-center !text-2xl {{#if isGM}}!text-teal-800{{else}}!text-fuchsia-800{{/if}} !w-40" />
+				<input
+					data-dtype="Number"
+					max="20"
+					min="1"
+					name="fixedTargetNumber"
+					type="number"
+					value="{{fixedTargetNumber}}"
+				/>
 			{{else}}
-				<select name="attribute" class="!border-none !bg-white !w-full !px-2 text-lg font-semibold {{#if isGM}}!text-teal-800{{else}}!text-fuchsia-800{{/if}}">
+				<select name="attribute">
 					{{#select attribute}}
 						{{#each attributes}}
-							<option value="{{ name }}">{{ label }} ({{ value }})</option>
+							<option value="{{name}}">
+								{{label}} ({{value}})
+							</option>
 						{{/each}}
 					{{/select}}
 				</select>
 			{{/if}}
 		</label>
-		<label class="flex flex-col items-center gap-1 rounded-md p-2 pt-1 {{#if isGM}}bg-teal-600 text-teal-50{{else}}bg-fuchsia-800 text-fuchsia-200{{/if}}">
-			<span class="text-lg font-semibold">
+		<label>
+			<span>
 				{{localize "DNM.Labels.DicePrompt.Skill" }}
 			</span>
 			{{#if fixedFocus}}
-				<input type="number" name="fixedFocus" value="{{ fixedFocus }}" min="1" max="20" class="!bg-white !border-none !text-center !text-2xl {{#if isGM}}!text-teal-800{{else}}!text-fuchsia-800{{/if}} !w-40" />
+				<input
+					data-dtype="Number"
+					max="20"
+					min="1"
+					name="fixedFocus"
+					type="number"
+					value="{{fixedFocus}}"
+				/>
 			{{else}}
-				<select name="skill" class="!border-none !bg-white !w-full !px-2 text-lg font-semibold {{#if isGM}}!text-teal-800{{else}}!text-fuchsia-800{{/if}}">
+				<select name="skill">
 					{{#select skill}}
-						<option value="-">—</option>
+						<option value="">&mdash;</option>
 						{{#each skills}}
-							<option value="{{ name }}">{{ label }} ({{ value }})</option>
+							<option value="{{name}}">
+								{{label}} ({{value}})
+							</option>
 						{{/each}}
 					{{/select}}
 				</select>
 			{{/if}}
 		</label>
-		<label class="flex flex-col items-center gap-1 rounded-md p-2 pt-1 {{#if isGM}}bg-teal-600 text-teal-50{{else}}bg-fuchsia-800 text-fuchsia-200{{/if}}">
-			<span class="text-lg font-semibold">
+		<label>
+			<span>
 				{{localize "DNM.Labels.DicePrompt.Complication" }}
 			</span>
-			<input type="number" name="complication" value="{{ complication }}" min="1" max="20" class="!bg-white !border-none !text-center !text-2xl {{#if isGM}}!text-teal-800{{else}}!text-fuchsia-800{{/if}} !w-40" />
+			<input
+				data-dtype="Number"
+				max="20"
+				min="1"
+				name="complication"
+				type="number"
+				value="{{ complication }}"
+			/>
 		</label>
 	</div>
 
-	<div class="flex justify-center gap-4 text-5xl">
-		<a data-action="set-num-dice" data-value="1" class="{{#if isGM}}text-teal-600{{else}}text-fuchsia-900{{/if}}">
-			<i class="fas fa-dice-d20"></i>
-		</a>
-	<a data-action="set-num-dice" data-value="2" class="{{#if (lt numDice 2)}}opacity-25{{/if}} {{#if isGM}}text-teal-600{{else}}text-fuchsia-900{{/if}}">
-			<i class="fas fa-dice-d20"></i>
-		</a>
-	<a data-action="set-num-dice" data-value="3" class=" {{#if (lt numDice 3)}}opacity-25{{/if}} {{#if isGM}}text-teal-600{{else}}text-fuchsia-900{{/if}}">
-			<i class="fas fa-dice-d20"></i>
-		</a>
-	<a data-action="set-num-dice" data-value="4" class=" {{#if (lt numDice 4)}}opacity-25{{/if}} {{#if isGM}}text-teal-600{{else}}text-fuchsia-900{{/if}}">
-			<i class="fas fa-dice-d20"></i>
-		</a>
-		<a data-action="set-num-dice" data-value="5" class=" {{#if (lt numDice 5)}}opacity-25{{/if}} {{#if isGM}}text-teal-600{{else}}text-fuchsia-900{{/if}}">
-			<i class="fas fa-dice-d20"></i>
-		</a>
+	<div class="dice">
+		{{#each diceStatuses}}
+			{{> diceDisplay
+				active=this.active
+				index=this.index
+			}}
+		{{/each}}
 	</div>
 
 	<button class="gap-1 text-xl font-semibold" data-action="roll">
 		{{localize "DNM.Labels.DicePrompt.Roll" }}
 	</button>
 </div>
+
+{{#*inline "diceDisplay"}}
+	<a
+		data-action="set-num-dice"
+		data-value="{{index}}"
+		{{#if active}}
+			class="active"
+		{{/if}}
+	>
+		<i class="fas fa-dice-d20"></i>
+	</a>
+{{/inline}}

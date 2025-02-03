@@ -1,0 +1,12 @@
+<div>
+	<span class="label">
+		{{localize "DNM.Labels.Notes"}}
+	</span>
+	{{editor enrichedNotes
+		button=true
+		class="enriched-text-block"
+		editable=editable
+		engine="prosemirror"
+		target="system.notes"
+	}}
+</div>

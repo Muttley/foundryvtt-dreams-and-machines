@@ -1,0 +1,180 @@
+@use "../abstracts" as *;
+@use "../mixins" as *;
+
+.dnm.sheet {
+	input[type="number"] {
+		font-weight: 600;
+		background: none;
+		font-size: 2rem;
+		line-height: 2.25rem;
+		text-align: center;
+		padding: 0.5rem;
+		border: none;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		color: black;
+
+		&:focus {
+			box-shadow: 0 0 5px $c-character-purple;
+		}
+	}
+
+	input:enabled.lockable {
+		box-shadow: inset 0 0 5px $c-character-purple;
+	}
+
+	ol.item-list {
+		@include p-reset;
+		padding: 0.5rem;
+	}
+
+	// p {
+	// 	@include p-reset;
+	// 	font-size: 1.1rem;
+	// 	color: black;
+	// 	text-wrap: pretty;
+	// 	// background: $c-offwhite;
+	// }
+
+	section.tab {
+		height: 100%
+	}
+
+	.enriched-text-block {
+		margin: 0;
+		padding: 4px;
+	}
+
+	.label {
+		display: flex;
+		width: 100%;
+		font-weight: 600;
+		line-height: 1.5rem;
+
+		padding-left: 0.25rem;
+		padding-right: 0.25rem;
+
+		align-items: center;
+		justify-content: center;
+
+		color: white;
+		background-color: $c-character-primary;
+
+		text-align: center;
+		text-shadow: 1px 1px 2px black;
+		text-transform: uppercase;
+	}
+
+	.name-input {
+		color: #ffffff;
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+		text-transform: uppercase;
+		height: 100%;
+		border-width: 0;
+
+		&:focus {
+			text-transform: none;
+		}
+	}
+
+	.rollable {
+		display: grid;
+		grid-template-columns: minmax(100px, 1fr);
+		gap: 0.2rem;
+		background-color: $c-offwhite;
+	}
+
+	.rollable-header {
+		padding-top: 4px;
+		color: $c-character-primary;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.sheet-header {
+		display: grid;
+		grid-template-columns: min-content 1fr min-content;
+		padding: 0.25rem;
+		align-items: center;
+		gap: 1rem;
+		background-color: $c-character-primary;
+
+		img.item-image,
+		img.profile {
+			max-width: 64px;
+			height: 64px;
+		}
+
+		input[type="text"] {
+			color: #ffffff;
+			font-size: 1.875rem;
+			line-height: 2.25rem;
+			text-transform: uppercase;
+			text-shadow: 1px 1px 2px black;
+			height: 100%;
+			border-width: 0;
+			background: unset;
+
+			&:focus {
+				text-transform: none;
+			}
+		}
+	}
+
+	.sheet-header-control {
+		padding: 8px;
+		color: white;
+		text-shadow: 1px 1px 2px black;
+	}
+
+	.skills {
+		display: grid;
+		row-gap: 0.5rem;
+	}
+
+	.strings {
+		display: grid;
+		align-content: baseline;
+
+		.custom-string {
+			background-color: $c-offwhite;
+
+			.string-edit {
+				margin: 2px;
+				padding: 2px;
+				text-transform: uppercase;
+				font-weight: bold;
+				text-align: center;
+
+				&:hover {
+					color: $c-character-purple;
+					background-color: $c-character-purple-highlight;
+					cursor: pointer;
+				}
+			}
+
+			.add-string-row {
+				color: $c-character-purple;
+				text-align: right;
+			}
+		}
+	}
+
+	.sublabel {
+		font-weight: 600;
+		color: $c-character-primary;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.tab-body {
+		@include p-reset;
+		padding: 0.25rem;
+		display: grid;
+	}
+
+	.window-content {
+		@include p-reset;
+	}
+}

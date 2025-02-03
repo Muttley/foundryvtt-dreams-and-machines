@@ -1,7 +1,27 @@
+@use "../abstracts" as *;
+
 .editor,
+.editor-container,
 .editor-content {
-	width: 100%;
-	height: 100%;
-	min-height: 10rem;
-	flex: 1;
+	// flex: 1;
+	min-height: 1rem;
+	overflow-y: visible;
+	background-color: unset;
+	// background-color: none;
+	// margin: 4px;
+	padding: 4px;
+	font-family: $font-primary;
+	font-size: 1.1rem;
+	font-weight: 500;
+	text-align: justify;
+
+	p {
+		background-color: unset;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $c-character-purple;
+		font-family: 'Bruno Ace';
+		text-shadow: unset;
+	}
 }

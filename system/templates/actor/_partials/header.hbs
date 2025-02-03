@@ -1,0 +1,28 @@
+<header class="sheet-header">
+	<img
+		alt="{{actor.name}}"
+		class="profile"
+		data-edit="img"
+		src="{{actor.img}}"
+	/>
+	<input
+		class="name-input"
+		name="name"
+		type="text"
+		value="{{actor.name}}"
+		{{disabled editModeDisabled}}
+	/>
+	<a class="sheet-header-control" data-action="toggleEditMode">
+		{{#if editModeEnabled}}
+			<i
+				class="fa-solid fa-lock-open"
+				data-tooltip="DNM.Tooltips.Actor.LockActor"
+			></i>
+		{{else}}
+			<i
+				class="fa-solid fa-lock"
+				data-tooltip="DNM.Tooltips.Actor.UnlockActor"
+			></i>
+		{{/if}}
+	</a>
+</header>

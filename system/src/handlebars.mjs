@@ -45,4 +45,9 @@ export function registerHandlebarsHelpers() {
 		return html.replace(rgx, "$& selected");
 	});
 
+
+	Handlebars.registerHelper("template", function(arg1) {
+		return templatePath(arg1);
+	});
+
 }

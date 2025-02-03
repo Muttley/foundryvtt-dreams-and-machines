@@ -3,6 +3,9 @@
  */
 export default class DnMActorSheet extends ActorSheet {
 
+	_editModeEnabled = false;
+
+
 	static get defaultOptions() {
 		return {
 			...super.defaultOptions,
@@ -21,15 +24,25 @@ export default class DnMActorSheet extends ActorSheet {
 	}
 
 
+	async _onToggleEditMode(event) {
+		this._editModeEnabled = !this._editModeEnabled;
+		await this.submit();
+		this.render();
+	}
+
+
 	/**
 	 * @param {JQuery} html
 	 */
 	activateListeners(html) {
 		super.activateListeners(html);
 
-		html.find('[data-action="add-string"]').on("click", this.onStringAdd.bind(this));
-		html.find('[data-action="open-sheet"]').on("click", this.openSheet.bind(this));
-		html.find('[data-action="roll"]').on("click", this.promptForRoll.bind(this));
+		html.find("[data-action=add-string]").on("click", this.onStringAdd.bind(this));
+		html.find("[data-action=open-sheet]").on("click", this.openSheet.bind(this));
+		html.find("[data-action=roll]").on("click", this.promptForRoll.bind(this));
+
+		html.find("[data-action=toggleEditMode]")
+			.click(async event => this._onToggleEditMode(event));
 
 		this.attachContextMenus(html);
 	}
@@ -101,10 +114,13 @@ export default class DnMActorSheet extends ActorSheet {
 	}
 
 
-	getData(options = {}) {
+	async getData(options = {}) {
 		const context = super.getData(options);
 
 		context.system = this.system;
+
+		context.editModeEnabled = this._editModeEnabled;
+		context.editModeDisabled = !this._editModeEnabled;
 
 		// Simple npc characters do not have all the attributes and skills of
 		// characters or majorNPCs

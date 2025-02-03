@@ -20,7 +20,7 @@ export default class CharacterDataModel
 			...Harms(),
 
 			coin: new fields.NumberField({
-				initial: 0,
+				initial: 2,
 				integer: true,
 				nullable: false,
 			}),
@@ -46,10 +46,19 @@ export default class CharacterDataModel
 				}),
 			}),
 
-			supplyPoints: new fields.NumberField({
-				initial: 0,
-				integer: true,
-				nullable: false,
+			supplyPoints: new fields.SchemaField({
+				value: new fields.NumberField({
+					initial: 0,
+					integer: true,
+					min: 0,
+					nullable: false,
+				}),
+				max: new fields.NumberField({
+					initial: 0,
+					integer: true,
+					min: 0,
+					nullable: false,
+				}),
 			}),
 
 			techLevel: new fields.NumberField({

@@ -10,15 +10,24 @@ export default class DicePrompt extends Application {
 	 * @param {DnMItem|undefined} item An optional item (usually a weapon) to
 	 *                                 note alongside the roll.
 	 */
-	static promptForRoll({ actor, attribute = "insight", skill = "-", fixedTargetNumber, fixedFocus, item } = {}) {
+	static promptForRoll({
+		actor,
+		attribute = "insight",
+		fixedFocus,
+		fixedTargetNumber,
+		item,
+		rollTitle = "",
+		skill = "",
+	} = {}) {
 		const prompt = new DicePrompt();
 
 		prompt.actor = actor;
 		prompt.attribute = attribute;
-		prompt.skill = skill;
-		prompt.fixedTargetNumber = fixedTargetNumber;
 		prompt.fixedFocus = fixedFocus;
+		prompt.fixedTargetNumber = fixedTargetNumber;
 		prompt.item = item;
+		prompt.rollTitle = rollTitle;
+		prompt.skill = skill;
 
 		prompt.render(true);
 	}
@@ -42,10 +51,12 @@ export default class DicePrompt extends Application {
 	 */
 	attribute = "insight";
 
+	rollTitle = "";
+
 	/**
 	 * @type {?string}
 	 */
-	skill = "-";
+	skill = "";
 
 	/**
 	 * @type {number|undefined}
@@ -94,16 +105,22 @@ export default class DicePrompt extends Application {
 			}));
 		}
 
+		const diceStatuses = [];
+		for (let i = 0; i < 5; i++) {
+			diceStatuses.push({index: i + 1, active: i < this.numDice});
+		}
+
 		return {
 			...super.getData(options),
 			actor: this.actor,
 			attribute: this.attribute ?? "insight",
 			attributes,
-			skill: this.skill ?? "-",
+			skill: this.skill,
 			skills,
 			fixedTargetNumber: this.fixedTargetNumber,
 			fixedFocus: this.fixedFocus,
 			numDice: this.numDice,
+			diceStatuses,
 			isGM: game.user.isGM,
 			complication: this.complication,
 		};
@@ -200,22 +217,17 @@ export default class DicePrompt extends Application {
 		let attribute = undefined;
 		let skill = undefined;
 
-		switch (this.actor.type) {
-			case "npc":
-				break;
+		if (this.actor.isNotNpc) {
+			attribute = {
+				label: game.i18n.localize(`DNM.Attributes.${this.attribute.capitalize()}`),
+				value: this.actor.system.attributes[this.attribute].value,
+			};
 
-			default: {
-				attribute = {
-					label: game.i18n.localize(`DNM.Attributes.${this.attribute.capitalize()}`),
-					value: this.actor.system.attributes[this.attribute].value,
+			if (this.skill) {
+				skill = {
+					label: game.i18n.localize(`DNM.Skills.${this.skill.capitalize()}`),
+					value: this.actor.system.skills[this.skill],
 				};
-
-				if (this.skill && this.skill !== "-") {
-					skill = {
-						label: game.i18n.localize(`DNM.Skills.${this.skill.capitalize()}`),
-						value: this.actor.system.skills[this.skill],
-					};
-				}
 			}
 		}
 
@@ -227,6 +239,7 @@ export default class DicePrompt extends Application {
 			numDice: this.numDice,
 			complicationRange: this.complication,
 			fixedTargetNumber: this.fixedTargetNumber,
+			rollTitle: this.rollTitle,
 			fixedFocus: this.fixedFocus,
 		});
 

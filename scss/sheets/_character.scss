@@ -5,30 +5,12 @@
 	min-width: 830px;
 	min-height: 760px;
 
-	input[type="number"] {
-		font-weight: 600;
-		background: none;
-		font-size: 2rem;
-		line-height: 2.25rem;
-		text-align: center;
-		padding: 0.5rem;
-		border: none;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
+	input[type="number"]:focus {
+		box-shadow: 0 0 5px $c-character-primary;
 	}
 
-	.rollable {
-		display: grid;
-		grid-template-columns: minmax(100px, 1fr);
-		gap: 0.5rem;
-		background-color: $c-offwhite;
-	}
-
-	.rollable-header {
-		padding-top: 4px;
-		color: $c-character-primary;
-		text-align: center;
-		text-transform: uppercase;
+	input:enabled {
+		box-shadow: inset 0 0 5px $c-character-primary;
 	}
 
 	.attributes {
@@ -71,70 +53,6 @@
 				border: none;
 			}
 		}
-	}
-
-	.sheet-header {
-		display: grid;
-		grid-template-columns: min-content 1fr;
-		padding: 0.25rem;
-		align-items: center;
-		gap: 1rem;
-		background-color: $c-character-primary;
-
-		img.profile {
-			max-width: 64px;
-			height: 64px;
-		}
-
-		input[type="text"] {
-			color: #ffffff;
-			font-size: 1.875rem;
-			line-height: 2.25rem;
-			text-transform: uppercase;
-			height: 100%;
-			border-width: 0;
-
-			&:focus {
-				text-transform: none;
-			}
-		}
-	}
-
-	.sheet-body {
-		@include p-reset;
-		padding: 0.25rem;
-		display: grid;
-	}
-
-	.strings {
-		display: grid;
-		gap: 0.5rem;
-
-		align-content: baseline;
-
-		.custom-string {
-			background-color: $c-offwhite;
-
-			.string-edit {
-				margin: 2px;
-				padding: 2px;
-				text-transform: uppercase;
-				font-weight: bold;
-				text-align: center;
-
-				&:hover {
-					color: $c-character-primary;
-					background-color: $c-character-primary-highlight;
-					cursor: pointer;
-				}
-			}
-
-			.add-string-row {
-				color: $c-character-primary;
-				text-align: right;
-			}
-		}
-
 	}
 
 	.background {
@@ -214,25 +132,9 @@
 		height: unset;
 	}
 
-	.label {
-		display: flex;
-		width: 100%;
-		font-weight: 600;
-
-		padding-left: 0.25rem;
-		padding-right: 0.25rem;
-
-		align-items: center;
-		justify-content: center;
-
-		color: white;
-		background-color: $c-character-primary;
-
-		text-transform: uppercase;
-	}
-
 	.name-input {
 		color: #ffffff;
+		background: unset;
 		font-size: 1.875rem;
 		line-height: 2.25rem;
 		text-transform: uppercase;
@@ -244,30 +146,8 @@
 		}
 	}
 
-	.skills {
-		display: grid;
-		row-gap: 0.5rem;
-	}
-
-	.sublabel {
-		font-weight: 600;
-		color: $c-character-primary;
-		text-transform: uppercase;
-		text-align: center;
-	}
-
-	.growth,
-	.supply,
-	.tech-level {
-		display: grid;
-		background-color: $c-offwhite;
-	}
-
 	.right-column {
 		grid-template-rows: min-content auto auto;
 	}
 
-	.window-content {
-		@include p-reset;
-	}
 }

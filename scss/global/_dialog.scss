@@ -1,8 +1,15 @@
 @use "../abstracts" as *;
+@use "../mixins" as *;
 
 .dreams-dialog {
-	padding: 8px;
-	background: $c-character-primary;
+	background: $c-character-purple;
+	font-family: $font-primary;
+
+	h1, h2, h3, h4, h5 {
+		font-family: $font-primary;
+		text-decoration: none;
+		border: none;
+	}
 
 	input[type="text"] {
 		font-weight: 600;

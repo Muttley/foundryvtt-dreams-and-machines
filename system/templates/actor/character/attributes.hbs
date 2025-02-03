@@ -38,10 +38,13 @@
 			</span>
 		</a>
 		<input
+			class="lockable"
+			data-type="Number"
 			type="number"
 			name="system.attributes.{{key}}.value"
 			value="{{value}}"
 			min="0"
+			{{disabled @root.editModeDisabled}}
 		/>
 	</div>
 {{/inline}}

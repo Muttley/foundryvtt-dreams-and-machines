@@ -1,8 +1,8 @@
 import CharacterAttributes from "../_types/CharacterAttributes.mjs";
 import Skills from "../_types/Skills.mjs";
-import Traits from "../_types/Traits.mjs";
+import Truths from "../_types/Truths.mjs";
 
-export default class ManorNPCDataModel
+export default class MajorNPCDataModel
 	extends foundry.abstract.TypeDataModel {
 
 	static defineSchema() {
@@ -11,7 +11,7 @@ export default class ManorNPCDataModel
 		return {
 			...CharacterAttributes(),
 			...Skills(),
-			...Traits(),
+			...Truths(),
 
 			threat: new fields.SchemaField({
 				current: new fields.NumberField({

@@ -44,4 +44,61 @@ export default class DnMActor extends Actor {
 		await this.updateSource(update);
 	}
 
+	get archetype() {
+		return this.items.find(i => i.type === "archetype");
+	}
+
+
+	get isNotNpc() {
+		return !this.isNpc;
+	}
+
+
+	get isNpc() {
+		return this.type === "npc";
+	}
+
+
+	get origin() {
+		return this.items.find(i => i.type === "origin");
+	}
+
+
+	get temperament() {
+		return this.items.find(i => i.type === "temperament");
+	}
+
+
+	get weapons() {
+		const weapons = this.items.filter(i => i.type === "equipment" && i.system.isWeapon);
+		return weapons.sort((a, b) => a.name.localeCompare(b.name));
+	}
+
+
+	async getItemsByType(type) {
+		return await Promise.all(
+			this.items.filter(
+				i => i.type === type
+			).map(
+				async i => ({
+					uuid: i.uuid,
+					name: i.name,
+					description: await TextEditor.enrichHTML(
+						i.system.description, { async: true }
+					),
+				})
+			)
+		);
+	}
+
+
+	async getEquipment() {
+		return await this.getItemsByType("equipment");
+	}
+
+
+	async getTalents() {
+		return (await this.getItemsByType("talent")).sort((a, b) => a.name.localeCompare(b.name));
+	}
+
 }
