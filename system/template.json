@@ -96,73 +96,8 @@
 			"origin",
 			"specialAbility",
 			"talent",
-			"temperament"
-		],
-		"templates": {
-			"itemDescription": {
-				"description": ""
-			}
-		},
-		"archetype": {
-			"templates": ["itemDescription"],
-			"goal": "",
-			"skills": {
-				"fight": 1,
-				"move": 1,
-				"operate": 1,
-				"sneak": 1,
-				"study": 1,
-				"survive": 1,
-				"talk": 1
-			},
-			"spirit": 1,
-			"supplyPoints": 0,
-			"startingGear": [],
-			"startingCoin": 0
-		},
-		"equipment": {
-			"templates": ["itemDescription"],
-			"techLevel": 0,
-			"value": 0,
-			"qualities": [],
-			"hasProtection": false,
-			"protection": {
-				"number": 0,
-				"breaker": 0
-			},
-			"isWeapon": false,
-			"weapon": {
-				"type": "Melee",
-				"qualities": [],
-				"damageQualities": []
-			},
-			"isGLIF": false,
-			"GLIF": {
-				"complexity": 1
-			}
-		},
-		"talent": {
-			"templates": ["itemDescription"],
-			"archetype": "General"
-		},
-		"temperament": {
-			"templates": ["itemDescription"],
-			"spiritEffect": "",
-			"exhaustionEffect": "",
-			"exhaustionType": "Despairing"
-		},
-		"majorNPCAction": {
-			"templates": ["itemDescription"],
-			"skillTest": {
-				"tn": 8,
-				"focus": 4
-			},
-			"weapon": {
-				"name": "",
-				"type": "Melee",
-				"qualities": [],
-				"damageQualities": []
-			}
-		}
+			"temperament",
+			"weapon"
+		]
 	}
 }

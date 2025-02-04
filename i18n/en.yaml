@@ -15,6 +15,12 @@ DNM.Exhaustion.Breathless: Breathless
 DNM.Exhaustion.Confused: Confused
 DNM.Exhaustion.Despairing: Despairing
 DNM.Exhaustion.Weary: Weary
+DNM.ItemCategories.Domestic: Domestic
+DNM.ItemCategories.HandMade: Hand-Made
+DNM.ItemCategories.Industrial: Industrial
+DNM.ItemCategories.Military: Military
+DNM.ItemCategories.Miscellaneous: Miscellaneous
+DNM.ItemCategories.Security: Security
 DNM.Labels.Action: Action
 DNM.Labels.Actions: Actions
 DNM.Labels.AddActions: Drag some Major NPC Actions onto this sheet to add actions this NPC can perform!
@@ -152,10 +158,11 @@ DNM.Skills.Sneak: Sneak
 DNM.Skills.Study: Study
 DNM.Skills.Survive: Survive
 DNM.Skills.Talk: Talk
-DNM.Sources.EchoesOfAnAncientEnemy: "Campaign Book: Echoes of an Ancient Enemy"
-DNM.Sources.EmertaValo: "Setting Guide: Emerta Valo"
+DNM.Sources.EchoesOfAnAncientEnemy: Campaign Book - Echoes of an Ancient Enemy
+DNM.Sources.EmertaValo: Setting Guide - Emerta Valo
 DNM.Sources.GamemastersGuide: Gamemaster's Guide
 DNM.Sources.GMToolkit: GM's Toolkit
+DNM.Sources.HandsOnResearch: Hands-On Research
 DNM.Sources.HomeIsWhereTheThreatIs: Home Is Where the Threat Is
 DNM.Sources.PlayersGuide: Player's Guide
 DNM.Sources.PoisonedWaters: Poisoned Waters
@@ -167,9 +174,9 @@ DNM.Tooltips.Actor.AddHarm: Add Harm
 DNM.Tooltips.Actor.AddLongTermGoal: Add Long-Term Goal
 DNM.Tooltips.Actor.AddShortTermGoal: Add Short-Term Goal
 DNM.Tooltips.Actor.AddTruth: Add Truth
-DNM.Tooltips.Actor.LockActor: Lock Actor
-DNM.Tooltips.Actor.UnlockActor: Unlock Actor
 DNM.Tooltips.Item.RemoveSelectedItem: Remove Selected Item
+DNM.Tooltips.Sheet.LockSheet: Lock Sheet
+DNM.Tooltips.Sheet.UnlockSheet: Unlock Sheet
 TYPES.Actor.character: Player Character
 TYPES.Actor.majorNPC: Major NPC
 TYPES.Actor.npc: NPC
@@ -180,3 +187,4 @@ TYPES.Item.origin: Origin
 TYPES.Item.specialAbility: Special Ability
 TYPES.Item.talent: Talent
 TYPES.Item.temperament: Temperament
+TYPES.Item.weapon: Weapon

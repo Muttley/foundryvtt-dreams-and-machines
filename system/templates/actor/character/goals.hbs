@@ -4,7 +4,7 @@
 		{{localize "DNM.Labels.Goals"}}
 	</span>
 
-	{{> actor/_partials/custom-string-list
+	{{> actor/_shared-partials/custom-string-list
 		addRowLabel=(localize "DNM.Labels.ShortTermGoals")
 		currentValues=system.goals.shortTerm
 		key="system.goals.shortTerm"
@@ -12,7 +12,7 @@
 		titleAdd=(localize "DNM.Tooltips.Actor.AddShortTermGoal")
 	}}
 
-	{{> actor/_partials/custom-string-list
+	{{> actor/_shared-partials/custom-string-list
 		addRowLabel=(localize "DNM.Labels.LongTermGoals")
 		currentValues=system.goals.longTerm
 		key="system.goals.longTerm"

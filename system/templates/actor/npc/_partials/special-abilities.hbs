@@ -14,7 +14,9 @@
 					data-action="useSpecialAbility"
 					data-uuid="{{uuid}}"
 				>
-					{{this.name}}
+					<i class="fas fa-dice-d20"></i>
+					<b style="text-transform: uppercase">{{this.name}}</b>:
+					{{{this.system.description}}}
 				</a>
 			</li>
 		{{/each}}

@@ -1,13 +1,13 @@
 <form class="{{cssClass}}" autocomplete="off">
 
-	{{> actor/_partials/header}}
+	{{>_shared-partials/header}}
 
 	<div class="sheet-body">
 		<div class="grid-2-columns">
 			{{> actor/character/attributes}}
 			{{> actor/character/meta-currencies}}
 			<div class="grid-4-columns">
-				{{> actor/_partials/skills}}
+				{{> actor/_shared-partials/skills}}
 				<div class="grid-colspan-3">
 					{{> actor/character/truths}}
 					{{> actor/character/goals}}

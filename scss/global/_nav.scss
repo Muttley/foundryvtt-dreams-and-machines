@@ -20,10 +20,41 @@
 			color: $c-character-purple;
 			border-radius: 16px;
 			flex: none;
+
+			&:hover {
+				color: white;
+			}
 		}
 
 		.active {
 			background: $c-character-purple;
+			color: white;
+		}
+	}
+}
+
+.dnm.sheet.item {
+	.sheet-tabs {
+		font-size: 16px;
+		font-family: 'Bruno Ace';
+		font-weight: bold;
+		text-transform: uppercase;
+		border: none;
+		color: black;
+
+		.item {
+			background: $c-secondary-unselected;
+			color: $c-secondary;
+			border-radius: 16px;
+			flex: none;
+
+			&:hover {
+				color: white;
+			}
+		}
+
+		.active {
+			background: $c-secondary;
 			color: white;
 		}
 	}

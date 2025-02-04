@@ -1,6 +1,6 @@
 import BookSource from "./_types/BookSource.mjs";
 import Description from "../_types/Description.mjs";
-import ItemQualities from "./_types/ItemQualities.mjs";
+import PhysicalItem from "./_types/PhysicalItem.mjs";
 
 export default class EquipmentDataModel
 	extends foundry.abstract.TypeDataModel {
@@ -48,44 +48,7 @@ export default class EquipmentDataModel
 		return {
 			...BookSource(),
 			...Description(),
-
-			techLevel: new fields.NumberField({
-				initial: 0,
-				integer: true,
-				nullable: false,
-			}),
-
-			value: new fields.NumberField({
-				initial: 0,
-				integer: true,
-				nullable: false,
-			}),
-
-			rarity: new fields.NumberField({
-				initial: 1,
-				integer: true,
-				min: 0,
-				nullable: false,
-			}),
-
-			supplyPointCost: new fields.StringField({
-				initial: "-",
-				nullable: false,
-			}),
-
-			category: new fields.StringField({
-				initial: "",
-				nullable: false,
-			}),
-
-			quantity: new fields.NumberField({
-				initial: 1,
-				integer: true,
-				min: 0,
-				nullable: false,
-			}),
-
-			qualities: ItemQualities(),
+			...PhysicalItem(),
 
 			hasProtection: new fields.BooleanField({
 				initial: false,
@@ -105,23 +68,6 @@ export default class EquipmentDataModel
 					min: 0,
 					nullable: false,
 				}),
-			}),
-
-			isWeapon: new fields.BooleanField({
-				initial: false,
-				nullable: false,
-			}),
-
-			weapon: new fields.SchemaField({
-				type: new fields.StringField({
-					initial: "Melee",
-					choices: ["Melee", "Ranged", "MeleeRanged"],
-					nullable: false,
-				}),
-
-				qualities: ItemQualities(),
-
-				damageQualities: ItemQualities(),
 			}),
 
 			isGLIF: new fields.BooleanField({

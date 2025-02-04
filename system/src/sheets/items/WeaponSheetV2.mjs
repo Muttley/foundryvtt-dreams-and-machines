@@ -1,20 +1,6 @@
-import DnMActorSheetV2 from "../DnMActorSheetV2.mjs";
+import DnMItemSheetV2 from "../DnMItemSheetV2.mjs";
 
-export default class NPCSheetV2 extends DnMActorSheetV2 {
-
-	/** @override */
-	static DEFAULT_OPTIONS = {
-		actions: {
-		},
-		classes: ["npc"],
-		form: {
-			submitOnChange: true,
-		},
-		position: {
-			width: 586,
-		},
-	};
-
+export default class WeaponSheet extends DnMItemSheetV2 {
 
 	/** @override */
 	static PARTS = {
@@ -25,14 +11,14 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 			template: templatePath("_shared-partials/tabs"),
 		},
 		attributes: {
-			template: templatePath("actor/npc/attributes-tab"),
+			template: templatePath("item/weapon/attributes-tab"),
 			templates: [
-				"actor/npc/_partials/actions",
-				"actor/npc/_partials/attributes",
-				"actor/npc/_partials/special-abilities",
-				"actor/npc/_partials/truth",
-				"actor/npc/_partials/weapons",
-			].map(path => templatePath(path)),
+				templatePath("item/_shared-partials/category"),
+				templatePath("item/_shared-partials/coin"),
+				templatePath("item/_shared-partials/rarity"),
+				templatePath("item/_shared-partials/supply-point-cost"),
+				templatePath("item/_shared-partials/tech-level"),
+			],
 		},
 		description: {
 			template: templatePath("_shared-partials/description-tab"),
@@ -57,12 +43,6 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 
 		switch (partId) {
 			case "attributes":
-				context.abilities = this.actor.items.filter(i => i.type === "specialAbility");
-				context.enrichedSpecialActions = await TextEditor.enrichHTML(
-					this.system.specialActions, { async: true }
-				);
-				context.weapons = this.actor.weapons;
-				context.specialAbilities = this.actor.specialAbilities;
 				break;
 			case "description":
 				context.enrichedDescription = await TextEditor.enrichHTML(
@@ -75,4 +55,5 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 
 		return context;
 	}
+
 }

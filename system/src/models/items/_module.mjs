@@ -5,3 +5,4 @@ export {default as OriginDataModel} from "./OriginDataModel.mjs";
 export {default as SpecialAbilityDataModel} from "./SpecialAbilityDataModel.mjs";
 export {default as TalentDataModel} from "./TalentDataModel.mjs";
 export {default as TemperamentDataModel} from "./TemperamentDataModel.mjs";
+export {default as WeaponDataModel} from "./WeaponDataModel.mjs";

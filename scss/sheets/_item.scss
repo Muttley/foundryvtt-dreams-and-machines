@@ -3,7 +3,7 @@
 
 .dnm.sheet.item {
 	.sheet-header {
-		background-color: $c-character-purple;
+		background-color: $c-secondary;
 	}
 
 	.content-link {
@@ -18,15 +18,16 @@
 	}
 
 	.label {
-		background-color: $c-character-purple;
+		background-color: $c-secondary;
+		margin-bottom: 4px;
 	}
 
 	.selectable-choice {
-		background-color: $c-character-purple-unselected;
+		background-color: $c-secondary-unselected;
 		color: black;
 		font-weight: normal;
 		text-align: center;
-		border-color: $c-character-purple-unselected;
+		border-color: $c-secondary-unselected;
 		border-style: solid;
 		border-radius: 8px;
 		margin: 2px;
@@ -42,7 +43,7 @@
 	.sublabel {
 		align-self: baseline;
 		font-weight: 600;
-		color: $c-character-purple;
+		color: $c-secondary;
 		text-transform: uppercase;
 		text-align: center;
 		font-size: 1.25rem;

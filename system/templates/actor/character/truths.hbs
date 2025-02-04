@@ -3,19 +3,19 @@
 		{{localize "DNM.Labels.CharacterTruths"}}
 	</span>
 
-	{{> actor/_partials/background-item
+	{{> actor/_shared-partials/background-item
 		item=origin
 		label=(localize "DNM.Labels.Origin")
 		placeholder=(localize "DNM.Labels.AddOrigin")
 	}}
 
-	{{> actor/_partials/background-item
+	{{> actor/_shared-partials/background-item
 		item=archetype
 		label=(localize "DNM.Labels.Archetype")
 		placeholder=(localize "DNM.Labels.AddArchetype")
 	}}
 
-	{{> actor/_partials/background-item
+	{{> actor/_shared-partials/background-item
 		item=temperament
 		label=(localize "DNM.Labels.Temperament")
 		placeholder=(localize "DNM.Labels.AddTemperament")
@@ -25,7 +25,7 @@
 	{{> actor/character/attitude }}
 	{{> actor/character/exhaustion }}
 
-	{{> actor/_partials/custom-string-list
+	{{> actor/_shared-partials/custom-string-list
 		addRowLabel=""
 		currentValues=system.truths
 		key="system.truths"

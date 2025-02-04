@@ -1,0 +1,20 @@
+<label>
+	<span class="label">
+		{{localize "DNM.Labels.Category"}}
+	</span>
+	<select
+		name="system.category"
+		{{disabled editModeDisabled}}
+	>
+		{{#each CONFIG.ITEM_CATEGORIES}}
+			<option
+				value="{{@key}}"
+				{{#ifCond ../item.system.category "===" @key}}
+					selected
+				{{/ifCond}}
+			>
+				{{this}}
+			</option>
+		{{/each}}
+	</select>
+</label>

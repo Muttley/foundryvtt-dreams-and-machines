@@ -67,11 +67,17 @@
 				<span class="result-item-header">
 					{{localize "DNM.Labels.Damage" }}
 				</span>
-				<span class="text-sm flex flex-wrap items-center gap-1 justify-center">
+				<span class="qualities">
 					{{#if item.system.weapon.damageQualities}}
 						{{#each item.system.weapon.damageQualities}}
-							<span class="oblique font-semibold">{{ label }}{{#if (gt rating 0)}} {{ rating }}{{/if}}</span>
-							{{#unless @last}}<span>{{localize "DNM.Labels.Weapon.or" }}</span>{{/unless}}
+							<span class="quality">
+								<em>{{label}}{{#if (gt rating 0)}} {{rating}}{{/if}}</em>
+							</span>
+							{{#unless @last}}
+								<span>
+									{{localize "DNM.Labels.Weapon.or"}}
+								</span>
+							{{/unless}}
 						{{/each}}
 					{{else}}
 						&mdash;
@@ -83,10 +89,12 @@
 				<span class="result-item-header">
 					{{localize "DNM.Labels.Qualities" }}
 				</span>
-				<span class="text-sm flex flex-wrap items-center gap-1 justify-center">
+				<span class="qualities">
 					{{#if item.system.weapon.qualities}}
 						{{#each item.system.weapon.qualities}}
-							<span class="oblique font-semibold">{{ label }}{{#if (gt rating 0)}} {{ rating }}{{/if}}{{#unless @last}},{{/unless}}</span>
+							<span class="quality">
+								<em>{{label}}{{#if (gt rating 0)}} {{ rating }}{{/if}}{{#unless @last}},{{/unless}}</em>
+							</span>
 						{{/each}}
 					{{else}}
 						&mdash;

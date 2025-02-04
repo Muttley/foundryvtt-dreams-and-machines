@@ -1,4 +1,4 @@
-export default function ItemQualities() {
+export default function Qualities() {
 	const fields = foundry.data.fields;
 
 	return new fields.ArrayField(

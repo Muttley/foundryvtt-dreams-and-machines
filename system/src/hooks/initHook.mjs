@@ -112,6 +112,7 @@ function registerItemDataModels() {
 	CONFIG.Item.dataModels.specialAbility = itemDataModels.SpecialAbilityDataModel;
 	CONFIG.Item.dataModels.talent = itemDataModels.TalentDataModel;
 	CONFIG.Item.dataModels.temperament = itemDataModels.TemperamentDataModel;
+	CONFIG.Item.dataModels.weapon = itemDataModels.WeaponDataModel;
 }
 
 /**
@@ -152,6 +153,11 @@ function registerItemSheets() {
 
 	Items.registerSheet("dreams-and-machines", itemSheets.OriginSheet, {
 		types: ["origin"],
+		makeDefault: true,
+	});
+
+	Items.registerSheet("dreams-and-machines", itemSheets.WeaponSheet, {
+		types: ["weapon"],
 		makeDefault: true,
 	});
 

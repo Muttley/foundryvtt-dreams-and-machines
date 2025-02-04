@@ -1,6 +1,6 @@
 const fields = foundry.data.fields;
 
-const OriginSkillChoices = () => ({
+const SkillChoices = () => ({
 	skillChoices: new fields.SchemaField({
 		choiceCount: new fields.NumberField({
 			initial: 0,
@@ -43,4 +43,4 @@ const OriginSkillChoices = () => ({
 	}),
 });
 
-export default OriginSkillChoices;
+export default SkillChoices;

@@ -1,6 +1,6 @@
 const fields = foundry.data.fields;
 
-const OriginAttributeChoices = () => ({
+const AttributeChoices = () => ({
 	attributeChoices: new fields.SchemaField({
 		choiceCount: new fields.NumberField({
 			initial: 0,
@@ -43,4 +43,4 @@ const OriginAttributeChoices = () => ({
 	}),
 });
 
-export default OriginAttributeChoices;
+export default AttributeChoices;

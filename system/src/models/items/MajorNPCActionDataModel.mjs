@@ -1,6 +1,6 @@
 import BookSource from "./_types/BookSource.mjs";
 import Description from "../_types/Description.mjs";
-import ItemQualities from "./_types/ItemQualities.mjs";
+import Qualities from "./_types/Qualities.mjs";
 
 export default class MajorNPCActionDataModel extends foundry.abstract.TypeDataModel {
 	/**
@@ -67,9 +67,9 @@ export default class MajorNPCActionDataModel extends foundry.abstract.TypeDataMo
 					nullable: false,
 				}),
 
-				qualities: ItemQualities(),
+				qualities: Qualities(),
 
-				damageQualities: ItemQualities(),
+				damageQualities: Qualities(),
 			}),
 		};
 	}

@@ -23,6 +23,16 @@ DREAMS.EXHAUSTION = {
 };
 
 
+DREAMS.ITEM_CATEGORIES = {
+	Domestic: "DNM.ItemCategories.Domestic",
+	HandMade: "DNM.ItemCategories.HandMade",
+	Industrial: "DNM.ItemCategories.Industrial",
+	Military: "DNM.ItemCategories.Military",
+	Miscellaneous: "DNM.ItemCategories.Miscellaneous",
+	Security: "DNM.ItemCategories.Security",
+};
+
+
 DREAMS.JOURNAL_UUIDS = {
 	releaseNotes: "Compendium.dreams-and-machines.system_documentation.JournalEntry.8mzM4axnEkXJTu6s",
 };
@@ -33,6 +43,7 @@ DREAMS.OFFICIAL_SOURCES = {
 	EmertaValo: "DNM.Sources.EmertaValo",
 	GamemastersGuide: "DNM.Sources.GamemastersGuide",
 	GMToolkit: "DNM.Sources.GMToolkit",
+	HandsOnResearch: "DNM.Sources.HandsOnResearch",
 	HomeIsWhereTheThreatIs: "DNM.Sources.HomeIsWhereTheThreatIs",
 	PlayersGuide: "DNM.Sources.PlayersGuide",
 	PoisonedWaters: "DNM.Sources.PoisonedWaters",

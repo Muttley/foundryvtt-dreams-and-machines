@@ -64,13 +64,19 @@ export default class DnMActor extends Actor {
 	}
 
 
+	get specialAbilities() {
+		const abilities = this.items.filter(i => i.type === "specialAbility");
+		return abilities.sort((a, b) => a.name.localeCompare(b.name));
+	}
+
+
 	get temperament() {
 		return this.items.find(i => i.type === "temperament");
 	}
 
 
 	get weapons() {
-		const weapons = this.items.filter(i => i.type === "equipment" && i.system.isWeapon);
+		const weapons = this.items.filter(i => i.type === "weapon");
 		return weapons.sort((a, b) => a.name.localeCompare(b.name));
 	}
 

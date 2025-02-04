@@ -5,6 +5,7 @@
 	input[type="number"] {
 		font-weight: 600;
 		background: none;
+		background-color: $c-offwhite;
 		font-size: 2rem;
 		line-height: 2.25rem;
 		text-align: center;
@@ -23,9 +24,14 @@
 		box-shadow: inset 0 0 5px $c-character-purple;
 	}
 
-	ol.item-list {
+	ol.item-list{
 		@include p-reset;
 		padding: 0.5rem;
+		background-color: $c-offwhite;
+
+		p {
+			@include p-reset;
+		}
 	}
 
 	// p {
@@ -100,8 +106,7 @@
 		gap: 1rem;
 		background-color: $c-character-primary;
 
-		img.item-image,
-		img.profile {
+		img.document-image {
 			max-width: 64px;
 			height: 64px;
 		}

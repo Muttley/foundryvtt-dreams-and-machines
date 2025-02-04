@@ -8,7 +8,7 @@
 			{{#each allSources}}
 				<option
 					value="{{this.uuid}}"
-					{{#ifCond ../actor.system.source "===" this.uuid}}
+					{{#ifCond ../document.system.source "===" this.uuid}}
 						selected
 					{{/ifCond}}
 				>
