@@ -1,0 +1,56 @@
+<label>
+	<span class="label">
+		{{localize "DNM.Labels.Qualities"}}
+	</span>
+	<div class="multi-select grid-1-columns">
+
+		<input
+			{{!--
+				list name needs to be unique and match the one used in the
+				datalist below.  Using the item id plus the system data key field
+				here should be unique enough
+			--}}
+			data-action="selectQuality"
+			data-system-property="{{qualities.systemProperty}}"
+			list="{{item._id}}_qualities_list"
+			placeholder="{{localize "DNM.Labels.StartTyping"}}"
+			style="margin-bottom: 4px;"
+			type="text"
+			value=""
+			{{disabled @root.editModeDisabled}}
+		/>
+		<datalist id="{{item._id}}_qualities_list">
+			{{#each qualities.inactive}}
+				<option
+					data-key="{{this.key}}"
+					value="{{this.name}}"
+				>{{this.name}}</option>
+			{{/each}}
+		</datalist>
+
+		<div class="grid-1-columns">
+			{{#each qualities.active}}
+				<div
+					class="selectable-choice selected"
+					data-tooltip="{{localize (concat "DNM.QualityTooltip." this.key)}}"
+				>
+					<label style="align-self: center;">
+						{{this.name}}
+					</label>
+					{{#if this.hasValue}}
+					<input
+						class="num-short-2"
+						name="{{../qualities.systemProperty}}.{{this.key}}.value"
+						type="number"
+						value="{{this.value}}"
+						{{disabled @root.editModeDisabled}}
+					>
+					{{/if}}
+				</div>
+			{{/each}}
+		</div>
+
+	</div>
+
+</label>
+

@@ -62,3 +62,26 @@ DREAMS.SKILLS = {
 	survive: "DNM.Skills.Survive",
 	talk: "DNM.Skills.Talk",
 };
+
+
+DREAMS.WEAPON_QUALITIES = {
+	ammo: "DNM.QualityName.ammo",
+	breaker: "DNM.QualityName.breaker",
+	burst: "DNM.QualityName.burst",
+	long_ranged: "DNM.QualityName.long_ranged",
+	loud: "DNM.QualityName.loud",
+	non_lethal: "DNM.QualityName.non_lethal",
+	powered_bed: "DNM.QualityName.powered_bed",
+	powered_break: "DNM.QualityName.powered_break",
+	powered_breather: "DNM.QualityName.powered_breather",
+	powered_special: "DNM.QualityName.powered_special",
+	quiet: "DNM.QualityName.quiet",
+	scary: "DNM.QualityName.scary",
+};
+
+
+DREAMS.WEAPON_TYPES = {
+	Melee: "DNM.Labels.Weapon.Melee",
+	Ranged: "DNM.Labels.Weapon.Ranged",
+	MeleeRanged: "DNM.Labels.Weapon.MeleeRanged",
+};

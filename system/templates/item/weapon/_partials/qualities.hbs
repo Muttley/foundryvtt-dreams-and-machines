@@ -1,0 +1,27 @@
+<label class="grid-colspan-2">
+	<span class="label">
+		{{localize "DNM.Labels.Qualities"}}
+	</span>
+
+	<div class="grid-2-columns">
+		{{#each qualities}}
+			<a
+				{{#if this.enabled}}
+					class="selectable-choice selected"
+				{{else}}
+					class="selectable-choice"
+				{{/if}}
+				data-action="toggleQuality"
+				data-enabled="{{this.enabled}}"
+				data-key="{{this.key}}"
+				data-system-property="system.qualities"
+				data-tooltip="{{localize (concat "DNM.QualityTooltip." this.key)}}"
+				{{disabled @root.editModeDisabled}}
+			>
+				{{this.name}}
+			</a>
+		{{/each}}
+	</div>
+
+</label>
+

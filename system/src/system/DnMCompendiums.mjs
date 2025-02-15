@@ -11,6 +11,11 @@ export default class DnMCompendiums {
 	 }
 
 	static async #documents(type, subtype=null, filterSources=true) {
+		dreams.debug(
+			`Retrieving ${filterSources ? "filtered" : "unfiltered"}`,
+			`"${subtype}" ${type} documents from system compendiums`
+		);
+
 		let sources = [];
 
 		if (filterSources === true) {
@@ -54,6 +59,11 @@ export default class DnMCompendiums {
 
 		// return new collection
 		return this.#collectionFromArray(docs);
+	}
+
+
+	static async qualities(filterSources=true) {
+		return DnMCompendiums.#documents("Item", "quality", filterSources);
 	}
 
 

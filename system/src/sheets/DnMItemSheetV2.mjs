@@ -6,35 +6,30 @@ export default class DnMItemSheetV2
 	_editModeEnabled = false;
 
 
-	/** @override */
-	static DEFAULT_OPTIONS = {
-		actions: {
-			editImage: this._onEditImage,
-			toggleEditMode: DnMItemSheetV2._onToggleEditMode,
-		},
-		classes: ["sheet", "dnm", "item"],
-		form: {
-			submitOnChange: true,
-		},
-		position: {
-			height: 800,
-			width: 600,
-		},
-		tag: "form",
-	};
-
-
 	get system() {
 		return this.item.system;
 	}
 
 
-	static async _onToggleEditMode(event, target) {
-		event.preventDefault();
-		this._editModeEnabled = !this._editModeEnabled;
-		await this.submit();
-		this.render();
-	}
+	/** @override */
+	static DEFAULT_OPTIONS = {
+		actions: {
+			editImage: this._onEditImage,
+			toggleEditMode: DnMItemSheetV2._onToggleEditMode,
+			toggleQuality: this._onToggleQuality,
+		},
+		classes: ["sheet", "dnm", "item"],
+		form: {
+			closeOnSubmit: false,
+			submitOnChange: true,
+		},
+		position: {
+			// height: 800,
+			height: "auto",
+			width: 600,
+		},
+		tag: "form",
+	};
 
 
 	/**
@@ -68,13 +63,87 @@ export default class DnMItemSheetV2
 	}
 
 
-	async _onFirstRender(context, options) {
-		await super._onFirstRender(context, options);
-		// this.#attachContextMenus();
+	static async _onToggleQuality(event, target) {
+		event.preventDefault();
+
+		const dataset = event.target.dataset;
+		const enabled = dataset.enabled === "true" ? false : true;
+
+		const updateData = {};
+		updateData[`${dataset.systemProperty}.${dataset.key}.enabled`] = enabled;
+
+		await this.item.update(updateData);
+		this.render();
 	}
 
 
-	_onRender(context, options) {}
+	_onRender(context, options) {
+		const selectChoice =
+			this.element.querySelector("[data-action=selectChoice]");
+		if (selectChoice) {
+			selectChoice.addEventListener("change", this._onSelectChoiceChange.bind(this));
+		}
+
+		const selectQuality =
+			this.element.querySelector("[data-action=selectQuality]");
+		if (selectQuality) {
+			selectQuality.addEventListener("change", this._onSelectQualityChange.bind(this));
+		}
+	}
+
+
+	async _onSelectChoiceChange(event) {
+		event.preventDefault();
+
+		const dataset = event.currentTarget.dataset ?? {};
+		dataset.selected_value = event.currentTarget.value;
+
+		// Dynamically find the method to call for this type of selection
+		// change, and then run it if it exists
+		//
+		const methodName = `_onOptionSelected_${dataset.choicesKey}`;
+		if (typeof this[methodName] === "function") {
+			await this[methodName](dataset);
+			// this.render();
+		}
+		else {
+			dreams.warn(`Unable to handle selection change; Class has no method named ${methodName}`);
+		}
+	}
+
+
+	async _onSelectQualityChange(event) {
+		event.preventDefault();
+
+		const dataset = event.currentTarget.dataset ?? {};
+
+		const options = event.target.list.options;
+		const value = event.target.value;
+
+		let qualityKey = null;
+		for (const option of options) {
+			if (option.value === value) {
+				qualityKey = option.getAttribute("data-key");
+				break;
+			}
+		}
+
+		if (qualityKey === null) return;
+
+		const updateData = {};
+		updateData[`${dataset.systemProperty}.${qualityKey}.enabled`] = true;
+
+		await this.item.update(updateData);
+		this.render();
+	}
+
+
+	static async _onToggleEditMode(event, target) {
+		event.preventDefault();
+		this._editModeEnabled = !this._editModeEnabled;
+		await this.submit();
+		this.render();
+	}
 
 
 	async _prepareContext(options={}) {
@@ -93,29 +162,6 @@ export default class DnMItemSheetV2
 		context.systemFields = this.document.system.schema.fields;
 
 		context.system = this.system;
-
-		if (!this.tabGroups.primary) this.tabGroups.primary = "attributes";
-
-		context.tabs = {
-			attributes: {
-				cssClass: this.tabGroups.primary === "attributes" ? "active" : "",
-				group: "primary",
-				id: "attributes",
-				label: "DNM.Labels.Attributes",
-			},
-			description: {
-				cssClass: this.tabGroups.primary === "description" ? "active" : "",
-				group: "primary",
-				id: "description",
-				label: "DNM.Labels.Description",
-			},
-			source: {
-				cssClass: this.tabGroups.primary === "source" ? "active" : "",
-				group: "primary",
-				id: "source",
-				label: "DNM.Labels.Source",
-			},
-		};
 
 		context.allSources = await dreams.compendiums.sources();
 

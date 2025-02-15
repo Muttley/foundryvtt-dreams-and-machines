@@ -1,10 +1,10 @@
 import BookSource from "./_types/BookSource.mjs";
 import Description from "../_types/Description.mjs";
 
-export default class SpecialAbilityDataModel extends foundry.abstract.TypeDataModel {
-	static defineSchema() {
-		// const fields = foundry.data.fields;
+export default class SpecialAbilityDataModel
+	extends foundry.abstract.TypeDataModel {
 
+	static defineSchema() {
 		return {
 			...BookSource(),
 			...Description(),

@@ -37,12 +37,14 @@
 			datalist below.  Using the item id plus the system data key field
 			here should be unique enough
 		--}}
+		data-action="selectChoice"
 		data-choices-key="{{config.choicesKey}}"
 		data-is-item="{{config.isItem}}"
 		list="{{item._id}}_{{config.choicesKey}}_list"
 		placeholder="{{localize "DNM.Labels.StartTyping"}}"
 		type="text"
 		value=""
+		{{disabled @root.editModeDisabled}}
 	/>
 	<datalist id="{{item._id}}_{{config.choicesKey}}_list">
 		{{#each config.availableItems}}

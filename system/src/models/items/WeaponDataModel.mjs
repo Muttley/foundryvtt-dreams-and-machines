@@ -1,7 +1,8 @@
 import BookSource from "./_types/BookSource.mjs";
+import Damage from "./_types/Damage.mjs";
 import Description from "../_types/Description.mjs";
-import Qualities from "./_types/Qualities.mjs";
 import PhysicalItem from "./_types/PhysicalItem.mjs";
+import WeaponQualities from "./_types/WeaponQualities.mjs";
 
 export default class WeaponDataModel extends foundry.abstract.TypeDataModel {
 	static defineSchema() {
@@ -12,7 +13,16 @@ export default class WeaponDataModel extends foundry.abstract.TypeDataModel {
 			...Description(),
 			...PhysicalItem(),
 
-			damageQualities: Qualities(),
+			damage: new fields.ArrayField(
+				...Damage(),
+				{
+					initial: [],
+					nullable: false,
+				}
+			),
+
+			// damageQualities: Qualities(),
+			qualities: WeaponQualities(),
 
 			weaponType: new fields.StringField({
 				initial: "Melee",

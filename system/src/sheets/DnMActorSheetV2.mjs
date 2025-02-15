@@ -9,13 +9,12 @@ export default class DnMActorSheetV2
 
 	#dragDrop = this.#createDragDropHandlers();
 
-
 	/** @override */
 	static DEFAULT_OPTIONS = {
 		actions: {
-			editImage: DnMActorSheetV2._onEditImage,
-			onRoll: DnMActorSheetV2._onRoll,
-			toggleEditMode: DnMActorSheetV2._onToggleEditMode,
+			editImage: this._onEditImage,
+			onRoll: this._onRoll,
+			toggleEditMode: this._onToggleEditMode,
 		},
 		classes: ["sheet", "dnm", "actor"],
 		dragDrop: [{dragSelector: ".draggable", dropSelector: null}],
@@ -23,7 +22,8 @@ export default class DnMActorSheetV2
 			submitOnChange: true,
 		},
 		position: {
-			height: 600,
+			// height: 600,
+			height: "auto",
 			width: 800,
 		},
 		tag: "form",

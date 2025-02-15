@@ -1,5 +1,3 @@
-import Qualities from "./Qualities.mjs";
-
 const fields = foundry.data.fields;
 
 const PhysicalItem = () => ({
@@ -19,8 +17,6 @@ const PhysicalItem = () => ({
 		nullable: false,
 	}),
 
-	qualities: Qualities(),
-
 	quantity: new fields.NumberField({
 		initial: 1,
 		integer: true,
@@ -39,7 +35,7 @@ const PhysicalItem = () => ({
 		initial: 0,
 		integer: true,
 		min: 0,
-		nullable: false,
+		nullable: true,
 	}),
 
 	techLevel: new fields.NumberField({

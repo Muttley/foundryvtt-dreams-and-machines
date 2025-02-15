@@ -2,8 +2,13 @@
 @use "../mixins" as *;
 
 .dnm.sheet.item {
+	input:enabled.lockable {
+		box-shadow: inset 0 0 5px $c-secondary;
+	}
+
 	.sheet-header {
-		background-color: $c-secondary;
+		// background-color: $c-secondary;
+		background-color: black;
 	}
 
 	.content-link {
@@ -24,19 +29,30 @@
 
 	.selectable-choice {
 		background-color: $c-secondary-unselected;
-		color: black;
+		color: $c-secondary;
 		font-weight: normal;
 		text-align: center;
 		border-color: $c-secondary-unselected;
 		border-style: solid;
-		border-radius: 8px;
+		border-radius: 6px;
 		margin: 2px;
+
+		&:hover {
+			color: white;
+			text-shadow: 0 0 8px var(--color-shadow-primary);
+			font-weight: bold;
+		}
 
 		&.selected {
 			font-weight: bold;
-			background-color: black;
-			border-color: black;
+			background-color: $c-secondary;
+			text-shadow: 1px 1px 2px black;
+			border-color: $c-secondary-unselected;
 			color: white;
+
+			&:hover {
+				text-shadow: 0 0 8px var(--color-shadow-primary);
+			}
 		}
 	}
 

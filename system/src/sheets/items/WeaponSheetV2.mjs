@@ -15,9 +15,12 @@ export default class WeaponSheet extends DnMItemSheetV2 {
 			templates: [
 				templatePath("item/_shared-partials/category"),
 				templatePath("item/_shared-partials/coin"),
+				templatePath("item/_shared-partials/quantity"),
 				templatePath("item/_shared-partials/rarity"),
 				templatePath("item/_shared-partials/supply-point-cost"),
 				templatePath("item/_shared-partials/tech-level"),
+				templatePath("item/weapon/_partials/damage"),
+				templatePath("item/weapon/_partials/qualities"),
 			],
 		},
 		description: {
@@ -33,6 +36,29 @@ export default class WeaponSheet extends DnMItemSheetV2 {
 	async _prepareContext(options={}) {
 		const context = await super._prepareContext(options);
 
+		if (!this.tabGroups.primary) this.tabGroups.primary = "attributes";
+
+		context.tabs = {
+			attributes: {
+				cssClass: this.tabGroups.primary === "attributes" ? "active" : "",
+				group: "primary",
+				id: "attributes",
+				label: "DNM.Labels.Attributes",
+			},
+			description: {
+				cssClass: this.tabGroups.primary === "description" ? "active" : "",
+				group: "primary",
+				id: "description",
+				label: "DNM.Labels.Description",
+			},
+			source: {
+				cssClass: this.tabGroups.primary === "source" ? "active" : "",
+				group: "primary",
+				id: "source",
+				label: "DNM.Labels.Source",
+			},
+		};
+
 		return context;
 	}
 
@@ -43,6 +69,7 @@ export default class WeaponSheet extends DnMItemSheetV2 {
 
 		switch (partId) {
 			case "attributes":
+				await this._prepareWeaponQualities(context);
 				break;
 			case "description":
 				context.enrichedDescription = await TextEditor.enrichHTML(
@@ -56,4 +83,17 @@ export default class WeaponSheet extends DnMItemSheetV2 {
 		return context;
 	}
 
+
+	async _prepareWeaponQualities(context) {
+		context.qualities = [];
+
+		for (const key in this.item.system.qualities) {
+			const quality = this.item.system.qualities[key] ?? {};
+
+			quality.key = key;
+			quality.name = game.i18n.localize(`DNM.QualityName.${key}`);
+
+			context.qualities.push(quality);
+		}
+	}
 }

@@ -3,17 +3,15 @@
 .editor,
 .editor-container,
 .editor-content {
-	// flex: 1;
-	min-height: 1rem;
+	min-height: 15rem;
+	height: 100%;
 	overflow-y: visible;
 	background-color: unset;
-	// background-color: none;
-	// margin: 4px;
+	margin: 4px;
 	padding: 4px;
 	font-family: $font-primary;
 	font-size: 1.1rem;
 	font-weight: 500;
-	text-align: justify;
 
 	p {
 		background-color: unset;

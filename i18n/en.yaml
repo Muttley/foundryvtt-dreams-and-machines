@@ -99,6 +99,7 @@ DNM.Labels.ProtectionBreaker: Protection (Breaker)
 DNM.Labels.Qualities: Qualities
 DNM.Labels.Quantity: Quantity
 DNM.Labels.Rarity: Rarity
+DNM.Labels.SelectQuality: Select Quality...
 DNM.Labels.SelectSpecialAbility: Select Special Ability...
 DNM.Labels.ShortTermGoals: Short-Term
 DNM.Labels.Skills: Skills
@@ -114,6 +115,7 @@ DNM.Labels.StartingGear: Starting Gear
 DNM.Labels.StartTyping: Start Typing...
 DNM.Labels.Successes: Successes
 DNM.Labels.Supply: Supply
+DNM.Labels.SupplyPointCost: Supply Point Cost
 DNM.Labels.SupplyPoints: Supply Points
 DNM.Labels.Talents: Talents
 DNM.Labels.TargetNumber: Target Number
@@ -139,6 +141,48 @@ DNM.Notifications.NotEnoughMomentum: Cannot spend Momentum while the pool is emp
 DNM.Notifications.NotEnoughThreat: Cannot spend Threat while the pool is empty!
 DNM.Placeholders.ArchetypeGoal.NoArchetype: No Archetype has been added to the character
 DNM.Placeholders.ArchetypeGoal.NoTemperament: No Temperament has been added to the character
+DNM.QualityName.ammo: Ammo
+DNM.QualityName.breaker: Breaker
+DNM.QualityName.bulky: Bulky
+DNM.QualityName.burst: Burst
+DNM.QualityName.covered_x: Covered
+DNM.QualityName.enclosed: Enclosed
+DNM.QualityName.environment: Environment
+DNM.QualityName.exposed: Exposed
+DNM.QualityName.handy: Handy
+DNM.QualityName.heavy: Heavy
+DNM.QualityName.long_ranged: Long-Ranged
+DNM.QualityName.loud: Loud
+DNM.QualityName.mine: Mine
+DNM.QualityName.mobile: Mobile
+DNM.QualityName.non_lethal: Non-Lethal
+DNM.QualityName.powered_bed: Powered (Bed)
+DNM.QualityName.powered_break: Powered (Break)
+DNM.QualityName.powered_breather: Powered (Breather)
+DNM.QualityName.powered_special: Powered (Special)
+DNM.QualityName.quiet: Quiet
+DNM.QualityName.scary: Scary
+DNM.QualityTooltip.ammo: Ammo
+DNM.QualityTooltip.breaker: Breaker
+DNM.QualityTooltip.bulky: Bulky
+DNM.QualityTooltip.burst: Burst
+DNM.QualityTooltip.covered_x: Covered
+DNM.QualityTooltip.enclosed: Enclosed
+DNM.QualityTooltip.environment: Environment
+DNM.QualityTooltip.exposed: Exposed
+DNM.QualityTooltip.handy: Handy
+DNM.QualityTooltip.heavy: Heavy
+DNM.QualityTooltip.long_ranged: Long-Ranged
+DNM.QualityTooltip.loud: Loud
+DNM.QualityTooltip.mine: Mine
+DNM.QualityTooltip.mobile: Mobile
+DNM.QualityTooltip.non_lethal: These weapons are designed to incapacitate an enemy briefly, but not leave any lasting damage. Injuries inflicted by a nonlethal weapon are instantly healed (and removed completely) when treated by an ally, or at the start of the next scene, whichever happens first.
+DNM.QualityTooltip.powered_bed: Powered (Bed)
+DNM.QualityTooltip.powered_break: Powered (Break)
+DNM.QualityTooltip.powered_breather: Powered (Breather)
+DNM.QualityTooltip.powered_special: Powered (Special)
+DNM.QualityTooltip.quiet: Quiet
+DNM.QualityTooltip.scary: Scary
 DNM.Roll.Complication: Complication
 DNM.Roll.Critical: Critical Success
 DNM.Roll.Fail: Fail

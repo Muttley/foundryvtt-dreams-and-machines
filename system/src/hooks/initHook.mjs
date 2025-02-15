@@ -156,13 +156,13 @@ function registerItemSheets() {
 		makeDefault: true,
 	});
 
-	Items.registerSheet("dreams-and-machines", itemSheets.WeaponSheet, {
-		types: ["weapon"],
+	Items.registerSheet("dreams-and-machines", itemSheets.SpecialAbilitySheet, {
+		types: ["specialAbility"],
 		makeDefault: true,
 	});
 
-	Items.registerSheet("dreams-and-machines", itemSheets.SpecialAbilitySheet, {
-		types: ["specialAbility"],
+	Items.registerSheet("dreams-and-machines", itemSheets.WeaponSheet, {
+		types: ["weapon"],
 		makeDefault: true,
 	});
 }

@@ -34,6 +34,15 @@ The code for this system is licensed under the [Creative Commons Attribution-Sha
 >
 > The [image](images/dnm-bg.jpg) used for sheet backgrounds is modified (mostly just lightened, tiled, shrunk, and color-tweaked) from "[Close-up Photo of Gray Wall](https://www.pexels.com/photo/close-up-photo-of-gray-wall-2768398/)" by Milo Textures on Pexels.
 
+### Icons
+This system uses various icons from [Game-icons.net](https://game-icons.net/), including icons created by:
+
+ * [Caro Asercion](https://game-icons.net/)
+ * [Delapouite](https://delapouite.com/)
+ * [Lorc](https://lorcblog.blogspot.com/)
+ * [Lord Berandas](http://berandas.deviantart.com/)
+ * [SpencerDub](https://game-icons.net/)
+
 ## Copyright Disclaimer
 
 This project, and the creator of this project, are unaffiliated with Modiphius. This is an unofficial, third-party system implementation built freely as a hobby project.
