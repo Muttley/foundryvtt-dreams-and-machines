@@ -56,6 +56,7 @@ DNM.Labels.Cost: Cost
 DNM.Labels.Current: Current
 DNM.Labels.CurrentShort: Curr.
 DNM.Labels.Damage: Damage
+DNM.Labels.DamageType: Damage Type
 DNM.Labels.Default: Default
 DNM.Labels.Delete: Delete
 DNM.Labels.DeleteQuality: Delete Quality
@@ -137,6 +138,7 @@ DNM.Labels.Weapon.or: or
 DNM.Labels.Weapon.Ranged: Ranged
 DNM.Labels.Weapon.Type: Weapon Type
 DNM.Labels.Weapons: Weapons
+DNM.Labels.WeaponType: Weapon Type
 DNM.Notifications.NotEnoughMomentum: Cannot spend Momentum while the pool is empty! Perhaps you should generate Threat instead?
 DNM.Notifications.NotEnoughThreat: Cannot spend Threat while the pool is empty!
 DNM.Placeholders.ArchetypeGoal.NoArchetype: No Archetype has been added to the character
@@ -162,27 +164,27 @@ DNM.QualityName.powered_breather: Powered (Breather)
 DNM.QualityName.powered_special: Powered (Special)
 DNM.QualityName.quiet: Quiet
 DNM.QualityName.scary: Scary
-DNM.QualityTooltip.ammo: Ammo
-DNM.QualityTooltip.breaker: Breaker
-DNM.QualityTooltip.bulky: Bulky
-DNM.QualityTooltip.burst: Burst
+DNM.QualityTooltip.bulky: The armor is heavy and can impede your movement. The GM may spend 1 Threat to add +1 Difficulty when you make Quickness (Move) tests while wearing this armor.
 DNM.QualityTooltip.covered_x: Covered
 DNM.QualityTooltip.enclosed: Enclosed
 DNM.QualityTooltip.environment: Environment
 DNM.QualityTooltip.exposed: Exposed
-DNM.QualityTooltip.handy: Handy
-DNM.QualityTooltip.heavy: Heavy
-DNM.QualityTooltip.long_ranged: Long-Ranged
-DNM.QualityTooltip.loud: Loud
-DNM.QualityTooltip.mine: Mine
-DNM.QualityTooltip.mobile: Mobile
-DNM.QualityTooltip.non_lethal: These weapons are designed to incapacitate an enemy briefly, but not leave any lasting damage. Injuries inflicted by a nonlethal weapon are instantly healed (and removed completely) when treated by an ally, or at the start of the next scene, whichever happens first.
-DNM.QualityTooltip.powered_bed: Powered (Bed)
-DNM.QualityTooltip.powered_break: Powered (Break)
-DNM.QualityTooltip.powered_breather: Powered (Breather)
-DNM.QualityTooltip.powered_special: Powered (Special)
-DNM.QualityTooltip.quiet: Quiet
-DNM.QualityTooltip.scary: Scary
+DNM.QualityTooltip.handy: The armor is covered in pockets, pouches, and attachment points for tools that make it especially useful. Your maximum Supply Points are increased by +2 while wearing this armor.
+DNM.QualityTooltip.heavy: The weapon is particularly bulky and may be harder to use (+1 Difficulty) if not set in place using a bipod, tripod, or other sturdy support.
+DNM.QualityTooltip.mine: These weapons must be placed as an action, but do not detonate immediately, requiring a Skill Test (Difficulty 1) to determine how well-positioned and concealed they are. Momentum from this Test can increase the damage cost of the mine, but the mine itself does not detonate until an enemy strays too near and detonates it.
+DNM.QualityTooltip.mobile: The armor is designed to allow for maximum mobility. When you spend Spirit to re-roll a d20 on a Skill Test using the Move skill, each point of Spirit spent allows you to re-roll two d20s rather than one.
+DNM.QualityTooltip.Weapon.ammo: The weapon profile describes weapons consumed when they’re used to make an attack, like grenades, or a specific type of ammunition used by a different weapon, such as special arrows used with a bow. Each attack made with an ammo weapon uses up one of that weapon.
+DNM.QualityTooltip.Weapon.breaker: The weapon is especially good at inflicting damage to machines. Armor and NPCs with Protection will list how much Protection they provide against breaker attacks.
+DNM.QualityTooltip.Weapon.burst: The weapon fires several projectiles, causes an explosion covering an area, or otherwise is good at affecting groups of enemies. When firing at a group, additional targets cost 1 Momentum instead of 2.
+DNM.QualityTooltip.Weapon.long_ranged: The weapon can be used from much farther away than other ranged weapons, ignoring the Difficulty increase for firing a target at long-range.
+DNM.QualityTooltip.Weapon.loud: The weapon makes a lot of noise when used.
+DNM.QualityTooltip.Weapon.non_lethal: These weapons are designed to incapacitate an enemy briefly, but not leave any lasting damage. Injuries inflicted by a nonlethal weapon are instantly healed (and removed completely) when treated by an ally, or at the start of the next scene, whichever happens first.
+DNM.QualityTooltip.Weapon.powered_bed: The weapon relies on a power supply to function. Powered weapons can be discharged when an attack is made, taking one die from the attack’s dice pool and setting it so that it has rolled a 1; in addition, if successful, the attack inflicts one additional Injury of the listed type. Once discharged, the weapon cannot be used again until it has recharged after a Bed rest.
+DNM.QualityTooltip.Weapon.powered_break: The weapon relies on a power supply to function. Powered weapons can be discharged when an attack is made, taking one die from the attack’s dice pool and setting it so that it has rolled a 1; in addition, if successful, the attack inflicts one additional Injury of the listed type. Once discharged, the weapon cannot be used again until it has recharged after a Break rest.
+DNM.QualityTooltip.Weapon.powered_breather: The weapon relies on a power supply to function. Powered weapons can be discharged when an attack is made, taking one die from the attack’s dice pool and setting it so that it has rolled a 1; in addition, if successful, the attack inflicts one additional Injury of the listed type. Once discharged, the weapon cannot be used again until it has recharged after a Breather rest.
+DNM.QualityTooltip.Weapon.powered_special: The weapon relies on a power supply to function. Powered weapons can be discharged when an attack is made, taking one die from the attack’s dice pool and setting it so that it has rolled a 1; in addition, if successful, the attack inflicts one additional Injury of the listed type. Once discharged, the weapon cannot be used again until it has recharged after a Special rest.
+DNM.QualityTooltip.Weapon.quiet: The weapon makes very little noise when used.
+DNM.QualityTooltip.Weapon.scary: The weapon is powerful, overkill against any but the deadliest foes, and carrying one will affect how people react to you both in and out of combat.
 DNM.Roll.Complication: Complication
 DNM.Roll.Critical: Critical Success
 DNM.Roll.Fail: Fail

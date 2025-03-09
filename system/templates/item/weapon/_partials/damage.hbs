@@ -1,25 +1,39 @@
 <label>
 	<span class="label">
+		{{#if @root.editModeEnabled}}
+			<a data-action="addDamageType" {{disabled @root.editModeDisabled}}>
+				<i class="fa-solid fa-plus"></i>
+			</a>
+			&nbsp;
+		{{/if}}
 		{{localize "DNM.Labels.Damage"}}
 	</span>
-</label>
-
-{{#*inline "qualitiesInput"}}
-	<div class="px-1 w-full">
-		<label class="flex flex-wrap gap-x-1 gap-y-1 w-full items-center px-1 justify-center">
-			{{#each value}}
-				<span class="flex gap-1 border-1 border-solid border-black p-1 rounded-md bg-gray-100 font-roboto-flex items-center">
-					<input type="hidden" name="{{ ../name }}.{{ @index }}.label" value="{{ label }}" />
-					<span>{{ label }}</span>
-					{{#if rating}}
-						<input type="number" class="!w-10 !text-center !my-0 !h-5" name="{{ ../name }}.{{ @index }}.rating" value="{{ rating }}" />
-					{{/if}}
-					<a class="text-xs" data-action="delete-quality" data-name="{{ ../name }}" data-index="{{ @index }}" title="{{localize "DNM.Labels.DeleteQuality" }}">
-						<i class="fas fa-trash"></i>
-					</a>
-				</span>
-			{{/each}}
-			<input name="new-quality" type="text" class="min-w-[100px] max-w-[150px] rounded-md" placeholder="{{localize "DNM.Labels.AddQualityPlaceholder" }}" data-action="add-quality" data-name="{{ name }}" />
-		</label>
+	<div class="damage-type-grid {{#if @root.editModeDisabled}}disabled{{/if}}">
+		{{#each system.damage}}
+			<input
+				class="lockable"
+				type="text"
+				name="system.damage.{{@index}}.type"
+				value="{{this.type}}"
+				placeholder="{{localize "DNM.Labels.DamageType"}}"
+				{{disabled @root.editModeDisabled}}
+			/>
+			<input
+				class="lockable"
+				type="number"
+				name="system.damage.{{@index}}.value"
+				value="{{this.value}}"
+				{{disabled @root.editModeDisabled}}
+			/>
+			{{#if @root.editModeEnabled}}
+				<a
+					data-action="deleteDamageType"
+					data-tooltip="{{localize "DNM.Labels.Delete"}}"
+					{{disabled @root.editModeDisabled}}
+				>
+					<i class="fas fa-trash" data-index="{{@index}}"></i>
+				</a>
+			{{/if}}
+		{{/each}}
 	</div>
-{{/inline}}
+</label>

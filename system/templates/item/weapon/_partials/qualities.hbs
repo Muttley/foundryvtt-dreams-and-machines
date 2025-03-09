@@ -1,4 +1,4 @@
-<label class="grid-colspan-2">
+<label>
 	<span class="label">
 		{{localize "DNM.Labels.Qualities"}}
 	</span>
@@ -15,7 +15,7 @@
 				data-enabled="{{this.enabled}}"
 				data-key="{{this.key}}"
 				data-system-property="system.qualities"
-				data-tooltip="{{localize (concat "DNM.QualityTooltip." this.key)}}"
+				data-tooltip="{{localize (concat "DNM.QualityTooltip.Weapon." this.key)}}"
 				{{disabled @root.editModeDisabled}}
 			>
 				{{this.name}}

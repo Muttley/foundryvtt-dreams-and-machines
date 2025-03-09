@@ -12,8 +12,11 @@
 			{{> (template "item/_shared-partials/coin") }}
 			{{> (template "item/_shared-partials/rarity") }}
 		</div>
-		<div class="grid-3-columns">
-			{{> (template "item/weapon/_partials/qualities") }}
+		<div class="grid-3-columns" style="grid-template-rows: min-content 1fr; row-gap: 4px;">
+			<div class="grid-colspan-2 grid-rowspan-2">
+				{{> (template "item/weapon/_partials/qualities") }}
+			</div>
+			{{> (template "item/weapon/_partials/type") }}
 			{{> (template "item/weapon/_partials/damage") }}
 		</div>
 	</div>

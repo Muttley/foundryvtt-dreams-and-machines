@@ -154,8 +154,13 @@ export default class DnMItemSheetV2
 		context.CONFIG = CONFIG.DREAMS;
 		context.cssClass = isEditable ? "editable" : "locked";
 		context.editable = isEditable;
-		context.editModeEnabled = this._editModeEnabled;
-		context.editModeDisabled = !this._editModeEnabled;
+
+		// Keep sheets unlocked if debug enabled
+		const debugEnabled = game.settings.get(SYSTEM_ID, "debugEnabled");
+
+		context.editModeEnabled = debugEnabled ? true : this._editModeEnabled;
+		context.editModeDisabled = !context.editModeEnabled;
+
 		context.document = this.document;
 
 		context.systemSource = this.system._source;

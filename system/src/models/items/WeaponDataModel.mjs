@@ -5,28 +5,27 @@ import PhysicalItem from "./_types/PhysicalItem.mjs";
 import WeaponQualities from "./_types/WeaponQualities.mjs";
 
 export default class WeaponDataModel extends foundry.abstract.TypeDataModel {
+
+	get enabledQualities() {
+		return this.qualities.filter(q => q.enabled);
+	}
+
 	static defineSchema() {
 		const fields = foundry.data.fields;
 
 		return {
 			...BookSource(),
+			...Damage(),
 			...Description(),
 			...PhysicalItem(),
 
-			damage: new fields.ArrayField(
-				...Damage(),
-				{
-					initial: [],
-					nullable: false,
-				}
-			),
-
-			// damageQualities: Qualities(),
 			qualities: WeaponQualities(),
 
 			weaponType: new fields.StringField({
-				initial: "Melee",
-				choices: ["Melee", "Ranged", "MeleeRanged"],
+				initial: Object.keys(CONFIG.DREAMS.WEAPON_TYPES)[0],
+				choices: () => {
+					return Object.keys(CONFIG.DREAMS.WEAPON_TYPES);
+				},
 				nullable: false,
 			}),
 		};

@@ -2,6 +2,13 @@ import DnMItemSheetV2 from "../DnMItemSheetV2.mjs";
 
 export default class WeaponSheet extends DnMItemSheetV2 {
 
+	static DEFAULT_OPTIONS = {
+		actions: {
+			addDamageType: this._onAddDamageType,
+			deleteDamageType: this._onDeleteDamageType,
+		},
+	};
+
 	/** @override */
 	static PARTS = {
 		header: {
@@ -21,6 +28,7 @@ export default class WeaponSheet extends DnMItemSheetV2 {
 				templatePath("item/_shared-partials/tech-level"),
 				templatePath("item/weapon/_partials/damage"),
 				templatePath("item/weapon/_partials/qualities"),
+				templatePath("item/weapon/_partials/type"),
 			],
 		},
 		description: {
@@ -30,6 +38,31 @@ export default class WeaponSheet extends DnMItemSheetV2 {
 			template: templatePath("_shared-partials/source-tab"),
 		},
 	};
+
+
+	static async _onAddDamageType(event, target) {
+		event.preventDefault();
+
+		const damageValues = this.system.damage ?? [];
+
+		damageValues.push({type: "", value: 1});
+
+		this.item.update({"system.damage": damageValues});
+	}
+
+
+	static async _onDeleteDamageType(event, target) {
+		event.preventDefault();
+
+		const dataset = event.target.dataset;
+		const index = Number(dataset.index);
+
+		const damageValues = this.system.damage ?? [];
+
+		damageValues.splice(index, 1);
+
+		this.item.update({"system.damage": damageValues});
+	}
 
 
 	/** @override */

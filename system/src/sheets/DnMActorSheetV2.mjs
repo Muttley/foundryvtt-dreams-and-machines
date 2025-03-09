@@ -303,6 +303,8 @@ export default class DnMActorSheetV2
 		const data = this.document.toObject(false);
 		const isEditable = this.isEditable;
 
+		context.CONFIG = CONFIG.DREAMS;
+
 		context.cssClass = isEditable ? "editable" : "locked";
 		context.editable = isEditable;
 		context.editModeEnabled = this._editModeEnabled;
@@ -355,4 +357,31 @@ export default class DnMActorSheetV2
 		return context;
 	}
 
+
+	async _prepareWeapons(context) {
+		const weapons = [];
+
+		for (const weapon of this.actor.weapons) {
+			const weaponData = {
+				name: weapon.name,
+				uuid: weapon.uuid,
+				type: CONFIG.DREAMS.WEAPON_TYPES[weapon.system.weaponType],
+				qualities: [],
+			};
+
+			for (const key in weapon.system.qualities) {
+				const quality = weapon.system.qualities[key] ?? {};
+
+				if (!quality.enabled) continue;
+
+				quality.name = game.i18n.localize(`DNM.QualityName.${key}`);
+
+				weaponData.qualities.push(quality);
+			}
+
+			weapons.push(weaponData);
+		}
+
+		return weapons;
+	}
 }

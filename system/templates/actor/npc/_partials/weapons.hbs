@@ -16,11 +16,13 @@
 					data-uuid="{{this.uuid}}"
 				>
 					<i class="fas fa-dice-d20"></i>
-					<b style="text-transform: uppercase">{{this.name}} ({{this.system.weapon.type}})</b>:
+					<b style="text-transform: uppercase">
+						{{this.name}}
+						({{this.type}})</b>:
 					<i>
-						{{#if this.system.weapon.damageQualities}}
-							{{#each this.system.weapon.damageQualities}}
-								<em>{{label}}{{#if (gt rating 0)}} {{ rating }}{{/if}}{{#unless @last}},{{/unless}}</em>
+						{{#if this.qualities}}
+							{{#each this.qualities}}
+								<em>{{name}}{{#if hasValue}} {{ value }}{{/if}}{{#unless @last}},{{/unless}}</em>
 							{{/each}}
 						{{else}}
 							&mdash;

@@ -61,7 +61,7 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 				context.enrichedSpecialActions = await TextEditor.enrichHTML(
 					this.system.specialActions, { async: true }
 				);
-				context.weapons = this.actor.weapons;
+				context.weapons = await this._prepareWeapons(context);
 				context.specialAbilities = this.actor.specialAbilities;
 				break;
 			case "description":
