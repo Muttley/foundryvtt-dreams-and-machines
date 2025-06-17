@@ -5,7 +5,7 @@ $columns: 6;
 %grid-styles {
 	@include p-reset;
 	display: grid;
-	column-gap: 4px;
+	grid-gap: 4px;
 }
 
 @mixin grid-colspan {

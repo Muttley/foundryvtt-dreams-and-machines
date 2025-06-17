@@ -1,21 +1,16 @@
 @use "../abstracts" as *;
 
-.editor,
-.editor-container,
-.editor-content {
-	min-height: 15rem;
+.editor {
+	flex: 1;
+	min-height: 350px;
 	height: 100%;
 	overflow-y: visible;
-	background-color: unset;
+	font-family: $font-primary;
 	margin: 4px;
 	padding: 4px;
 	font-family: $font-primary;
 	font-size: 1.1rem;
 	font-weight: 500;
-
-	p {
-		background-color: unset;
-	}
 
 	h1, h2, h3, h4, h5, h6 {
 		color: $c-character-purple;

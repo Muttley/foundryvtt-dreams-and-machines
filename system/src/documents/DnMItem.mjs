@@ -6,7 +6,7 @@ export default class DnMItem extends Item {
 		await super._preCreate(data, options, user);
 
 		if (data.img === undefined) {
-			let icon = `systems/dreams-and-machines/assets/icons/${data.type}.svg`;
+			const icon = `systems/dreams-and-machines/assets/icons/${data.type}.svg`;
 			this.updateSource({ img: icon });
 		}
 	}

@@ -1,17 +1,19 @@
 @use "../mixins" as *;
 
-.application .window-content,
-.window-app .window-content {
-	@include p-reset;
+.dnm {
+	.window-content {
+		@include p-reset;
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    padding: 8px;
-    color: var(--color-text-dark-primary);
-    overflow-y: auto;
-    overflow-x: hidden;
+		// display: flex;
+		// flex-direction: column;
+		// flex-wrap: nowrap;
+		// justify-content: flex-start;
+		// padding: 8px;
+		// color: var(--color-text-dark-primary);
+		// overflow-y: auto;
+		// overflow-x: hidden;
+		color: black;
 
-	background: url('../assets/ui/dnm-bg.jpg') repeat;
+		background: url('../assets/ui/dnm-bg.jpg') repeat;
+	}
 }

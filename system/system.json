@@ -4,8 +4,8 @@
 	"description": "An unofficial system for playing Dreams and Machines from Modiphius Entertainment Ltd.",
 	"version": "1.2.0",
 	"compatibility": {
-		"minimum": 12,
-		"verified": 12
+		"minimum": 13,
+		"verified": 13
 	},
 	"authors": [
 		{
@@ -27,9 +27,9 @@
 	],
 	"packs": [
 		{
-			"name": "origins",
-			"label": "Origins",
-			"path": "packs/origins",
+			"name": "character_options",
+			"label": "Character Options",
+			"path": "packs/character_options",
 			"type": "Item",
 			"system": "dreams-and-machines",
 			"ownership": {
@@ -57,16 +57,14 @@
 			"sorting": "m",
 			"color": "#5e1966",
 			"packs": [
-				"system_documentation"
+				"character_options"
 			],
 			"folders": [
 				{
-					"name": "Character Options",
+					"name": "Documentation",
 					"sorting": "a",
 					"color": "#2c0d31",
-					"packs": [
-						"origins"
-					]
+					"packs": ["system_documentation"]
 				}
 			]
 		}

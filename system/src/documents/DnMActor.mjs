@@ -82,7 +82,7 @@ export default class DnMActor extends Actor {
 
 
 	async getItemsByType(type) {
-		return await Promise.all(
+		return (await Promise.all(
 			this.items.filter(
 				i => i.type === type
 			).map(
@@ -92,9 +92,10 @@ export default class DnMActor extends Actor {
 					description: await TextEditor.enrichHTML(
 						i.system.description, { async: true }
 					),
+					system: i.system,
 				})
 			)
-		);
+		)).sort((a, b) => a.name.localeCompare(b.name));
 	}
 
 
@@ -105,6 +106,11 @@ export default class DnMActor extends Actor {
 
 	async getTalents() {
 		return (await this.getItemsByType("talent")).sort((a, b) => a.name.localeCompare(b.name));
+	}
+
+
+	async getWeapons() {
+		return await this.getItemsByType("weapon");
 	}
 
 }

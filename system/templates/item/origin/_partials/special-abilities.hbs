@@ -12,7 +12,7 @@
 		</span>
 	</div>
 	<div class="grid-colspan-2">
-		{{> item/_shared-partials/choice-selector
+		{{> (template "item/_shared-partials/choice-selector")
 			config=fixedAbilitiesConfig
 			editable=editable
 		}}
@@ -20,7 +20,7 @@
 	<div class="grid-colspan-3">
 		<div class="grid-3-columns">
 			<div class="grid-colspan-2">
-				{{> item/_shared-partials/choice-selector
+				{{> (template "item/_shared-partials/choice-selector")
 					config=abilityChoicesConfig
 					editable=editable
 				}}
@@ -34,6 +34,7 @@
 					name="system.specialAbilityChoices.maxChoices"
 					type="number"
 					value="{{system.specialAbilityChoices.maxChoices}}"
+					{{disabled @root.editModeDisabled}}
 				/>
 			</label>
 		</div>

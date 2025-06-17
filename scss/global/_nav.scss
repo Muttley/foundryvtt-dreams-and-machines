@@ -3,8 +3,7 @@
 
 .dnm.sheet {
 	nav {
-		margin-left: 8px;
-		margin-right: 8px;
+		margin: 4px;
 	}
 
 	.sheet-tabs {
@@ -14,6 +13,12 @@
 		text-transform: uppercase;
 		border: none;
 		color: black;
+
+		a {
+			width: 12em;
+			padding-left: 8px;
+			padding-right: 8px;
+		}
 
 		.item {
 			background: $c-character-purple-unselected;

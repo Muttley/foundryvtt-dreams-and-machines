@@ -1,7 +1,7 @@
 <div class="grid-4-columns">
 
 	<span class="label grid-colspan-4">
-		Skill Choices
+		{{localize "DNM.Labels.SkillChoices"}}
 	</span>
 
 	<div class="grid-1-columns grid-colspan-2">
@@ -14,8 +14,9 @@
 					{{else}}
 						class="selectable-choice"
 					{{/if}}
-					data-action="toggle-skill-choice"
+					data-action="toggleSkillChoice"
 					data-skill-id="{{this.id}}"
+					{{disabled @root.editModeDisabled}}
 				>
 					{{this.name}}
 				</a>
@@ -26,25 +27,27 @@
 
 	<label class="sublabel">
 		<span>
-			Choices
+			{{localize "DNM.Labels.Choices"}}
 		</span>
 		<input
 			data-type="Number"
 			name="system.skillChoices.choiceCount"
 			type="number"
 			value="{{system.skillChoices.choiceCount}}"
+			{{disabled @root.editModeDisabled}}
 		/>
 	</label>
 
 	<label class="sublabel">
 		<span>
-			Value
+			{{localize "DNM.Labels.Value"}}
 		</span>
 		<input
 			data-type="Number"
 			name="system.skillChoices.value"
 			type="number"
 			value="{{system.skillChoices.value}}"
+			{{disabled @root.editModeDisabled}}
 		/>
 	</label>
 

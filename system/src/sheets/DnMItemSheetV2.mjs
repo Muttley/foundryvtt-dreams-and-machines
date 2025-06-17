@@ -5,18 +5,83 @@ export default class DnMItemSheetV2
 
 	_editModeEnabled = false;
 
+	_firstRender = true;
+
+
+	get defaultTab() {
+		return "attributes";
+	}
+
 
 	get system() {
 		return this.item.system;
 	}
 
 
+	get tabs() {
+		if (!this.tabGroups.primary) {
+			this.tabGroups.primary = this.defaultTab;
+		}
+
+		switch (this.item.type) {
+			case "archetype":
+			case "equipment":
+			case "majorNPCAction":
+			case "origin":
+			case "talent":
+			case "temperament":
+			case "weapon": {
+				return {
+					attributes: {
+						cssClass: this.tabGroups.primary === "attributes" ? "active" : "",
+						group: "primary",
+						id: "attributes",
+						label: "DNM.Labels.Attributes",
+					},
+					description: {
+						cssClass: this.tabGroups.primary === "description" ? "active" : "",
+						group: "primary",
+						id: "description",
+						label: "DNM.Labels.Description",
+					},
+					source: {
+						cssClass: this.tabGroups.primary === "source" ? "active" : "",
+						group: "primary",
+						id: "source",
+						label: "DNM.Labels.Source",
+					},
+				};
+			}
+			case "specialAbility": {
+				return {
+					description: {
+						cssClass: this.tabGroups.primary === "description" ? "active" : "",
+						group: "primary",
+						id: "description",
+						label: "DNM.Labels.Description",
+					},
+					source: {
+						cssClass: this.tabGroups.primary === "source" ? "active" : "",
+						group: "primary",
+						id: "source",
+						label: "DNM.Labels.Source",
+					},
+				};
+			}
+		}
+
+		return itemTabs;
+	}
+
+
 	/** @override */
 	static DEFAULT_OPTIONS = {
 		actions: {
-			editImage: this._onEditImage,
+			toggleAttributeChoice: DnMItemSheetV2._onToggleAttributeChoice,
 			toggleEditMode: DnMItemSheetV2._onToggleEditMode,
-			toggleQuality: this._onToggleQuality,
+			toggleQuality: DnMItemSheetV2._onToggleQuality,
+			toggleSkillChoice: DnMItemSheetV2._onToggleSkillChoice,
+			deleteChoice: DnMItemSheetV2._deleteChoiceItem,
 		},
 		classes: ["sheet", "dnm", "item"],
 		form: {
@@ -24,7 +89,6 @@ export default class DnMItemSheetV2
 			submitOnChange: true,
 		},
 		position: {
-			// height: 800,
 			height: "auto",
 			width: 600,
 		},
@@ -32,34 +96,62 @@ export default class DnMItemSheetV2
 	};
 
 
-	/**
-	 * Handle changing a Document's image.
-	 * TODO: Copied from v13 implementation, can be removed after
-	 */
-	static async _onEditImage(_event, target) {
-		if (target.nodeName !== "IMG") {
-			throw new Error("The editImage action is available only for IMG elements.");
+	static async _deleteChoiceItem(event) {
+		if (!(this.isEditable && this._editModeEnabled)) return;
+
+		event.preventDefault();
+		event.stopPropagation();
+
+		const deleteUuid = event.target.dataset.uuid ?? undefined;
+		const choicesKey = event.target.dataset.choicesKey ?? undefined;
+
+		// handles cases where choicesKey is nested property.
+		const currentChoices = choicesKey
+			.split(".")
+			.reduce((obj, path) => obj ? obj[path]: [], this.item.system);
+
+		const newChoices = [];
+		for (const itemUuid of currentChoices) {
+			if (itemUuid === deleteUuid) continue;
+			newChoices.push(itemUuid);
 		}
-		const attr = target.dataset.edit;
-		const current = foundry.utils.getProperty(this.document._source, attr);
-		const defaultArtwork =
-			this.document.constructor.getDefaultArtwork?.(this.document._source) ?? {};
-		const defaultImage = foundry.utils.getProperty(defaultArtwork, attr);
-		const fp = new FilePicker({
-			current,
-			type: "image",
-			redirectToRoot: defaultImage ? [defaultImage] : [],
-			callback: path => {
-				target.src = path;
-				if (this.options.form.submitOnChange) {
-					const submit = new Event("submit");
-					this.element.dispatchEvent(submit);
-				}
-			},
-			top: this.position.top + 40,
-			left: this.position.left + 10,
-		});
-		await fp.browse();
+
+		const dataKey = `system.${choicesKey}`;
+		this.item.update({[dataKey]: newChoices});
+	}
+
+
+	async #toggleAttributeChoice(attributeId) {
+		const newChoices = this.#toggleChoice(
+			this.system.attributeChoices.choices,
+			attributeId
+		);
+
+		this.item.update({"system.attributeChoices.choices": newChoices});
+	}
+
+
+	#toggleChoice(currentChoices, choiceId) {
+		let newChoices = [];
+
+		if (currentChoices.includes(choiceId)) {
+			newChoices = currentChoices.filter(a => a !== choiceId);
+		}
+		else {
+			newChoices = [...currentChoices, choiceId];
+		}
+
+		return newChoices;
+	}
+
+
+	async #toggleSkillChoice(skillId) {
+		const newChoices = this.#toggleChoice(
+			this.system.skillChoices.choices,
+			skillId
+		);
+
+		this.item.update({"system.skillChoices.choices": newChoices});
 	}
 
 
@@ -78,44 +170,81 @@ export default class DnMItemSheetV2
 
 
 	_onRender(context, options) {
-		const selectChoice =
-			this.element.querySelector("[data-action=selectChoice]");
-		if (selectChoice) {
-			selectChoice.addEventListener("change", this._onSelectChoiceChange.bind(this));
-		}
+		const me = this;
 
-		const selectQuality =
-			this.element.querySelector("[data-action=selectQuality]");
-		if (selectQuality) {
-			selectQuality.addEventListener("change", this._onSelectQualityChange.bind(this));
-		}
+		this.element.querySelectorAll("[data-action=selectChoice]").forEach(
+			selected => {
+				selected.addEventListener("change", me._onSelectChoiceChange.bind(me));
+			}
+		);
+
+		this.element.querySelectorAll("[data-action=selectQuality]").forEach(
+			element => {
+				element.addEventListener("change", me._onSelectQualityChange.bind(me));
+			}
+		);
 	}
 
 
 	async _onSelectChoiceChange(event) {
 		event.preventDefault();
+		const options = event.target?.list?.options ?? [];
+		const dataset = event.target?.dataset ?? {};
 
-		const dataset = event.currentTarget.dataset ?? {};
-		dataset.selected_value = event.currentTarget.value;
+		const isItem = dataset.isItem === "true" ? true : false;
 
-		// Dynamically find the method to call for this type of selection
-		// change, and then run it if it exists
-		//
-		const methodName = `_onOptionSelected_${dataset.choicesKey}`;
-		if (typeof this[methodName] === "function") {
-			await this[methodName](dataset);
-			// this.render();
+		let uuid = undefined;
+
+		for (const option of options) {
+			if (option.value === event.target.value) {
+				uuid = option.getAttribute("data-uuid");
+				break;
+			}
+		}
+
+		if (!uuid) return;
+
+		// handles cases where choicesKey is nested property.
+		let currentChoices = dataset.choicesKey
+			.split(".")
+			.reduce((obj, path) => obj ? obj[path]: [], this.item.system);
+
+		if (currentChoices.includes(uuid)) return; // No duplicates
+
+		currentChoices.push(uuid);
+
+		const choiceItems = [];
+		for (const itemUuid of currentChoices) {
+			if (isItem) {
+				choiceItems.push(await fromUuid(itemUuid));
+			}
+			else {
+				choiceItems.push(itemUuid);
+			}
+		}
+
+		if (isItem) {
+			choiceItems.sort((a, b) => a.name.localeCompare(b.name));
 		}
 		else {
-			dreams.warn(`Unable to handle selection change; Class has no method named ${methodName}`);
+			choiceItems.sort((a, b) => a.localeCompare(b));
 		}
+
+		const sortedChoiceUuids = dataset.isItem
+			? choiceItems.map(item => item.uuid)
+			: choiceItems;
+
+		const updateData = {};
+		updateData[`system.${dataset.choicesKey}`] = sortedChoiceUuids;
+
+		return this.item.update(updateData);
 	}
 
 
 	async _onSelectQualityChange(event) {
 		event.preventDefault();
 
-		const dataset = event.currentTarget.dataset ?? {};
+		const dataset = event.target.dataset ?? {};
 
 		const options = event.target.list.options;
 		const value = event.target.value;
@@ -138,6 +267,12 @@ export default class DnMItemSheetV2
 	}
 
 
+	static async _onToggleAttributeChoice(event, target) {
+		event.preventDefault();
+		this.#toggleAttributeChoice(target.dataset.attributeId);
+	}
+
+
 	static async _onToggleEditMode(event, target) {
 		event.preventDefault();
 		this._editModeEnabled = !this._editModeEnabled;
@@ -146,8 +281,35 @@ export default class DnMItemSheetV2
 	}
 
 
+	static async _onToggleSkillChoice(event, target) {
+		event.preventDefault();
+		this.#toggleSkillChoice(target.dataset.skillId);
+	}
+
+
+	async _preparePartContext(partId, context, options) {
+		await super._preparePartContext(partId, context, options);
+
+		const textEditor = foundry.applications.ux.TextEditor.implementation;
+
+		switch (partId) {
+			case "description":
+				context.enrichedDescription = await textEditor.enrichHTML(
+					this.system.description, { async: true }
+				);
+				break;
+		}
+
+		context.tab = context.tabs[partId];
+
+		return context;
+	}
+
+
 	async _prepareContext(options={}) {
 		const context = await super._prepareContext(options);
+
+		context.tabs = this.tabs;
 
 		const isEditable = this.isEditable;
 
@@ -171,6 +333,37 @@ export default class DnMItemSheetV2
 		context.allSources = await dreams.compendiums.sources();
 
 		return context;
+	}
+
+	_getAttributeData(context) {
+		const attributes = [];
+
+		for (const [id, name] of Object.entries(CONFIG.DREAMS.ATTRIBUTES)) {
+			attributes.push({
+				id,
+				name,
+				selected: this.system.attributeChoices.choices.includes(id),
+			});
+		}
+		context.attributes = attributes.sort(
+			(a, b) => a.name.localeCompare(b.name)
+		);
+	}
+
+
+	_getSkillData(context) {
+		const skills = [];
+
+		for (const [id, name] of Object.entries(CONFIG.DREAMS.SKILLS)) {
+			skills.push({
+				id,
+				name,
+				selected: this.system.skillChoices.choices.includes(id),
+			});
+		}
+		context.skills = skills.sort(
+			(a, b) => a.name.localeCompare(b.name)
+		);
 	}
 
 }

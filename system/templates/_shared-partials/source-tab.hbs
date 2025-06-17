@@ -2,8 +2,10 @@
 	<div class="tab-body">
 		<select name="system.source" {{disabled editModeDisabled}}>
 			<option value="">&mdash;</option>
-			{{selectOptions allSources
+			{{selectOptions
+				allSources
 				labelAttr="name"
+				localize=false
 				selected=@root.system.source
 				valueAttr="uuid"
 			}}

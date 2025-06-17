@@ -1,17 +1,13 @@
 <div class="tab source" data-group="primary" data-tab="source">
 	<div class="tab-body">
 		<select name="system.source">
-			<option value="">&mdash;</option>
-			{{#each allSources}}
-				<option
-					value="{{this.uuid}}"
-					{{#ifCond ../item.system.source "===" this.uuid}}
-						selected
-					{{/ifCond}}
-				>
-					{{this.name}}
-				</option>
-			{{/each}}
+			{{selectOptions
+				allSources
+				labelAttr="name"
+				localize=false
+				selected=item.system.source
+				valueAttr="uuid"
+			}}
 		</select>
 	</div>
 </div>

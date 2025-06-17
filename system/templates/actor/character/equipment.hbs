@@ -4,27 +4,29 @@
 	</span>
 
 	<ol class="item-list">
-		{{#each equipment}}
+		{{#each weapons}}
 		<li
 			class="item"
 			data-menu="item"
-			data-uuid="{{this.uuid}}"
+			data-uuid="{{uuid}}"
 		>
-			{{#if system.isWeapon}}
-				{{#if (or (eq system.weapon.type 'Melee') (eq system.weapon.type 'MeleeRanged'))}}
-					<a
-						data-action="roll"
-						data-attribute="might"
-						data-skill="fight"
-						data-uuid="{{uuid}}"
-					>
-						<i class="fas fa-sword"></i>
-					</a>
-				{{/if}}
+			{{#if (or (eq system.weaponType 'Melee') (eq system.weaponType 'MeleeRanged'))}}
+				<a
+					data-action="roll"
+					data-attribute="might"
+					data-skill="fight"
+					data-uuid="{{this.uuid}}"
+				>
+					<i class="fas fa-sword"></i>
+				</a>
+			{{/if}}
 
-				{{#if (or (eq system.weapon.type 'Ranged') (eq system.weapon.type 'MeleeRanged'))}}
-					<a data-action="roll" data-attribute="quickness" data-skill="fight" data-uuid="{{ uuid }}"><i class="fas fa-bow-arrow"></i></a>
-				{{/if}}
+			{{#if (or (eq system.weaponType 'Ranged') (eq system.weaponType 'MeleeRanged'))}}
+				<a
+					data-action="roll"
+					data-attribute="quickness"
+					data-skill="fight"
+					data-uuid="{{uuid}}"><i class="fas fa-bow-arrow"></i></a>
 			{{/if}}
 
 			<a
@@ -34,14 +36,13 @@
 			>
 				{{name}}
 				{{#if (gt system.techLevel 0)}}
-					(TL{{ system.techLevel }}
-					{{#if system.isWeapon}}, {{localize (concat "DNM.Labels.Weapon." system.weapon.type)}}
-					{{/if}})
+					(TL{{ system.techLevel }},
+					{{localize (concat "DNM.Labels.Weapon." system.weaponType)}})
 				{{else}}
-					{{#if system.isWeapon}} ({{localize (concat "DNM.Labels.Weapon." system.weapon.type)}})
-					{{/if}}
+					({{localize (concat "DNM.Labels.Weapon." system.weaponType)}})
 				{{/if}}
-				{{#if system.hasQualities}}:{{else}}.{{/if}}</a>
+				{{#if system.hasQualities}}:{{else}}.{{/if}}
+			</a>
 		</li>
 		{{/each}}
 	</ol>

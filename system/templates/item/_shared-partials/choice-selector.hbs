@@ -1,5 +1,30 @@
 <div class="multi-select grid-1-columns">
 
+	<input
+		{{!--
+			list name needs to be unique and match the one used in the
+			datalist below.  Using the item id plus the system data key field
+			here should be unique enough
+		--}}
+		data-action="selectChoice"
+		data-choices-key="{{config.choicesKey}}"
+		data-is-item="{{config.isItem}}"
+		id="{{@root.rootId}}_{{config.choicesKey}}_input"
+		list="{{@root.rootId}}_{{config.choicesKey}}_list"
+		placeholder="{{localize "DNM.Labels.StartTyping"}}"
+		type="text"
+		value=""
+		{{disabled @root.editModeDisabled}}
+	/>
+	<datalist id="{{@root.rootId}}_{{config.choicesKey}}_list">
+		{{#each config.availableItems}}
+			<option
+				data-uuid="{{this.uuid}}"
+				value="{{this.name}}"
+			></option>
+		{{/each}}
+	</datalist>
+
 	{{#if config.selectedItems}}
 		<div class="items flexrow">
 			{{#each config.selectedItems}}
@@ -19,7 +44,7 @@
 							<i
 								class="delete-choice fas fa-delete-right"
 								data-tooltip="{{localize 'DNM.Tooltips.Item.RemoveSelectedItem'}}"
-								data-action="delete-choice"
+								data-action="deleteChoice"
 								data-choices-key="{{../config.choicesKey}}"
 								data-uuid="{{this.uuid}}"
 							></i>
@@ -30,29 +55,5 @@
 			{{/each}}
 		</div>
 	{{/if}}
-
-	<input
-		{{!--
-			list name needs to be unique and match the one used in the
-			datalist below.  Using the item id plus the system data key field
-			here should be unique enough
-		--}}
-		data-action="selectChoice"
-		data-choices-key="{{config.choicesKey}}"
-		data-is-item="{{config.isItem}}"
-		list="{{item._id}}_{{config.choicesKey}}_list"
-		placeholder="{{localize "DNM.Labels.StartTyping"}}"
-		type="text"
-		value=""
-		{{disabled @root.editModeDisabled}}
-	/>
-	<datalist id="{{item._id}}_{{config.choicesKey}}_list">
-		{{#each config.availableItems}}
-			<option
-				data-uuid="{{this.uuid}}"
-				value="{{this.name}}"
-			></option>
-		{{/each}}
-	</datalist>
 
 </div>

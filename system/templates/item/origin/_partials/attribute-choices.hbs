@@ -14,8 +14,9 @@
 					{{else}}
 						class="selectable-choice"
 					{{/if}}
-					data-action="toggle-attribute-choice"
+					data-action="toggleAttributeChoice"
 					data-attribute-id="{{this.id}}"
+					{{disabled @root.editModeDisabled}}
 				>
 					{{this.name}}
 				</a>
@@ -33,6 +34,7 @@
 			name="system.attributeChoices.choiceCount"
 			type="number"
 			value="{{system.attributeChoices.choiceCount}}"
+			{{disabled @root.editModeDisabled}}
 		/>
 	</label>
 
@@ -45,6 +47,7 @@
 			name="system.attributeChoices.value"
 			type="number"
 			value="{{system.attributeChoices.value}}"
+			{{disabled @root.editModeDisabled}}
 		/>
 	</label>
 

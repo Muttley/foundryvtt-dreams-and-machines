@@ -1,16 +1,17 @@
 <section class="tab {{tab.cssClass}}" data-group="primary" data-tab="description">
-	<div class="tab-body">
-		<div class="editor-container">
-			{{#if editModeEnabled}}
-				{{formGroup systemFields.description
-					enriched=enrichedDescription
-					value=systemSource.description
-					documentUUID=document.uuid
-					height=300
-				}}
-			{{else}}
-				{{{enrichedDescription}}}
-			{{/if}}
-		</div>
+	<div class="tab-body scrollable description">
+		{{#if editModeEnabled}}
+			<prose-mirror
+				name="system.description"
+				value="{{ systemSource.description }}"
+				document-uuid="{{ document.uuid }}"
+			></prose-mirror>
+		{{else}}
+			<div class="editor">
+				<div class="editor-content">
+					{{{enrichedDescription}}}
+				</div>
+			</div>
+		{{/if}}
 	</div>
 </section>

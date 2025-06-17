@@ -9,6 +9,7 @@ export default class WeaponSheet extends DnMItemSheetV2 {
 		},
 	};
 
+
 	/** @override */
 	static PARTS = {
 		header: {
@@ -66,52 +67,10 @@ export default class WeaponSheet extends DnMItemSheetV2 {
 
 
 	/** @override */
-	async _prepareContext(options={}) {
-		const context = await super._prepareContext(options);
-
-		if (!this.tabGroups.primary) this.tabGroups.primary = "attributes";
-
-		context.tabs = {
-			attributes: {
-				cssClass: this.tabGroups.primary === "attributes" ? "active" : "",
-				group: "primary",
-				id: "attributes",
-				label: "DNM.Labels.Attributes",
-			},
-			description: {
-				cssClass: this.tabGroups.primary === "description" ? "active" : "",
-				group: "primary",
-				id: "description",
-				label: "DNM.Labels.Description",
-			},
-			source: {
-				cssClass: this.tabGroups.primary === "source" ? "active" : "",
-				group: "primary",
-				id: "source",
-				label: "DNM.Labels.Source",
-			},
-		};
-
-		return context;
-	}
-
-
-	/** @override */
 	async _preparePartContext(partId, context, options) {
 		await super._preparePartContext(partId, context, options);
 
-		switch (partId) {
-			case "attributes":
-				await this._prepareWeaponQualities(context);
-				break;
-			case "description":
-				context.enrichedDescription = await TextEditor.enrichHTML(
-					this.system.description, { async: true }
-				);
-				break;
-		}
-
-		context.tab = context.tabs[partId];
+		if (partId === "attributes") await this._prepareWeaponQualities(context);
 
 		return context;
 	}

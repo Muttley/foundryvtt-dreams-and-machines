@@ -1,47 +1,17 @@
-<div class="tab attributes" data-group="primary" data-tab="attributes">
+<section class="tab {{tab.cssClass}}" data-group="primary" data-tab="attributes">
 	<div class="tab-body">
-		{{> item/origin/_partials/attributes}}
-		{{> item/origin/_partials/attribute-choices}}
-		{{> item/origin/_partials/skills}}
-		{{> item/origin/_partials/skill-choices}}
+		{{> (template "item/origin/_partials/attributes") }}
+		{{> (template "item/origin/_partials/attribute-choices") }}
+		{{> (template "item/origin/_partials/skills") }}
+		{{> (template "item/origin/_partials/skill-choices") }}
 
-		{{!-- Tech Level/Spirit/Supply Points --}}
 		<div class="grid-3-columns">
-			<label>
-				<span class="label">
-					{{localize "DNM.Labels.TechLevel"}}
-				</span>
-				<input
-					data-type="Number"
-					name="system.techLevel"
-					type="number"
-					value="{{system.techLevel}}"
-				/>
-			</label>
-			<label>
-				<span class="label">
-					{{localize "DNM.Labels.Spirit"}}
-				</span>
-				<input
-					data-type="Number"
-					name="system.spirit"
-					type="number"
-					value="{{system.spirit}}"
-				/>
-			</label>
-			<label>
-				<span class="label">
-					{{localize "DNM.Labels.SupplyPoints"}}
-				</span>
-				<input
-					data-type="Number"
-					name="system.supplyPoints"
-					type="number"
-					value="{{system.supplyPoints}}"
-				/>
+			{{> (template "item/_shared-partials/tech-level") }}
+			{{> (template "item/_shared-partials/spirit") }}
+			{{> (template "item/_shared-partials/supply-points") }}
 			</label>
 		</div>
 
-		{{> item/origin/_partials/special-abilities}}
+		{{> (template "item/origin/_partials/special-abilities") }}
 	</div>
-</div>
+</section>

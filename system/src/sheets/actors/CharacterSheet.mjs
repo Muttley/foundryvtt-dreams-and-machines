@@ -71,6 +71,7 @@ export default class CharacterSheet extends DnMActorSheet {
 
 		context.talents = await this.actor.getTalents();
 		context.equipment = await this.actor.getEquipment();
+		context.weapons = await this.actor.getWeapons();
 
 		context.enrichedAttitude = undefined;
 		context.enrichedExhaustion = undefined;
