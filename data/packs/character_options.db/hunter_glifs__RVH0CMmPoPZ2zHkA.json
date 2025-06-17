@@ -1,0 +1,14 @@
+{
+	"_id": "RVH0CMmPoPZ2zHkA",
+	"_key": "!items!RVH0CMmPoPZ2zHkA",
+	"effects": [
+	],
+	"folder": "6X3071EOUUlA9QcU",
+	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"name": "Hunter-GLIFs",
+	"system": {
+		"description": "<p>Your body is covered with tattoos, scars, warpaint, and clothing marked with GLIF-patterns which conceal you from the optics of hostile machines for a time.</p><p>When you are in a scene with a hostile machine, you may attempt to hide from it even if you have no cover or concealment from its sight or sensors. This effect ends when you or another character takes hostile action against the machine.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "specialAbility"
+}

@@ -1,0 +1,69 @@
+{
+	"_id": "wWHzXixBuPX9dTfA",
+	"_key": "!items!wWHzXixBuPX9dTfA",
+	"effects": [
+	],
+	"folder": "TS7uD2n1wn7sh0Dk",
+	"img": "systems/dreams-and-machines/assets/icons/origin.svg",
+	"name": "River",
+	"system": {
+		"attributeChoices": {
+			"choiceCount": 0,
+			"choices": [
+			],
+			"chosen": [
+			],
+			"value": 0
+		},
+		"attributes": {
+			"insight": {
+				"value": 7
+			},
+			"might": {
+				"value": 6
+			},
+			"quickness": {
+				"value": 7
+			},
+			"resolve": {
+				"value": 6
+			}
+		},
+		"configured": false,
+		"description": "<p>Rivers live on the waterways that spread across Evera Prime. They never stay in one place for long and make their living by trade. Anything that’s needed can be found at the next stop, and anything no longer needed, someone else will find a purpose for. The Rivers flow like the waters they have made their home, never settling, always moving. They make connections with many folks along their travels, and they are viewed by many as the lifeblood of Evera. There’s a saying among the land-bound on Evera, “If you have it, a River brought it.”</p><ul><li><p><strong>Truth</strong>: The character gains the Truth River</p></li><li><p><strong>Attributes</strong>: The character’s starting Attributes are Might 6, Quickness 7, Insight 7, Resolve 6.</p></li><li><p><strong>Skills</strong>: The character’s starting Skills are Move 1, Fight 1, Sneak 1, Talk 2, Operate 2, Study 1, Survive 1.</p></li><li><p><strong>Tech Level</strong>: The character has a starting Tech Level of 2.</p></li><li><p><strong>Spirit</strong>: The character’s Spirit Pool is increased by +1.</p></li><li><p><strong>Supply Points</strong>: The character’s Supply Points are increased by +3. A River’s Supply Points can be replenished from any source and can be used to create both natural and technological items.</p></li><li><p><strong>Special Abilities</strong>: The character has any two of the following special abilities: <strong>Just What They Need</strong>, <strong>Trader</strong>, or <strong>Haggler</strong>.</p></li></ul><p></p>",
+		"fixedSpecialAbilities": [
+		],
+		"skillChoices": {
+			"choiceCount": 0,
+			"choices": [
+			],
+			"chosen": [
+			],
+			"value": 0
+		},
+		"skills": {
+			"fight": 1,
+			"move": 1,
+			"operate": 2,
+			"sneak": 1,
+			"study": 1,
+			"survive": 1,
+			"talk": 2
+		},
+		"source": "PlayersGuide",
+		"specialAbilityChoices": {
+			"choices": [
+				"Compendium.dreams-and-machines.character_options.Item.hTey7ugUwcXOUj23",
+				"Compendium.dreams-and-machines.character_options.Item.VRywZwwrgkiptNzA",
+				"Compendium.dreams-and-machines.character_options.Item.7d1XkVvIhj6ukZEW"
+			],
+			"maxChoices": 2,
+			"selected": [
+			]
+		},
+		"spirit": 1,
+		"supplyPoints": 3,
+		"techLevel": 2
+	},
+	"type": "origin"
+}

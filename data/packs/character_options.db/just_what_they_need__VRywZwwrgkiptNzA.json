@@ -1,0 +1,14 @@
+{
+	"_id": "VRywZwwrgkiptNzA",
+	"_key": "!items!VRywZwwrgkiptNzA",
+	"effects": [
+	],
+	"folder": "VEJQnJkBgY8T46AK",
+	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"name": "Just What They Need",
+	"system": {
+		"description": "<p>Your pack is bulging with things you no longer have need for, but which others might find a purpose for.</p><p>Once per session, when you trade with another character, you may spend up to 3 Supply Points to reveal that you’re carrying an item worth up to 2 coin per Supply Point spent, which is something valuable to whomever you’re trading with.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "specialAbility"
+}

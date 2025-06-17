@@ -1,0 +1,14 @@
+{
+	"_id": "xMFCyHeLxLlrGJK6",
+	"_key": "!items!xMFCyHeLxLlrGJK6",
+	"effects": [
+	],
+	"folder": "DycfZXWuQ5Sawlpi",
+	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"name": "GLIF-Lore",
+	"system": {
+		"description": "<p>You possess knowledge of ancient sigils and patterns which can affect machines, known as GLIFs. These patterns can be inscribed onto surfaces, objects, or even people to provoke an instinctive response in most machines and other AI systems.</p><p>You possess a Stylus, a nanotech writing implement that can mark any surface and erase previous marks. You know two GLIFs (see page 119), either two Complexity 1 GLIFs, or one of Complexity 1 and one of Complexity 2.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "specialAbility"
+}

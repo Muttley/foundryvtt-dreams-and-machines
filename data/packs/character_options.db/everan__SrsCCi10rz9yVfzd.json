@@ -1,0 +1,80 @@
+{
+	"_id": "SrsCCi10rz9yVfzd",
+	"_key": "!items!SrsCCi10rz9yVfzd",
+	"effects": [
+	],
+	"folder": "TS7uD2n1wn7sh0Dk",
+	"img": "systems/dreams-and-machines/assets/icons/origin.svg",
+	"name": "Everan",
+	"system": {
+		"attributeChoices": {
+			"choiceCount": 2,
+			"choices": [
+				"quickness",
+				"resolve",
+				"insight",
+				"might"
+			],
+			"chosen": [
+			],
+			"value": 7
+		},
+		"attributes": {
+			"insight": {
+				"value": 6
+			},
+			"might": {
+				"value": 6
+			},
+			"quickness": {
+				"value": 6
+			},
+			"resolve": {
+				"value": 6
+			}
+		},
+		"configured": false,
+		"description": "<p>The majority of people on the world of Evera Prime are Everans. Their communities tend to be the largest and most welcoming, with strong traditions of hospitality. Part of their success is seeking out aid from other communities, banding together and sharing strengths to survive and thrive. Everans know that strength comes from difference, and uniqueness is a quality worth celebrating. Everan communities are highly varied in type and size, ranging from tiny hamlets burrowed in the hollow of a mountain, to the biggest towns that exist following the Builder War. Wherever they come from, whoever they are, Everans are friendly, welcoming folk, knowing there’s no accounting for taste.</p><ul><li><p><strong>Truth</strong>: The character gains the Truth Everan</p></li><li><p><strong>Attributes</strong>: The character’s starting Attributes are Might 6, Quickness 6, Insight 6, Resolve 6. Pick two attributes and increase both to 7.</p></li><li><p><strong>Skills</strong>: The character’s starting Skills are Move 1, Fight 1, Sneak 1, Talk 1, Operate 1, Study 1, Survive 1. Pick two Skills and increase both to 2.</p></li><li><p><strong>Tech Level</strong>: The character has a starting Tech Level of 2.</p></li><li><p><strong>Spirit</strong>: The character’s Spirit Pool is increased by +1.</p></li><li><p><strong>Supply Points</strong>: The character has +1 Supply Points. An Everan’s Supply Points can be replenished from any source and can be used to create both natural and technological items.</p></li><li><p><strong>Special Abilities</strong>: The character has the <strong>GLIF-Pattern Clothing</strong> ability, plus either <strong>Everyone’s Friend</strong> or <strong>Adaptable</strong>.</p></li></ul><p></p>",
+		"fixedSpecialAbilities": [
+			"Compendium.dreams-and-machines.character_options.Item.ioC8QDVsa7pypcNg"
+		],
+		"skillChoices": {
+			"choiceCount": 2,
+			"choices": [
+				"fight",
+				"sneak",
+				"operate",
+				"study",
+				"survive",
+				"talk",
+				"move"
+			],
+			"chosen": [
+			],
+			"value": 2
+		},
+		"skills": {
+			"fight": 1,
+			"move": 1,
+			"operate": 1,
+			"sneak": 1,
+			"study": 1,
+			"survive": 1,
+			"talk": 1
+		},
+		"source": "PlayersGuide",
+		"specialAbilityChoices": {
+			"choices": [
+				"Compendium.dreams-and-machines.character_options.Item.wfKnp9UQu7e1Ck74",
+				"Compendium.dreams-and-machines.character_options.Item.RRxEqHXs1wnV7G7V"
+			],
+			"maxChoices": 1,
+			"selected": [
+			]
+		},
+		"spirit": 1,
+		"supplyPoints": 0,
+		"techLevel": 1
+	},
+	"type": "origin"
+}

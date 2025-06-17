@@ -1,0 +1,67 @@
+{
+	"_id": "LRt1nHrsFYZ4Ikgb",
+	"_key": "!items!LRt1nHrsFYZ4Ikgb",
+	"effects": [
+	],
+	"folder": "TS7uD2n1wn7sh0Dk",
+	"img": "systems/dreams-and-machines/assets/icons/origin.svg",
+	"name": "Archivist",
+	"system": {
+		"attributeChoices": {
+			"choiceCount": 0,
+			"choices": [
+			],
+			"chosen": [
+			],
+			"value": 0
+		},
+		"attributes": {
+			"insight": {
+				"value": 8
+			},
+			"might": {
+				"value": 6
+			},
+			"quickness": {
+				"value": 6
+			},
+			"resolve": {
+				"value": 6
+			}
+		},
+		"configured": false,
+		"description": "<p>A subculture of scientists, engineers, and technoarchaeologists, who trade their understanding of machines for food and other resources. Archivists view themselves as the inheritors of the mantle of the La Scio Archive, those brave souls who stood up to the Builder and orchestrated humanity’s defense. They are varied in their beliefs, adhering to one of several philosophies, but all work for the betterment of humanity. Archivist collectives are small communities, often held at arm’s length by others, as Archivists can be regarded as aloof, eccentric, disconnected, or just weird. Still, Archivists pay fair coin for the things they need, and most are willing to share their knowledge for the right price.</p><ul><li><p><strong>Truth</strong>: The character gains the Truth Archivist</p></li><li><p><strong>Attributes</strong>: The character’s starting Attributes are Might 6, Quickness 6, Insight 8, Resolve 6.</p></li><li><p><strong>Skills</strong>: The character’s starting Skills are Move 1, Fight 1, Sneak 1, Talk 1, Operate 2, Study 2, Survive 1.</p></li><li><p><strong>Tech Level</strong>: The character has a starting Tech Level of 3.</p></li><li><p><strong>Spirit</strong>: The character’s Spirit Pool is unchanged.</p></li><li><p><strong>Supply Points</strong>: The character’s Supply Points are increased by +2. An Archivist’s Supply Points are replenished from salvaged technology, and they can only be used to produce technological tools. This character can gain twice the normal amount of Supply Points from technological or industrial sources.</p></li><li><p><strong>Special Abilities</strong>: The character has the special ability <strong>GLIF-Lore</strong>, which includes knowledge of two GLIFs (described below).</p></li></ul><p></p>",
+		"fixedSpecialAbilities": [
+			"Compendium.dreams-and-machines.character_options.Item.xMFCyHeLxLlrGJK6"
+		],
+		"skillChoices": {
+			"choiceCount": 0,
+			"choices": [
+			],
+			"chosen": [
+			],
+			"value": 0
+		},
+		"skills": {
+			"fight": 1,
+			"move": 1,
+			"operate": 1,
+			"sneak": 1,
+			"study": 2,
+			"survive": 1,
+			"talk": 1
+		},
+		"source": "PlayersGuide",
+		"specialAbilityChoices": {
+			"choices": [
+			],
+			"maxChoices": 0,
+			"selected": [
+			]
+		},
+		"spirit": 0,
+		"supplyPoints": 2,
+		"techLevel": 3
+	},
+	"type": "origin"
+}

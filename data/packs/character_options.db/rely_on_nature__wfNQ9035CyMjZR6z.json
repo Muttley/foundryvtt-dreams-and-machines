@@ -1,0 +1,14 @@
+{
+	"_id": "wfNQ9035CyMjZR6z",
+	"_key": "!items!wfNQ9035CyMjZR6z",
+	"effects": [
+	],
+	"folder": "yH2h6EfmBzDpCFLt",
+	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"name": "Rely on Nature",
+	"system": {
+		"description": "<p>Dreamers have traditional techniques to keep themselves and their allies healthy.</p><p>When you attempt First Aid on an ally, you count as having the appropriate tools, making the Skill Test at Difficulty 1, by spending Supply Points equal to the Injury’s damage rating.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "specialAbility"
+}

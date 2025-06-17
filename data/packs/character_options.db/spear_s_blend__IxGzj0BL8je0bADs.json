@@ -1,0 +1,14 @@
+{
+	"_id": "IxGzj0BL8je0bADs",
+	"_key": "!items!IxGzj0BL8je0bADs",
+	"effects": [
+	],
+	"folder": "6X3071EOUUlA9QcU",
+	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"name": "Spear's Blend",
+	"system": {
+		"description": "<p>You have been taught some of the old lore, of special blends of herbs, plant oils, and other chemicals that heighten reflexes, make a warrior fearless, and numb them to pain. Such a blend would be poisonous to outsiders, but you have built up a resistance.</p><p>You may spend 1 Supply Point at the start of a conflict scene to administer the Spear’s Blend — this might be inhaled, drank, rubbed on the gums, or administered another way. During the scene, you gain one extra Spirit whenever you use the <strong>Adrenaline Rush</strong> option to regain Spirit by adding to Threat.</p><p></p>",
+		"source": "PlayersGuide"
+	},
+	"type": "specialAbility"
+}

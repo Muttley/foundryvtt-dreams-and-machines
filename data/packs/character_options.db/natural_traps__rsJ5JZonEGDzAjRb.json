@@ -1,0 +1,14 @@
+{
+	"_id": "rsJ5JZonEGDzAjRb",
+	"_key": "!items!rsJ5JZonEGDzAjRb",
+	"effects": [
+	],
+	"folder": "yH2h6EfmBzDpCFLt",
+	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"name": "Natural Traps",
+	"system": {
+		"description": "<p>Dreamers are taught a variety of techniques and tricks that can be used to hinder or dissuade attackers, even robots. These traps use nothing but materials found within the natural world.</p><p>When you create a Truth that represents a trap or a hindrance placed on an enemy, you may spend 1 Supply Point to enhance the trap or hindrance, doubling any Difficulty increase it causes, and increasing the Difficulty of any Skill Test to remove it by +1.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "specialAbility"
+}

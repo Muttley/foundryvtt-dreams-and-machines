@@ -1,0 +1,69 @@
+{
+	"_id": "lRqvh1dPbpJeFRUy",
+	"_key": "!items!lRqvh1dPbpJeFRUy",
+	"effects": [
+	],
+	"folder": "TS7uD2n1wn7sh0Dk",
+	"img": "systems/dreams-and-machines/assets/icons/origin.svg",
+	"name": "Dreamer",
+	"system": {
+		"attributeChoices": {
+			"choiceCount": 0,
+			"choices": [
+			],
+			"chosen": [
+			],
+			"value": 0
+		},
+		"attributes": {
+			"insight": {
+				"value": 6
+			},
+			"might": {
+				"value": 6
+			},
+			"quickness": {
+				"value": 6
+			},
+			"resolve": {
+				"value": 8
+			}
+		},
+		"configured": false,
+		"description": "<p>Settlements of Dreamers tend to be remote and isolated, and they are seldom especially large groups. Dreamers shun technology, preferring to live off the land, and they are known to be fiercely independent and self-reliant, often to the point of being aggressive to outsiders. Their secretiveness and distrust of technology means many people think of them as backwards, but this couldn’t be further from the truth. Dreamers are masters of biological and chemical sciences, and they have learned to live well, and safely, without needing the crutch of technology that might draw Wakers. Dreamers are generally insular and slow to trust outsiders, but they form tight bonds with those who earn their trust.</p><ul><li><p><strong>Truth</strong>: The character gains the Truth Dreamer</p></li><li><p><strong>Attributes</strong>: The character’s starting Attributes are Might 6, Quickness 6, Insight 6, Resolve 8.</p></li><li><p><strong>Skills</strong>: The character’s starting Skills are Move 2, Fight 1, Sneak 1, Talk 1, Operate 1, Study 1, Survive 2.</p></li><li><p><strong>Tech Level</strong>: The character has a starting Tech Level of 1.</p></li><li><p><strong>Spirit</strong>: The character’s Spirit Pool is increased by +2.</p></li><li><p><strong>Supply Points</strong>: The character’s Supply Points are unchanged. A Dreamer’s Supply Points are replenished from the natural world, and they can only be used to create natural items. The character gains twice the normal number of Supply Points from foraging for natural Supply Points.</p></li><li><p><strong>Special Abilities</strong>: The character has any two of the following special abilities: <strong>Rely on Nature</strong>, <strong>Natural Traps</strong>, or <strong>Tech-less</strong>.</p></li></ul><p></p>",
+		"fixedSpecialAbilities": [
+		],
+		"skillChoices": {
+			"choiceCount": 0,
+			"choices": [
+			],
+			"chosen": [
+			],
+			"value": 0
+		},
+		"skills": {
+			"fight": 1,
+			"move": 2,
+			"operate": 1,
+			"sneak": 1,
+			"study": 1,
+			"survive": 2,
+			"talk": 1
+		},
+		"source": "PlayersGuide",
+		"specialAbilityChoices": {
+			"choices": [
+				"Compendium.dreams-and-machines.character_options.Item.rsJ5JZonEGDzAjRb",
+				"Compendium.dreams-and-machines.character_options.Item.wfNQ9035CyMjZR6z",
+				"Compendium.dreams-and-machines.character_options.Item.VxyiBQK5LcHZ57p7"
+			],
+			"maxChoices": 2,
+			"selected": [
+			]
+		},
+		"spirit": 2,
+		"supplyPoints": 0,
+		"techLevel": 1
+	},
+	"type": "origin"
+}

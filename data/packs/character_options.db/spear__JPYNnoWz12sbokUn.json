@@ -1,0 +1,71 @@
+{
+	"_id": "JPYNnoWz12sbokUn",
+	"_key": "!items!JPYNnoWz12sbokUn",
+	"effects": [
+	],
+	"folder": "TS7uD2n1wn7sh0Dk",
+	"img": "systems/dreams-and-machines/assets/icons/origin.svg",
+	"name": "Spear",
+	"system": {
+		"attributeChoices": {
+			"choiceCount": 1,
+			"choices": [
+				"might",
+				"quickness"
+			],
+			"chosen": [
+			],
+			"value": 8
+		},
+		"attributes": {
+			"insight": {
+				"value": 6
+			},
+			"might": {
+				"value": 6
+			},
+			"quickness": {
+				"value": 6
+			},
+			"resolve": {
+				"value": 6
+			}
+		},
+		"configured": false,
+		"description": "<p>Spears are a culture of warriors and hunters, who wander the wilderness and the ruins, destroying machines and keeping their territories safe. Spears are descended from those humans who could not, or did not, flee the cities during the War, and they have generations of experience in hunting machines. The Spears leave no one behind; every human is worth defending against the machines. Given how irradiated and damaged much of their lands are, they often trade with other communities, particularly for things that they cannot grow or scavenge for themselves.</p><ul><li><p><strong>Truth</strong>: The character gains the Truth Spear</p></li><li><p><strong>Attributes</strong>: The character’s starting Attributes are Might 6, Quickness 6, Insight 6, Resolve 6. Select Might or Quickness and increase the chosen attribute to 8.</p></li><li><p><strong>Skills</strong>: The character’s starting Skills are Move 1, Fight 2, Sneak 2, Talk 1, Operate 1, Study 1, Survive 1.</p></li><li><p><strong>Tech Level</strong>: The character has a starting Tech Level of 1. Spears ignore the Tech Level of Electrospears and may always use them.</p></li><li><p><strong>Spirit</strong>: The character’s Spirit Pool is increased by +1.</p></li><li><p><strong>Supply Points</strong>: The character’s Supply Points are increased by +1. A Spear’s Supply Points can be replenished from any source and can be used to create both natural and technological items.</p></li><li><p><strong>Special</strong>: When selecting equipment for the character, one of the character’s weapons <em>must</em> be an Electrospear.</p></li><li><p><strong>Special Abilities</strong>: The character has the ability <strong>Hunter-GLIFs</strong> and one of the following special abilities: <strong>Spear’s Blend</strong> or <strong>Second Strike</strong>.</p></li></ul><p></p>",
+		"fixedSpecialAbilities": [
+			"Compendium.dreams-and-machines.character_options.Item.RVH0CMmPoPZ2zHkA"
+		],
+		"skillChoices": {
+			"choiceCount": 0,
+			"choices": [
+			],
+			"chosen": [
+			],
+			"value": 0
+		},
+		"skills": {
+			"fight": 2,
+			"move": 1,
+			"operate": 1,
+			"sneak": 2,
+			"study": 1,
+			"survive": 1,
+			"talk": 1
+		},
+		"source": "PlayersGuide",
+		"specialAbilityChoices": {
+			"choices": [
+				"Compendium.dreams-and-machines.character_options.Item.A8U2JX9soIBRzUKx",
+				"Compendium.dreams-and-machines.character_options.Item.IxGzj0BL8je0bADs"
+			],
+			"maxChoices": 1,
+			"selected": [
+			]
+		},
+		"spirit": 1,
+		"supplyPoints": 1,
+		"techLevel": 1
+	},
+	"type": "origin"
+}

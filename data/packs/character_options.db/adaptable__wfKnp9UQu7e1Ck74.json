@@ -1,0 +1,14 @@
+{
+	"_id": "wfKnp9UQu7e1Ck74",
+	"_key": "!items!wfKnp9UQu7e1Ck74",
+	"effects": [
+	],
+	"folder": "oTQocB4Vb0trfRxD",
+	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"name": "Adaptable",
+	"system": {
+		"description": "<p>Everans make use of whatever they can to help their communities thrive, and will not needlessly cast aside technology that can be of use.</p><p>When you attempt to use technology with a Tech Level higher than yours, add only half the normal amount of points to Threat (rounding up).</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "specialAbility"
+}

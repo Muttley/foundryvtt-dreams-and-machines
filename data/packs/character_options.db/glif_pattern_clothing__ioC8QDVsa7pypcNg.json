@@ -1,0 +1,14 @@
+{
+	"_id": "ioC8QDVsa7pypcNg",
+	"_key": "!items!ioC8QDVsa7pypcNg",
+	"effects": [
+	],
+	"folder": "oTQocB4Vb0trfRxD",
+	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"name": "GLIF-Pattern Clothing",
+	"system": {
+		"description": "<p>You own, and routinely wear, items of clothing — often a cloak, coat, shawl, poncho, or other piece of outerwear — patterned with the traditional geometric forms of a <em>disregard</em> GLIF, intended to make machines overlook the wearer. In combination with a traditional dance taught to them as children, an Everan can more easily avoid the wrath of a dangerous machine.</p><p>As an action, you can perform this dance, which does not require a Skill Test. Until the start of their next action, a machine attempting to attack you adds +1 to the Difficulty of its attack. Once a machine has been affected by this ability, it cannot be affected again during this scene.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "specialAbility"
+}
