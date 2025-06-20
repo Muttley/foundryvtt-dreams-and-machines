@@ -60,6 +60,7 @@
 	.label {
 		@include p-reset;
 		display: flex;
+		font-size: 1.1em;
 		font-weight: 600;
 		line-height: 1.25rem;
 
@@ -164,11 +165,10 @@
 
 	.tab-body {
 		@include p-reset;
+		display: grid;
+		gap: 4px;
 		min-height: 350px;
 		padding: 0.25rem;
-		display: grid;
-		grid-template-rows: max-content;
-		row-gap: 4px;
 
 		&.description {
 			max-height: 600px;

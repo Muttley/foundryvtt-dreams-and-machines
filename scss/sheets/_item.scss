@@ -12,14 +12,25 @@
 	}
 
 	.content-link {
-		background-color: black;
 		color: white;
-		font-weight: bold;
 		line-height: 1;
-
-		border-radius: 8px;
+		border-color: $c-secondary;
+		border-radius: 6px;
 		margin: 2px;
 		padding: 4px;
+		border-style: solid;
+		font-weight: bold;
+		margin: 2px;
+		border-width: unset;
+			background-color: $c-secondary-selected;
+
+			text-shadow: 1px 1px 2px black;
+			border-color: $c-secondary;
+
+			&:hover {
+				color: white;
+				text-shadow: 0 0 8px var(--color-shadow-primary);
+			}
 	}
 
 	.damage-type-grid {
@@ -36,6 +47,7 @@
 
 	.label {
 		background-color: $c-secondary;
+		height: fit-content;
 	}
 
 	.selectable-choice {
@@ -47,6 +59,7 @@
 		border-style: solid;
 		border-radius: 6px;
 		margin: 2px;
+		height: fit-content;
 
 		&:hover {
 			color: white;
@@ -56,9 +69,10 @@
 
 		&.selected {
 			font-weight: bold;
-			background-color: $c-secondary;
+			background-color: $c-secondary-selected;
+
 			text-shadow: 1px 1px 2px black;
-			border-color: $c-secondary-unselected;
+			border-color: $c-secondary;
 			color: white;
 
 			&:hover {

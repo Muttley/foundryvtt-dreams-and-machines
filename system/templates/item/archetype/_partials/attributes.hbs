@@ -1,0 +1,25 @@
+<div class="grid-1-columns">
+
+	<span class="label">
+		{{localize "DNM.Labels.Attributes"}}
+	</span>
+
+	<div class="grid-4-columns">
+
+		{{#each attributes}}
+			<a
+				{{#if this.selected}}
+					class="selectable-choice selected"
+				{{else}}
+					class="selectable-choice"
+				{{/if}}
+				data-action="toggleAttributeChoice"
+				data-attribute-id="{{this.id}}"
+				{{disabled @root.editModeDisabled}}
+			>
+				{{this.name}}
+			</a>
+		{{/each}}
+
+	</div>
+</div>

@@ -101,4 +101,8 @@ export default class DnMCompendiums {
 		return DnMCompendiums.#documents("Item", "specialAbility", filterSources);
 	}
 
+	static async talents(filterSources=true) {
+		return DnMCompendiums.#documents("Item", "talent", filterSources);
+	}
+
 }

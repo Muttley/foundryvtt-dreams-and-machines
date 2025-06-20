@@ -132,7 +132,7 @@ function registerItemSheets() {
 	Items.unregisterSheet("core", ItemSheet);
 
 	Items.registerSheet("dreams-and-machines", itemSheets.DnMItemSheet, {
-		types: ["talent", "temperament"],
+		types: ["temperament"],
 		makeDefault: true,
 	});
 
@@ -158,6 +158,11 @@ function registerItemSheets() {
 
 	Items.registerSheet("dreams-and-machines", itemSheets.SpecialAbilitySheet, {
 		types: ["specialAbility"],
+		makeDefault: true,
+	});
+
+	Items.registerSheet("dreams-and-machines", itemSheets.TalentSheet, {
+		types: ["talent"],
 		makeDefault: true,
 	});
 

@@ -102,6 +102,7 @@ DNM.Labels.Quantity: Quantity
 DNM.Labels.Rarity: Rarity
 DNM.Labels.SelectQuality: Select Quality...
 DNM.Labels.SelectSpecialAbility: Select Special Ability...
+DNM.Labels.SelectTalent: Select Talent...
 DNM.Labels.ShortTermGoals: Short-Term
 DNM.Labels.SkillChoices: Skill Choices
 DNM.Labels.Skills: Skills
@@ -119,6 +120,7 @@ DNM.Labels.Successes: Successes
 DNM.Labels.Supply: Supply
 DNM.Labels.SupplyPointCost: Supply Point Cost
 DNM.Labels.SupplyPoints: Supply Points
+DNM.Labels.TalentChoices: Talent Choices
 DNM.Labels.Talents: Talents
 DNM.Labels.TargetNumber: Target Number
 DNM.Labels.TechLevel: Tech Level

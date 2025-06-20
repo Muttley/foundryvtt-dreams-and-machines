@@ -1,6 +1,9 @@
+import AttributeBonusChoices from "./_types/AttributeBonusChoices.mjs";
 import BookSource from "./_types/BookSource.mjs";
+import Configured from "./_types/Configured.mjs";
 import Description from "../_types/Description.mjs";
-import Skills from "../_types/Skills.mjs";
+import SkillBonusChoices from "./_types/SkillBonusChoices.mjs";
+import TalentChoices from "./_types/TalentChoices.mjs";
 
 export default class ArchetypeDataModel
 	extends foundry.abstract.TypeDataModel {
@@ -17,11 +20,14 @@ export default class ArchetypeDataModel
 		const fields = foundry.data.fields;
 
 		return {
+			...AttributeBonusChoices(),
 			...BookSource(),
+			...Configured(),
 			...Description(),
-			...Skills(),
+			...SkillBonusChoices(),
+			...TalentChoices(),
 
-			goal: new fields.HTMLField({
+			goals: new fields.HTMLField({
 				initial: "",
 				nullable: false,
 			}),
@@ -51,8 +57,8 @@ export default class ArchetypeDataModel
 				}
 			),
 
-			startingCoin: new fields.NumberField({
-				initial: 0,
+			techLevel: new fields.NumberField({
+				initial: 1,
 				integer: true,
 				min: 0,
 				nullable: false,

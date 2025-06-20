@@ -18,7 +18,8 @@
 			color: $c-character-primary;
 
 			&:hover {
-				color: white;
+				color: red;
+				text-shadow: 0 0 8px black;
 			}
 		}
 

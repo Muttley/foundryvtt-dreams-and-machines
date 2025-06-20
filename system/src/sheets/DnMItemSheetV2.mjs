@@ -1,5 +1,6 @@
 const {api, sheets} = foundry.applications;
 
+const TextEditor = foundry.applications.ux.TextEditor.implementation;
 export default class DnMItemSheetV2
 	extends api.HandlebarsApplicationMixin(sheets.ItemSheetV2) {
 
@@ -28,7 +29,6 @@ export default class DnMItemSheetV2
 			case "equipment":
 			case "majorNPCAction":
 			case "origin":
-			case "talent":
 			case "temperament":
 			case "weapon": {
 				return {
@@ -52,7 +52,8 @@ export default class DnMItemSheetV2
 					},
 				};
 			}
-			case "specialAbility": {
+			case "specialAbility":
+			case "talent": {
 				return {
 					description: {
 						cssClass: this.tabGroups.primary === "description" ? "active" : "",
@@ -290,11 +291,9 @@ export default class DnMItemSheetV2
 	async _preparePartContext(partId, context, options) {
 		await super._preparePartContext(partId, context, options);
 
-		const textEditor = foundry.applications.ux.TextEditor.implementation;
-
 		switch (partId) {
 			case "description":
-				context.enrichedDescription = await textEditor.enrichHTML(
+				context.enrichedDescription = await TextEditor.enrichHTML(
 					this.system.description, { async: true }
 				);
 				break;

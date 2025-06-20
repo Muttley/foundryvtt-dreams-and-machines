@@ -1,0 +1,21 @@
+<div class="grid-1-columns narrow-text-field {{#if editModeEnabled}}editing{{/if}}">
+	<span class="label">
+		{{localize "DNM.Labels.Goals"}}
+	</span>
+
+	<div class="scrollable" style="width: 100%;">
+		{{#if editModeEnabled}}
+			<prose-mirror
+				name="system.goals"
+				value="{{ systemSource.goals }}"
+				document-uuid="{{ document.uuid }}"
+			></prose-mirror>
+		{{else}}
+			<div class="editor">
+				<div class="editor-content">
+					{{{enrichedGoals}}}
+				</div>
+			</div>
+		{{/if}}
+	</div>
+</div>

@@ -1,13 +1,14 @@
 @use "../abstracts" as *;
+@use "../mixins" as *;
 
 .editor {
+	@include p-reset;
+	padding-left: 4px;
+	padding-right: 4px;
 	flex: 1;
-	min-height: 350px;
+	min-height: 305px;
 	height: 100%;
-	overflow-y: visible;
 	font-family: $font-primary;
-	margin: 4px;
-	padding: 4px;
 	font-family: $font-primary;
 	font-size: 1.1rem;
 	font-weight: 500;
@@ -16,5 +17,19 @@
 		color: $c-character-purple;
 		font-family: 'Bruno Ace';
 		text-shadow: unset;
+	}
+}
+
+.narrow-text-field {
+	height: 8em;
+	grid-template-rows: min-content 1fr;
+	min-height: 6em;
+
+	.editor {
+		min-height: 6em;
+	}
+
+	&.editing {
+		height: 15em;
 	}
 }

@@ -40,7 +40,7 @@
 						data-type="Item"
 						data-uuid="{{this.uuid}}"
 					>
-						{{#if ../editable}}
+						{{#unless @root.editModeDisabled}}
 							<i
 								class="delete-choice fas fa-delete-right"
 								data-tooltip="{{localize 'DNM.Tooltips.Item.RemoveSelectedItem'}}"
@@ -48,7 +48,7 @@
 								data-choices-key="{{../config.choicesKey}}"
 								data-uuid="{{this.uuid}}"
 							></i>
-						{{/if}}
+						{{/unless}}
 						{{this.name}}
 					</a>
 				</div>

@@ -1,9 +1,7 @@
 <section class="tab {{tab.cssClass}}" data-group="primary" data-tab="attributes">
 	<div class="tab-body">
-		{{> (template "item/origin/_partials/attributes") }}
-		{{> (template "item/origin/_partials/attribute-choices") }}
-		{{> (template "item/origin/_partials/skills") }}
-		{{> (template "item/origin/_partials/skill-choices") }}
+		{{> (template "item/archetype/_partials/attributes") }}
+		{{> (template "item/archetype/_partials/skills") }}
 
 		<div class="grid-3-columns">
 			{{> (template "item/_shared-partials/tech-level") }}
@@ -11,6 +9,8 @@
 			{{> (template "item/_shared-partials/supply-points") }}
 		</div>
 
-		{{> (template "item/origin/_partials/special-abilities") }}
+		{{> (template "item/archetype/_partials/talent-choices") }}
+		{{> (template "item/archetype/_partials/goals") }}
+		{{> (template "item/archetype/_partials/equipment") }}
 	</div>
 </section>
