@@ -1,0 +1,52 @@
+{
+	"_id": "Ho94l9D0Eap7mrG1",
+	"_key": "!items!Ho94l9D0Eap7mrG1",
+	"effects": [
+	],
+	"folder": "NhxCGX5D0YSnntN4",
+	"img": "systems/dreams-and-machines/assets/icons/archetype.svg",
+	"name": "Fixer",
+	"system": {
+		"attributeChoices": {
+			"choices": [
+				"insight",
+				"quickness",
+				"resolve"
+			],
+			"values": [
+			]
+		},
+		"configured": false,
+		"description": "<p>They say Gatherers are a grubby breed, that your hands are always dirty. From bringing down lumber, to smashing minerals from the mines, tilling the soil, or running the herds, you’re the one who’s out there doing it. You understand the lay of the land, with the uncanny knack of reading what it might offer just from the slope of the hills, the color of the rocks, and the path of the streams. And you’re used to living in it — climbing where others wouldn’t dare to check out the silvery glint in that rock, fast-stepping across rapids to get to that lush little glade where you’re sure rare herbs and spices grow. All this time in the wild has made you self-sufficient, it’s more than toughened you up. Few would call you ‘grubby’ to your face, not just because you might let your temper get the better of you, but also because they know they need you a hell of a lot more than you need them.</p><ul><li><p><strong>Truth</strong>: The character gains the Truth Gatherer</p></li><li><p><strong>Attributes</strong>: Add +3 to one of Might, Quickness, or Insight, add +2 to one of the remaining two, and add +1 to the last of the three.</p></li><li><p><strong>Skills</strong>: Add +2 to one of Operate, Survive, or Study. Add +1 to the other two.</p></li><li><p><strong>Tech Level</strong>: The character’s Tech Level is increased by +1.</p></li><li><p><strong>Spirit</strong>: The character’s Spirit Pool is increased by +1.</p></li><li><p><strong>Supply Points</strong>: The character has +1 Supply Point.</p></li><li><p><strong>Talent</strong>: Gatherers begin with one of the following talents: <strong>Understand the Land</strong>, <strong>Risky Resources</strong>, <strong>Supply and Demand</strong>, <strong>Make Do and Mend</strong>, or Reach the Best Stuff.</p></li><li><p><strong>Goals</strong>: When this character discovers something valuable which will help them, their group, or a friendly community, gain <strong>growth</strong>.</p></li><li><p><strong>Equipment</strong>: One Hand-Made or Security Weapon, Protective Clothing (TL2 or TL3) or Heavy Protective Clothing (TL3 or TL4), Survival Kit (TL2 or TL3) or Bypass Kit (TL 4)</p></li></ul>",
+		"goals": "<p>When this character discovers something valuable which will help them, their group, or a friendly community, gain <strong>growth</strong>.</p>",
+		"skillChoices": {
+			"choices": [
+				"move",
+				"talk",
+				"study"
+			],
+			"values": [
+			]
+		},
+		"source": "PlayersGuide",
+		"spirit": 1,
+		"startingGear": [
+			"<p>One Hand-Made or Security Weapon, Protective Clothing (TL2 or TL3) or Heavy Protective Clothing (TL3 or TL4), Survival Kit (TL2 or TL3) or Bypass Kit (TL 4)</p>"
+		],
+		"supplyPoints": 1,
+		"talentChoices": {
+			"choices": [
+				"Compendium.dreams-and-machines.character_options.Item.EbxVaQJqTFWMmwst",
+				"Compendium.dreams-and-machines.character_options.Item.7Epqmt3GRixdvrlB",
+				"Compendium.dreams-and-machines.character_options.Item.Gw50SCHK49o7sgho",
+				"Compendium.dreams-and-machines.character_options.Item.CHTVggGdCcju8c6w",
+				"Compendium.dreams-and-machines.character_options.Item.tlQ3YHVObpBpPxtP"
+			],
+			"maxChoices": 1,
+			"selected": [
+			]
+		},
+		"techLevel": 1
+	},
+	"type": "archetype"
+}

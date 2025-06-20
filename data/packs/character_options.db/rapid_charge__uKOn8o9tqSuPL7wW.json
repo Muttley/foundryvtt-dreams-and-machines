@@ -1,0 +1,14 @@
+{
+	"_id": "uKOn8o9tqSuPL7wW",
+	"_key": "!items!uKOn8o9tqSuPL7wW",
+	"effects": [
+	],
+	"folder": "i9RMOYUguzsLn2dz",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Rapid Charge",
+	"system": {
+		"description": "<p>You’ve learned to squeeze every last bit of charge from your powered weapons and tools.</p><p>As an action, you can spend one or more Supply Points to recharge a Powered item or weapon you or an ally you can reach are carrying. It costs 1 Supply Point to recharge a Powered (Breather) item, 2 Supply Points to recharge a Powered (Break) item, and 3 Supply Points to recharge a Powered (Bed) item.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

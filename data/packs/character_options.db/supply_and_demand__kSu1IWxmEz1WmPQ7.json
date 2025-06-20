@@ -1,0 +1,14 @@
+{
+	"_id": "kSu1IWxmEz1WmPQ7",
+	"_key": "!items!kSu1IWxmEz1WmPQ7",
+	"effects": [
+	],
+	"folder": "JrNnnpDNW076OBbF",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Supply and Demand",
+	"system": {
+		"description": "<p>You’re used to haggling and bartering to exchange what you’ve got for what you need.</p><p>When you attempt a Skill Test to trade resources or valuables you’ve obtained for something else, you may re-roll one d20 for free, without spending Spirit.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

@@ -1,0 +1,14 @@
+{
+	"_id": "lAG4mWXXGR0UjhBP",
+	"_key": "!items!lAG4mWXXGR0UjhBP",
+	"effects": [
+	],
+	"folder": "fEwtsbtEKxPsS2Fo",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Following a Lead",
+	"system": {
+		"description": "<p>Constantly seeking the greatest prizes and most valuable treasures, you always keep an ear out for rumors, legends, even tall tales that might contain the secrets of your next great discovery.</p><p>When you spend Momentum to <strong>Ask a Question</strong>, you may add 1 to Threat to create a Truth which represents some insight or useful fact you’ve gained from the rumors you’ve heard.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

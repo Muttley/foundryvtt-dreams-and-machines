@@ -1,0 +1,14 @@
+{
+	"_id": "7Epqmt3GRixdvrlB",
+	"_key": "!items!7Epqmt3GRixdvrlB",
+	"effects": [
+	],
+	"folder": "r03CVQvnkbKZIVHf",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Fast Friends",
+	"system": {
+		"description": "<p>You’re gregarious and make friends easily.</p><p>After you complete a <strong>Bed</strong> rest, you can choose one character whom you do not have a <strong>bond</strong> with. You gain a bond with that character until the next time you go to <strong>Bed</strong>.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

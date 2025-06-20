@@ -1,0 +1,52 @@
+{
+	"_id": "T7o0xO7Ewd8u9EWO",
+	"_key": "!items!T7o0xO7Ewd8u9EWO",
+	"effects": [
+	],
+	"folder": "NhxCGX5D0YSnntN4",
+	"img": "systems/dreams-and-machines/assets/icons/archetype.svg",
+	"name": "Grabber",
+	"system": {
+		"attributeChoices": {
+			"choices": [
+				"insight",
+				"might",
+				"quickness"
+			],
+			"values": [
+			]
+		},
+		"configured": false,
+		"description": "<p>Grabbers are a breed apart, choosing to delve into the deepest and most dangerous of ruins, seeking out the powerful treasures hidden within. It may be high risk, but high risk means high reward, if you know your business the way you do. Light-footed and sneaky, your mantra “get in quick, and get out quicker'' keeps you away from trouble — mostly. You and your crew are not Spears or Sentinels, you have no interest in facing down a Waker or Thrall, not when you can sneak past them and get what you came for anyway. Enterprising Grabbers are always looking for leads to lucrative finds, and always advertise their services before going on a run — grabbing stuff to order makes shifting it that much easier. Then you’re away into the wilderness, traveling on your makeshift buggy, automated wagon, or those fancy electric trail bikes you found on the last trip out, just looking for the perfect haul.</p><ul><li><p><strong>Truth</strong>: The character gains the Truth “Grabber”</p></li><li><p><strong>Attributes</strong>: Add +3 to one of Might, Quickness, or Insight, add +2 to one of the remaining two, and add +1 to the last of the three.</p></li><li><p><strong>Skills</strong>: Add +2 to one of Move, Sneak, or Operate. Add +1 to the other two.</p></li><li><p><strong>Tech Level</strong>: The character’s Tech Level is increased by +1.</p></li><li><p><strong>Spirit</strong>: The character’s Spirit Pool is increased by +1.</p></li><li><p><strong>Supply Points</strong>: The character has +1 Supply Points.</p></li><li><p><strong>Talent</strong>: Grabbers begin with one of the following talents: <strong>Never Stay Still</strong>, <strong>Better When Unseen</strong>, <strong>Following a Lead</strong>, <strong>Bag of Tricks</strong>, or <strong>Light Feet</strong>.</p></li><li><p><strong>Goals</strong>: When this character avoids a problem using stealth or cunning, or they solve a problem with something they gained from salvaging somewhere dangerous, gain <strong>growth</strong>.</p></li><li><p><strong>Equipment</strong>: One Hand-Made or Security Weapon, Protective Clothing (TL2 or TL3) or covert cloak (TL4), Toolkit (TL 2 or TL3) or Bypass Kit (TL4)</p></li></ul>",
+		"goals": "<p>When this character avoids a problem using stealth or cunning, or they solve a problem with something they gained from salvaging somewhere dangerous, gain <strong>growth</strong>.</p>",
+		"skillChoices": {
+			"choices": [
+				"move",
+				"sneak",
+				"operate"
+			],
+			"values": [
+			]
+		},
+		"source": "PlayersGuide",
+		"spirit": 1,
+		"startingGear": [
+			"<p>One Hand-Made or Security Weapon, Protective Clothing (TL2 or TL3) or covert cloak (TL4), Toolkit (TL 2 or TL3) or Bypass Kit (TL4)</p>"
+		],
+		"supplyPoints": 1,
+		"talentChoices": {
+			"choices": [
+				"Compendium.dreams-and-machines.character_options.Item.ATdQ1SFJSB7z8auP",
+				"Compendium.dreams-and-machines.character_options.Item.xyge2aGcwGLSwIrG",
+				"Compendium.dreams-and-machines.character_options.Item.lAG4mWXXGR0UjhBP",
+				"Compendium.dreams-and-machines.character_options.Item.DOFgMZYGJe3BiN4z",
+				"Compendium.dreams-and-machines.character_options.Item.wa5m3FYlE8uGj6k3"
+			],
+			"maxChoices": 1,
+			"selected": [
+			]
+		},
+		"techLevel": 1
+	},
+	"type": "archetype"
+}

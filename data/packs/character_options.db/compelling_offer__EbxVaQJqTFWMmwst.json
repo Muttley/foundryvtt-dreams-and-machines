@@ -1,0 +1,14 @@
+{
+	"_id": "EbxVaQJqTFWMmwst",
+	"_key": "!items!EbxVaQJqTFWMmwst",
+	"effects": [
+	],
+	"folder": "r03CVQvnkbKZIVHf",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Compelling Offer",
+	"system": {
+		"description": "<p>You’re good at finding what people want, and offering it in exchange for their aid.</p><p>When you attempt a Skill Test to persuade someone to do something, you may offer them something valuable in exchange: for every 2 coin the offered item is worth, reduce the Difficulty of your Skill Test by 1, to a minimum of 1.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

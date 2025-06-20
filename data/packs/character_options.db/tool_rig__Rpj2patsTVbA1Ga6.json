@@ -1,0 +1,14 @@
+{
+	"_id": "Rpj2patsTVbA1Ga6",
+	"_key": "!items!Rpj2patsTVbA1Ga6",
+	"effects": [
+	],
+	"folder": "i9RMOYUguzsLn2dz",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Tool Rig",
+	"system": {
+		"description": "<p>You’ve assembled a custom tool rig, a modular collection of tools fitted across your body or mounted on prehensile arms, designed for ease of use.</p><p>This tool rig is built from your toolkit, plus additional mounts for items you make in the field. You may add other powered items, except weapons or armor, to this rig during a <strong>Break</strong> rest, but the rig can only mount a number of tools equal to your Operate skill.</p><p>When you use a toolkit, a device created using Supply Points, or another item fitted to your tool rig, each time you spend a point of Spirit, it allows you to both purchase a d20 before the roll and re-roll a die after the roll. Further, when you discharge a Powered item in the tool rig, you may instantly recharge it by discharging another Powered item in your tool rig.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

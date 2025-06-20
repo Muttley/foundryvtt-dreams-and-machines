@@ -1,0 +1,14 @@
+{
+	"_id": "33n3CfamzddphlHP",
+	"_key": "!items!33n3CfamzddphlHP",
+	"effects": [
+	],
+	"folder": "5NdV77e3DLKG12E9",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Guidance",
+	"system": {
+		"description": "<p>You provide direction to help overcome a great many problems.</p><p>When an ally attempts a Skill Test, you may spend 1 Spirit to aid that character, rolling 1d20 against your <strong>Insight</strong> (<strong>Talk</strong>) as per the Assistance rules, even if you couldn’t normally assist them.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

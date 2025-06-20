@@ -1,0 +1,14 @@
+{
+	"_id": "OzRTIqZQLd6SdWkC",
+	"_key": "!items!OzRTIqZQLd6SdWkC",
+	"effects": [
+	],
+	"folder": "jIRmcxhG0mX4rLFx",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Never Unarmed",
+	"system": {
+		"description": "<p>You always have a back-up weapon or three.</p><p>On your turn, you may spend Supply Points to produce a back-up weapon. One Supply Point creates a melee weapon which inflicts an Injury with a cost of 1 (the GM will determine the Injury’s name), and additional points may be spent to increase that Injury’s cost by +1, to make it a ranged weapon, or to add the Breaker quality (each effect costs 1). The weapon is destroyed after making one attack. You cannot spend more Supply Points on this talent than your Tech Level.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

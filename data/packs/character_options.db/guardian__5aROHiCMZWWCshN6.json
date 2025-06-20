@@ -1,0 +1,52 @@
+{
+	"_id": "5aROHiCMZWWCshN6",
+	"_key": "!items!5aROHiCMZWWCshN6",
+	"effects": [
+	],
+	"folder": "NhxCGX5D0YSnntN4",
+	"img": "systems/dreams-and-machines/assets/icons/archetype.svg",
+	"name": "Guardian",
+	"system": {
+		"attributeChoices": {
+			"choices": [
+				"might",
+				"quickness",
+				"resolve"
+			],
+			"values": [
+			]
+		},
+		"configured": false,
+		"description": "<p>You’re an average person, living your normal life, tending to your farm or business, looking after your family, building a community around you, a place to call home. And you are committed to that home, so much so that you volunteered to become a Guardian — any community’s first line of defense. You have weapons, prized possessions handed down the generations or the best the Grabbers can find for you, and you keep their actions clean, their blades keen, and within reach at all times. You may only be the settlement’s militia, but you are tough, ready, and willing to defend your home, with your life, if needs must. Years of practice with your comrades, months of training by the Sentinels, and those times where you had to fight for real, have made you into a defensive bulwark ready to hold out until reinforcements — or the professionals — arrive. You know that you cannot survive without your community, but likewise your community cannot survive without you.</p><ul><li><p><strong>Truth</strong>: The character gains the Truth Guardian</p></li><li><p><strong>Attributes</strong>: Add +3 to one of Might, Quickness, or Resolve, add +2 to one of the remaining two, and add +1 to the last of the three.</p></li><li><p><strong>Skills</strong>: Add +2 to one of Move, Fight, or Sneak. Add +1 to the other two.</p></li><li><p><strong>Tech Level</strong>: The character’s Tech Level is increased by +1.</p></li><li><p><strong>Spirit</strong>: The character’s Spirit Pool is increased by +1.</p></li><li><p><strong>Supply Points</strong>: The character’s Supply Points are unchanged.</p></li><li><p><strong>Talent</strong>: Guardians begin with one of the following talents: <strong>Decisive Strike</strong>, Rapid Assault, <strong>Defensive Posture</strong>, <strong>Never Unarmed</strong>, or <strong>Army of One.</strong></p></li><li><p><strong>Goals</strong>: When this character defeats a Major Notable NPC that threatened them, their group, or a friendly community, gain <strong>growth</strong>.</p></li><li><p><strong>Equipment</strong>: One Hand-Made, Security, or Military weapon, one Hand-Made or Security Weapon, Salvage Armor (TL 1 or TL2) or Light Armor (Security) (TL 2 or TL 3), 3 Coin.</p></li></ul>",
+		"goals": "<p>When this character defeats a Major Notable NPC that threatened them, their group, or a friendly community, gain <strong>growth</strong>.</p>",
+		"skillChoices": {
+			"choices": [
+				"fight",
+				"move",
+				"sneak"
+			],
+			"values": [
+			]
+		},
+		"source": "PlayersGuide",
+		"spirit": 1,
+		"startingGear": [
+			"<p>One Hand-Made, Security, or Military weapon, one Hand-Made or Security Weapon, Salvage Armor (TL 1 or TL2) or Light Armor (Security) (TL 2 or TL 3), 3 Coin.</p>"
+		],
+		"supplyPoints": 0,
+		"talentChoices": {
+			"choices": [
+				"Compendium.dreams-and-machines.character_options.Item.yFQXqjw4g5q2zb6x",
+				"Compendium.dreams-and-machines.character_options.Item.qSewpfsGVnNrpJE2",
+				"Compendium.dreams-and-machines.character_options.Item.uLm0gsEJVDkqBCnU",
+				"Compendium.dreams-and-machines.character_options.Item.OzRTIqZQLd6SdWkC",
+				"Compendium.dreams-and-machines.character_options.Item.7scklsOZORlOc7PS"
+			],
+			"maxChoices": 1,
+			"selected": [
+			]
+		},
+		"techLevel": 1
+	},
+	"type": "archetype"
+}

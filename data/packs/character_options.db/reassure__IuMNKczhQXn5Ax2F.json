@@ -1,0 +1,14 @@
+{
+	"_id": "IuMNKczhQXn5Ax2F",
+	"_key": "!items!IuMNKczhQXn5Ax2F",
+	"effects": [
+	],
+	"folder": "5NdV77e3DLKG12E9",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Reassure",
+	"system": {
+		"description": "<p>You have a knack for tending to those at their lowest.</p><p>When you attempt a Skill Test to help an ally who is exhausted, you reduce the Difficulty by 1. Further, if you succeed, they regain Spirit equal to half your Talk skill, rounding up, rather than only 1.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

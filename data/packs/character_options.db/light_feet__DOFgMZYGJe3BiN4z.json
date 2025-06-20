@@ -1,0 +1,14 @@
+{
+	"_id": "DOFgMZYGJe3BiN4z",
+	"_key": "!items!DOFgMZYGJe3BiN4z",
+	"effects": [
+	],
+	"folder": "fEwtsbtEKxPsS2Fo",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Light Feet",
+	"system": {
+		"description": "<p>You move fast to secure your prize first, and get away before anyone else reaches you.</p><p>When you spend Momentum to move an additional zone, you may spend two Momentum instead of one to move two zones rather than one.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

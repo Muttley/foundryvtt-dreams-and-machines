@@ -1,0 +1,14 @@
+{
+	"_id": "pUYWrgUu27rqaBfH",
+	"_key": "!items!pUYWrgUu27rqaBfH",
+	"effects": [
+	],
+	"folder": "JrNnnpDNW076OBbF",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Risky Resources",
+	"system": {
+		"description": "<p>You’re willing to take risks to get the resources you need.</p><p>When you succeed at a Skill Test to claim something valuable, such as useful resources, raw materials, precious information, rare technology, or Supply Points, you may add 2 to Threat to secure a greater quantity or greater value of those resources (in the case of Supply Points, double the amount received). The GM determines the benefits of the larger quantity or value otherwise.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

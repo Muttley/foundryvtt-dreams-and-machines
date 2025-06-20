@@ -1,0 +1,14 @@
+{
+	"_id": "rPwbldA2OJ7BpMTh",
+	"_key": "!items!rPwbldA2OJ7BpMTh",
+	"effects": [
+	],
+	"folder": "5NdV77e3DLKG12E9",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Bedside Manner",
+	"system": {
+		"description": "<p>You can put people at ease as you tend their wounds.</p><p>When you succeed at a Skill Test to perform first aid on an ally, and you bought one or more extra dice for that Test, the ally regains Spirit equal to the number of extra dice you bought.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

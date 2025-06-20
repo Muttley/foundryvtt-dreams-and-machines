@@ -1,0 +1,14 @@
+{
+	"_id": "tlQ3YHVObpBpPxtP",
+	"_key": "!items!tlQ3YHVObpBpPxtP",
+	"effects": [
+	],
+	"folder": "r03CVQvnkbKZIVHf",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Shrewd Customer",
+	"system": {
+		"description": "<p>You’ve got a knack for getting the best price for your trades.</p><p>When you attempt a Skill Test to barter or haggle, reduce the Difficulty by 1.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

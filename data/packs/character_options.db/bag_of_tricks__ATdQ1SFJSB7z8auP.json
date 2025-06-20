@@ -1,0 +1,14 @@
+{
+	"_id": "ATdQ1SFJSB7z8auP",
+	"_key": "!items!ATdQ1SFJSB7z8auP",
+	"effects": [
+	],
+	"folder": "fEwtsbtEKxPsS2Fo",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Bag of Tricks",
+	"system": {
+		"description": "<p>You collect tools and resources that can help you get out of a tricky situation.</p><p>During an action scene, on your turn you may spend one Supply Point to create an instant trick to distract or disrupt an enemy, before or after you take your action. You may: provide yourself with concealment (such as smoke), add +1 to the Difficulty of the next Test one NPC makes, or prevent one NPC from moving from their zone in their next turn. You may suggest alternate small effects with GM’s permission.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

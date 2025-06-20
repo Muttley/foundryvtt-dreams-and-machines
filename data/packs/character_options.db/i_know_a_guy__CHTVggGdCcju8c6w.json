@@ -1,0 +1,14 @@
+{
+	"_id": "CHTVggGdCcju8c6w",
+	"_key": "!items!CHTVggGdCcju8c6w",
+	"effects": [
+	],
+	"folder": "r03CVQvnkbKZIVHf",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "I Know a Guy",
+	"system": {
+		"description": "<p>You have friends everywhere.</p><p>You have one additional <strong>bond</strong> within the group. In addition, once per adventure when you approach a new group of people, you may spend 2 Momentum or add 2 to Threat to declare that you have a contact within that group, unless that group is hostile.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

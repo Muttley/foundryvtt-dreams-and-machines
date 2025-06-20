@@ -1,0 +1,52 @@
+{
+	"_id": "QVsyi9zIr1WWOKUC",
+	"_key": "!items!QVsyi9zIr1WWOKUC",
+	"effects": [
+	],
+	"folder": "NhxCGX5D0YSnntN4",
+	"img": "systems/dreams-and-machines/assets/icons/archetype.svg",
+	"name": "Tech",
+	"system": {
+		"attributeChoices": {
+			"choices": [
+				"insight",
+				"might",
+				"resolve"
+			],
+			"values": [
+			]
+		},
+		"configured": false,
+		"description": "<p>The world relies on people with the skill to fix stuff, the patience to study, the genius to unlock the secrets of science — people like you. Learning at the knee of your parents, you have the know-how to make old machines run again, or slap together new ones that work well enough. You’re a mechanic in demand, and the people are always in need of your skills — it’s a never ending job, but someone has to do it. Working from the dusty workshops at the top of your Archivist tower, or in the back of a tent in the local Everan village, you get your hands on every bit of Old World tech you can, taking it apart, working out what it did and how it did it, putting it back together and hoping it works. If you’re not a mechanic, you might be a scientist tinkering with advanced technology others could only dream of, yearning to uncover the deepest secrets of yesteryear, not just for the good of the people but simply because you must. Your thirst for knowledge is unquenchable.</p><ul><li><p><strong>Truth</strong>: The character gains the Truth Tech</p></li><li><p><strong>Attributes</strong>: Add +3 to one of Might, Insight, Resolve, add +2 to one of the remaining two, and add +1 to the last of the three.</p></li><li><p><strong>Skills</strong>: Add +2 to one of Sneak, Study, or Operate. Add +1 to the other two.</p></li><li><p><strong>Tech Level</strong>: The character’s Tech Level is increased by +2.</p></li><li><p><strong>Spirit</strong>: The character’s Spirit Pool is unchanged.</p></li><li><p><strong>Supply Points</strong>: The character has +2 Supply Points.</p></li><li><p><strong>Talent</strong>: Techs begin with one of the following talents: Machine Sense, Tinkerer, Mech-Breaker, Rapid Charge, or Tool Rig.</p></li><li><p>: When this character solves a problem caused by technology th<strong>Goals</strong>at threatens them, their group, or a friendly community, gain growth.</p></li><li><p><strong>Equipment</strong>: One Hand-Made or Security Weapon, Protective Clothing (TL3), Toolkit (any TL), Data Storage Device (TL3).</p></li></ul>",
+		"goals": "<p>When this character solves a problem caused by technology that threatens them, their group, or a friendly community, gain <strong>growth</strong>.</p>",
+		"skillChoices": {
+			"choices": [
+				"sneak",
+				"study",
+				"operate"
+			],
+			"values": [
+			]
+		},
+		"source": "PlayersGuide",
+		"spirit": 0,
+		"startingGear": [
+			"<p>One Hand-Made or Security Weapon, Protective Clothing (TL3), Toolkit (any TL), Data Storage Device (TL3).</p>"
+		],
+		"supplyPoints": 2,
+		"talentChoices": {
+			"choices": [
+				"Compendium.dreams-and-machines.character_options.Item.3z7yk3Cxvh6HyWg5",
+				"Compendium.dreams-and-machines.character_options.Item.kwhA6Iym72DShqQE",
+				"Compendium.dreams-and-machines.character_options.Item.uKOn8o9tqSuPL7wW",
+				"Compendium.dreams-and-machines.character_options.Item.TvWjcckB830iFHbl",
+				"Compendium.dreams-and-machines.character_options.Item.Rpj2patsTVbA1Ga6"
+			],
+			"maxChoices": 1,
+			"selected": [
+			]
+		},
+		"techLevel": 2
+	},
+	"type": "archetype"
+}
