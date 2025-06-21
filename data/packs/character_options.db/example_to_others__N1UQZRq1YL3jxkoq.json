@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Example to Others",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.HA5Ajtz38zV94aWr",
 		"description": "<p>You help people achieve their best, and help them recover from their mistakes.</p><p>When another player character in the group fails a Skill Test, you may spend Spirit to help them learn from the experience, giving them <strong>growth</strong>. This costs Spirit equal to 6 minus the Difficulty of the Skill Test, and the other PC must be visible to you and able to hear you when they failed the Skill Test.</p>",
 		"source": "PlayersGuide"
 	},

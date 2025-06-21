@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Decisive Strike",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.5aROHiCMZWWCshN6",
 		"description": "<p>You can deliver punishing blows which are hard to resist.</p><p>When you succeed at an attack, you may spend 1 Spirit to increase the cost to avoid the Injury by +2.</p>",
 		"source": "PlayersGuide"
 	},

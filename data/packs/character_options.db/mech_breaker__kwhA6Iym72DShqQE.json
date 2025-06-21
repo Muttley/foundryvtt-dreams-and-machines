@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Mech-Breaker",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.QVsyi9zIr1WWOKUC",
 		"description": "<p>You’ve learned how machines work, and you’ve learned how to take them apart.</p><p>If you have created a Truth which represents a weakness or flaw you’ve learned about or spotted in a machine, then you — or whichever other character uses that Truth on an attack against that machine — may add +2 to the cost to avoid that attack’s Injury. After an attack has been made using this benefit, the Truth created is removed, as the machine adapts to protect that weakness.</p>",
 		"source": "PlayersGuide"
 	},

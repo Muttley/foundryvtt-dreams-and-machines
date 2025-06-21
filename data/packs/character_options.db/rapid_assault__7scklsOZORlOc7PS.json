@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Rapid Assault",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.5aROHiCMZWWCshN6",
 		"description": "<p>You can face down multiple enemies at once, moving from foe to foe with calm precision.</p><p>When you succeed at an attack against a group, you may spend 1 Spirit to strike an additional enemy within that group (or two extra foes if you’re using a Burst weapon).</p>",
 		"source": "PlayersGuide"
 	},

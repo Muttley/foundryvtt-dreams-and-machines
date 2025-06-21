@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Rally",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.HA5Ajtz38zV94aWr",
 		"description": "<p>You can bolster people’s courage and will when the situation gets tough.</p><p>When you spend one or more Momentum to restore an ally’s Spirit, you may spend one or more Spirit to affect multiple allies, who must all be able to see and hear you. Each Spirit spent lets you restore Spirit to one extra ally, and all allies regain the same amount of Spirit (1 for 1 Momentum, 2 for 3 Momentum, 3 for 6 Momentum). The effects of a <strong>supportive bond</strong> are applied after this.</p>",
 		"source": "PlayersGuide"
 	},

@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Machine Sense",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.QVsyi9zIr1WWOKUC",
 		"description": "<p>You have a deeper understanding than most of how machines work and how to avoid the dangers they pose.</p><p>When you attempt a Test (or roll to set the Difficulty in a contest) to avoid an action or effect caused by a machine, you may spend 2 Spirit before rolling to count one of your d20s as if it had rolled a 1. Further, whenever you would suffer an Injury from an attack by a machine, reduce the cost to avoid that Injury by 1.</p>",
 		"source": "PlayersGuide"
 	},

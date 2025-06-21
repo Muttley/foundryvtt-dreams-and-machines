@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Better When Unseen",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.T7o0xO7Ewd8u9EWO",
 		"description": "<p>You do your best work when nobody is looking.</p><p>When you are in a situation where no enemy is aware of you, or when you are hidden from them, you gain 2 additional Momentum, which must be spent immediately. This Momentum cannot be saved.</p>",
 		"source": "PlayersGuide"
 	},

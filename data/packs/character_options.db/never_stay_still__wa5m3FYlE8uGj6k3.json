@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Never Stay Still",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.T7o0xO7Ewd8u9EWO",
 		"description": "<p>Movement is life. If you stay still, it’s only a temporary state until you can get moving again.</p><p>When you use Quickness to defend against an attack or resist an action or hazard, if you succeed at the Test or win the contest, you regain 1 Spirit and may immediately move up to one zone.</p>",
 		"source": "PlayersGuide"
 	},

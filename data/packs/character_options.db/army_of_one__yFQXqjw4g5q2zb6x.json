@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Army of One",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.5aROHiCMZWWCshN6",
 		"description": "<p>You’ve developed a knack for operating two weapons at once.</p><p>When you make an attack, you may choose to wield two weapons. Make the first attack as normal; if that succeeds, you may spend 1 Momentum to make a second attack, which must be with the other weapon.</p>",
 		"source": "PlayersGuide"
 	},

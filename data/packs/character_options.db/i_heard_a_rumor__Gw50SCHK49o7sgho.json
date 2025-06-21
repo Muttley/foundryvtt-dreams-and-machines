@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "I Heard a Rumor",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.Ho94l9D0Eap7mrG1",
 		"description": "<p>People trust you with their secrets.</p><p>At the start of a scene, you may add up to 3 to Threat. For each point of Threat added, you may ask the GM one additional question about the situation or location. The information the GM provides will have to come from rumors and news from various sources.</p>",
 		"source": "PlayersGuide"
 	},

@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Reach the Best Stuff",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.UPiVr1CvuTubMKBz",
 		"description": "<p>You know that the better materials — and often the ones that haven’t been claimed yet — can be found in hard-to-reach places.</p><p>When you would cross an obstacle or move through difficult terrain, reduce the Momentum cost or Skill Test Difficulty by 1, to a minimum of 0.</p>",
 		"source": "PlayersGuide"
 	},

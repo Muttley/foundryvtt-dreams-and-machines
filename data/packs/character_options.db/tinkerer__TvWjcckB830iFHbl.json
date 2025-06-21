@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Tinkerer",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.QVsyi9zIr1WWOKUC",
 		"description": "<p>You are used to jury-rigging the tools you need, and you are particularly good at using parts and salvage efficiently.</p><p>When you create a device using Supply Points, reduce the number of Supply Points you spend by 1 (to a minimum of 1) after determining what you want to create. Further, you may choose to disassemble any device you created, regaining 1 Supply Point.</p>",
 		"source": "PlayersGuide"
 	},

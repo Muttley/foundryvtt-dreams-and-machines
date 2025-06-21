@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Understand the Land",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.UPiVr1CvuTubMKBz",
 		"description": "<p>You have an appreciation for the land and what it can provide.</p><p>When you attempt a Skill Test to locate resources or otherwise find something valuable or significant in the wilderness, you generate one bonus Momentum, which may only be used to ask a question.</p>",
 		"source": "PlayersGuide"
 	},

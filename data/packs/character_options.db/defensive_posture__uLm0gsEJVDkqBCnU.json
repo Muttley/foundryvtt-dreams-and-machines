@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Defensive Posture",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.5aROHiCMZWWCshN6",
 		"description": "<p>You are particularly good at staying alive.</p><p>When an enemy makes a successful attack against you, before you spend Spirit to avoid an Injury, you may add 1 to Threat to reduce the cost to avoid the Injury by 2, to a minimum of 1. You can confer this reduction to an ally, but the ally must be at your side when they are attacked.</p>",
 		"source": "PlayersGuide"
 	},

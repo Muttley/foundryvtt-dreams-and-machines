@@ -7,6 +7,7 @@
 	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
 	"name": "Make Do and Mend",
 	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.UPiVr1CvuTubMKBz",
 		"description": "<p>You let nothing go to waste and can salvage useful parts and materials even from your own creations.</p><p>At the end of a scene, if you created any temporary items using Supply Points, you recover half (rounded up) the Supply Points spent to make each item.</p>",
 		"source": "PlayersGuide"
 	},
