@@ -3,6 +3,7 @@ export default function Qualities() {
 
 	return new fields.ArrayField(
 		new fields.DocumentUUIDField({
+			blank: true,
 			initial: "",
 			nullable: false,
 		}),

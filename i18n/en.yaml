@@ -142,6 +142,7 @@ DNM.Labels.Weapon.Ranged: Ranged
 DNM.Labels.Weapon.Type: Weapon Type
 DNM.Labels.Weapons: Weapons
 DNM.Labels.WeaponType: Weapon Type
+DNM.Notifications.MissingFromCompendiums: The {missingType} with UUID '{missingUuid}' configured for this {type} with the name '{name}' is missing from the compendiums
 DNM.Notifications.NotEnoughMomentum: Cannot spend Momentum while the pool is empty! Perhaps you should generate Threat instead?
 DNM.Notifications.NotEnoughThreat: Cannot spend Threat while the pool is empty!
 DNM.Placeholders.ArchetypeGoal.NoArchetype: No Archetype has been added to the character

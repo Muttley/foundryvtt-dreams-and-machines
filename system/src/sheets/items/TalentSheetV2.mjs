@@ -10,6 +10,12 @@ export default class TalentSheet extends DnMItemSheetV2 {
 		tabs: {
 			template: templatePath("_shared-partials/tabs"),
 		},
+		attributes: {
+			template: templatePath("item/talent/attributes-tab"),
+			templates: [
+				templatePath("item/talent/_partials/archetype"),
+			],
+		},
 		description: {
 			template: templatePath("_shared-partials/description-tab"),
 		},
@@ -21,6 +27,52 @@ export default class TalentSheet extends DnMItemSheetV2 {
 
 	get defaultTab() {
 		return "description";
+	}
+
+
+	/** @override */
+	async _preparePartContext(partId, context, options) {
+		await super._preparePartContext(partId, context, options);
+
+		if (partId === "attributes") {
+			const archetypeItems = await dreams.compendiums.archetypes(false);
+
+			let foundOwnArchetype = this.item.system.archetype
+				? false
+				: true;
+
+			context.archetypes = [];
+
+			for (const archetype of archetypeItems) {
+				console.log(archetype.system);
+
+				if (!foundOwnArchetype) {
+					foundOwnArchetype = this.item.system.archetype === archetype.uuid;
+				}
+
+				context.archetypes.push({
+					uuid: archetype.uuid,
+					label: archetype.name,
+				});
+			}
+
+			if (!foundOwnArchetype) {
+				dreams.utils.reportMissingTypeByUuid(
+					this.item, "archetype", this.system.archetype
+				);
+
+				context.archetypes.push({
+					uuid: this.item.system.archetype,
+					label: "[Invalid ID]",
+				});
+			}
+
+			context.archetypes = context.archetypes.sort(
+				(a, b) => a.label.localeCompare(b.label)
+			);
+		}
+
+		return context;
 	}
 
 }

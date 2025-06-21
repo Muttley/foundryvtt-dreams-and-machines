@@ -62,6 +62,11 @@ export default class DnMCompendiums {
 	}
 
 
+	static async archetypes(filterSources=true) {
+		return DnMCompendiums.#documents("Item", "archetype", filterSources);
+	}
+
+
 	static async qualities(filterSources=true) {
 		return DnMCompendiums.#documents("Item", "quality", filterSources);
 	}

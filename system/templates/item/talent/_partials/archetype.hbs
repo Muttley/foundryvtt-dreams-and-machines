@@ -1,0 +1,15 @@
+<div>
+	<span class="label">
+		{{localize "DNM.Labels.Archetype"}}
+	</span>
+	<select name="system.archetype" {{disabled editModeDisabled}}>
+		<option value="">&mdash;</option>
+		{{selectOptions
+			archetypes
+			labelAttr="label"
+			localize=false
+			selected=@root.system.archetype
+			valueAttr="uuid"
+		}}
+	</select>
+</div>

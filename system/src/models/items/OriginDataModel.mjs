@@ -24,6 +24,7 @@ export default class OriginDataModel extends foundry.abstract.TypeDataModel {
 
 			fixedSpecialAbilities: new fields.ArrayField(
 				new fields.DocumentUUIDField({
+					blank: true,
 					initial: "",
 					nullable: false,
 				}),

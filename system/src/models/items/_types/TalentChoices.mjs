@@ -10,6 +10,7 @@ const TalentChoices = () => ({
 		}),
 		selected: new fields.ArrayField(
 			new fields.DocumentUUIDField({
+				blank: true,
 				initial: "",
 				nullable: false,
 			}),
@@ -20,6 +21,7 @@ const TalentChoices = () => ({
 		),
 		choices: new fields.ArrayField(
 			new fields.DocumentUUIDField({
+				blank: true,
 				initial: "",
 				nullable: false,
 			}),

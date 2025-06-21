@@ -57,6 +57,17 @@ export default class DnMUtils {
 	}
 
 
+	static async reportMissingTypeByUuid(item, missingType, missingUuid) {
+		ui.notifications.error(
+			game.i18n.format("DNM.Notifications.MissingFromCompendiums", {
+				name: item.name,
+				type: game.i18n.localize(`TYPES.Item.${item.type}`),
+				missingType: game.i18n.localize(`TYPES.Item.${missingType}`),
+				missingUuid: missingUuid,
+			})
+		);
+	}
+
 	// If this is a new release, show the release notes to the GM the first time
 	// they login
 	static async showNewReleaseNotes() {

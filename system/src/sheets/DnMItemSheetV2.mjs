@@ -29,6 +29,7 @@ export default class DnMItemSheetV2
 			case "equipment":
 			case "majorNPCAction":
 			case "origin":
+			case "talent":
 			case "temperament":
 			case "weapon": {
 				return {
@@ -52,8 +53,7 @@ export default class DnMItemSheetV2
 					},
 				};
 			}
-			case "specialAbility":
-			case "talent": {
+			case "specialAbility": {
 				return {
 					description: {
 						cssClass: this.tabGroups.primary === "description" ? "active" : "",

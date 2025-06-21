@@ -10,6 +10,7 @@ const SpecialAbilityChoices = () => ({
 		}),
 		selected: new fields.ArrayField(
 			new fields.DocumentUUIDField({
+				blank: true,
 				initial: "",
 				nullable: false,
 			}),
@@ -20,6 +21,7 @@ const SpecialAbilityChoices = () => ({
 		),
 		choices: new fields.ArrayField(
 			new fields.DocumentUUIDField({
+				blank: true,
 				initial: "",
 				nullable: false,
 			}),

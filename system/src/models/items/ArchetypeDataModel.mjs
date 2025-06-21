@@ -58,7 +58,7 @@ export default class ArchetypeDataModel
 			),
 
 			techLevel: new fields.NumberField({
-				initial: 1,
+				initial: 0,
 				integer: true,
 				min: 0,
 				nullable: false,
