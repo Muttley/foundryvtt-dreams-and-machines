@@ -34,18 +34,6 @@
 			"<p>One Hand-Made or Security Weapon, Protective Clothing (TL2 or TL3) or covert cloak (TL4), Toolkit (TL 2 or TL3) or Bypass Kit (TL4)</p>"
 		],
 		"supplyPoints": 1,
-		"talentChoices": {
-			"choices": [
-				"Compendium.dreams-and-machines.character_options.Item.ATdQ1SFJSB7z8auP",
-				"Compendium.dreams-and-machines.character_options.Item.xyge2aGcwGLSwIrG",
-				"Compendium.dreams-and-machines.character_options.Item.lAG4mWXXGR0UjhBP",
-				"Compendium.dreams-and-machines.character_options.Item.DOFgMZYGJe3BiN4z",
-				"Compendium.dreams-and-machines.character_options.Item.wa5m3FYlE8uGj6k3"
-			],
-			"maxChoices": 1,
-			"selected": [
-			]
-		},
 		"techLevel": 1
 	},
 	"type": "archetype"

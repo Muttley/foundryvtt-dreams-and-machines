@@ -34,18 +34,6 @@
 			"<p>One Hand-Made or Security Weapon, Protective Clothing (TL2) or Salvage Armor (TL 1 or 2), First Aid Kit (TL2, TL3, or TL4), and 3 coin.</p>"
 		],
 		"supplyPoints": 0,
-		"talentChoices": {
-			"choices": [
-				"Compendium.dreams-and-machines.character_options.Item.rPwbldA2OJ7BpMTh",
-				"Compendium.dreams-and-machines.character_options.Item.N1UQZRq1YL3jxkoq",
-				"Compendium.dreams-and-machines.character_options.Item.33n3CfamzddphlHP",
-				"Compendium.dreams-and-machines.character_options.Item.SpcCHJFbUteu2Git",
-				"Compendium.dreams-and-machines.character_options.Item.IuMNKczhQXn5Ax2F"
-			],
-			"maxChoices": 1,
-			"selected": [
-			]
-		},
 		"techLevel": 1
 	},
 	"type": "archetype"

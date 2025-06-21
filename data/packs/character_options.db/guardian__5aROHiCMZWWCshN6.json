@@ -34,18 +34,6 @@
 			"<p>One Hand-Made, Security, or Military weapon, one Hand-Made or Security Weapon, Salvage Armor (TL 1 or TL2) or Light Armor (Security) (TL 2 or TL 3), 3 Coin.</p>"
 		],
 		"supplyPoints": 0,
-		"talentChoices": {
-			"choices": [
-				"Compendium.dreams-and-machines.character_options.Item.yFQXqjw4g5q2zb6x",
-				"Compendium.dreams-and-machines.character_options.Item.qSewpfsGVnNrpJE2",
-				"Compendium.dreams-and-machines.character_options.Item.uLm0gsEJVDkqBCnU",
-				"Compendium.dreams-and-machines.character_options.Item.OzRTIqZQLd6SdWkC",
-				"Compendium.dreams-and-machines.character_options.Item.7scklsOZORlOc7PS"
-			],
-			"maxChoices": 1,
-			"selected": [
-			]
-		},
 		"techLevel": 1
 	},
 	"type": "archetype"

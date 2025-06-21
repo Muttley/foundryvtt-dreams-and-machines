@@ -34,18 +34,6 @@
 			"<p>One Hand-Made or Security Weapon, Protective Clothing (TL3), Toolkit (any TL), Data Storage Device (TL3).</p>"
 		],
 		"supplyPoints": 2,
-		"talentChoices": {
-			"choices": [
-				"Compendium.dreams-and-machines.character_options.Item.3z7yk3Cxvh6HyWg5",
-				"Compendium.dreams-and-machines.character_options.Item.kwhA6Iym72DShqQE",
-				"Compendium.dreams-and-machines.character_options.Item.uKOn8o9tqSuPL7wW",
-				"Compendium.dreams-and-machines.character_options.Item.TvWjcckB830iFHbl",
-				"Compendium.dreams-and-machines.character_options.Item.Rpj2patsTVbA1Ga6"
-			],
-			"maxChoices": 1,
-			"selected": [
-			]
-		},
 		"techLevel": 2
 	},
 	"type": "archetype"

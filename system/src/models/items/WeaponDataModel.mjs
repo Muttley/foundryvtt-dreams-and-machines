@@ -22,9 +22,9 @@ export default class WeaponDataModel extends foundry.abstract.TypeDataModel {
 			qualities: WeaponQualities(),
 
 			weaponType: new fields.StringField({
-				initial: Object.keys(CONFIG.DREAMS.WEAPON_TYPES)[0],
+				initial: Object.keys(CONFIG.DREAMS.ITEM_CATEGORIES)[0],
 				choices: () => {
-					return Object.keys(CONFIG.DREAMS.WEAPON_TYPES);
+					return Object.keys(CONFIG.DREAMS.ITEM_CATEGORIES);
 				},
 				nullable: false,
 			}),

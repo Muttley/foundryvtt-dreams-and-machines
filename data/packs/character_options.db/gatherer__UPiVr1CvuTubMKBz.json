@@ -34,18 +34,6 @@
 			"<p>One Hand-Made or Security Weapon, Protective Clothing (TL2 or TL3) or Heavy Protective Clothing (TL3 or TL4), Survival Kit (TL2 or TL3) or Bypass Kit (TL 4)</p>"
 		],
 		"supplyPoints": 1,
-		"talentChoices": {
-			"choices": [
-				"Compendium.dreams-and-machines.character_options.Item.eFsLzilTbm7gbNzN",
-				"Compendium.dreams-and-machines.character_options.Item.KjzWwfWU4i837Zhh",
-				"Compendium.dreams-and-machines.character_options.Item.pUYWrgUu27rqaBfH",
-				"Compendium.dreams-and-machines.character_options.Item.kSu1IWxmEz1WmPQ7",
-				"Compendium.dreams-and-machines.character_options.Item.rwiwNTMFs1WUhMN7"
-			],
-			"maxChoices": 1,
-			"selected": [
-			]
-		},
 		"techLevel": 1
 	},
 	"type": "archetype"

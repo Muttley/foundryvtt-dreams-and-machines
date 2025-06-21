@@ -37,7 +37,6 @@ export default class ArchetypeSheet extends DnMItemSheetV2 {
 				templatePath("item/archetype/_partials/equipment"),
 				templatePath("item/archetype/_partials/goals"),
 				templatePath("item/archetype/_partials/skills"),
-				templatePath("item/archetype/_partials/talent-choices"),
 			],
 		},
 		description: {
@@ -48,29 +47,9 @@ export default class ArchetypeSheet extends DnMItemSheetV2 {
 		},
 	};
 
-
-	async #getTalentSelectorConfigs(context) {
-		const [selectedTalents, availableTalents] =
-			await dreams.utils.getDedupedSelectedItems(
-				await dreams.compendiums.talents(),
-				this.item.system.talentChoices.choices ?? []
-			);
-
-		context.talentChoicesConfig = {
-			availableItems: availableTalents,
-			choicesKey: "talentChoices.choices",
-			isItem: true,
-			label: game.i18n.localize("DNM.Labels.Talents"),
-			prompt: game.i18n.localize("DNM.Labels.SelectTalent"),
-			selectedItems: selectedTalents,
-		};
-	}
-
-
 	async _prepareArchetypeAttributes(context) {
 		this._getAttributeData(context);
 		this._getSkillData(context);
-		await this.#getTalentSelectorConfigs(context);
 
 		context.enrichedGoals = await TextEditor.enrichHTML(
 			this.system.goals,

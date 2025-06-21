@@ -3,7 +3,6 @@ import BookSource from "./_types/BookSource.mjs";
 import Configured from "./_types/Configured.mjs";
 import Description from "../_types/Description.mjs";
 import SkillBonusChoices from "./_types/SkillBonusChoices.mjs";
-import TalentChoices from "./_types/TalentChoices.mjs";
 
 export default class ArchetypeDataModel
 	extends foundry.abstract.TypeDataModel {
@@ -25,7 +24,6 @@ export default class ArchetypeDataModel
 			...Configured(),
 			...Description(),
 			...SkillBonusChoices(),
-			...TalentChoices(),
 
 			goals: new fields.HTMLField({
 				initial: "",
