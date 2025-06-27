@@ -291,14 +291,6 @@ export default class DnMItemSheetV2
 	async _preparePartContext(partId, context, options) {
 		await super._preparePartContext(partId, context, options);
 
-		switch (partId) {
-			case "description":
-				context.enrichedDescription = await TextEditor.enrichHTML(
-					this.system.description, { async: true }
-				);
-				break;
-		}
-
 		context.tab = context.tabs[partId];
 
 		return context;
@@ -331,17 +323,26 @@ export default class DnMItemSheetV2
 
 		context.allSources = await dreams.compendiums.sources();
 
+		const enrichedFields = this.system.enrichedFields ?? {};
+		for (let key of Object.keys(enrichedFields)) {
+			enrichedFields[key] = await TextEditor.enrichHTML(
+				enrichedFields[key]
+			);
+		}
+
+		context.enrichedFields = enrichedFields;
+
 		return context;
 	}
 
-	_getAttributeData(context) {
+	_getAttributeData(context, chosen) {
 		const attributes = [];
 
 		for (const [id, name] of Object.entries(CONFIG.DREAMS.ATTRIBUTES)) {
 			attributes.push({
 				id,
 				name,
-				selected: this.system.attributeChoices.choices.includes(id),
+				selected: chosen.includes(id),
 			});
 		}
 		context.attributes = attributes.sort(

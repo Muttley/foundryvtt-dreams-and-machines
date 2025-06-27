@@ -352,6 +352,15 @@ export default class DnMActorSheetV2
 		// characters or majorNPCs
 		if (this.actor.type !== "npc") this.getAttributesAndSkillsData(context);
 
+		const enrichedFields = this.system.enrichedFields ?? {};
+		for (let key of Object.keys(enrichedFields)) {
+			enrichedFields[key] = await TextEditor.enrichHTML(
+				enrichedFields[key]
+			);
+		}
+
+		context.enrichedFields = enrichedFields;
+
 		context.allSources = await dreams.compendiums.sources();
 
 		return context;

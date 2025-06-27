@@ -5,6 +5,7 @@ $columns: 6;
 %grid-styles {
 	@include p-reset;
 	display: grid;
+	// align-content: baseline;
 	grid-gap: 4px;
 }
 

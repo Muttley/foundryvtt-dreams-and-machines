@@ -7,3 +7,4 @@ export {default as OriginSheet} from "./OriginSheetV2.mjs";
 export {default as SpecialAbilitySheet} from "./SpecialAbilitySheetV2.mjs";
 export {default as TalentSheet} from "./TalentSheetV2.mjs";
 export {default as WeaponSheet} from "./WeaponSheetV2.mjs";
+export {default as TemperamentSheet} from "./TemperamentSheetV2.mjs";

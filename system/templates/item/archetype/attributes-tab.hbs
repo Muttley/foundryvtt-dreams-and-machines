@@ -1,7 +1,7 @@
 <section class="tab {{tab.cssClass}}" data-group="primary" data-tab="attributes">
 	<div class="tab-body">
-		{{> (template "item/archetype/_partials/attributes") }}
-		{{> (template "item/archetype/_partials/skills") }}
+		{{> (template "item/_shared-partials/attributes") }}
+		{{> (template "item/_shared-partials/skills") }}
 
 		<div class="grid-3-columns">
 			{{> (template "item/_shared-partials/tech-level") }}
@@ -9,7 +9,14 @@
 			{{> (template "item/_shared-partials/supply-points") }}
 		</div>
 
-		{{> (template "item/archetype/_partials/goals") }}
-		{{> (template "item/archetype/_partials/equipment") }}
+		{{> (template "item/_shared-partials/narrow-text-field")
+			key="goals"
+			label=(localize "DNM.Labels.Goals")
+		}}
+
+		{{> (template "item/_shared-partials/narrow-text-field")
+			key="equipment"
+			label=(localize "DNM.Labels.Equipment")
+		}}
 	</div>
 </section>

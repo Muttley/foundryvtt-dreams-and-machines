@@ -1,9 +1,12 @@
 import DnMItemSheetV2 from "../DnMItemSheetV2.mjs";
 
-export default class ArchetypeSheet extends DnMItemSheetV2 {
+export default class TemperamentSheet extends DnMItemSheetV2 {
 
 	/** @override */
 	static DEFAULT_OPTIONS = {
+		actions: {
+			toggleAttributeChoice: TemperamentSheet._onToggleAttributeChoice,
+		},
 		position: {
 			height: "auto",
 			width: 600,
@@ -25,15 +28,11 @@ export default class ArchetypeSheet extends DnMItemSheetV2 {
 			template: templatePath("_shared-partials/tabs"),
 		},
 		attributes: {
-			template: templatePath("item/archetype/attributes-tab"),
+			template: templatePath("item/temperament/attributes-tab"),
 			templates: [
 				templatePath("item/_shared-partials/attributes"),
-				templatePath("item/_shared-partials/choice-selector"),
 				templatePath("item/_shared-partials/narrow-text-field"),
 				templatePath("item/_shared-partials/skills"),
-				templatePath("item/_shared-partials/spirit"),
-				templatePath("item/_shared-partials/supply-points"),
-				templatePath("item/_shared-partials/tech-level"),
 			],
 		},
 		description: {
@@ -44,8 +43,18 @@ export default class ArchetypeSheet extends DnMItemSheetV2 {
 		},
 	};
 
-	async _prepareArchetypeAttributes(context) {
-		this._getAttributeData(context, this.system.attributeChoices.choices);
+
+	static async _onToggleAttributeChoice(event, target) {
+		event.preventDefault();
+		const attributeId = target.dataset.attributeId;
+		this.item.update({"system.attributeChoices.chosen": attributeId});
+	}
+
+
+	async _prepareTemperamentAttributes(context) {
+		const chosen = [this.system.attributeChoices.chosen];
+		this._getAttributeData(context, chosen);
+
 		this._getSkillData(context);
 	}
 
@@ -54,7 +63,7 @@ export default class ArchetypeSheet extends DnMItemSheetV2 {
 	async _preparePartContext(partId, context, options) {
 		await super._preparePartContext(partId, context, options);
 
-		if (partId === "attributes") await this._prepareArchetypeAttributes(context);
+		if (partId === "attributes") await this._prepareTemperamentAttributes(context);
 
 		return context;
 	}

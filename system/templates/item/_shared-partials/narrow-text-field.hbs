@@ -1,0 +1,23 @@
+<div class="grid-1-columns narrow-text-field {{#if @root.editModeEnabled}}editing{{/if}}">
+	{{#if label}}
+		<span class="label">
+			{{label}}
+		</span>
+	{{/if}}
+
+	<div class="scrollable" style="width: 100%;">
+		{{#if @root.editModeEnabled}}
+			<prose-mirror
+				name="system.{{key}}"
+				value="{{lookup @root.systemSource key}}"
+				document-uuid="{{ document.uuid }}"
+			></prose-mirror>
+		{{else}}
+			<div class="editor">
+				<div class="editor-content">
+					{{{lookup @root.enrichedFields key}}}
+				</div>
+			</div>
+		{{/if}}
+	</div>
+</div>

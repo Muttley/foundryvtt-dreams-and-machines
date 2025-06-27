@@ -6,6 +6,12 @@ import WeaponQualities from "./_types/WeaponQualities.mjs";
 
 export default class WeaponDataModel extends foundry.abstract.TypeDataModel {
 
+	get enrichedFields() {
+		return {
+			description: this.description,
+		};
+	}
+
 	get enabledQualities() {
 		return this.qualities.filter(q => q.enabled);
 	}

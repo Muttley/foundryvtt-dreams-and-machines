@@ -3,6 +3,13 @@ import Description from "../_types/Description.mjs";
 import Qualities from "./_types/Qualities.mjs";
 
 export default class MajorNPCActionDataModel extends foundry.abstract.TypeDataModel {
+
+	get enrichedFields() {
+		return {
+			description: this.description,
+		};
+	}
+
 	/**
 	 * Utility property to get all weapon qualities in one combined array.
 	 *

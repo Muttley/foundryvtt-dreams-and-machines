@@ -4,6 +4,12 @@ import Description from "../_types/Description.mjs";
 export default class NPCDataModel
 	extends foundry.abstract.TypeDataModel {
 
+	get enrichedFields() {
+		return {
+			description: this.description,
+		};
+	}
+
 	static defineSchema() {
 		const fields = foundry.data.fields;
 

@@ -5,6 +5,12 @@ import Truths from "../_types/Truths.mjs";
 export default class MajorNPCDataModel
 	extends foundry.abstract.TypeDataModel {
 
+	get enrichedFields() {
+		return {
+			description: this.description,
+		};
+	}
+
 	static defineSchema() {
 		const fields = foundry.data.fields;
 

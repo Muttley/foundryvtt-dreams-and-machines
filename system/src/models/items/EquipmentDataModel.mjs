@@ -5,6 +5,12 @@ import PhysicalItem from "./_types/PhysicalItem.mjs";
 export default class EquipmentDataModel
 	extends foundry.abstract.TypeDataModel {
 
+	get enrichedFields() {
+		return {
+			description: this.description,
+		};
+	}
+
 	/**
 	 * Utility for checking for the presence of qualities within Handlebars
 	 * templates.

@@ -7,12 +7,12 @@ import SkillBonusChoices from "./_types/SkillBonusChoices.mjs";
 export default class ArchetypeDataModel
 	extends foundry.abstract.TypeDataModel {
 
-	/**
-	 * Utility method to check that there is at least one piece of starting
-	 * gear added.
-	 */
-	get hasStartingGear() {
-		return this.startingGear.length > 0;
+	get enrichedFields() {
+		return {
+			description: this.description,
+			equipment: this.equipment,
+			goals: this.goals,
+		};
 	}
 
 	static defineSchema() {
@@ -24,6 +24,11 @@ export default class ArchetypeDataModel
 			...Configured(),
 			...Description(),
 			...SkillBonusChoices(),
+
+			equipment: new fields.HTMLField({
+				initial: "",
+				nullable: false,
+			}),
 
 			goals: new fields.HTMLField({
 				initial: "",
@@ -43,17 +48,6 @@ export default class ArchetypeDataModel
 				min: 0,
 				nullable: false,
 			}),
-
-			startingGear: new fields.ArrayField(
-				new fields.StringField({
-					initial: "",
-					nullable: false,
-				}),
-				{
-					initial: [],
-					nullable: false,
-				}
-			),
 
 			techLevel: new fields.NumberField({
 				initial: 0,

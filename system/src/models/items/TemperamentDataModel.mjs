@@ -1,12 +1,16 @@
+import AttributeSingleChoice from "./_types/AttributeSingleChoice.mjs";
 import BookSource from "./_types/BookSource.mjs";
 import Description from "../_types/Description.mjs";
+import SkillBonusChoices from "./_types/SkillBonusChoices.mjs";
 
 export default class TemperamentDataModel extends foundry.abstract.TypeDataModel {
-	/** @type {{ [key: string]: string}} */
+
 	get enrichedFields() {
 		return {
-			enrichedSpiritEffect: this.spiritEffect,
-			enrichedExhaustionEffect: this.exhaustionEffect,
+			attitude: this.attitude,
+			description: this.description,
+			drive: this.drive,
+			exhaustion: this.exhaustion,
 		};
 	}
 
@@ -14,15 +18,27 @@ export default class TemperamentDataModel extends foundry.abstract.TypeDataModel
 		const fields = foundry.data.fields;
 
 		return {
+			...AttributeSingleChoice(),
 			...BookSource(),
 			...Description(),
+			...SkillBonusChoices(),
 
-			spiritEffect: new fields.HTMLField({
+			attitude: new fields.HTMLField({
 				initial: "",
 				nullable: false,
 			}),
 
-			exhaustionEffect: new fields.HTMLField({
+			bonds: new fields.HTMLField({
+				initial: "",
+				nullable: false,
+			}),
+
+			drive: new fields.HTMLField({
+				initial: "",
+				nullable: false,
+			}),
+
+			exhaustion: new fields.HTMLField({
 				initial: "",
 				nullable: false,
 			}),
@@ -32,6 +48,7 @@ export default class TemperamentDataModel extends foundry.abstract.TypeDataModel
 				choices: Object.keys(CONFIG.DREAMS.EXHAUSTION),
 				nullable: false,
 			}),
+
 		};
 	}
 }

@@ -9,6 +9,12 @@ import SpecialAbilityChoices from "./_types/SpecialAbilityChoices.mjs";
 
 export default class OriginDataModel extends foundry.abstract.TypeDataModel {
 
+	get enrichedFields() {
+		return {
+			description: this.description,
+		};
+	}
+
 	static defineSchema() {
 		const fields = foundry.data.fields;
 

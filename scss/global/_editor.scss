@@ -21,12 +21,12 @@
 }
 
 .narrow-text-field {
-	height: 8em;
+	height: 10em;
 	grid-template-rows: min-content 1fr;
-	min-height: 6em;
+	min-height: 10em;
 
 	.editor {
-		min-height: 6em;
+		min-height: 10em;
 	}
 
 	&.editing {

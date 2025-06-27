@@ -131,7 +131,7 @@ function registerItems() {
 function registerItemSheets() {
 	Items.unregisterSheet("core", ItemSheet);
 
-	Items.registerSheet("dreams-and-machines", itemSheets.DnMItemSheet, {
+	Items.registerSheet("dreams-and-machines", itemSheets.TemperamentSheet, {
 		types: ["temperament"],
 		makeDefault: true,
 	});

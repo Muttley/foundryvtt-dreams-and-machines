@@ -27,15 +27,15 @@ export default class OriginSheet extends DnMItemSheetV2 {
 		attributes: {
 			template: templatePath("item/origin/attributes-tab"),
 			templates: [
-				templatePath("item/_shared-partials/spirit"),
-				templatePath("item/_shared-partials/supply-points"),
 				templatePath("item/_shared-partials/choice-selector"),
+				templatePath("item/_shared-partials/skills"),
+				templatePath("item/_shared-partials/spirit"),
 				templatePath("item/_shared-partials/supply-point-cost"),
+				templatePath("item/_shared-partials/supply-points"),
 				templatePath("item/_shared-partials/tech-level"),
 				templatePath("item/origin/_partials/attribute-choices"),
 				templatePath("item/origin/_partials/attributes"),
 				templatePath("item/origin/_partials/skill-choices"),
-				templatePath("item/origin/_partials/skills"),
 				templatePath("item/origin/_partials/special-abilities"),
 			],
 		},
@@ -82,7 +82,7 @@ export default class OriginSheet extends DnMItemSheetV2 {
 
 
 	async _prepareOriginAttributes(context) {
-		this._getAttributeData(context);
+		this._getAttributeData(context, this.system.attributeChoices.choices);
 		this._getSkillData(context);
 		await this.#getSpecialAbilitySelectorConfigs(context);
 	}

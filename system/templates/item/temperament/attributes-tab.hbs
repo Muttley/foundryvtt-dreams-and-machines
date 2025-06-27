@@ -1,0 +1,27 @@
+<section class="tab {{tab.cssClass}}" data-group="primary" data-tab="attributes">
+	<div class="tab-body">
+		{{> (template "item/_shared-partials/attributes") }}
+		{{> (template "item/_shared-partials/skills") }}
+
+		{{> (template "item/_shared-partials/narrow-text-field")
+			key="drive"
+			label=(localize "DNM.Labels.Drive")
+		}}
+
+		{{> (template "item/_shared-partials/narrow-text-field")
+			key="exhaustion"
+			label=(localize "DNM.Labels.Exhaustion")
+		}}
+
+		<select name="system.exhaustionType" {{disabled editModeDisabled}}>
+			{{selectOptions CONFIG.EXHAUSTION selected=@root.system.exhaustionType}}
+		</select>
+
+		{{> (template "item/temperament/_partials/exhaustion") }}
+
+		{{> (template "item/_shared-partials/narrow-text-field")
+			key="attitude"
+			label=(localize "DNM.Labels.Attitude")
+		}}
+	</div>
+</section>
