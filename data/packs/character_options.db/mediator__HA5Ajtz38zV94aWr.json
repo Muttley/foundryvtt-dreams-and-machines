@@ -18,6 +18,7 @@
 		},
 		"configured": false,
 		"description": "<p>You know that power doesn’t really lie at the end of a gun, but in the people themselves. And those who have that strength of character have a duty to use it for the good of the people. You’re a leader, an organizer, a local politician, or a doctor, medic, or a spiritual advisor. You have made the welfare of the people your personal responsibility — not through fighting for them, but by helping them through disputes and being there to guide them, to lift their spirits in dire days and heal them when they fall. You may have an official role in your local community, an elder, adviser, or advocate, but sometimes your natural qualities shine through so brightly that others look beyond those people, and to you for leadership. Not all people in this position would seek to put the welfare of others before their own benefit, and some use their powers of persuasion and leadership to feather their own nests first.</p><ul><li><p><strong>Truth</strong>: The character gains the Truth Mediator</p></li><li><p><strong>Attributes</strong>: Add +3 to one of Quickness, Insight, or Resolve, add +2 to one of the remaining two, and add +1 to the last of the three.</p></li><li><p><strong>Skills</strong>: Add +2 to one of Talk, Study, or Operate. Add +1 to the other two.</p></li><li><p><strong>Tech Level</strong>: The character’s Tech Level is increased by +1.</p></li><li><p><strong>Spirit</strong>: The character’s Spirit Pool is increased by +2.</p></li><li><p><strong>Supply Points</strong>: The character’s Supply Points are unchanged.</p></li><li><p><strong>Talent</strong>: Mediators begin with one of the following talents: <strong>Guidance</strong>, <strong>Reassure</strong>, <strong>Rally</strong>, <strong>Bedside Manner</strong>, or <strong>Example to Others</strong>.</p></li><li><p><strong>Goals</strong>: When this character peacefully resolves a dispute or conflict that involves them, their group, or a friendly community, gain <strong>growth</strong>.</p></li><li><p><strong>Equipment</strong>: One Hand-Made or Security Weapon, Protective Clothing (TL2) or Salvage Armor (TL 1 or 2), First Aid Kit (TL2, TL3, or TL4), and 3 coin.</p></li></ul>",
+		"equipment": "<p>One Hand-Made or Security Weapon, Protective Clothing (TL2) or Salvage Armor (TL 1 or 2), First Aid Kit (TL2, TL3, or TL4), and 3 coin.</p>",
 		"goals": "<p>When this character peacefully resolves a dispute or conflict that involves them, their group, or a friendly community, gain <strong>growth</strong>.</p>",
 		"skillChoices": {
 			"choices": [
@@ -30,9 +31,6 @@
 		},
 		"source": "PlayersGuide",
 		"spirit": 2,
-		"startingGear": [
-			"<p>One Hand-Made or Security Weapon, Protective Clothing (TL2) or Salvage Armor (TL 1 or 2), First Aid Kit (TL2, TL3, or TL4), and 3 coin.</p>"
-		],
 		"supplyPoints": 0,
 		"techLevel": 1
 	},

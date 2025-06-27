@@ -1,0 +1,32 @@
+{
+	"_id": "hQVBuce03GLQuHUY",
+	"_key": "!items!hQVBuce03GLQuHUY",
+	"effects": [
+	],
+	"folder": "vqWSMBScWq1Cnrt2",
+	"img": "systems/dreams-and-machines/assets/icons/temperament.svg",
+	"name": "Maverick",
+	"system": {
+		"attitude": "<p>if your group faced a problem because you rushed into a situation without considering your allies, gain <strong>growth</strong>.</p>",
+		"attributeChoices": {
+			"choices": [
+			],
+			"chosen": "quickness"
+		},
+		"bonds": "",
+		"description": "<p>You’re daring, but undisciplined and unpredictable, preferring to handle things your own way.</p><ul><li><p><strong>Attributes</strong>: Add +1 to Quickness and +1 to any other attribute</p></li><li><p><strong>Skills</strong>: Add +1 to Fight or Operate.</p></li><li><p><strong>Bonds</strong>: when you select bonds in the next step, at least one must be a <strong>supportive bond</strong>.</p></li><li><p><strong>Drive</strong>: When the GM spends 3 or more Threat at once, regain 1 Spirit.</p></li><li><p><strong>Exhaustion</strong>: Your dynamism comes to a quick halt when you find yourself out of your league. When you become exhausted, add +1 to Threat if you choose any exhaustion other than <em>Breathless</em>.</p></li><li><p><strong>Attitude</strong>: if your group faced a problem because you rushed into a situation without considering your allies, gain <strong>growth</strong>.</p></li></ul>",
+		"drive": "<p>When the GM spends 3 or more Threat at once, regain 1 Spirit.</p>",
+		"exhaustion": "<p>Your dynamism comes to a quick halt when you find yourself out of your league. When you become exhausted, add +1 to Threat if you choose any exhaustion other than <em>Breathless</em>.</p>",
+		"exhaustionType": "Breathless",
+		"skillChoices": {
+			"choices": [
+				"fight",
+				"operate"
+			],
+			"values": [
+			]
+		},
+		"source": "PlayersGuide"
+	},
+	"type": "temperament"
+}

@@ -1,0 +1,32 @@
+{
+	"_id": "Osf3H4buarLxNWLT",
+	"_key": "!items!Osf3H4buarLxNWLT",
+	"effects": [
+	],
+	"folder": "vqWSMBScWq1Cnrt2",
+	"img": "systems/dreams-and-machines/assets/icons/temperament.svg",
+	"name": "Circumspect",
+	"system": {
+		"attitude": "<p>If your group faced a problem because you wanted to spend time planning and studying a dangerous situation before acting, gain <strong>growth</strong>.</p>",
+		"attributeChoices": {
+			"choices": [
+			],
+			"chosen": "resolve"
+		},
+		"bonds": "<p>When you select bonds in the next step, at least one must be a supportive bond.</p>",
+		"description": "<p>You’re very careful in how you make decisions, perhaps too cautious. You consider all the angles and only act when you’re ready.</p><ul><li><p><strong>Attributes</strong>: Add +1 to Resolve and +1 to any other attribute</p></li><li><p><strong>Skills</strong>: Add +1 to Study or Sneak.</p></li><li><p><strong>Bonds</strong>: When you select bonds in the next step, at least one must be a <strong>supportive bond</strong>.</p></li><li><p><strong>Drive</strong>: When there's any Momentum in the group pool at the start of your turn, regain 1 Spirit.</p></li><li><p><strong>Exhaustion</strong>: Your resolve slips when you don’t have a plan. When you become exhausted, add +1 to Threat if you choose any exhaustion other than <em>Despairing</em>.</p></li><li><p><strong>Attitude</strong>: If your group faced a problem because you wanted to spend time planning and studying a dangerous situation before acting, gain <strong>growth</strong>.</p></li></ul>",
+		"drive": "<p>When there's any Momentum in the group pool at the start of your turn, regain 1 Spirit.</p>",
+		"exhaustion": "<p>Your resolve slips when you don’t have a plan. When you become exhausted, add +1 to Threat if you choose any exhaustion other than <em>Despairing</em>.</p>",
+		"exhaustionType": "Despairing",
+		"skillChoices": {
+			"choices": [
+				"sneak",
+				"study"
+			],
+			"values": [
+			]
+		},
+		"source": "PlayersGuide"
+	},
+	"type": "temperament"
+}

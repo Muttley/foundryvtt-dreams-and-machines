@@ -1,0 +1,32 @@
+{
+	"_id": "1P9UUCnLsQRurV85",
+	"_key": "!items!1P9UUCnLsQRurV85",
+	"effects": [
+	],
+	"folder": "vqWSMBScWq1Cnrt2",
+	"img": "systems/dreams-and-machines/assets/icons/temperament.svg",
+	"name": "Manipulative",
+	"system": {
+		"attitude": "<p>If your group faced a problem because you kept secrets from, or attempted to trick, a friend or ally, gain <strong>growth</strong>.</p>",
+		"attributeChoices": {
+			"choices": [
+			],
+			"chosen": "insight"
+		},
+		"bonds": "",
+		"description": "<p>You plot and scheme, creating cunning plans to ensure your success.</p><ul><li><p><strong>Attributes</strong>: Add +1 to Insight and +1 to any other attribute</p></li><li><p><strong>Skills</strong>: Add +1 to Sneak or Talk.</p></li><li><p><strong>Bonds</strong>: When you select bonds in the next step, at least one must be a <strong>rivalry</strong>.</p></li><li><p><strong>Drive</strong>: When you create a Truth that represents a plan or scheme, regain 1 Spirit.</p></li><li><p><strong>Exhaustion</strong>: Your cunning may tie you in knots when your schemes falter. When you become exhausted, add +1 to Threat if you choose any exhaustion other than <em>Confused</em>.</p></li><li><p><strong>Attitude</strong>: If your group faced a problem because you kept secrets from, or attempted to trick, a friend or ally, gain <strong>growth</strong>.</p></li></ul>",
+		"drive": "<p>When you create a Truth that represents a plan or scheme, regain 1 Spirit.</p>",
+		"exhaustion": "<p>Your cunning may tie you in knots when your schemes falter. When you become exhausted, add +1 to Threat if you choose any exhaustion other than <em>Confused</em>.</p>",
+		"exhaustionType": "Confused",
+		"skillChoices": {
+			"choices": [
+				"sneak",
+				"talk"
+			],
+			"values": [
+			]
+		},
+		"source": "PlayersGuide"
+	},
+	"type": "temperament"
+}
