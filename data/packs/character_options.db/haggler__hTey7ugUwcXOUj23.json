@@ -4,11 +4,11 @@
 	"effects": [
 	],
 	"folder": "VEJQnJkBgY8T46AK",
-	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"img": "systems/dreams-and-machines/assets/icons/special_ability.svg",
 	"name": "Haggler",
 	"system": {
 		"description": "<p>You have developed a knack for haggling and negotiation and can spot the opportunity to get the best deal.</p><p>When buying or selling an item, you may add +1 to the cost of one item you are selling or reduce the cost of one item you wish to buy by 1. Once you’ve done this, you may not use this ability again until after you have taken a Bed rest.</p>",
 		"source": "PlayersGuide"
 	},
-	"type": "specialAbility"
+	"type": "special_ability"
 }

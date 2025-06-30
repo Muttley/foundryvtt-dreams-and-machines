@@ -4,11 +4,11 @@
 	"effects": [
 	],
 	"folder": "yH2h6EfmBzDpCFLt",
-	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"img": "systems/dreams-and-machines/assets/icons/special_ability.svg",
 	"name": "Tech-Less",
 	"system": {
 		"description": "<p>You have learned to rely on basic, almost primitive tools, eschewing the advanced devices that were used in the Old World. While this can make life harder, it can help avoid the synthetic gaze of machines, which are drawn to the signals produced by old tech.</p><p>Whenever a machine attempts a Skill Test to detect you, increase the Difficulty of its Skill Tests by +1 if there is an ally with a higher Tech Level in the same zone. However, whenever you attempt to use an item of a higher Tech Level than your own, add an extra +1 to Threat.</p>",
 		"source": "PlayersGuide"
 	},
-	"type": "specialAbility"
+	"type": "special_ability"
 }

@@ -4,11 +4,11 @@
 	"effects": [
 	],
 	"folder": "6X3071EOUUlA9QcU",
-	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"img": "systems/dreams-and-machines/assets/icons/special_ability.svg",
 	"name": "Second Strike",
 	"system": {
 		"description": "<p>You have studied the pack tactics of your kin and know well that for many of the deadly foes in the ruins, the first strike is seldom the final one.</p><p>When you make a melee attack against an enemy who has suffered one or more Injuries, you regain 1 Spirit before making the attack.</p><p></p>",
 		"source": "PlayersGuide"
 	},
-	"type": "specialAbility"
+	"type": "special_ability"
 }

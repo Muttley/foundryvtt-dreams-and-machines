@@ -4,11 +4,11 @@
 	"effects": [
 	],
 	"folder": "oTQocB4Vb0trfRxD",
-	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"img": "systems/dreams-and-machines/assets/icons/special_ability.svg",
 	"name": "Everyone's Friend",
 	"system": {
 		"description": "<p>Everans are used to working well with others and are excellent at forming bonds with their comrades.</p><p>You receive one additional bond with another character in the group. This bond may be a supportive bond or a rivalry.</p>",
 		"source": "PlayersGuide"
 	},
-	"type": "specialAbility"
+	"type": "special_ability"
 }

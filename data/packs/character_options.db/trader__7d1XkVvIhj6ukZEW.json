@@ -4,11 +4,11 @@
 	"effects": [
 	],
 	"folder": "VEJQnJkBgY8T46AK",
-	"img": "systems/dreams-and-machines/assets/icons/specialAbility.svg",
+	"img": "systems/dreams-and-machines/assets/icons/special_ability.svg",
 	"name": "Trader",
 	"system": {
 		"description": "<p>You have successfully traveled up and down the waterways and have picked up a healthy reserve of money.</p><p>You begin the game with +3 coin.</p>",
 		"source": "PlayersGuide"
 	},
-	"type": "specialAbility"
+	"type": "special_ability"
 }
