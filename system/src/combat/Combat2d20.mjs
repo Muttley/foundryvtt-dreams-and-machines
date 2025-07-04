@@ -1,25 +1,33 @@
-// import Counter from '../system/counter';
-
 export default class Combat2d20 extends Combat {
-	constructor(options) {
-		super(options);
-
-		this.flags.combatantsTurnDone = this.flags.combatantsTurnDone ?? [];
-	}
 
 	get combatantsTurnDone() {
-		const combatantsTurnDone = this.flags.combatantsTurnDone ?? [];
+		return this.getFlag(SYSTEM_ID, "combatantsTurnDone") ?? [];
+	}
+
+
+	get combatantsTurnsDoneThisRound() {
+		const combatantsTurnDone = this.combatantsTurnDone;
 		return combatantsTurnDone[this.round] ?? {};
 	}
 
+
+	get momentumLog() {
+		const momentumLog = this.flags.momentumLog ?? [];
+		return momentumLog[this.round] ?? {};
+	}
+
+
 	async endCombat() {
-		return Dialog.confirm({
-			title: game.i18n.localize("COMBAT.EndTitle"),
-			content: `<p>${game.i18n.localize("COMBAT.EndConfirmation")}</p>`,
-			yes: () => {
-				this.delete();
+		const proceed = await foundry.applications.api.DialogV2.confirm({
+			window: {
+				title: game.i18n.localize("COMBAT.EndTitle"),
 			},
+			content: game.i18n.localize("COMBAT.EndConfirmation"),
+			rejectClose: false,
+			modal: true,
 		});
+
+		if (proceed) this.delete();
 	}
 
 	async nextRound() {
@@ -30,8 +38,8 @@ export default class Combat2d20 extends Combat {
 		let nextRound = this.round + 1;
 
 		// Update the document, passing data through a hook first
-		const updateData = { round: nextRound, turn: this.turn };
-		const updateOptions = { advanceTime, direction: 1 };
+		const updateData = {round: nextRound, turn: this.turn};
+		const updateOptions = {advanceTime, direction: 1};
 		Hooks.callAll("combatRound", this, updateData, updateOptions);
 		return this.update(updateData, updateOptions);
 	}
@@ -44,8 +52,8 @@ export default class Combat2d20 extends Combat {
 		this.turn = newTurn;
 
 		// Update the document, passing data through a hook first
-		const updateData = { round: this.round, turn: newTurn };
-		const updateOptions = { advanceTime: CONFIG.time.turnTime, direction: 1 };
+		const updateData = {round: this.round, turn: newTurn};
+		const updateOptions = {advanceTime: CONFIG.time.turnTime, direction: 1};
 		Hooks.callAll("combatTurn", this, updateData, updateOptions);
 		return this.update(updateData, updateOptions);
 	}
@@ -55,7 +63,15 @@ export default class Combat2d20 extends Combat {
 		const turns = this.combatants.contents;
 
 		// Sort alphabetically by name first
-		turns.sort((a, b) => a.name.localeCompare(b.name));
+		turns.sort((a, b) => {
+			if (a.name < b.name) {
+				return -1;
+			}
+			if (a.name > b.name) {
+				return 1;
+			}
+			return 0;
+		});
 
 		// Now sort by type
 		turns.sort((a, b) => {
@@ -71,7 +87,8 @@ export default class Combat2d20 extends Combat {
 			return 0;
 		});
 
-		if (this.turn !== null) this.turn = Math.clamped(this.turn, 0, turns.length - 1);
+		if (this.turn !== null) this.turn =
+			Math.clamped(this.turn, 0, turns.length - 1);
 
 		// Update state tracking
 		let c = turns[this.turn];
@@ -86,14 +103,13 @@ export default class Combat2d20 extends Combat {
 		if (!this.previous) this.previous = this.current;
 
 		// Return the array of prepared turns
-		return (this.turns = turns);
+		return this.turns = turns;
 	}
 
 	async startCombat() {
 		const updateData = {
-			"round": 1,
-			"turn": 0,
-			"flags.combatantsTurnDone": [],
+			round: 1,
+			turn: 0,
 		};
 
 		Hooks.callAll("combatStart", this, updateData);
@@ -105,13 +121,14 @@ export default class Combat2d20 extends Combat {
 		if (!game.user.isGM) return;
 		if (!this.started) return;
 
+		const combatantsTurnsDoneThisRound = this.combatantsTurnsDoneThisRound;
+
+		const turnDone = !(combatantsTurnsDoneThisRound[combatantId] ?? false);
+		combatantsTurnsDoneThisRound[combatantId] = turnDone;
+
 		const combatantsTurnDone = this.combatantsTurnDone;
+		combatantsTurnDone[this.round] = combatantsTurnsDoneThisRound;
 
-		const turnDone = !(combatantsTurnDone[combatantId] ?? false);
-		combatantsTurnDone[combatantId] = turnDone;
-
-		this.flags.combatantsTurnDone[this.round] = combatantsTurnDone;
-
-		return this.update({ "flags.combatantsTurnDone": this.flags.combatantsTurnDone });
+		this.setFlag(SYSTEM_ID, "combatantsTurnDone", combatantsTurnDone);
 	}
 }

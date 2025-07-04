@@ -13,7 +13,7 @@ import * as itemSheets from "../sheets/items/_module.mjs";
 
 import * as app from "../app/_module.mjs";
 
-import { registerCombatTracker } from "../combat/CombatTracker2d20.mjs";
+import { registerCombatTracker } from "../combat/CombatTracker2d20V2.mjs";
 import { registerFonts } from "../fonts.mjs";
 import { registerHandlebarsHelpers } from "../handlebars.mjs";
 
@@ -83,22 +83,32 @@ function registerActors() {
  * Handles registration for all Dreams and Machines Actor sheets.
  */
 function registerActorSheets() {
-	Actors.unregisterSheet("core", ActorSheet);
+	foundry.documents.collections.Actors.registerSheet(
+		"dreams-and-machines",
+		actorSheets.CharacterSheet,
+		{
+			types: ["character"],
+			makeDefault: true,
+		}
+	);
 
-	Actors.registerSheet("dreams-and-machines", actorSheets.CharacterSheet, {
-		types: ["character"],
-		makeDefault: true,
-	});
+	foundry.documents.collections.Actors.registerSheet(
+		"dreams-and-machines",
+		actorSheets.MajorNPCSheet,
+		{
+			types: ["majorNPC"],
+			makeDefault: true,
+		}
+	);
 
-	Actors.registerSheet("dreams-and-machines", actorSheets.MajorNPCSheet, {
-		types: ["majorNPC"],
-		makeDefault: true,
-	});
-
-	Actors.registerSheet("dreams-and-machines", actorSheets.NPCSheetV2, {
-		types: ["npc"],
-		makeDefault: true,
-	});
+	foundry.documents.collections.Actors.registerSheet(
+		"dreams-and-machines",
+		actorSheets.NPCSheetV2,
+		{
+			types: ["npc"],
+			makeDefault: true,
+		}
+	);
 }
 
 /**
@@ -130,50 +140,84 @@ function registerItems() {
  * Handles registration for all Dreams and Machine Item sheets.
  */
 function registerItemSheets() {
-	Items.unregisterSheet("core", ItemSheet);
+	foundry.documents.collections.Items.registerSheet(
+		"dreams-and-machines",
+		itemSheets.TemperamentSheet,
+		{
+			types: ["temperament"],
+			makeDefault: true,
+		}
+	);
 
-	Items.registerSheet("dreams-and-machines", itemSheets.TemperamentSheet, {
-		types: ["temperament"],
-		makeDefault: true,
-	});
+	foundry.documents.collections.Items.registerSheet(
+		"dreams-and-machines",
+		itemSheets.ArchetypeSheet,
+		{
+			types: ["archetype"],
+			makeDefault: true,
+		}
+	);
 
-	Items.registerSheet("dreams-and-machines", itemSheets.ArchetypeSheet, {
-		types: ["archetype"],
-		makeDefault: true,
-	});
+	foundry.documents.collections.Items.registerSheet(
+		"dreams-and-machines",
+		itemSheets.EquipmentSheet,
+		{
+			types: ["equipment"],
+			makeDefault: true,
+		}
+	);
 
-	Items.registerSheet("dreams-and-machines", itemSheets.EquipmentSheet, {
-		types: ["equipment"],
-		makeDefault: true,
-	});
+	foundry.documents.collections.Items.registerSheet(
+		"dreams-and-machines",
+		itemSheets.MajorNPCActionSheet,
+		{
+			types: ["major_npc_action"],
+			makeDefault: true,
+		}
+	);
 
-	Items.registerSheet("dreams-and-machines", itemSheets.MajorNPCActionSheet, {
-		types: ["major_npc_action"],
-		makeDefault: true,
-	});
+	foundry.documents.collections.Items.registerSheet(
+		"dreams-and-machines",
+		itemSheets.NPCActionSheet,
+		{
+			types: ["npc_action"],
+			makeDefault: true,
+		}
+	);
 
-	Items.registerSheet("dreams-and-machines", itemSheets.NPCActionSheet, {
-		types: ["npc_action"],
-		makeDefault: true,
-	});
+	foundry.documents.collections.Items.registerSheet(
+		"dreams-and-machines",
+		itemSheets.OriginSheet,
+		{
+			types: ["origin"],
+			makeDefault: true,
+		}
+	);
 
-	Items.registerSheet("dreams-and-machines", itemSheets.OriginSheet, {
-		types: ["origin"],
-		makeDefault: true,
-	});
+	foundry.documents.collections.Items.registerSheet(
+		"dreams-and-machines",
+		itemSheets.SpecialAbilitySheet,
+		{
+			types: ["special_ability"],
+			makeDefault: true,
+		}
+	);
 
-	Items.registerSheet("dreams-and-machines", itemSheets.SpecialAbilitySheet, {
-		types: ["special_ability"],
-		makeDefault: true,
-	});
+	foundry.documents.collections.Items.registerSheet(
+		"dreams-and-machines",
+		itemSheets.TalentSheet,
+		{
+			types: ["talent"],
+			makeDefault: true,
+		}
+	);
 
-	Items.registerSheet("dreams-and-machines", itemSheets.TalentSheet, {
-		types: ["talent"],
-		makeDefault: true,
-	});
-
-	Items.registerSheet("dreams-and-machines", itemSheets.WeaponSheet, {
-		types: ["weapon"],
-		makeDefault: true,
-	});
+	foundry.documents.collections.Items.registerSheet(
+		"dreams-and-machines",
+		itemSheets.WeaponSheet,
+		{
+			types: ["weapon"],
+			makeDefault: true,
+		}
+	);
 }
