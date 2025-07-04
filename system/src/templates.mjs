@@ -22,7 +22,6 @@ export default async function registerTemplates() {
 		"systems/dreams-and-machines/templates/_shared-partials/header.hbs",
 		"systems/dreams-and-machines/templates/actor/_shared-partials/background-item.hbs",
 		"systems/dreams-and-machines/templates/actor/_shared-partials/custom-string-list.hbs",
-		"systems/dreams-and-machines/templates/actor/_shared-partials/header.hbs",
 		"systems/dreams-and-machines/templates/actor/_shared-partials/skills.hbs",
 		"systems/dreams-and-machines/templates/actor/character/archetype-goal.hbs",
 		"systems/dreams-and-machines/templates/actor/character/attitude.hbs",
@@ -45,7 +44,6 @@ export default async function registerTemplates() {
 		"systems/dreams-and-machines/templates/actor/major-npc/truths.hbs",
 		"systems/dreams-and-machines/templates/item/_shared-partials/choice-selector.hbs",
 		"systems/dreams-and-machines/templates/item/_shared-partials/coin.hbs",
-		"systems/dreams-and-machines/templates/item/_shared-partials/description-tab.hbs",
 		"systems/dreams-and-machines/templates/item/_shared-partials/header.hbs",
 		"systems/dreams-and-machines/templates/item/_shared-partials/source-tab.hbs",
 		"systems/dreams-and-machines/templates/item/_shared-partials/supply-point-cost.hbs",
@@ -58,7 +56,7 @@ export default async function registerTemplates() {
 		paths[key] = path;
 	}
 
-	await loadTemplates(paths);
+	await foundry.applications.handlebars.loadTemplates(paths);
 
 	dreams.debug("Template Loading Complete.");
 }

@@ -93,6 +93,7 @@ DNM.Labels.Max: Max
 DNM.Labels.MissingUUID: (Missing UUID)
 DNM.Labels.Momentum: Momentum
 DNM.Labels.Name: Name
+DNM.Labels.New: New
 DNM.Labels.Notes: Notes
 DNM.Labels.Or: Or
 DNM.Labels.Origin: Origin

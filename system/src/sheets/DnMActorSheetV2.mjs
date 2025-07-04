@@ -12,6 +12,7 @@ export default class DnMActorSheetV2
 	/** @override */
 	static DEFAULT_OPTIONS = {
 		actions: {
+			addItem: this._onAddItem,
 			onRoll: this._onRoll,
 			toggleEditMode: this._onToggleEditMode,
 		},
@@ -135,6 +136,21 @@ export default class DnMActorSheetV2
 
 		// Set data transfer
 		event.dataTransfer.setData("text/plain", JSON.stringify(dragData));
+	}
+
+
+	static async _onAddItem(event, target) {
+		event.preventDefault();
+
+		const type = target.dataset.itemType;
+		const typeName = game.i18n.localize(`TYPES.Item.${type}`);
+
+		const name = `${game.i18n.localize("DNM.Labels.New")} ${typeName}`;
+
+		const data = { name, type};
+
+		const [newItem] = await this.actor.createEmbeddedDocuments("Item", [data]);
+		newItem.sheet.render(true);
 	}
 
 

@@ -6,7 +6,7 @@
 /**
  * Shared base class for all Item Sheets.
  */
-export default class DnMItemSheet extends ItemSheet {
+export default class DnMItemSheet extends foundry.appv1.sheets.ItemSheet {
 
 	_editModeEnabled = false;
 

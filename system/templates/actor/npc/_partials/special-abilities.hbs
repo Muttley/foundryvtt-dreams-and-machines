@@ -1,5 +1,15 @@
 <div>
 	<span class="label">
+		{{#if @root.editModeEnabled}}
+			<a
+				data-action="addItem"
+				data-item-type="special_ability"
+				{{disabled @root.editModeDisabled}}
+			>
+				<i class="fa-solid fa-plus"></i>
+			</a>
+			&nbsp;
+		{{/if}}
 		{{localize "DNM.Labels.SpecialAbilities"}}
 	</span>
 

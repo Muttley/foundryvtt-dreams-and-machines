@@ -1,7 +1,7 @@
 /**
  * Shared base class for all Actor Sheets.
  */
-export default class DnMActorSheet extends ActorSheet {
+export default class DnMActorSheet extends foundry.appv1.sheets.ActorSheet {
 
 	_editModeEnabled = false;
 
