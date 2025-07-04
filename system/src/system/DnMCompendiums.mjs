@@ -103,7 +103,7 @@ export default class DnMCompendiums {
 
 
 	static async specialAbilities(filterSources=true) {
-		return DnMCompendiums.#documents("Item", "specialAbility", filterSources);
+		return DnMCompendiums.#documents("Item", "special_ability", filterSources);
 	}
 
 	static async talents(filterSources=true) {

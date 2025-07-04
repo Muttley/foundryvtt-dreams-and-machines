@@ -51,12 +51,6 @@ export default class NPCDataModel
 					nullable: false,
 				}),
 			}),
-
-			specialActions: new fields.HTMLField({
-				initial: "",
-				nullable: false,
-			}),
-
 		};
 	}
 

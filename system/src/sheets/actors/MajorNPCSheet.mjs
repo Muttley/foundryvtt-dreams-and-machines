@@ -5,7 +5,7 @@ export default class MajorNPCSheet extends DnMActorSheet {
 	async getData(options = {}) {
 		const actions = await Promise.all(
 			this.actor.items
-				.filter(i => i.type === "majorNPCAction")
+				.filter(i => i.type === "npc_action")
 				.map(async i => {
 					let enrichedDescription = undefined;
 
@@ -35,7 +35,7 @@ export default class MajorNPCSheet extends DnMActorSheet {
 
 		const abilities = await Promise.all(
 			this.actor.items
-				.filter(i => i.type === "specialAbility")
+				.filter(i => i.type === "special_ability")
 				.map(async i => {
 					i.enrichedDescription = await TextEditor.enrichHTML(
 						i.system.description, { async: true }

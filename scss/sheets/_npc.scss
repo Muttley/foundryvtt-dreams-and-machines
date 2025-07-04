@@ -2,8 +2,6 @@
 @use "../mixins" as *;
 
 .dnm.sheet.actor.npc {
-	// min-width: 830px;
-	// min-height: 760px;
 
 	.label {
 		background-color: $c-character-purple;
@@ -11,16 +9,6 @@
 
 	.right-column {
 		grid-template-rows: min-content auto auto ;
-	}
-
-	// .sheet-body {
-	// 	@include p-reset;
-	// 	padding: 0.25rem;
-	// 	display: grid;
-	// }
-
-	.sheet-header {
-		background-color: $c-character-purple;
 	}
 
 	.sublabel {
@@ -35,9 +23,6 @@
 			background: white;
 			text-align: center;
 			border: none;
-			padding: 0.5rem;
-			padding-top: 1rem;
-			padding-bottom: 1rem;
 			text-transform: uppercase;
 			color: black;
 

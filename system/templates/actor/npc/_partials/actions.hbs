@@ -2,22 +2,32 @@
 	<span class="label">
 		{{localize "DNM.Labels.Actions"}}
 	</span>
+
 	<ol class="item-list">
-		{{#each actions}}
-			<li
-				class="item"
-				data-menu="item"
-				data-uuid="{{this.uuid}}"
-			>
-				<a
-					data-action="roll"
-					data-attribute="might"
-					data-skill="fight"
-					data-uuid="{{uuid}}"
+		{{#if actions}}
+			{{#each actions}}
+				<li
+					class="item"
+					data-menu="item"
+					data-uuid="{{this.uuid}}"
 				>
-					<i class="fas fa-sword"></i>
-				</a>
-			</li>
-		{{/each}}
+					<a
+						data-action="roll"
+						data-uuid="{{uuid}}"
+					>
+						<b style="text-transform: uppercase">
+							{{this.name}}:
+						</b>
+					</a>
+						<em>
+							{{{this.enrichedDescription}}}
+						</em>
+				</li>
+			{{/each}}
+		{{else}}
+			<div class="placeholder">
+				{{localize "DNM.Placeholders.None"}}
+			</div>
+		{{/if}}
 	</ol>
 </div>

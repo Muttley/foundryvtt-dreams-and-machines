@@ -1,6 +1,7 @@
 import BookSource from "./_types/BookSource.mjs";
+import Damage from "./_types/Damage.mjs";
 import Description from "../_types/Description.mjs";
-import Qualities from "./_types/Qualities.mjs";
+import WeaponQualities from "./_types/WeaponQualities.mjs";
 
 export default class MajorNPCActionDataModel extends foundry.abstract.TypeDataModel {
 
@@ -10,20 +11,12 @@ export default class MajorNPCActionDataModel extends foundry.abstract.TypeDataMo
 		};
 	}
 
-	/**
-	 * Utility property to get all weapon qualities in one combined array.
-	 *
-	 * @return ItemQuality[]
-	 */
-	get weaponQualities() {
-		return [...this.weapon.damageQualities, ...this.weapon.qualities];
+	get hasSkillTest() {
+		return this.skillTest.attribute !== "—" && this.skillTest.skill !== "—";
 	}
 
-	/**
-	 * Allow chat templates to treat this equivalent to an Equipment item.
-	 */
 	get isWeapon() {
-		return true;
+		return this.hasSkillTest && this.weapon.name !== "" && this.weapon.damage.length > 0;
 	}
 
 	static defineSchema() {
@@ -35,30 +28,15 @@ export default class MajorNPCActionDataModel extends foundry.abstract.TypeDataMo
 
 			skillTest: new fields.SchemaField({
 				attribute: new fields.StringField({
-					initial: "-",
+					initial: "—",
 					nullable: false,
-					choices: [
-						"-",
-						"might",
-						"quickness",
-						"insight",
-						"resolve",
-					],
+					choices: ["—", ...Object.keys(CONFIG.DREAMS.ATTRIBUTES)],
 				}),
 
 				skill: new fields.StringField({
-					initial: "-",
+					initial: "—",
 					nullable: false,
-					choices: [
-						"-",
-						"fight",
-						"move",
-						"operate",
-						"sneak",
-						"study",
-						"survive",
-						"talk",
-					],
+					choices: ["—", ...Object.keys(CONFIG.DREAMS.SKILLS)],
 				}),
 			}),
 
@@ -68,15 +46,17 @@ export default class MajorNPCActionDataModel extends foundry.abstract.TypeDataMo
 					nullable: false,
 				}),
 
-				type: new fields.StringField({
-					initial: "Melee",
-					choices: ["Melee", "Ranged"],
+				weaponType: new fields.StringField({
+					initial: Object.keys(CONFIG.DREAMS.NPC_WEAPON_TYPES)[0],
+					choices: () => {
+						return Object.keys(CONFIG.DREAMS.NPC_WEAPON_TYPES);
+					},
 					nullable: false,
 				}),
 
-				qualities: Qualities(),
+				qualities: WeaponQualities(),
 
-				damageQualities: Qualities(),
+				...Damage(),
 			}),
 		};
 	}

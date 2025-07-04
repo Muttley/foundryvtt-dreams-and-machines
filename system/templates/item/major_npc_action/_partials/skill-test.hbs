@@ -1,0 +1,37 @@
+<div>
+	<span class="label" style="margin-bottom: 4px;">
+		{{localize "DNM.Labels.SkillTest"}}
+	</span>
+	<div class="grid-2-columns">
+		<div>
+			<span class="label">
+				{{localize "DNM.Labels.Attribute"}}
+			</span>
+			<select name="system.skillTest.attribute" {{disabled editModeDisabled}}>
+				<option value="—">&mdash;</option>
+				{{selectOptions
+					CONFIG.ATTRIBUTES_SORTED
+					labelAttr="name"
+					localize=false
+					selected=@root.system.skillTest.attribute
+					valueAttr="key"
+				}}
+			</select>
+		</div>
+			<div>
+				<span class="label">
+					{{localize "DNM.Labels.Skill"}}
+				</span>
+				<select name="system.skillTest.skill" {{disabled editModeDisabled}}>
+					<option value="—">&mdash;</option>
+					{{selectOptions
+						CONFIG.SKILLS_SORTED
+						labelAttr="name"
+						localize=false
+						selected=@root.system.skillTest.skill
+						valueAttr="key"
+					}}
+				</select>
+			</div>
+	</div>
+</div>

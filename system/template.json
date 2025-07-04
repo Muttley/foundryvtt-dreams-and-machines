@@ -4,97 +4,16 @@
 			"character",
 			"majorNPC",
 			"npc"
-		],
-		"templates": {
-			"attributes": {
-				"attributes": {
-					"insight": {
-						"value": 7,
-						"exhaustion": false,
-						"confused": false
-					},
-					"might": {
-						"value":  7,
-						"exhaustion":  false,
-						"weary": false
-					},
-					"quickness": {
-						"value":  7,
-						"exhaustion":  false,
-						"breathless": false
-					},
-					"resolve": {
-						"value":  7,
-						"exhaustion":  false,
-						"despairing": false
-					}
-				}
-			},
-			"skills": {
-				"skills": {
-					"fight": 1,
-					"move": 1,
-					"operate": 1,
-					"sneak": 1,
-					"study": 1,
-					"survive": 1,
-					"talk": 1
-				}
-			},
-			"traits": {
-				"traits": []
-			},
-			"truths": {
-				"truths": []
-			}
-		},
-		"character": {
-			"templates": [
-				"attributes",
-				"skills",
-				"truths"
-			],
-			"bonds": [],
-			"coin": 0,
-			"goals": {
-				"longTerm": [],
-				"shortTerm": []
-			},
-			"growth": 0,
-			"harms": [],
-			"spirit": {
-				"value": 1,
-				"max": 1
-			},
-			"supplyPoints": 0,
-			"techLevel": 1
-		},
-		"majorNPC": {
-			"templates": [
-				"attributes",
-				"skills",
-				"traits"
-			],
-			"threat": {
-				"current": 0,
-				"max": 0
-			},
-			"injuries": {
-				"current": 0,
-				"max": 1
-			},
-			"notes": "",
-			"description": ""
-		}
+		]
 	},
-
 	"Item": {
 		"types": [
 			"archetype",
 			"equipment",
-			"majorNPCAction",
+			"major_npc_action",
+			"npc_action",
 			"origin",
-			"specialAbility",
+			"special_ability",
 			"talent",
 			"temperament",
 			"weapon"

@@ -4,21 +4,29 @@
 	</span>
 
 	<ol class="item-list">
-		{{#each specialAbilities}}
-			<li
-				class="item"
-				data-menu="item"
-				data-uuid="{{this.uuid}}"
-			>
-				<a
-					data-action="useSpecialAbility"
-					data-uuid="{{uuid}}"
+		{{#if specialAbilities}}
+			{{#each specialAbilities}}
+				<li
+					class="item"
+					data-menu="item"
+					data-uuid="{{this.uuid}}"
 				>
-					<i class="fas fa-dice-d20"></i>
-					<b style="text-transform: uppercase">{{this.name}}</b>:
-					{{{this.system.description}}}
-				</a>
-			</li>
-		{{/each}}
+					<a
+						data-action="useSpecialAbility"
+						data-uuid="{{uuid}}"
+					>
+						<i class="fas fa-dice-d20"></i>
+						<b style="text-transform: uppercase">{{this.name}}</b>:
+						<em>
+							{{{this.system.description}}}
+						</em>
+					</a>
+				</li>
+			{{/each}}
+		{{else}}
+			<div class="placeholder">
+				{{localize "DNM.Placeholders.None"}}
+			</div>
+		{{/if}}
 	</ol>
 </div>

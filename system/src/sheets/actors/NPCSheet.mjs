@@ -11,7 +11,7 @@ export default class NPCSheet extends DnMActorSheet {
 		);
 		const enrichedNotes = await TextEditor.enrichHTML(this.system.notes, { async: true });
 
-		const abilities = this.actor.items.filter(i => i.type === "specialAbility");
+		const abilities = this.actor.items.filter(i => i.type === "special_ability");
 		const weapons = this.actor.items.filter(i => i.type === "item" && i.system.isWeapon);
 
 		return {

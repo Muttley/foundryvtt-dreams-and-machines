@@ -65,13 +65,19 @@ export default class DnMActor extends Actor {
 
 
 	get specialAbilities() {
-		const abilities = this.items.filter(i => i.type === "specialAbility");
+		const abilities = this.items.filter(i => i.type === "special_ability");
 		return abilities.sort((a, b) => a.name.localeCompare(b.name));
 	}
 
 
 	get temperament() {
 		return this.items.find(i => i.type === "temperament");
+	}
+
+
+	get actions() {
+		const actions = this.items.filter(i => i.type === "npc_action");
+		return actions.sort((a, b) => a.name.localeCompare(b.name));
 	}
 
 

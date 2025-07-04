@@ -8,9 +8,9 @@ globalThis.templatePath = path => path ? systemPath(`templates/${path}.hbs`) : s
 
 
 DREAMS.ATTRIBUTES = {
-	insight: "DNM.Attributes.Insight",
 	might: "DNM.Attributes.Might",
 	quickness: "DNM.Attributes.Quickness",
+	insight: "DNM.Attributes.Insight",
 	resolve: "DNM.Attributes.Resolve",
 };
 
@@ -38,6 +38,12 @@ DREAMS.JOURNAL_UUIDS = {
 };
 
 
+DREAMS.NPC_WEAPON_TYPES = {
+	Melee: "DNM.Labels.Weapon.Melee",
+	Ranged: "DNM.Labels.Weapon.Ranged",
+};
+
+
 DREAMS.OFFICIAL_SOURCES = {
 	EchoesOfAnAncientEnemy: "DNM.Sources.EchoesOfAnAncientEnemy",
 	EmertaValo: "DNM.Sources.EmertaValo",
@@ -54,13 +60,13 @@ DREAMS.OFFICIAL_SOURCES = {
 
 
 DREAMS.SKILLS = {
-	fight: "DNM.Skills.Fight",
 	move: "DNM.Skills.Move",
-	operate: "DNM.Skills.Operate",
+	fight: "DNM.Skills.Fight",
 	sneak: "DNM.Skills.Sneak",
+	talk: "DNM.Skills.Talk",
+	operate: "DNM.Skills.Operate",
 	study: "DNM.Skills.Study",
 	survive: "DNM.Skills.Survive",
-	talk: "DNM.Skills.Talk",
 };
 
 
@@ -85,3 +91,25 @@ DREAMS.WEAPON_TYPES = {
 	Ranged: "DNM.Labels.Weapon.Ranged",
 	MeleeRanged: "DNM.Labels.Weapon.MeleeRanged",
 };
+
+
+export function generateSortedData() {
+	DREAMS.ATTRIBUTES_SORTED = [];
+	for (let attribute in DREAMS.ATTRIBUTES) {
+		DREAMS.ATTRIBUTES_SORTED.push({
+			key: attribute,
+			name: DREAMS.ATTRIBUTES[attribute],
+		});
+	}
+	DREAMS.ATTRIBUTES_SORTED.sort((a, b) => a.name.localeCompare(b.name));
+
+
+	DREAMS.SKILLS_SORTED = [];
+	for (let skill in DREAMS.SKILLS) {
+		DREAMS.SKILLS_SORTED.push({
+			key: skill,
+			name: DREAMS.SKILLS[skill],
+		});
+	}
+	DREAMS.SKILLS_SORTED.sort((a, b) => a.name.localeCompare(b.name));
+}

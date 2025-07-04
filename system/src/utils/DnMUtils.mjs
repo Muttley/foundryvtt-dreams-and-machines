@@ -76,7 +76,7 @@ export default class DnMUtils {
 			const systemVersion = game.system.version;
 
 			if (systemVersion !== savedVersion) {
-				Hotbar.toggleDocumentSheet(
+				foundry.applications.ui.Hotbar.toggleDocumentSheet(
 					CONFIG.DREAMS.JOURNAL_UUIDS.releaseNotes
 				);
 

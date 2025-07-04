@@ -43,6 +43,15 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 	};
 
 
+	get allowedItems() {
+		return [
+			"npc_action",
+			"special_ability",
+			"weapon",
+		];
+	}
+
+
 	/** @override */
 	async _prepareContext(options={}) {
 		const context = await super._prepareContext(options);
@@ -57,12 +66,9 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 
 		switch (partId) {
 			case "attributes":
-				context.abilities = this.actor.items.filter(i => i.type === "specialAbility");
-				context.enrichedSpecialActions = await TextEditor.enrichHTML(
-					this.system.specialActions, { async: true }
-				);
+				context.specialAbilities = this.actor.items.filter(i => i.type === "special_ability");
+				context.actions = await this._prepareActions(context);
 				context.weapons = await this._prepareWeapons(context);
-				context.specialAbilities = this.actor.specialAbilities;
 				break;
 			case "description":
 				context.enrichedDescription = await TextEditor.enrichHTML(

@@ -66,6 +66,7 @@
 
 		align-items: center;
 		justify-content: center;
+		height: fit-content;
 
 		color: white;
 		background-color: $c-character-primary;
@@ -88,6 +89,15 @@
 		}
 	}
 
+	.placeholder {
+		padding: 0.25rem;
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 1;
+		text-align: center;
+		font-style: oblique;
+	}
+
 	.rollable {
 		display: grid;
 		grid-template-columns: minmax(100px, 1fr);
@@ -108,7 +118,7 @@
 		padding: 0.25rem;
 		align-items: center;
 		gap: 1rem;
-		background-color: $c-character-primary;
+		background-color: black;
 
 		img.item-image,
 		img.document-image {
@@ -166,7 +176,8 @@
 	.tab-body {
 		@include p-reset;
 		display: grid;
-		gap: 4px;
+		gap: 8px;
+		align-content: baseline;
 		min-height: 350px;
 		padding: 0.25rem;
 

@@ -12,7 +12,6 @@ export default class DnMActorSheetV2
 	/** @override */
 	static DEFAULT_OPTIONS = {
 		actions: {
-			editImage: this._onEditImage,
 			onRoll: this._onRoll,
 			toggleEditMode: this._onToggleEditMode,
 		},
@@ -28,6 +27,11 @@ export default class DnMActorSheetV2
 		},
 		tag: "form",
 	};
+
+
+	get allowedItems() {
+		return [];
+	}
 
 
 	get dragDrop() {
@@ -114,37 +118,6 @@ export default class DnMActorSheetV2
 		else {
 			return console.warn("Could not find document class");
 		}
-	}
-
-
-	/**
-	 * Handle changing a Document's image.
-	 * TODO: Copied from v13 implementation, can be removed after
-	 */
-	static async _onEditImage(_event, target) {
-		if (target.nodeName !== "IMG") {
-			throw new Error("The editImage action is available only for IMG elements.");
-		}
-		const attr = target.dataset.edit;
-		const current = foundry.utils.getProperty(this.document._source, attr);
-		const defaultArtwork =
-			this.document.constructor.getDefaultArtwork?.(this.document._source) ?? {};
-		const defaultImage = foundry.utils.getProperty(defaultArtwork, attr);
-		const fp = new FilePicker({
-			current,
-			type: "image",
-			redirectToRoot: defaultImage ? [defaultImage] : [],
-			callback: path => {
-				target.src = path;
-				if (this.options.form.submitOnChange) {
-					const submit = new Event("submit");
-					this.element.dispatchEvent(submit);
-				}
-			},
-			top: this.position.top + 40,
-			left: this.position.left + 10,
-		});
-		await fp.browse();
 	}
 
 
@@ -270,7 +243,10 @@ export default class DnMActorSheetV2
 
 	async _onDropItem(event, data) {
 		if (!this.actor.isOwner) return false;
+
 		const item = await DnMItem.fromDropData(data);
+
+		if (!this.allowedItems.includes(item.type)) return false;
 
 		// Handle item sorting within the same Actor
 		if (this.actor.uuid === item.parent?.uuid) return this._onSortItem(event, item);
@@ -367,15 +343,35 @@ export default class DnMActorSheetV2
 	}
 
 
+	async _prepareActions(context) {
+		const actions = [];
+
+		for (const action of this.actor.actions) {
+			const enrichedDescription = await TextEditor.enrichHTML(action.system.description);
+
+			const actionData = {
+				enrichedDescription,
+				name: action.name,
+				uuid: action.uuid,
+			};
+
+			actions.push(actionData);
+		}
+
+		return actions;
+	}
+
+
 	async _prepareWeapons(context) {
 		const weapons = [];
 
 		for (const weapon of this.actor.weapons) {
 			const weaponData = {
+				damage: weapon.system.damage,
 				name: weapon.name,
-				uuid: weapon.uuid,
-				type: CONFIG.DREAMS.WEAPON_TYPES[weapon.system.weaponType],
 				qualities: [],
+				type: CONFIG.DREAMS.WEAPON_TYPES[weapon.system.weaponType],
+				uuid: weapon.uuid,
 			};
 
 			for (const key in weapon.system.qualities) {

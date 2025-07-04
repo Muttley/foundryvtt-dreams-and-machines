@@ -40,6 +40,7 @@ DNM.Labels.Archetype: Archetype
 DNM.Labels.ArchetypeGoal: Archetype Goal
 DNM.Labels.Archetypes: Archetypes
 DNM.Labels.Attitude: Attitude
+DNM.Labels.Attribute: Attribute
 DNM.Labels.AttributeChoices: Attribute Choices
 DNM.Labels.Attributes: Attributes
 DNM.Labels.Bond: Bond
@@ -91,6 +92,7 @@ DNM.Labels.LongTermGoals: Long-Term
 DNM.Labels.Max: Max
 DNM.Labels.MissingUUID: (Missing UUID)
 DNM.Labels.Momentum: Momentum
+DNM.Labels.Name: Name
 DNM.Labels.Notes: Notes
 DNM.Labels.Or: Or
 DNM.Labels.Origin: Origin
@@ -104,6 +106,7 @@ DNM.Labels.SelectQuality: Select Quality...
 DNM.Labels.SelectSpecialAbility: Select Special Ability...
 DNM.Labels.SelectTalent: Select Talent...
 DNM.Labels.ShortTermGoals: Short-Term
+DNM.Labels.Skill: Skill
 DNM.Labels.SkillChoices: Skill Choices
 DNM.Labels.Skills: Skills
 DNM.Labels.SkillTest: Skill Test
@@ -147,6 +150,7 @@ DNM.Notifications.NotEnoughMomentum: Cannot spend Momentum while the pool is emp
 DNM.Notifications.NotEnoughThreat: Cannot spend Threat while the pool is empty!
 DNM.Placeholders.ArchetypeGoal.NoArchetype: No Archetype has been added to the character
 DNM.Placeholders.ArchetypeGoal.NoTemperament: No Temperament has been added to the character
+DNM.Placeholders.None: None
 DNM.QualityName.ammo: Ammo
 DNM.QualityName.breaker: Breaker
 DNM.QualityName.bulky: Bulky
@@ -232,9 +236,10 @@ TYPES.Actor.majorNPC: Major NPC
 TYPES.Actor.npc: NPC
 TYPES.Item.archetype: Archetype
 TYPES.Item.equipment: Equipment
-TYPES.Item.majorNPCAction: Major NPC Action
+TYPES.Item.major_npc_action: Major NPC Action
+TYPES.Item.npc_action: NPC Action
 TYPES.Item.origin: Origin
-TYPES.Item.specialAbility: Special Ability
+TYPES.Item.special_ability: Special Ability
 TYPES.Item.talent: Talent
 TYPES.Item.temperament: Temperament
 TYPES.Item.weapon: Weapon

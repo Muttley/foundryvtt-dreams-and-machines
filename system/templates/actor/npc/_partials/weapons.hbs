@@ -4,32 +4,38 @@
 	</span>
 
 	<ol class="item-list">
-		{{#each weapons}}
-			<li
-				class="item"
-				data-menu="item"
-				data-uuid="{{this.uuid}}"
-			>
-				<a
-					data-action="onRoll"
-					data-type="main"
+		{{#if weapons}}
+			{{#each weapons}}
+				<li
+					class="item"
+					data-menu="item"
 					data-uuid="{{this.uuid}}"
 				>
-					<i class="fas fa-dice-d20"></i>
-					<b style="text-transform: uppercase">
-						{{this.name}}
-						({{this.type}})</b>:
-					<i>
-						{{#if this.qualities}}
-							{{#each this.qualities}}
-								<em>{{name}}{{#if hasValue}} {{ value }}{{/if}}{{#unless @last}},{{/unless}}</em>
-							{{/each}}
-						{{else}}
-							&mdash;
-						{{/if}}
-					</i>
-				</a>
-			</li>
-		{{/each}}
+					<a
+						data-action="onRoll"
+						data-type="main"
+						data-uuid="{{this.uuid}}"
+					>
+						<i class="fas fa-dice-d20"></i>
+						<b style="text-transform: uppercase">
+							{{this.name}} ({{this.type}}):
+						</b>
+						<em>
+							{{#if this.damage}}
+								{{#each this.damage}}
+									{{ type }} {{ value }}{{#unless @last}},{{/unless}}
+								{{/each}}
+							{{else}}
+								&mdash;
+							{{/if}}
+						</em>
+					</a>
+				</li>
+			{{/each}}
+		{{else}}
+			<div class="placeholder">
+				{{localize "DNM.Placeholders.None"}}
+			</div>
+		{{/if}}
 	</ol>
 </div>

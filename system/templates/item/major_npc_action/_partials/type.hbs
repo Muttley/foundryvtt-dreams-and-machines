@@ -1,0 +1,10 @@
+<div>
+	<span class="label">
+		{{localize "DNM.Labels.WeaponType"}}
+	</span>
+
+	<select name="system.weaponType" {{disabled @root.editModeDisabled}}>
+		{{selectOptions CONFIG.NPC_WEAPON_TYPES selected=@root.system.weapon.weaponType}}
+	</select>
+</div>
+

@@ -1,3 +1,5 @@
+import { generateSortedData } from "../config.mjs";
+
 export const setupHook = {
 	attach: () => {
 		dreams.debug("Attaching setup hook");
@@ -20,6 +22,8 @@ export const setupHook = {
 					}
 				}
 			}
+
+			generateSortedData();
 		});
 	},
 };

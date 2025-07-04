@@ -27,7 +27,7 @@ export default class DnMItemSheetV2
 		switch (this.item.type) {
 			case "archetype":
 			case "equipment":
-			case "majorNPCAction":
+			case "major_npc_action":
 			case "origin":
 			case "talent":
 			case "temperament":
@@ -53,7 +53,8 @@ export default class DnMItemSheetV2
 					},
 				};
 			}
-			case "specialAbility": {
+			case "npc_action":
+			case "special_ability": {
 				return {
 					description: {
 						cssClass: this.tabGroups.primary === "description" ? "active" : "",
@@ -78,11 +79,13 @@ export default class DnMItemSheetV2
 	/** @override */
 	static DEFAULT_OPTIONS = {
 		actions: {
+			addDamageType: DnMItemSheetV2._onAddDamageType,
+			deleteChoice: DnMItemSheetV2._deleteChoiceItem,
+			deleteDamageType: DnMItemSheetV2._onDeleteDamageType,
 			toggleAttributeChoice: DnMItemSheetV2._onToggleAttributeChoice,
 			toggleEditMode: DnMItemSheetV2._onToggleEditMode,
 			toggleQuality: DnMItemSheetV2._onToggleQuality,
 			toggleSkillChoice: DnMItemSheetV2._onToggleSkillChoice,
-			deleteChoice: DnMItemSheetV2._deleteChoiceItem,
 		},
 		classes: ["sheet", "dnm", "item"],
 		form: {
@@ -153,6 +156,37 @@ export default class DnMItemSheetV2
 		);
 
 		this.item.update({"system.skillChoices.choices": newChoices});
+	}
+
+
+	static async _onAddDamageType(event, target) {
+		event.preventDefault();
+
+		const damageValues = this.system.damage ?? [];
+
+		damageValues.push({type: "", value: 1});
+
+		const updateData = {};
+		updateData[target.dataset.systemKey] = damageValues;
+
+		this.item.update(updateData);
+	}
+
+
+	static async _onDeleteDamageType(event, target) {
+		event.preventDefault();
+
+		const dataset = event.target.dataset;
+		const index = Number(dataset.index);
+
+		const damageValues = this.system.damage ?? [];
+
+		damageValues.splice(index, 1);
+
+		const updateData = {};
+		updateData[target.dataset.systemKey] = damageValues;
+
+		this.item.update(updateData);
 	}
 
 
@@ -336,34 +370,35 @@ export default class DnMItemSheetV2
 	}
 
 	_getAttributeData(context, chosen) {
-		const attributes = [];
+		context.attributes = [];
 
 		for (const [id, name] of Object.entries(CONFIG.DREAMS.ATTRIBUTES)) {
-			attributes.push({
+			context.attributes.push({
 				id,
 				name,
 				selected: chosen.includes(id),
 			});
 		}
-		context.attributes = attributes.sort(
-			(a, b) => a.name.localeCompare(b.name)
-		);
+		// context.attributes = attributes.sort(
+		// 	(a, b) => a.name.localeCompare(b.name)
+		// );
 	}
 
 
 	_getSkillData(context) {
-		const skills = [];
+		context.skills = [];
 
 		for (const [id, name] of Object.entries(CONFIG.DREAMS.SKILLS)) {
-			skills.push({
+			context.skills.push({
 				id,
 				name,
 				selected: this.system.skillChoices.choices.includes(id),
 			});
 		}
-		context.skills = skills.sort(
-			(a, b) => a.name.localeCompare(b.name)
-		);
+
+		// context.skills = skills.sort(
+		// 	(a, b) => a.name.localeCompare(b.name)
+		// );
 	}
 
 }

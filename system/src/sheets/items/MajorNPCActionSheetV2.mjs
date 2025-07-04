@@ -1,7 +1,6 @@
 import DnMItemSheetV2 from "../DnMItemSheetV2.mjs";
 
-export default class WeaponSheet extends DnMItemSheetV2 {
-
+export default class MajorNPCActionSheet extends DnMItemSheetV2 {
 
 	/** @override */
 	static PARTS = {
@@ -12,17 +11,14 @@ export default class WeaponSheet extends DnMItemSheetV2 {
 			template: templatePath("_shared-partials/tabs"),
 		},
 		attributes: {
-			template: templatePath("item/weapon/attributes-tab"),
+			template: templatePath("item/major_npc_action/attributes-tab"),
 			templates: [
-				templatePath("item/_shared-partials/category"),
-				templatePath("item/_shared-partials/coin"),
-				templatePath("item/_shared-partials/quantity"),
-				templatePath("item/_shared-partials/rarity"),
-				templatePath("item/_shared-partials/supply-point-cost"),
-				templatePath("item/_shared-partials/tech-level"),
-				templatePath("item/weapon/_partials/damage"),
-				templatePath("item/weapon/_partials/qualities"),
-				templatePath("item/weapon/_partials/type"),
+				templatePath("item/major_npc_action/_partials/damage"),
+				templatePath("item/major_npc_action/_partials/name"),
+				templatePath("item/major_npc_action/_partials/qualities"),
+				templatePath("item/major_npc_action/_partials/skill-test"),
+				templatePath("item/major_npc_action/_partials/type"),
+				templatePath("item/major_npc_action/_partials/weapon"),
 			],
 		},
 		description: {
@@ -32,6 +28,11 @@ export default class WeaponSheet extends DnMItemSheetV2 {
 			template: templatePath("_shared-partials/source-tab"),
 		},
 	};
+
+
+	// get defaultTab() {
+	// 	return "description";
+	// }
 
 
 	/** @override */
@@ -47,8 +48,8 @@ export default class WeaponSheet extends DnMItemSheetV2 {
 	async _prepareWeaponQualities(context) {
 		context.qualities = [];
 
-		for (const key in this.item.system.qualities) {
-			const quality = this.item.system.qualities[key] ?? {};
+		for (const key in this.item.system.weapon.qualities) {
+			const quality = this.item.system.weapon.qualities[key] ?? {};
 
 			quality.key = key;
 			quality.name = game.i18n.localize(`DNM.QualityName.${key}`);

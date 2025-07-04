@@ -1,9 +1,9 @@
-<label>
+<div>
 	<span class="label">
 		{{#if @root.editModeEnabled}}
 			<a
 				data-action="addDamageType"
-				data-system-key="system.damage"
+				data-system-key="system.weapon.damage"
 				{{disabled @root.editModeDisabled}}
 			>
 				<i class="fa-solid fa-plus"></i>
@@ -13,11 +13,11 @@
 		{{localize "DNM.Labels.Damage"}}
 	</span>
 	<div class="damage-type-grid {{#if @root.editModeDisabled}}disabled{{/if}}">
-		{{#each system.damage}}
+		{{#each system.weapon.damage}}
 			<input
 				class="lockable"
 				type="text"
-				name="system.damage.{{@index}}.type"
+				name="system.weapon.damage.{{@index}}.type"
 				value="{{this.type}}"
 				placeholder="{{localize "DNM.Labels.DamageType"}}"
 				{{disabled @root.editModeDisabled}}
@@ -25,14 +25,14 @@
 			<input
 				class="lockable"
 				type="number"
-				name="system.damage.{{@index}}.value"
+				name="system.weapon.damage.{{@index}}.value"
 				value="{{this.value}}"
 				{{disabled @root.editModeDisabled}}
 			/>
 			{{#if @root.editModeEnabled}}
 				<a
 					data-action="deleteDamageType"
-					data-system-key="system.damage"
+					data-system-key="system.weapon.damage"
 					data-tooltip="{{localize "DNM.Labels.Delete"}}"
 					{{disabled @root.editModeDisabled}}
 				>
@@ -41,4 +41,4 @@
 			{{/if}}
 		{{/each}}
 	</div>
-</label>
+</div>
