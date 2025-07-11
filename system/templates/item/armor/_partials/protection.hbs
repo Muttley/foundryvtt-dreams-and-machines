@@ -1,0 +1,30 @@
+<div>
+	<div>
+		<span class="label">
+			{{localize "DNM.Labels.Protection"}}
+		</span>
+		<input
+			class="lockable"
+			data-type="Number"
+			name="system.protection.value"
+			type="number"
+			value="{{system.protection.value}}"
+			{{disabled @root.editModeDisabled}}
+		/>
+	</div>
+</div>
+<div>
+	<div>
+		<span class="label">
+			({{localize "DNM.QualityName.breaker"}})
+		</span>
+		<input
+			class="lockable"
+			data-type="Number"
+			name="system.protection.breaker"
+			type="number"
+			value="{{system.protection.breaker}}"
+			{{disabled @root.editModeDisabled}}
+		/>
+	</div>
+</div>

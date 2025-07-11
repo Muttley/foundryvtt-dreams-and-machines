@@ -1,0 +1,101 @@
+{
+	"_id": "s5dXtK8fGq47kCDm",
+	"_key": "!items!s5dXtK8fGq47kCDm",
+	"effects": [
+	],
+	"folder": "RxQmXzZLO9hJlGX5",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "EM Beamer",
+	"system": {
+		"category": "Military",
+		"coin": 6,
+		"damage": [
+			{
+				"type": "Overloaded",
+				"value": 4
+			}
+		],
+		"description": "<p>A long-ranged form of directed radiation weapon, these guns propel a focused electromagnetic pulse down a narrow channel of ionized air, striking a target at long distances. These weapons were heavily used during the War for destroying mechs and other technological foes, but are far less effective against living creatures.</p><p>The profile for the EMP Beamer can be found in the Military Weapons Table at the start of this section. An EMP Beamer is a powered weapon, which recharges after a Bed rest. Non-robot characters cannot suffer an Injury from an EMP Weapon.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 5,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

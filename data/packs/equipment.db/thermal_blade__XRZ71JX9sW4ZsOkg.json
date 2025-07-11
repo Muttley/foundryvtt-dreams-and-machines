@@ -1,0 +1,101 @@
+{
+	"_id": "XRZ71JX9sW4ZsOkg",
+	"_key": "!items!XRZ71JX9sW4ZsOkg",
+	"effects": [
+	],
+	"folder": "RxQmXzZLO9hJlGX5",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Thermal Blade",
+	"system": {
+		"category": "Military",
+		"coin": 6,
+		"damage": [
+			{
+				"type": "Cauterized",
+				"value": 4
+			}
+		],
+		"description": "<p>This weapon appears to be an unusual form of sword, spear, or another cutting melee weapon. When activated, however, the blade heats up considerably, allowing it to cut and melt through harder substances and even armor plating. The heating elements on the blade glow when in use, though shielding technology in the hilt means that the heat doesn’t affect the user or anyone not within a centimeter or so of the blade’s edge.</p><p>The profile for the Thermal Blade can be found in the Military Weapons Table at the start of this section. A Thermal Blade is a powered weapon, which recharges after a Bed rest.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4,
+		"weaponType": "Melee"
+	},
+	"type": "weapon"
+}

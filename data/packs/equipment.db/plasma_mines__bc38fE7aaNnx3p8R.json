@@ -1,0 +1,101 @@
+{
+	"_id": "bc38fE7aaNnx3p8R",
+	"_key": "!items!bc38fE7aaNnx3p8R",
+	"effects": [
+	],
+	"folder": "RxQmXzZLO9hJlGX5",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Plasma Mines",
+	"system": {
+		"category": "Military",
+		"coin": 6,
+		"damage": [
+			{
+				"type": "Plasma Burn [x2]",
+				"value": 4
+			}
+		],
+		"description": "<p>These mines generate a burst of highenergy plasma that burns everything in the immediate vicinity. They were often used to defeat heavy mechs and heavy vehicles, as the intense plasma could burn through most materials. They’re set to trigger when someone passes within a meter.</p><p>Each mine can only be used once. The profile for a Plasma Mine can be found in the Military Weapons Table at the start of this section. An Atoma device produces these mines in batches of three.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 3,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

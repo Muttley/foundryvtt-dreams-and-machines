@@ -1,0 +1,101 @@
+{
+	"_id": "lhIDuqiWUG7V6gTw",
+	"_key": "!items!lhIDuqiWUG7V6gTw",
+	"effects": [
+	],
+	"folder": "rZAZVR5JEyhmGRYH",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Bomb (Tangle)",
+	"system": {
+		"category": "HandMade",
+		"coin": 2,
+		"damage": [
+			{
+				"type": "Entangled",
+				"value": 4
+			}
+		],
+		"description": "<p>A simple ranged weapon, comprising a hard outer shell filled with a reactive payload, and an explosive charge to break the shell and set off the payload after a brief delay.</p><p>Blast bombs contain a more powerful explosive charge along with hardened metal and ceramic shrapnel which is hurled at high speed by the blast. Incendiary bombs ignite a flammable liquid and spread it over an area. Tangle bombs contain an adhesive chemical mixture that rapidly expands and hardens when the bomb detonates, entangling anyone nearby.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 3,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 2,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

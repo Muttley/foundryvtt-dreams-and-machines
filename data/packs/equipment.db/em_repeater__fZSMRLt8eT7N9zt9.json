@@ -1,0 +1,101 @@
+{
+	"_id": "fZSMRLt8eT7N9zt9",
+	"_key": "!items!fZSMRLt8eT7N9zt9",
+	"effects": [
+	],
+	"folder": "RxQmXzZLO9hJlGX5",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "EM Repeater",
+	"system": {
+		"category": "Military",
+		"coin": 6,
+		"damage": [
+			{
+				"type": "Overloaded",
+				"value": 3
+			}
+		],
+		"description": "<p>A common form of EMP weapon, these guns propel directed electromagnetic pulses. The weapon has a relatively high rate of fire, able to produce several pulses in quick succession, but their effective range is limited. These weapons were used for destroying mechs and other high-tech targets.</p><p>The profile for the EMP Repeater can be found in the Military Weapons Table at the start of this section. An EMP Repeater is a powered weapon, which recharges after a Bed rest. Non-robot characters cannot suffer Injury from EMP weapons.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 5,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

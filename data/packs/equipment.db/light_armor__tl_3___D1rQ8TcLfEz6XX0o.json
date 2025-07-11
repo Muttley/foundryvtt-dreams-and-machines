@@ -1,0 +1,65 @@
+{
+	"_id": "D1rQ8TcLfEz6XX0o",
+	"_key": "!items!D1rQ8TcLfEz6XX0o",
+	"effects": [
+	],
+	"folder": "59POMv9LyQ7iSHaZ",
+	"img": "systems/dreams-and-machines/assets/icons/armor.svg",
+	"name": "Light Armor (TL-3)",
+	"system": {
+		"category": "Security",
+		"coin": 4,
+		"damage": [
+		],
+		"description": "<p>Light armor was typically worn by security personnel, those for whom combat is a risk, but not guaranteed, and by those unwilling to sacrifice mobility for protection. Light armor is commonly covered in pouches, belts, and other fixtures for carrying tools and other equipment.</p><p>Tech Level 2 Light Armor is Armor which provides Protection of 2. Tech Level 3 Light Armor provides Protection 3 instead. In either case, this Protection is reduced to half (rounding up) by attacks with the <em>breaker</em> keyword. Light Armor is <em>handy</em>.</p>",
+		"equipped": false,
+		"protection": {
+			"breaker": 2,
+			"value": 3
+		},
+		"qualities": {
+			"bulky": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"environment": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"handy": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"mobile": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 0,
+		"techLevel": 3
+	},
+	"type": "armor"
+}

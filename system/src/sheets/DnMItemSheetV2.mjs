@@ -26,7 +26,9 @@ export default class DnMItemSheetV2
 
 		switch (this.item.type) {
 			case "archetype":
+			case "armor":
 			case "equipment":
+			case "glif":
 			case "major_npc_action":
 			case "origin":
 			case "talent":
@@ -192,6 +194,8 @@ export default class DnMItemSheetV2
 
 	static async _onToggleQuality(event, target) {
 		event.preventDefault();
+
+		if (!this._editModeEnabled) return;
 
 		const dataset = event.target.dataset;
 		const enabled = dataset.enabled === "true" ? false : true;

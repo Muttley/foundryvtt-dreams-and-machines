@@ -1,0 +1,101 @@
+{
+	"_id": "JNv0ZpLmy3LLEYAi",
+	"_key": "!items!JNv0ZpLmy3LLEYAi",
+	"effects": [
+	],
+	"folder": "RxQmXzZLO9hJlGX5",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "EMP Mines",
+	"system": {
+		"category": "Military",
+		"coin": 6,
+		"damage": [
+			{
+				"type": "Overloaded [x2]",
+				"value": 4
+			}
+		],
+		"description": "<p>These placed charges produce an intense electromagnetic pulse, which harms only machines. They’re normally set to detonate when the mine detects a mech or other machine moving within a meter.</p><p>Each mine can only be used once. The profile for an EMP Mine can be found in the Military Weapons Table at the start of this section. Non-robot characters cannot suffer Injury from EMP Mines. An Atoma device produces these mines in batches of three.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 3,
+		"rarity": 5,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

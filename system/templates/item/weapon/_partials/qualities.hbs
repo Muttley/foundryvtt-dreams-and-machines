@@ -1,11 +1,11 @@
-<label>
+<div>
 	<span class="label">
 		{{localize "DNM.Labels.Qualities"}}
 	</span>
 
 	<div class="grid-2-columns">
 		{{#each qualities}}
-			<a
+			<div
 				{{#if this.enabled}}
 					class="selectable-choice selected"
 				{{else}}
@@ -16,12 +16,11 @@
 				data-key="{{this.key}}"
 				data-system-property="system.qualities"
 				data-tooltip="{{localize (concat "DNM.QualityTooltip.Weapon." this.key)}}"
-				{{disabled @root.editModeDisabled}}
 			>
 				{{this.name}}
-			</a>
+			</div>
 		{{/each}}
 	</div>
 
-</label>
+</div>
 

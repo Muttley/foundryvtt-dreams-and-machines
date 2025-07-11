@@ -30,10 +30,10 @@ export default class TemperamentSheet extends DnMItemSheetV2 {
 		attributes: {
 			template: templatePath("item/temperament/attributes-tab"),
 			templates: [
-				templatePath("item/_shared-partials/attributes"),
-				templatePath("item/_shared-partials/narrow-text-field"),
-				templatePath("item/_shared-partials/skills"),
-			],
+				"item/_shared-partials/attributes",
+				"item/_shared-partials/narrow-text-field",
+				"item/_shared-partials/skills",
+			].map(path => templatePath(path)),
 		},
 		description: {
 			template: templatePath("_shared-partials/description-tab"),

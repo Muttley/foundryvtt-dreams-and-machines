@@ -17,6 +17,11 @@ const PhysicalItem = () => ({
 		nullable: false,
 	}),
 
+	equipped: new fields.BooleanField({
+		initial: false,
+		nullable: false,
+	}),
+
 	quantity: new fields.NumberField({
 		initial: 1,
 		integer: true,
@@ -28,6 +33,11 @@ const PhysicalItem = () => ({
 		initial: 1,
 		integer: true,
 		min: 0,
+		nullable: false,
+	}),
+
+	stashed: new fields.BooleanField({
+		initial: false,
 		nullable: false,
 	}),
 

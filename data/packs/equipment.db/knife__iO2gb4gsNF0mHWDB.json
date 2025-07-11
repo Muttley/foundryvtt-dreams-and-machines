@@ -1,0 +1,101 @@
+{
+	"_id": "iO2gb4gsNF0mHWDB",
+	"_key": "!items!iO2gb4gsNF0mHWDB",
+	"effects": [
+	],
+	"folder": "rZAZVR5JEyhmGRYH",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Knife",
+	"system": {
+		"category": "HandMade",
+		"coin": 1,
+		"damage": [
+			{
+				"type": "Bleeding",
+				"value": 1
+			}
+		],
+		"description": "<p>A sharpened metal blade with a short handle. Knives are more often made as tools than as weapons, but any knife can serve as a weapon in desperate times. A well-made fighting knife can stand up to heavy use, while also functioning as a useful tool for hunting and scavenging.</p><p>The profile for a knife can be found in the Hand-Made Weapons Table at the start of this section.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 1,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 1,
+		"techLevel": 0,
+		"weaponType": "MeleeRanged"
+	},
+	"type": "weapon"
+}

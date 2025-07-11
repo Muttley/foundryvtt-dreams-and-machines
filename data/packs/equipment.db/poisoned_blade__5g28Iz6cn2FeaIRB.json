@@ -1,0 +1,101 @@
+{
+	"_id": "5g28Iz6cn2FeaIRB",
+	"_key": "!items!5g28Iz6cn2FeaIRB",
+	"effects": [
+	],
+	"folder": "rZAZVR5JEyhmGRYH",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Poisoned Blade",
+	"system": {
+		"category": "HandMade",
+		"coin": 3,
+		"damage": [
+			{
+				"type": "Poisoned",
+				"value": 3
+			}
+		],
+		"description": "<p>Long knives, often needle-like, hollow, or with a specially-shaped fuller to allow a toxic substance to run easily along the blade’s length, these blades are carefully designed and made to deliver a toxic substance with a sharp stab or deep scratch. These toxins are often extracted from dangerous animals or concocted from plant extracts by experts in Dreamer communities.</p><p>The profile for poisoned blades can be found in the Hand-Made Weapons Table at the start of this section. A poisoned blade cannot inflict Injuries on machine enemies.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 2,
+		"weaponType": "Melee"
+	},
+	"type": "weapon"
+}

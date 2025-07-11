@@ -1,0 +1,101 @@
+{
+	"_id": "OwGovtK70sFcxL8p",
+	"_key": "!items!OwGovtK70sFcxL8p",
+	"effects": [
+	],
+	"folder": "RxQmXzZLO9hJlGX5",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Flamethrower",
+	"system": {
+		"category": "Military",
+		"coin": 4,
+		"damage": [
+			{
+				"type": "Burns",
+				"value": 4
+			}
+		],
+		"description": "<p>A weapon which sprays an ignited chemical fuel over a target. Atoma-made models contain a self-filling reservoir that synthesizes the propellant slowly over time. While restricted to Military Atoma devices, the majority of these weapons are used to clear invasive foliage, melt ice and snow, and to create firebreaks to prevent the spread of uncontrolled forest fires, rather than in actual combat.</p><p>The profile for the Flamethrower can be found in the Military Weapons Table at the start of this section. A Flamethrower is a powered weapon, which recharges after a Bed rest.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 3,
+		"techLevel": 3,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

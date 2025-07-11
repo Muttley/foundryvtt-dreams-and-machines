@@ -1,0 +1,65 @@
+{
+	"_id": "EhzIwlStd31ARuIx",
+	"_key": "!items!EhzIwlStd31ARuIx",
+	"effects": [
+	],
+	"folder": "59POMv9LyQ7iSHaZ",
+	"img": "systems/dreams-and-machines/assets/icons/armor.svg",
+	"name": "Heavy Armor (TL-3)",
+	"system": {
+		"category": "Military",
+		"coin": 6,
+		"damage": [
+		],
+		"description": "<p>A bulky suit of hard combat armor, worn over a padded undersuit. The armor plates and ablative layers are reinforced by a nanotech self-repair mechanism that allows the armor to remain effective even during intensive combat. The armor contains servomotors to assist the wearer with movement, and the Tech Level 4 version even contains limited anti-grav suspensors designed to offset the weight of the armor, granting enhanced mobility. Someone wearing heavy armor is expecting heavy fighting, and is best avoided.</p><p>Tech Level 3 Heavy Armor is Armor which provides Protection of 5. Tech Level 4 Combat Armor provides Protection 6 instead. In either case, this Protection is reduced to half (rounding up) by attacks with the <em>breaker</em> keyword. Heavy Armor is a <em>powered</em> item, which recharges after a Bed rest. It is also scary.</p>",
+		"equipped": false,
+		"protection": {
+			"breaker": 3,
+			"value": 5
+		},
+		"qualities": {
+			"bulky": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"environment": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"handy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mobile": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 0,
+		"techLevel": 3
+	},
+	"type": "armor"
+}

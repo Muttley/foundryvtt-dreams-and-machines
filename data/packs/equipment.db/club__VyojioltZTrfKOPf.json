@@ -1,0 +1,101 @@
+{
+	"_id": "VyojioltZTrfKOPf",
+	"_key": "!items!VyojioltZTrfKOPf",
+	"effects": [
+	],
+	"folder": "rZAZVR5JEyhmGRYH",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Club",
+	"system": {
+		"category": "HandMade",
+		"coin": 1,
+		"damage": [
+			{
+				"type": "Bludgeoned",
+				"value": 1
+			}
+		],
+		"description": "<p>A sturdy length of wood or metal, used to batter and bludgeon enemies. Easy to improvise, but improvised clubs are prone to break from use. Deliberately-made clubs tend to be reinforced to withstand repeated impacts.</p><p>The profile for the club can be found in the Hand-Made Weapons Table at the start of this section.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 1,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 1,
+		"techLevel": 0,
+		"weaponType": "Melee"
+	},
+	"type": "weapon"
+}

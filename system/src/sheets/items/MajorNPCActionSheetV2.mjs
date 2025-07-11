@@ -13,13 +13,13 @@ export default class MajorNPCActionSheet extends DnMItemSheetV2 {
 		attributes: {
 			template: templatePath("item/major_npc_action/attributes-tab"),
 			templates: [
-				templatePath("item/major_npc_action/_partials/damage"),
-				templatePath("item/major_npc_action/_partials/name"),
-				templatePath("item/major_npc_action/_partials/qualities"),
-				templatePath("item/major_npc_action/_partials/skill-test"),
-				templatePath("item/major_npc_action/_partials/type"),
-				templatePath("item/major_npc_action/_partials/weapon"),
-			],
+				"item/major_npc_action/_partials/damage",
+				"item/major_npc_action/_partials/name",
+				"item/major_npc_action/_partials/qualities",
+				"item/major_npc_action/_partials/skill-test",
+				"item/major_npc_action/_partials/type",
+				"item/major_npc_action/_partials/weapon",
+			].map(path => templatePath(path)),
 		},
 		description: {
 			template: templatePath("_shared-partials/description-tab"),

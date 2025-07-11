@@ -1,0 +1,101 @@
+{
+	"_id": "Hpa4a1r7pTgeUaP6",
+	"_key": "!items!Hpa4a1r7pTgeUaP6",
+	"effects": [
+	],
+	"folder": "rZAZVR5JEyhmGRYH",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Electrospear",
+	"system": {
+		"category": "HandMade",
+		"coin": 6,
+		"damage": [
+			{
+				"type": "Shocked",
+				"value": 4
+			}
+		],
+		"description": "<p>A potent hand-made weapon, Electrospears are used almost exclusively by Spears, who revere them as a symbol of their way of life and a legacy of their ancestors. Electrospears from fallen comrades are recovered and stored in Spear encampments, and each Spear will meditate surrounded by these weapons until they choose — or are chosen by — the weapon they will bear. Each Spear modifies and repairs their weapon throughout their lives, adding to their legacy. Each Electrospear is, essentially, an overcharged shock-prod with an extended, sharpened head — not especially sophisticated, but potent even against tough enemies such as mechs.</p><p>The profile for an Electrospear can be found in the Hand-Made Weapons Table at the start of this section. An Electrospear is a powered weapon, which recharges after a Breather rest. While recharging, the weapon may still be used as a normal spear.</p><p>Electrospears cannot be purchased — Spears don’t part with their traditional arms, but they’ll pay for weapons to be returned to them.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 5,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3,
+		"weaponType": "Melee"
+	},
+	"type": "weapon"
+}

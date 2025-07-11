@@ -1,0 +1,105 @@
+{
+	"_id": "SPKLGYDJ25Q1qlef",
+	"_key": "!items!SPKLGYDJ25Q1qlef",
+	"effects": [
+	],
+	"folder": "glfmGr9zgVQynWQI",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Shock Prod",
+	"system": {
+		"category": "Domestic",
+		"coin": 4,
+		"damage": [
+			{
+				"type": "Shocked",
+				"value": 3
+			},
+			{
+				"type": "Stunned",
+				"value": 3
+			}
+		],
+		"description": "<p>A sturdy scepter about the length of a forearm, topped with a metallic element which discharges electricity upon contact with an object or person. They were used as crowd control and riot-suppression tools previously, but most versions found these days are used instead to deter wild animals or herd livestock. Shock prods have an adjustable charge and can be set to inflict a short-lived shock that only really stuns the target. The effect is still painful, though.</p><p>The profile for the Shock Prod can be found in the Security Weapons Table at the start of this section. It may replace its shocked 3 Injury with stunned 3 on any attack, decided before any dice are rolled for the attack. A Shock Prod is a powered weapon, which recharges after a Breather rest.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3,
+		"weaponType": "Melee"
+	},
+	"type": "weapon"
+}

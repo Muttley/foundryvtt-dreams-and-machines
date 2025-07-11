@@ -1,0 +1,65 @@
+{
+	"_id": "d9VwkGIa1g4ue0jO",
+	"_key": "!items!d9VwkGIa1g4ue0jO",
+	"effects": [
+	],
+	"folder": "59POMv9LyQ7iSHaZ",
+	"img": "systems/dreams-and-machines/assets/icons/armor.svg",
+	"name": "Heavy Protective Gear (TL-4)",
+	"system": {
+		"category": "Industrial",
+		"coin": 5,
+		"damage": [
+		],
+		"description": "<p>Heavy-duty industrial protective gear is designed to protect from exposure to dangerous conditions, such as exposure to chemicals, radiation, electrical discharges, and blunt force trauma or lacerations from heavy machinery. Higher Tech Level versions use lighter, more durable materials.</p><p>Tech Level 3 Heavy Protective Gear is Armor which provides Protection of 3. Tech Level 4 Heavy Protective Gear provides Protection 4 instead. In either case, this Protection is ignored by attacks with the <em>breaker</em> keyword. Heavy Protective Gear is <em>bulky</em> and <em>handy</em>.</p>",
+		"equipped": false,
+		"protection": {
+			"breaker": 0,
+			"value": 4
+		},
+		"qualities": {
+			"bulky": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"environment": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"handy": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"mobile": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 5,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 0,
+		"techLevel": 4
+	},
+	"type": "armor"
+}

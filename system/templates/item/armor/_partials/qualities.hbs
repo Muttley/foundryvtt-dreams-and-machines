@@ -1,0 +1,26 @@
+<div>
+	<span class="label">
+		{{localize "DNM.Labels.Qualities"}}
+	</span>
+
+	<div class="grid-2-columns">
+		{{#each qualities}}
+			<div
+				{{#if this.enabled}}
+					class="selectable-choice selected"
+				{{else}}
+					class="selectable-choice"
+				{{/if}}
+				data-action="toggleQuality"
+				data-enabled="{{this.enabled}}"
+				data-key="{{this.key}}"
+				data-system-property="system.qualities"
+				data-tooltip="{{localize (concat "DNM.QualityTooltip.Armor." this.key)}}"
+			>
+				{{this.name}}
+			</div>
+		{{/each}}
+	</div>
+
+</div>
+

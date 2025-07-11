@@ -1,0 +1,101 @@
+{
+	"_id": "0oIDjssuu4lc32Ag",
+	"_key": "!items!0oIDjssuu4lc32Ag",
+	"effects": [
+	],
+	"folder": "glfmGr9zgVQynWQI",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Thermal Staff",
+	"system": {
+		"category": "Security",
+		"coin": 4,
+		"damage": [
+			{
+				"type": "Burn",
+				"value": 3
+			}
+		],
+		"description": "<p>A long staff, scepter, or rod with a heating element at the tip, which glows when in use, though shielding technology in the staff means that the heat doesn’t affect the user. The staff can be used to generate light and heat, to ignite flammable materials, to illuminate an area or to send a signal, and in extremes can be heated to temperatures intense enough to melt through dense armor plating.</p><p>The profile for the Thermal Staff can be found in the Security Weapons Table at the start of this section. A Thermal Staff is a powered weapon, which recharges after a Break rest.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4,
+		"weaponType": "Melee"
+	},
+	"type": "weapon"
+}

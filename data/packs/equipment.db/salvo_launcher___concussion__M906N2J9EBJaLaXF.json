@@ -1,0 +1,101 @@
+{
+	"_id": "M906N2J9EBJaLaXF",
+	"_key": "!items!M906N2J9EBJaLaXF",
+	"effects": [
+	],
+	"folder": "RxQmXzZLO9hJlGX5",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Salvo Launcher - Concussion",
+	"system": {
+		"category": "Military",
+		"coin": 7,
+		"damage": [
+			{
+				"type": "Concussed [x3]",
+				"value": 2
+			}
+		],
+		"description": "<p>A heavy weapon found mounted on vehicles, heavy mechs, and static emplacements, the Salvo Launcher is a rapid-firing multiplemissile launch pod which nano-fabricates a variety of missiles to use against an assortment of different types of target. These weapons require an Atoma cube to fabricate the ammunition, in addition to a large power supply. Sometimes called “Weavers’ Wrath,” as the weapon system responds well to the skills and lore of a Weaver.</p><p>A Salvo Launcher has several profiles, depending on which missiles are being fired, which can be found in the Military Weapons Table at the start of this section. It takes an action to switch between missile types unless the user has a reader lens or tactical lens. A Salvo Launcher may be fired directly, or if the user has a reader lens or tactical lens, it may be guided, allowing the attack to seek the target even if they’re not currently visible, or one d20 on the attack to be re-rolled. A Salvo Launcher is a powered weapon, requiring an active power supply (a generator or similar) to operate.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 5,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 5,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

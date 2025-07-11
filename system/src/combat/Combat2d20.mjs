@@ -88,7 +88,7 @@ export default class Combat2d20 extends Combat {
 		});
 
 		if (this.turn !== null) this.turn =
-			Math.clamped(this.turn, 0, turns.length - 1);
+			Math.clamp(this.turn, 0, turns.length - 1);
 
 		// Update state tracking
 		let c = turns[this.turn];

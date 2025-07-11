@@ -1,0 +1,65 @@
+{
+	"_id": "3zFL4uVMWPuG5zfH",
+	"_key": "!items!3zFL4uVMWPuG5zfH",
+	"effects": [
+	],
+	"folder": "59POMv9LyQ7iSHaZ",
+	"img": "systems/dreams-and-machines/assets/icons/armor.svg",
+	"name": "Combat Armor (TL-4)",
+	"system": {
+		"category": "Security",
+		"coin": 6,
+		"damage": [
+		],
+		"description": "<p>In the years before the war, due to the prevalence of directed energy weapons, the typical forms of combat armor were normally made of hard polymer plates over a heat-resistant, electrically-insulated flexible bodysuit. This armor, while bulky and sometimes cumbersome, provides excellent protection against most weapons; someone wearing it is often assumed to be a person looking for trouble.</p><p>Tech Level 3 Combat Armor is Armor which provides Protection of 4. Tech Level 4 Combat Armor provides Protection 5 instead. In either case, this Protection is reduced to half (rounding up) by attacks with the <em>breaker</em> keyword. The armor is <em>bulky</em> and <em>scary</em>.</p>",
+		"equipped": false,
+		"protection": {
+			"breaker": 3,
+			"value": 5
+		},
+		"qualities": {
+			"bulky": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"environment": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"handy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mobile": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 0,
+		"techLevel": 4
+	},
+	"type": "armor"
+}

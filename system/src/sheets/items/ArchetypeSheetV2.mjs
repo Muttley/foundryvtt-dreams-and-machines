@@ -27,14 +27,14 @@ export default class ArchetypeSheet extends DnMItemSheetV2 {
 		attributes: {
 			template: templatePath("item/archetype/attributes-tab"),
 			templates: [
-				templatePath("item/_shared-partials/attributes"),
-				templatePath("item/_shared-partials/choice-selector"),
-				templatePath("item/_shared-partials/narrow-text-field"),
-				templatePath("item/_shared-partials/skills"),
-				templatePath("item/_shared-partials/spirit"),
-				templatePath("item/_shared-partials/supply-points"),
-				templatePath("item/_shared-partials/tech-level"),
-			],
+				"item/_shared-partials/attributes",
+				"item/_shared-partials/choice-selector",
+				"item/_shared-partials/narrow-text-field",
+				"item/_shared-partials/skills",
+				"item/_shared-partials/spirit",
+				"item/_shared-partials/supply-points",
+				"item/_shared-partials/tech-level",
+			].map(path => templatePath(path)),
 		},
 		description: {
 			template: templatePath("_shared-partials/description-tab"),

@@ -1,8 +1,8 @@
-<label>
+<div>
 	<span class="label">
 		{{localize "DNM.Labels.Category"}}
 	</span>
 	<select name="system.category" {{disabled editModeDisabled}}>
 		{{selectOptions CONFIG.ITEM_CATEGORIES selected=@root.system.category}}
 	</select>
-</label>
+</div>

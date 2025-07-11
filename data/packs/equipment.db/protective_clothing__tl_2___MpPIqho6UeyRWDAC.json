@@ -1,0 +1,65 @@
+{
+	"_id": "MpPIqho6UeyRWDAC",
+	"_key": "!items!MpPIqho6UeyRWDAC",
+	"effects": [
+	],
+	"folder": "59POMv9LyQ7iSHaZ",
+	"img": "systems/dreams-and-machines/assets/icons/armor.svg",
+	"name": "Protective Clothing (TL-2)",
+	"system": {
+		"category": "Domestic",
+		"coin": 2,
+		"damage": [
+		],
+		"description": "<p>This represents clothing or personal protective equipment used to protect the wearer against minor injuries and reduce the effect of more serious injuries. It commonly consists of padding or lightweight plastic or polymer foam, and was used by those riding bikes or motorcycles, and by some kinds of athletes. Higher Tech Level versions use lighter, more durable materials. Protective clothing allows for a considerable range of motion and easy mobility while providing protection.</p><p>Tech Level 2 Protective Clothing is Armor which provides Protection of 1. Tech Level 3 Protective Clothing provides Protection 2 instead. In either case, this Protection is ignored by attacks with the <em>breaker</em> keyword. Protective clothing is <em>mobile</em>.</p>",
+		"equipped": false,
+		"protection": {
+			"breaker": 0,
+			"value": 1
+		},
+		"qualities": {
+			"bulky": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"environment": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"handy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mobile": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PoisonedWaters",
+		"stashed": false,
+		"supplyPointCost": 0,
+		"techLevel": 2
+	},
+	"type": "armor"
+}

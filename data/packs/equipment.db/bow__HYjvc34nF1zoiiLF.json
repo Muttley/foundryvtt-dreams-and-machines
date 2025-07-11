@@ -1,0 +1,101 @@
+{
+	"_id": "HYjvc34nF1zoiiLF",
+	"_key": "!items!HYjvc34nF1zoiiLF",
+	"effects": [
+	],
+	"folder": "rZAZVR5JEyhmGRYH",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Bow",
+	"system": {
+		"category": "HandMade",
+		"coin": 1,
+		"damage": [
+			{
+				"type": "Impale",
+				"value": 1
+			}
+		],
+		"description": "<p>A simple ranged weapon, normally made from lengths of flexible wood or metal, sometimes using pulleys to amplify the user’s effort. Bows are effective and versatile weapons, able to use arrows with a variety of different arrowheads.</p><p>Blast head arrows have a simple explosive charge in the arrowhead, designed to detonate upon impact. Spark heads contain an electrical charge which discharges upon impact. Tangle heads contain an adhesive chemical mixture that rapidly expands and hardens when the arrowhead breaks open on impact, entangling the target.</p><p>A bow has a basic profile for normal arrows, and then several profiles for special types of arrows, depending on which are being used, which can be found in the Hand-Made Weapons Table at the start of this section. Choose which type of arrow is being used before rolling for an attack. Arrows with the ammo quality are limited in number, with one shot consumed by each attack. Special arrows are bought or made in batches of 3.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 1,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 1,
+		"techLevel": 1,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

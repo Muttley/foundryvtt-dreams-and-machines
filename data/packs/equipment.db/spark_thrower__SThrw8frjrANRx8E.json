@@ -1,0 +1,101 @@
+{
+	"_id": "SThrw8frjrANRx8E",
+	"_key": "!items!SThrw8frjrANRx8E",
+	"effects": [
+	],
+	"folder": "rZAZVR5JEyhmGRYH",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Spark Thrower",
+	"system": {
+		"category": "HandMade",
+		"coin": 3,
+		"damage": [
+			{
+				"type": "Shocked",
+				"value": 3
+			}
+		],
+		"description": "<p>A short-ranged weapon which projects a brief-but-intense electrical charge to injure and dissuade attackers. There are a number of different designs for the weapon, and many communities have their own versions.</p><p>The profile for a Spark Thrower can be found in the Hand-Made Weapons Table at the start of this section. A Spark Thrower is a powered weapon, which recharges after a Break rest.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 3,
+		"techLevel": 3,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

@@ -1,0 +1,101 @@
+{
+	"_id": "748huPqnXlUmwLze",
+	"_key": "!items!748huPqnXlUmwLze",
+	"effects": [
+	],
+	"folder": "rZAZVR5JEyhmGRYH",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Sling",
+	"system": {
+		"category": "HandMade",
+		"coin": 1,
+		"damage": [
+			{
+				"type": "Bludgeoned",
+				"value": 1
+			}
+		],
+		"description": "<p>A simple ranged weapon, normally made from strips of leather or cloth. For their apparent simplicity, they can be a highly effective weapon, allowing the wielder to hurl heavy stones or metal bullets over long distances. Inventive users replace the normal blunt projectiles with hollow shells containing explosives or chemicals.</p><p>Blast sling bullets are a simple explosive, designed to detonate upon impact. Tangle bullets contain an adhesive chemical mixture that rapidly expands and hardens when the bullet breaks open on impact, entangling the target.</p><p>A Sling has a basic profile for normal bullets, and then several profiles for special types of bullets, depending on which are being used, which can be found in the Hand-Made Weapons Table at the start of this section. Choose which type of bullet is being used before rolling for an attack. Bullets with the ammo quality are limited in number, with one shot consumed by each attack.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 1,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 1,
+		"techLevel": 1,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

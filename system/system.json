@@ -39,6 +39,18 @@
 			"flags": {}
 		},
 		{
+			"name": "equipment",
+			"label": "Equipment",
+			"path": "packs/equipment",
+			"type": "Item",
+			"system": "dreams-and-machines",
+			"ownership": {
+				"PLAYER": "OBSERVER",
+				"ASSISTANT": "OWNER"
+			},
+			"flags": {}
+		},
+		{
 			"name": "system_documentation",
 			"label": "System Documentation",
 			"path": "packs/system_documentation",
@@ -57,7 +69,8 @@
 			"sorting": "m",
 			"color": "#5e1966",
 			"packs": [
-				"character_options"
+				"character_options",
+				"equipment"
 			],
 			"folders": [
 				{

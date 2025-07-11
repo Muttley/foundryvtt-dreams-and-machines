@@ -1,0 +1,101 @@
+{
+	"_id": "PdvsOWWpdGORPjAY",
+	"_key": "!items!PdvsOWWpdGORPjAY",
+	"effects": [
+	],
+	"folder": "glfmGr9zgVQynWQI",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Repulser Glove",
+	"system": {
+		"category": "Security",
+		"coin": 4,
+		"damage": [
+			{
+				"type": "Concussed",
+				"value": 4
+			}
+		],
+		"description": "<p>Kinetic Pulse Gloves — commonly known as Repulser Gloves, merging the words “Repulse” and “Pulser” — are a personal defense armament that project a wave or bubble of kinetic force from a projector in the palm or on the knuckles. The force of this is considerable, but the weapon is normally non-lethal, spreading the impact over a wide enough area that the effect leaves a target knocked over, disoriented, and winded, but with no lasting injuries.</p><p>The profile for a Repulser Glove can be found in the Security Weapons Table at the start of this section.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

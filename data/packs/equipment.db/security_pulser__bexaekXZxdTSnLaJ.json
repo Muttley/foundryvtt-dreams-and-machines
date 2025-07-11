@@ -1,0 +1,105 @@
+{
+	"_id": "bexaekXZxdTSnLaJ",
+	"_key": "!items!bexaekXZxdTSnLaJ",
+	"effects": [
+	],
+	"folder": "glfmGr9zgVQynWQI",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Security Pulser",
+	"system": {
+		"category": "Security",
+		"coin": 4,
+		"damage": [
+			{
+				"type": "Burned",
+				"value": 2
+			},
+			{
+				"type": "Stunned",
+				"value": 2
+			}
+		],
+		"description": "<p>Pulsers are high-intensity laser weapons, projecting an intense, brief laser pulse at the target. Security Pulsers are a variant designed for use by security personnel, and the weapon can adjust the pulse it generates to have a non-lethal effect. This “stun” pulse is painful to those shot, but the incapacitation lasts only a few minutes and leaves no lingering effects.</p><p>The profile for the Security Pulser can be found in the Security Weapons Table at the start of this section. It may replace its burned 2 Injury with stunned 2 on any attack, decided before any dice are rolled for the attack. A Security Pulser is a powered weapon, which recharges after a Break rest.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

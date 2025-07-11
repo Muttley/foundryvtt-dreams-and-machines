@@ -116,6 +116,7 @@ function registerActorSheets() {
  */
 function registerItemDataModels() {
 	CONFIG.Item.dataModels.archetype = itemDataModels.ArchetypeDataModel;
+	CONFIG.Item.dataModels.armor = itemDataModels.ArmorDataModel;
 	CONFIG.Item.dataModels.equipment = itemDataModels.EquipmentDataModel;
 	CONFIG.Item.dataModels.major_npc_action = itemDataModels.MajorNPCActionDataModel;
 	CONFIG.Item.dataModels.npc_action = itemDataModels.NPCActionDataModel;
@@ -142,18 +143,18 @@ function registerItems() {
 function registerItemSheets() {
 	foundry.documents.collections.Items.registerSheet(
 		"dreams-and-machines",
-		itemSheets.TemperamentSheet,
+		itemSheets.ArchetypeSheet,
 		{
-			types: ["temperament"],
+			types: ["archetype"],
 			makeDefault: true,
 		}
 	);
 
 	foundry.documents.collections.Items.registerSheet(
 		"dreams-and-machines",
-		itemSheets.ArchetypeSheet,
+		itemSheets.ArmorSheet,
 		{
-			types: ["archetype"],
+			types: ["armor"],
 			makeDefault: true,
 		}
 	);
@@ -208,6 +209,15 @@ function registerItemSheets() {
 		itemSheets.TalentSheet,
 		{
 			types: ["talent"],
+			makeDefault: true,
+		}
+	);
+
+	foundry.documents.collections.Items.registerSheet(
+		"dreams-and-machines",
+		itemSheets.TemperamentSheet,
+		{
+			types: ["temperament"],
 			makeDefault: true,
 		}
 	);

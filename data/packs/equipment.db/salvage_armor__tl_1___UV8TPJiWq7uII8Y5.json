@@ -1,0 +1,65 @@
+{
+	"_id": "UV8TPJiWq7uII8Y5",
+	"_key": "!items!UV8TPJiWq7uII8Y5",
+	"effects": [
+	],
+	"folder": "59POMv9LyQ7iSHaZ",
+	"img": "systems/dreams-and-machines/assets/icons/armor.svg",
+	"name": "Salvage Armor (TL-1)",
+	"system": {
+		"category": "HandMade",
+		"coin": 1,
+		"damage": [
+		],
+		"description": "<p>Collections of durable materials fastened together or to clothing can serve as basic protection. While still shaped and somewhat fitted to the wearer, much of this is made up of scrap metals, plastics, and other discarded materials. Tech Level 2 versions can shape and bond these materials together more effectively, making better armor overall.</p><p>Tech Level 1 Salvage Armor is Armor which provides Protection of 1. Tech Level 2 Salvage Armor provides Protection 2 instead. In either case, this Protection is halved (rounding up) by attacks with the <em>breaker</em> keyword.</p>",
+		"equipped": false,
+		"protection": {
+			"breaker": 1,
+			"value": 1
+		},
+		"qualities": {
+			"bulky": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"environment": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"handy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mobile": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 0,
+		"techLevel": 1
+	},
+	"type": "armor"
+}

@@ -1,0 +1,101 @@
+{
+	"_id": "tybgqYTw1uAp5laq",
+	"_key": "!items!tybgqYTw1uAp5laq",
+	"effects": [
+	],
+	"folder": "rZAZVR5JEyhmGRYH",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Thrall Electrospear",
+	"system": {
+		"category": "HandMade",
+		"coin": 5,
+		"damage": [
+			{
+				"type": "Shocked",
+				"value": 4
+			}
+		],
+		"description": "<p>The long hooked or barbed spears carried by Thralls. These cruel weapons are rarely found outside the hands of a Thrall. Many Thralls carry ordinary spears in this design, but more advanced forms have occasionally been identified. Some versions have a monomolecular edge that cuts more easily than any blade manufactured without machine assistance, and others contain strange electro-conductive elements, similar to an Electrospear, but designed to draw upon implants in the wielder’s body. These Thrall ‘Electrospears’ can be used in melee but can also discharge a short-ranged electrical shock.</p><p>The profile for Thrall Spears can be found in the Security Weapons Table at the start of this section. Thrall Electrospears are powered weapons, but they do not recharge normally: they draw power from the user’s body.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 5,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3,
+		"weaponType": "MeleeRanged"
+	},
+	"type": "weapon"
+}

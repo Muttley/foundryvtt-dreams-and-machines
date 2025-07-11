@@ -4,7 +4,19 @@
 .dnm.sheet {
 	// background: url('../assets/ui/dnm-bg.jpg') repeat;
 
-	input[type="number"] {
+	input[type=checkbox] {
+		@include p-reset;
+
+		&::before,
+		&::after {
+			align-self: right;
+			font-size: 1.5rem;
+			line-height: 1;
+			color: black;
+		}
+	}
+
+	input[type=number] {
 		font-weight: 600;
 		background: none;
 		background-color: $c-offwhite;

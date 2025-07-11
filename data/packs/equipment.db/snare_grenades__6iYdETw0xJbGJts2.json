@@ -1,0 +1,101 @@
+{
+	"_id": "6iYdETw0xJbGJts2",
+	"_key": "!items!6iYdETw0xJbGJts2",
+	"effects": [
+	],
+	"folder": "glfmGr9zgVQynWQI",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Snare Grenades",
+	"system": {
+		"category": "Security",
+		"coin": 3,
+		"damage": [
+			{
+				"type": "Stuck",
+				"value": 2
+			}
+		],
+		"description": "<p>These non-lethal grenades are used to restrain and subdue enemies. They expel a foam which expands rapidly and then hardens seconds later.</p><p>Each grenade can only be used once. The profile for a Snare Grenade can be found in the Security Weapons Table at the start of this section. An Atoma device produces these grenades in batches of three.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 3,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 2,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

@@ -7,6 +7,17 @@ globalThis.systemPath = path => `systems/${SYSTEM_ID}/${path ?? ""}`;
 globalThis.templatePath = path => path ? systemPath(`templates/${path}.hbs`) : systemPath("templates");
 
 
+DREAMS.ARMOR_QUALITIES = {
+	bulky: "DNM.QualityName.bulky",
+	environment: "DNM.QualityName.environment",
+	handy: "DNM.QualityName.handy",
+	mobile: "DNM.QualityName.mobile",
+	powered_bed: "DNM.QualityName.powered_bed",
+	powered_break: "DNM.QualityName.powered_break",
+	scary: "DNM.QualityName.scary",
+};
+
+
 DREAMS.ATTRIBUTES = {
 	might: "DNM.Attributes.Might",
 	quickness: "DNM.Attributes.Quickness",
@@ -74,8 +85,10 @@ DREAMS.WEAPON_QUALITIES = {
 	ammo: "DNM.QualityName.ammo",
 	breaker: "DNM.QualityName.breaker",
 	burst: "DNM.QualityName.burst",
+	heavy: "DNM.QualityName.heavy",
 	long_ranged: "DNM.QualityName.long_ranged",
 	loud: "DNM.QualityName.loud",
+	mine: "DNM.QualityName.mine",
 	non_lethal: "DNM.QualityName.non_lethal",
 	powered_bed: "DNM.QualityName.powered_bed",
 	powered_break: "DNM.QualityName.powered_break",

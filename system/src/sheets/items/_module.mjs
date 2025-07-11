@@ -1,5 +1,5 @@
-
 export {default as ArchetypeSheet} from "./ArchetypeSheetV2.mjs";
+export {default as ArmorSheet} from "./ArmorSheetV2.mjs";
 export {default as DnMItemSheet} from "../DnMItemSheet.mjs";
 export {default as EquipmentSheet} from "./EquipmentSheet.mjs";
 export {default as MajorNPCActionSheet} from "./MajorNPCActionSheetV2.mjs";

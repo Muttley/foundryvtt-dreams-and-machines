@@ -1,0 +1,101 @@
+{
+	"_id": "MQG6pvSbQCXjAh17",
+	"_key": "!items!MQG6pvSbQCXjAh17",
+	"effects": [
+	],
+	"folder": "RxQmXzZLO9hJlGX5",
+	"img": "systems/dreams-and-machines/assets/icons/weapon.svg",
+	"name": "Plasma Mortar",
+	"system": {
+		"category": "Military",
+		"coin": 7,
+		"damage": [
+			{
+				"type": "Plasma Burn [x2]",
+				"value": 4
+			}
+		],
+		"description": "<p>A heavy plasma weapon with devastating effects. This weapon uses an offshoot of nanogram field technology to project a magnetic ‘bubble’ which compresses a mass of plasma into an extremely small space. This bubble is propelled towards the target, collapsing moments before impact, allowing the plasma to expand explosively over a wide area. More akin to a small artillery piece than an infantry weapon, a plasma mortar requires a massive amount of power to operate. Conventional kinetic batteries alone cannot store enough charge.</p><p>The profile for the Plasma Mortar can be found in the Military Weapons Table at the start of this section. A Plasma Mortar is a powered weapon, requiring an active power supply (a generator or similar) to operate.</p>",
+		"equipped": false,
+		"qualities": {
+			"ammo": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"breaker": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"burst": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"heavy": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"long_ranged": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"loud": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"mine": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"non_lethal": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_breather": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_special": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"quiet": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 3,
+		"rarity": 5,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 5,
+		"weaponType": "Ranged"
+	},
+	"type": "weapon"
+}

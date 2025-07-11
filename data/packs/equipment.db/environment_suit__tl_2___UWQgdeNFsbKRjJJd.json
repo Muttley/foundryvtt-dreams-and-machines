@@ -1,0 +1,65 @@
+{
+	"_id": "UWQgdeNFsbKRjJJd",
+	"_key": "!items!UWQgdeNFsbKRjJJd",
+	"effects": [
+	],
+	"folder": "59POMv9LyQ7iSHaZ",
+	"img": "systems/dreams-and-machines/assets/icons/armor.svg",
+	"name": "Environment Suit (TL-2)",
+	"system": {
+		"category": "Industrial",
+		"coin": 3,
+		"damage": [
+		],
+		"description": "<p>Sealed suits with air filters, designed to protect against contaminated atmospheres — environments filled with toxic gas or dust, with radiation, smoke, hazardous fumes, and similar dangers. They provide relatively little physical protection, but are useful for avoiding the worst of toxic environments, so they’re prized by Grabbers and other explorers. More advanced versions have powered filter pumps that are far more effective.</p><p>Tech Level 2 Environment Suits are Armor which provide Protection of 1. Tech Level 3 Environment Suits provide Protection 2 instead. In either case, this Protection is reduced to 0 by attacks with the <em>breaker</em> keyword. The armor has the <em>environment</em> keyword. The Tech Level 2 version is <em>bulky</em>, while the Tech Level 3 version is <em>powered</em>, and recharges after a Break rest.</p>",
+		"equipped": false,
+		"protection": {
+			"breaker": 0,
+			"value": 1
+		},
+		"qualities": {
+			"bulky": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"environment": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"handy": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"mobile": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_bed": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"powered_break": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"scary": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			}
+		},
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 0,
+		"techLevel": 2
+	},
+	"type": "armor"
+}
