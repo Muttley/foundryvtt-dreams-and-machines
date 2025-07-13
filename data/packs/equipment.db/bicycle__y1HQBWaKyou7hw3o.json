@@ -1,0 +1,22 @@
+{
+	"_id": "y1HQBWaKyou7hw3o",
+	"_key": "!items!y1HQBWaKyou7hw3o",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Bicycle",
+	"system": {
+		"category": "Domestic",
+		"coin": 6,
+		"description": "<p>A simple, muscle powered vehicle. Useful for covering ground quickly, but risky to use in dense terrain. Unpowered bicycles became more common after the War to allow people to travel more quickly between distant communities.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 1,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 2
+	},
+	"type": "equipment"
+}

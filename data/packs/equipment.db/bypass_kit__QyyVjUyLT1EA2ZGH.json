@@ -1,0 +1,22 @@
+{
+	"_id": "QyyVjUyLT1EA2ZGH",
+	"_key": "!items!QyyVjUyLT1EA2ZGH",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Bypass Kit",
+	"system": {
+		"category": "Security",
+		"coin": 5,
+		"description": "<p>Once used by security and emergency services to bypass locks and other security systems in an emergency, these tools — including electromagnetic scramblers, radio frequency jammers, infrared dazzlers, nanotech lockpicks, and similar devices to blind, overwhelm, or confuse security systems — were also extremely useful to those with more illicit intentions. Today, they’re a valuable tool for anyone trying to get into secured sections of ancient ruins.</p><p>A bypass kit allows a character to attempt a Skill Test to unlock a locked door or disable a security system. A bypass kit is a powered device which recharges after a Break rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}

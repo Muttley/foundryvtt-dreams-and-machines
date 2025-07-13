@@ -1,0 +1,22 @@
+{
+	"_id": "X4O8iB3C8WD5E2mE",
+	"_key": "!items!X4O8iB3C8WD5E2mE",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "First Aid Kit (TL-3)",
+	"system": {
+		"category": "Domestic",
+		"coin": 3,
+		"description": "<p>A collection of tools and supplies for patching up injuries. Versions exist at various tech levels, with different kinds of tools at each:</p><ul><li><p><strong>Tech Level 2:</strong> Simple tools, such as bandages, dressings, sutures, antiseptics, adhesives to seal wounds, and secure bandages designed to fit snugly over wounds with minimal risk of coming loose.</p></li><li><p><strong>Tech Level 3:</strong> A digital diagnosis and assistant device and attached tools that dispense chemical treatments that form a seal over wounds and stimulate natural healing.</p></li><li><p><strong>Tech Level 4:</strong> The entire kit is contained within a single wand-like nanotech device which can reknit torn flesh and broken bone, soothe burned tissues, and ease pain.</p></li></ul><p>A First Aid Kit allows a character to treat Injuries a character has suffered. A kit can treat Injuries with a cost of the kit’s tech level +1. A Tech Level 2 kit can be used three times before the supplies are used up. Tech Level 3 and 4 kits are powered and recharge after a Break rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

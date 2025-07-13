@@ -1,0 +1,22 @@
+{
+	"_id": "ZCiJsCrKysxrj1Au",
+	"_key": "!items!ZCiJsCrKysxrj1Au",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Combat Automed",
+	"system": {
+		"category": "Military",
+		"coin": 6,
+		"description": "<p>A collection of linked sensors and automated medical devices designed to be worn under armor. These respond to significant changes in the wearer’s vital signs and administer aid immediately upon detecting an Injury.</p><p>A Combat Automed operates automatically. When the wearer suffers an Injury, the Automed immediately discharges its power supply, and treats that Injury immediately. The wearer may then add +1 to Threat to self-revive and cease being defeated. A Combat Automed is powered and recharges after a Break rest.</p><p>A Weaver with an Interface Lens can override the automated processes of a Combat Automed, and remotely operate them as if they were an Emergency Trauma Kit.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 5,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 5
+	},
+	"type": "equipment"
+}

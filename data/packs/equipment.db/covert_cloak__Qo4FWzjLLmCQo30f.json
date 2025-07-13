@@ -1,0 +1,22 @@
+{
+	"_id": "Qo4FWzjLLmCQo30f",
+	"_key": "!items!Qo4FWzjLLmCQo30f",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Covert Cloak",
+	"system": {
+		"category": "Security",
+		"coin": 5,
+		"description": "<p>A long, hooded cloak made of an advanced metallic polymer, embedded with pigment-shifting nanoparticles. A kinetic battery is mounted in the clasp. The cloak is large enough that it can cover a person’s entire body. When active, the cloak shifts color to blend in with the surroundings, absorbs the wearer’s body heat, and diffuses and refracts active sensors.</p><p>A Covert Cloak adds +1 success to the wearer’s Skill Tests in an opposed Test when an enemy is searching for them, and it allows a character to hide even without any other available cover or concealment. A covert cloak is a powered device, which recharges after a Break rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}

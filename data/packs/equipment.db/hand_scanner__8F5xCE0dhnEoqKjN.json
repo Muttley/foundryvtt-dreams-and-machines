@@ -1,0 +1,22 @@
+{
+	"_id": "8F5xCE0dhnEoqKjN",
+	"_key": "!items!8F5xCE0dhnEoqKjN",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Hand Scanner",
+	"system": {
+		"category": "Security",
+		"coin": 5,
+		"description": "<p>A compact handheld or wrist-mounted device which can broadcast, receive, and analyze a variety of signals, allowing it to scan and study the environment in detailed ways that human eyesight alone cannot. They are invaluable for intensive, even forensic analysis of an area, and for finding secrets which would otherwise be undetectable. Hand scanners can interface with a reader lens, providing a detailed augmented-reality overlay of an environment, and thus they are often sought-after by Weavers.</p><p>A Hand Scanner reduces the Difficulty of any Skill Test to search or study an area, object, or person by 1, or allows a character to attempt to search for things which are not detectable by normal human sight, smell, hearing, etc. A hand scanner is a powered device, which recharges after a Break rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}

@@ -1,0 +1,22 @@
+{
+	"_id": "OpIyddxOo40DoVub",
+	"_key": "!items!OpIyddxOo40DoVub",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Stylus",
+	"system": {
+		"category": "Domestic",
+		"coin": 3,
+		"description": "<p>The humble Stylus is a slim gray or black metallic cylinder somewhat longer than a person’s middle finger, which can apply a durable nanometer-thick layer of pigment of any color to any surface quickly and precisely. This pigment layer is normally set to degrade over time — usually 24 or 48 hours — but can be set to last far longer, and the Stylus can erase the pigment as desired. Even aside from their use with GLIFs, they’re useful for coloring clothing and decorating dwellings, leaving messages for others, marking resource claims or highlighting hazards in the wilds and the ruins, and a variety of other incidental uses.</p><p>A Stylus is powered by a tiny kinetic battery cell, and essentially never runs out of pigment, meaning that it continues functioning basically forever. While not abundant, it isn’t uncommon to find them in the ruins of the old cities, and most large communities and nomadic groups are likely to have one or two available, particularly Archivist enclaves who use these devices to mark GLIFs.</p><p>A Stylus can be used by any character, regardless of Tech Level, as their controls are designed to be as simple and intuitive as possible.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}

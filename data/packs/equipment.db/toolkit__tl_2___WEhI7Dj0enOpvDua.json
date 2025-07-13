@@ -1,0 +1,22 @@
+{
+	"_id": "WEhI7Dj0enOpvDua",
+	"_key": "!items!WEhI7Dj0enOpvDua",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Toolkit (TL-2)",
+	"system": {
+		"category": "Domestic",
+		"coin": 2,
+		"description": "<p>A box, bag, or other storage case containing an assortment of precise tools for performing maintenance and repairs on devices. Versions exist at various tech levels, with different kinds of tools at each: a Tech Level 1 kit may consist of wrenches, screwdrivers, pliers, and similar items, while a Tech Level 3 kit may contain precision devices suitable for working on microelectronics.</p><p>A toolkit allows a character to repair a damaged piece of technology. A toolkit can repair technology with a Tech Level 1 higher than that of the toolkit. Tech Level 3 are powered and recharge after a Break rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 2
+	},
+	"type": "equipment"
+}

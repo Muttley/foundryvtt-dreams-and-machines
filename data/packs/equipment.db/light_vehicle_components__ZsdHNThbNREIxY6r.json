@@ -1,0 +1,22 @@
+{
+	"_id": "ZsdHNThbNREIxY6r",
+	"_key": "!items!ZsdHNThbNREIxY6r",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Light Vehicle Components",
+	"system": {
+		"category": "Industrial",
+		"coin": 3,
+		"description": "<p>Components to repair a small civilian or commercial vehicle. This is not sufficient to construct a complete vehicle, but rather provides a kit of common spare and replacement parts to perform routine maintenance and repairs on a small vehicle. These are engine and propulsion components that typically wear out fastest, requiring routine replacement.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

@@ -1,0 +1,22 @@
+{
+	"_id": "CloGZzqQhFj2UOu8",
+	"_key": "!items!CloGZzqQhFj2UOu8",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Binoculars, Security",
+	"system": {
+		"category": "Security",
+		"coin": 4,
+		"description": "<p>A device that magnifies images of distant objects, allowing the user to pick out details more easily. Higher tech level versions incorporate additional functions, such as a rangefinder to provide an accurate distance to the target, as well as night vision and thermal imaging for finding targets in dark or obscured conditions.</p><p>Using binoculars reduces the Difficulty of Skill Tests by 1 when observing or studying details of distant objects, creatures, or places. A Tech Level 3 set of binoculars also allows the user to ignore Difficulty increases from darkness, smoke, dust clouds, and similar obscuring factors.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

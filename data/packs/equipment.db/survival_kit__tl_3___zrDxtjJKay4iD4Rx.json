@@ -1,0 +1,22 @@
+{
+	"_id": "zrDxtjJKay4iD4Rx",
+	"_key": "!items!zrDxtjJKay4iD4Rx",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Survival Kit (TL-3)",
+	"system": {
+		"category": "Industrial",
+		"coin": 4,
+		"description": "<p>A pack containing a compact tent, a water filter, and a lighter to start fires. The Tech Level 3 version adds thermal filaments to the tent to maintain a comfortable temperature, a more advanced water filtration system, and an electric heater/cooker as an alternative to a campfire.</p><p>The Survival Kit reduces the Difficulty of any Skill Test to find shelter in the wilderness by 1. A Tech Level 3 Survival Kit is also a powered item which recharges after a Break rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

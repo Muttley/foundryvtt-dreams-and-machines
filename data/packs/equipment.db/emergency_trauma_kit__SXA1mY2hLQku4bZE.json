@@ -1,0 +1,22 @@
+{
+	"_id": "SXA1mY2hLQku4bZE",
+	"_key": "!items!SXA1mY2hLQku4bZE",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Emergency Trauma Kit",
+	"system": {
+		"category": "Industrial",
+		"coin": 6,
+		"description": "<p>An advanced set of medical tools for rapidly stabilizing serious injuries. It contains a diagnosis wand to scan the patient to determine the nature and extent of their injuries. This is designed to broadcast the information to a reader lens, making them difficult for non-Weavers to use. Once it has diagnosed the patient, a small assortment of nanotech tissue regenerators and similar devices allow broken bones to be fixed, burnt or torn flesh to be healed, and so forth.</p><p>An Emergency Trauma kit can completely heal any single Injury with a successful <strong>Insight (Operate)</strong> Test with a Difficulty equal to the Injury’s damage rating -2. An Emergency Trauma Kit is powered, and recharges after a Bed rest. Due to the reliance on a reader lens, a non-Weaver attempting to use an Emergency Trauma Kit adds 1 to Threat.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}

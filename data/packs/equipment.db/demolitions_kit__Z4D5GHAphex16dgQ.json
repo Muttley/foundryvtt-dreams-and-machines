@@ -1,0 +1,22 @@
+{
+	"_id": "Z4D5GHAphex16dgQ",
+	"_key": "!items!Z4D5GHAphex16dgQ",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Demolitions Kit",
+	"system": {
+		"category": "Military",
+		"coin": 6,
+		"description": "<p>A case containing a micro-fabricator and a collection of scanners, designed for carrying out demolitions work. The scanners can survey a standing structure and detect weak points and load-bearing elements, as well as calculating the necessary explosive yield to place at each point to achieve the desired destruction. The fabricator then produces stable explosives fitted with detonators and serves as a remote detonator for these charges. The device also contains tools to defuse explosive charges.</p><p>This kit allows a character to make Skill Tests to create, plant, set, and disarm explosive charges. These will normally be <strong>Insight (Operate)</strong> tests. An explosive charge cannot easily be used during combat, as they need to be planted and set in place before they can be detonated. An explosive charge will inflict Injuries of burned [x2] 5 to any character, creature, or vehicle within the same zone, though it only counts as a breaker attack against a target which the explosive is fixed to.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 5,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 5
+	},
+	"type": "equipment"
+}

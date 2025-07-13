@@ -1,0 +1,22 @@
+{
+	"_id": "mjbGafx2hEWk3hUZ",
+	"_key": "!items!mjbGafx2hEWk3hUZ",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Heavy Vehicle Components",
+	"system": {
+		"category": "Industrial",
+		"coin": 5,
+		"description": "<p>Components to repair a large industrial cargo vehicle. This is not sufficient to construct a complete vehicle, but rather provides a kit of common spare and replacement parts to perform routine maintenance and repairs on a large vehicle. These are engine and propulsion components that typically wear out fastest, requiring routine replacement.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

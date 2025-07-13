@@ -1,0 +1,22 @@
+{
+	"_id": "IsVO3CMi3HqqPJul",
+	"_key": "!items!IsVO3CMi3HqqPJul",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Underwater Breathing Apparatus",
+	"system": {
+		"category": "Industrial",
+		"coin": 4,
+		"description": "<p>A compact device, designed to be worn over the mouth, which produces breathable air from water flowing through it.</p><p>This device allows the wearer to breathe underwater. The device is designed to be extremely simple to use, and thus can be used by any character, regardless of Tech Level.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

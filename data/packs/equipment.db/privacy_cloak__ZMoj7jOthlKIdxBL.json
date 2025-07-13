@@ -1,0 +1,22 @@
+{
+	"_id": "ZMoj7jOthlKIdxBL",
+	"_key": "!items!ZMoj7jOthlKIdxBL",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Privacy Cloak",
+	"system": {
+		"category": "Security",
+		"coin": 5,
+		"description": "<p>Looking almost like an umbrella without any canopy stretched between the ribs, a privacy cloak is an ingenious piece of technology. Once the central rod has been extended and the ribs unfolded, it projects a thin energy barrier — large enough for two people to stand close together within it — which is nearly opaque and entirely soundproof from the outside, preventing anyone outside from seeing or hearing into the space. Those within can still see and hear outside of it. The field lasts for no more than five minutes, after which the device’s battery is drained. The device recharges after a Bed rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}

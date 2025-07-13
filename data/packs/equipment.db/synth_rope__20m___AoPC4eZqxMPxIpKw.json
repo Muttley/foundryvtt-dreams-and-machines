@@ -1,0 +1,22 @@
+{
+	"_id": "AoPC4eZqxMPxIpKw",
+	"_key": "!items!AoPC4eZqxMPxIpKw",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Synth Rope (20m)",
+	"system": {
+		"category": "Domestic",
+		"coin": 2,
+		"description": "<p>A tightly-woven bundle of strands made from a tough synthetic polymer. Normally produced in 20 meter lengths when manufactured by an Atoma. The strands are twisted and braided together to increase the rope’s effectiveness and durability, and the materials used are more durable and hard-wearing than naturally-made ropes.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 2
+	},
+	"type": "equipment"
+}

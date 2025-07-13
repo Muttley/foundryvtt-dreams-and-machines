@@ -1,0 +1,22 @@
+{
+	"_id": "dHDhA55I90HZaipY",
+	"_key": "!items!dHDhA55I90HZaipY",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Inductive Charger, Industrial",
+	"system": {
+		"category": "Industrial",
+		"coin": 5,
+		"description": "<p>A large box containing a heavy-duty kinetic battery, intended to transfer the charge of its own battery into another kinetic battery, reducing the time until the item is fully charged. These are much larger and have a much higher capacity than conventional inductive chargers, allowing them to charge more power-hungry items, or several smaller items. They’re often mounted in the back of large vehicles or placed at the heart of a workplace where they can be easy accessed by people recharging their tools.</p><p>An industrial inductive charger is a powered item which recharges after a Bed rest, but it doesn’t do anything unless it is discharged. When discharged, it recharges up to three Powered (Breather) items or up to one Powered (Break) item as if the items had received the appropriate rest. A Powered (Bed) rest will recharge during the next Breather.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}

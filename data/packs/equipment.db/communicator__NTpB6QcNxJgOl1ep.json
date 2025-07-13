@@ -1,0 +1,22 @@
+{
+	"_id": "NTpB6QcNxJgOl1ep",
+	"_key": "!items!NTpB6QcNxJgOl1ep",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Communicator",
+	"system": {
+		"category": "Domestic",
+		"coin": 3,
+		"description": "<p>A small electronic device — small enough to fit into the palm of the hand — which can send and receive digital radio signals over a distance. With no communications infrastructure available, these signals only work over a limited distance, no more than a kilometer, and are often interrupted by terrain like hills.</p><p>Two or more of these devices touched together will pair them, so that they send and receive on the same frequency. They can send and receive audio, still images, video, and text, and can read such information from a linked data storage device (below), but they have very little storage capacity themselves.</p><p>However, radio signals are risky, and digital ones especially so, for they could be detected by Wakers. Each time a message is sent using a Communicator, add 1 to Threat. Communicators are powered, and recharge after a Break rest, but there are very few situations where a communicator would need to use all its power all at once.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

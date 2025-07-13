@@ -1,0 +1,22 @@
+{
+	"_id": "6pNuPWLWlZ4lVGIT",
+	"_key": "!items!6pNuPWLWlZ4lVGIT",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Rope (20m)",
+	"system": {
+		"category": "HandMade",
+		"coin": 1,
+		"description": "<p>A tightly-woven bundle of strands made from natural fibers. Normally produced in 20 meter lengths. The strands are twisted and braided together to increase the rope’s effectiveness and durability.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 1,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 1
+	},
+	"type": "equipment"
+}

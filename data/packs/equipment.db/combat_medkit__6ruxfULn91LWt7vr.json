@@ -1,0 +1,22 @@
+{
+	"_id": "6ruxfULn91LWt7vr",
+	"_key": "!items!6ruxfULn91LWt7vr",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Combat Medkit",
+	"system": {
+		"category": "Military",
+		"coin": 6,
+		"description": "<p>A collection of tools and supplies for patching up injuries, specialized to help patch up soldiers injured during combat. The main tool is a wand-like device which uses nanotech to seal wounds and stimulate natural healing processes, along with a number of modular attachments that help dealing with specific types of combat injury, and which are capable of stimulating adrenaline production to get a wounded soldier back on their feet fast.</p><p>A Combat Medkit allows a character to treat Injuries a character has suffered, as well as providing the means to provide longer-term care to heal treated injuries. Further, when used to treat an Injury, the user may spend 1 Momentum to immediately wake a defeated character, allowing them to act once more. A Combat Medkit can treat Injuries with a damage rating of up to 6. Combat Medkits are powered and recharge after a Break rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 5,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}

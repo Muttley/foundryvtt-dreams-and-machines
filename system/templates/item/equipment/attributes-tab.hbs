@@ -1,0 +1,16 @@
+<section class="tab {{tab.cssClass}}" data-group="primary" data-tab="attributes">
+	<div class="tab-body">
+		<div class="grid-4-columns">
+			<div class="grid-colspan-2">
+				{{> (template "item/_shared-partials/category") }}
+			</div>
+			{{> (template "item/_shared-partials/tech-level") }}
+			{{> (template "item/_shared-partials/quantity") }}
+		</div>
+		<div class="grid-3-columns">
+			{{> (template "item/_shared-partials/supply-point-cost") }}
+			{{> (template "item/_shared-partials/rarity") }}
+			{{> (template "item/_shared-partials/coin") }}
+		</div>
+	</div>
+</section>

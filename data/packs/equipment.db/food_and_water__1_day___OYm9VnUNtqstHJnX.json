@@ -1,0 +1,22 @@
+{
+	"_id": "OYm9VnUNtqstHJnX",
+	"_key": "!items!OYm9VnUNtqstHJnX",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Food and Water (1 day)",
+	"system": {
+		"category": "Domestic",
+		"coin": 1,
+		"description": "<p>Sufficient food and drink to sustain a single person for a single day. The specifics of this depend entirely on the source. Each community has their own traditional recipes, staples, and delicacies, and the kinds of food that are obtained for traveling are different to those which are traded to be cooked and prepared at home later.</p><p>Atoma-made food tends to be bland, but filling, delivered as a nutrient-dense ration brick that can be stored for months. Atomas can also produce bottles of pure water.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 1,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 1
+	},
+	"type": "equipment"
+}

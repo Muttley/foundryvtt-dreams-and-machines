@@ -1,0 +1,22 @@
+{
+	"_id": "i9V45ZvId9xPigct",
+	"_key": "!items!i9V45ZvId9xPigct",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Bolt Cutters",
+	"system": {
+		"category": "Industrial",
+		"coin": 2,
+		"description": "<p>A heavy-duty set of shears or scissors, designed for cutting through metal bolts, cables, and other solid fastenings. Also useful for breaking heavy physical locks or cutting away damaged sections of vehicles and similar in an emergency.</p><p>This allows a character to break heavy metal fastenings and similar objects with a <strong>Might (Operate)</strong> Skill Test.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 1
+	},
+	"type": "equipment"
+}

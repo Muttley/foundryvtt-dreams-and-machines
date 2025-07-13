@@ -14,11 +14,6 @@ export default class TemperamentSheet extends DnMItemSheetV2 {
 	};
 
 
-	get defaultTab() {
-		return "attributes";
-	}
-
-
 	/** @override */
 	static PARTS = {
 		header: {

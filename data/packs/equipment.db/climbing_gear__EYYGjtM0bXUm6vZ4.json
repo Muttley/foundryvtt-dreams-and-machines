@@ -1,0 +1,22 @@
+{
+	"_id": "EYYGjtM0bXUm6vZ4",
+	"_key": "!items!EYYGjtM0bXUm6vZ4",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Climbing Gear",
+	"system": {
+		"category": "Industrial",
+		"coin": 3,
+		"description": "<p>A collection of tools and devices to aid in climbing sheer surfaces, mountains, cliffs, and collapsing ruins. It contains a sturdy climbing axe, several pitons that can be wedged into cracks, a length of synth-rope, and a pair of grip-gloves that enhance the wearer’s grip and allow them to hold on to objects and surfaces more effectively.</p><p>These reduce the Difficulty of all <strong>Might (Move)</strong> tests to climb by 1 and allow a character to attempt a Skill Test to climb surfaces that might not be possible to climb otherwise.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 2
+	},
+	"type": "equipment"
+}

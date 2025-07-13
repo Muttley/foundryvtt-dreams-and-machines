@@ -1,0 +1,22 @@
+{
+	"_id": "plwYHrJUoeyHeEUc",
+	"_key": "!items!plwYHrJUoeyHeEUc",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Surveillance Kit",
+	"system": {
+		"category": "Security",
+		"coin": 4,
+		"description": "<p>A storage case containing an assortment of devices useful for covertly observing a location. This consists of several small cameras and microphones, all of which can record information individually or be set to send that information back to a computer in the case.</p><p>A surveillance kit can be set up in a specific area with a Skill Test, allowing them to gather information covertly from that area. Failure on the Test may mean that the devices are detected or not placed where they can gather information properly. A Surveillance Kit is a powered device which recharges after a Break rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

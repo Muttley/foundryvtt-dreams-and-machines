@@ -1,0 +1,22 @@
+{
+	"_id": "PgSGz5FQs7nkrsTM",
+	"_key": "!items!PgSGz5FQs7nkrsTM",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Weaver Lens",
+	"system": {
+		"category": "Domestic",
+		"coin": 4,
+		"description": "<p>Also commonly called a reader lens, Weaver Lenses are so named because they are most commonly used by Weavers, who rely on the information they provide in order to carry out their trade. A Weaver Lens is a simple eyepiece, visor, pair of spectacles, or even hand-held lens (similar to a magnifying glass) which displays an interactive three-dimensional information layer over whatever is viewed through the lens. The display is controlled by eye movements, vocal commands, and gestures made within the lens’ field of view, though the secrets to these control methods are typically known only to Weavers.</p><p>Any Weaver can use a Weaver Lens regardless of their Tech Level. Other characters can view whatever information is already displayed, but may find it difficult or even impossible to interact with that information in any consistent or useful way.</p><p>A Weaver Lens is powered but cannot be discharged.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}

@@ -1,0 +1,22 @@
+{
+	"_id": "ZrClZ8tLEADaWiQy",
+	"_key": "!items!ZrClZ8tLEADaWiQy",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Industrial Plasma Cutter",
+	"system": {
+		"category": "Industrial",
+		"coin": 5,
+		"description": "<p>A bulky device which produces a small, intense plasma beam that can cut through most substances. The device contains stabilizers to help the wielder hold the heavy device steady and make smooth cuts, but the size, weight, and the small cutting beam make industrial plasma cutters almost impossible to use as weapons. With a few minor adjustments, the beam can be diffused to function as a welder, melting two surfaces together, though this isn’t as efficient.</p><p>An industrial plasma cutter allows the user to cut through solid objects with ease. Complex cuts, cuts through tough or resistant materials, welding, or hurried work, may require a <strong>Quickness (Operate)</strong> Skill Test. An industrial plasma cutter is powered, and recharges after a Bed rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}

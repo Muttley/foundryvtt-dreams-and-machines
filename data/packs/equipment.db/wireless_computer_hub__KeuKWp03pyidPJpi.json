@@ -1,0 +1,22 @@
+{
+	"_id": "KeuKWp03pyidPJpi",
+	"_key": "!items!KeuKWp03pyidPJpi",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Wireless Computer Hub",
+	"system": {
+		"category": "Miscellaneous",
+		"coin": 7,
+		"description": "<p>A large, and moderately powerful computer system designed to serve as a central processor, storage device, and power supply for other devices in the vicinity. This can link to reader lenses, communicators, portable data storage, local terminals fixed nearby, and portable computers brought close to it. It wirelessly transmits and receives data within its network, as well as wirelessly charging the batteries of nearby devices. The maximum range is only a few hundred meters, limited by obstructions such as dense walls and other environmental factors, but within that range it provides an extremely fast and efficient connection. Some Archivist communities possess such a computer hub to aid their work, and many others would pay handsomely to obtain one.</p><p>The hub must be connected to a persistent power source — a generator of some sort — but allows connected devices to recharge more quickly, requiring the next shortest type of rest (i.e., items that recharge with Bed rest can recharge over a Break, while items that recharge with a Break can recharge with a Breather). The recharging item must remain within range of the hub for the entire rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 5
+	},
+	"type": "equipment"
+}

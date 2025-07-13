@@ -1,0 +1,22 @@
+{
+	"_id": "Um4H9JEPIDwWCD4E",
+	"_key": "!items!Um4H9JEPIDwWCD4E",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Restraints",
+	"system": {
+		"category": "Security",
+		"coin": 2,
+		"description": "<p>A pair of lockable metal bracelets linked by a short chain or cable. A key or other means of unlocking the restraints is included with any set of restraints produced by an Atoma, though sets of restraints found in the ruins may have been separated from their keys long ago. A new key can normally be fashioned by spending 1 Supply Point.</p><p>A character wearing restraints has their hands bound closely together (in front of them or behind them, at the discretion of the character applying the restraints) and finds their physical actions impaired. It requires a <strong>Might (Survive)</strong> Test with a Difficulty of 4 to break restraints while wearing them.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 1
+	},
+	"type": "equipment"
+}

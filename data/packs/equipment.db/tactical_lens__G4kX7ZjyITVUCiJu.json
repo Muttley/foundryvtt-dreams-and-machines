@@ -1,0 +1,22 @@
+{
+	"_id": "G4kX7ZjyITVUCiJu",
+	"_key": "!items!G4kX7ZjyITVUCiJu",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Tactical Lens",
+	"system": {
+		"category": "Military",
+		"coin": 6,
+		"description": "<p>A specialized form of reader lens, a tactical lens provides a heads-up display suited to combat uses. Before and during the War, these were issued to whole squads of soldiers, passing information back and forth silently. They are somewhat riskier to use now, as the signals they communicate with can be tracked by hostile machines.</p><p>The wearer of a Tactical Lens may re-roll 1d20 on any ranged attack made when you spend time aiming, or when your target has a Truth which represents a weak spot. Further, when you take an action, you may add 1 to Threat to message to one ally also wearing a Tactical Lens. This message may include up to five words of text and mark a location or enemy you can see. This can be used to pass Truths representing information (such as knowledge of weaknesses) between characters.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}

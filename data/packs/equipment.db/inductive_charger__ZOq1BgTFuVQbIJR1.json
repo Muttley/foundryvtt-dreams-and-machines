@@ -1,0 +1,22 @@
+{
+	"_id": "ZOq1BgTFuVQbIJR1",
+	"_key": "!items!ZOq1BgTFuVQbIJR1",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Inductive Charger",
+	"system": {
+		"category": "Domestic",
+		"coin": 3,
+		"description": "<p>A small black disc or ring containing a kinetic battery, often with an illuminated rim, intended to transfer the charge of its own battery into another kinetic battery, reducing the time until the item is fully charged.</p><p>An Inductive Charger is a powered item which recharges after a Bed rest, but it doesn’t do anything unless it is discharged. When discharged, it recharges a Powered (Breather) item as if the item had received a Breather rest. A Powered (Break) item will recharge during the next Breather. A Powered (Bed) item will recharge during the next Break.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 2,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

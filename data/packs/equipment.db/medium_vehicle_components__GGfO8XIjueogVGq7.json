@@ -1,0 +1,22 @@
+{
+	"_id": "GGfO8XIjueogVGq7",
+	"_key": "!items!GGfO8XIjueogVGq7",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Medium Vehicle Components",
+	"system": {
+		"category": "Industrial",
+		"coin": 4,
+		"description": "<p>Components to repair a medium civilian or commercial vehicle. This is not sufficient to construct a complete vehicle, but rather provides a kit of common spare and replacement parts to perform routine maintenance and repairs on a medium vehicle. These are engine and propulsion components that typically wear out fastest, requiring routine replacement.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

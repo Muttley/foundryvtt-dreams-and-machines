@@ -1,0 +1,22 @@
+{
+	"_id": "jZTgUDMG4EikcylT",
+	"_key": "!items!jZTgUDMG4EikcylT",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Short-ranged Digital Communicator Hub",
+	"system": {
+		"category": "Miscellaneous",
+		"coin": 6,
+		"description": "<p>While portable communicators are useful, they were designed to connect to a much larger communications network that stretched further than any modern Everan has ever traveled. This network no longer exists, however, having been destroyed during the war. Still, for more local communication needs, scavengers occasionally find short-ranged communication hubs, which combine an antenna and signal-processing systems to connect together numerous communicators.</p><p>The communicator hub can connect to communicators up to 10 kilometers away (limited by terrain — a hub in the middle of a valley will be limited by surrounding hills), and any communicator linked to the hub can communicate with any other communicator linked to it. Individual communicators are assigned an ID — a name or number — to speed up connecting to specific people.</p><p>A communicator hub is powered and must be connected to a persistent power source — a generator of some sort. It cannot recharge on its own.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}

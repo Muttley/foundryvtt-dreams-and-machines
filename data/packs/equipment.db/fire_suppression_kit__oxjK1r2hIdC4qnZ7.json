@@ -1,0 +1,22 @@
+{
+	"_id": "oxjK1r2hIdC4qnZ7",
+	"_key": "!items!oxjK1r2hIdC4qnZ7",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Fire Suppression Kit",
+	"system": {
+		"category": "Industrial",
+		"coin": 4,
+		"description": "<p>A bulky cylinder affixed to a trigger unit, a fire suppression kit is designed to spray a fire with an extremely cold expanding foam which binds oxygen in the surrounding air, starving the fire of heat and oxygen, extinguishing it rapidly. The cylinder continually refills over time.</p><p>A Fire Suppression Kit allows a character to make a Quickness (Operate) Test to extinguish a fire; the Difficulty is determined by the size of the fire and how much fuel it has. A Fire Suppression Kit is powered, and recharges after a Bed rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

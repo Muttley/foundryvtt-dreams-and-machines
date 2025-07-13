@@ -1,0 +1,22 @@
+{
+	"_id": "cYvsrTmmaRpXLmhx",
+	"_key": "!items!cYvsrTmmaRpXLmhx",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Data Storage Device",
+	"system": {
+		"category": "Domestic",
+		"coin": 3,
+		"description": "<p>These tiny devices can store large amounts of data from computer systems and similar devices. Most are short, blank oval or rectangular devices about the size of a human thumb, and the term “thumb drive” has been used to describe them for as long as anyone can remember. Most will magnetically fasten to the outer case of a computer, connecting to the computer in the process, at which point data can be transferred to or from the storage device. A Weaver with a reader lens can allow a user to see a list of the contents — file names, types of data, and so forth — and can normally move data to and from a storage device more easily than a non-Weaver.</p><p>Data Storage Devices are powered, and recharge after a Break rest, but there are very few situations where it would need to use all its power all at once. The data stored within remains intact while recharging but cannot be accessed.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

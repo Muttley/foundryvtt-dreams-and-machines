@@ -1,0 +1,22 @@
+{
+	"_id": "xmOd22btoU7lEQxc",
+	"_key": "!items!xmOd22btoU7lEQxc",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Medical Kit (TL-3)",
+	"system": {
+		"category": "Industrial",
+		"coin": 4,
+		"description": "<p>A collection of tools and supplies for patching up injuries. Versions exist at various tech levels, with different kinds of tools at each, similar to first aid kits but with a wider range of supplies and tools.</p><p>A Medical Kit allows a character to treat Injuries a character has suffered, as well as providing the means to provide longer-term care to heal treated injuries. A kit can treat Injuries with a damage rating of the kit’s Tech Level +1. Medical kits are powered and recharge after a Breather rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 4,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

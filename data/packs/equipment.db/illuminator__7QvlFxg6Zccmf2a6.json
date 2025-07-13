@@ -1,0 +1,22 @@
+{
+	"_id": "7QvlFxg6Zccmf2a6",
+	"_key": "!items!7QvlFxg6Zccmf2a6",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Illuminator",
+	"system": {
+		"category": "Domestic",
+		"coin": 2,
+		"description": "<p>A simple device that shines a bright light over an area. These come in a variety of different forms and styles. They are relatively easy to assemble from spare parts, and simple enough that anyone can use them.</p><p>Illuminators are powered, but they cannot be discharged normally. They may still be discharged because of environmental effects, complications, or similar, but there’s no real way to use an illuminator in such a way that the entire kinetic battery is emptied all at once. If discharged, they recharge after a Breather rest.</p><p>A character can always use an Illuminator regardless of their Tech Level.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 1,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": 3,
+		"techLevel": 3
+	},
+	"type": "equipment"
+}

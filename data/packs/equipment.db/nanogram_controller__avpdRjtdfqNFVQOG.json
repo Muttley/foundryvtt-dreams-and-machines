@@ -1,0 +1,22 @@
+{
+	"_id": "avpdRjtdfqNFVQOG",
+	"_key": "!items!avpdRjtdfqNFVQOG",
+	"effects": [
+	],
+	"folder": "vRarCMPsJb5sTVVa",
+	"img": "systems/dreams-and-machines/assets/icons/equipment.svg",
+	"name": "Nanogram Controller",
+	"system": {
+		"category": "Industrial",
+		"coin": 5,
+		"description": "<p>A small metallic wristband, bracelet, watch, or cuff, which acts as the housing and charging unit for a nanogram swarm. When not in use, the nanogram swarm resides within a compartment within the device, charging from an internal kinetic battery.</p><p>The wearer of a Nanogram Controller gains a Nanogram Genius as a Companion NPC. This is a powered device, which recharges after a Break rest.</p>",
+		"equipped": false,
+		"quantity": 1,
+		"rarity": 3,
+		"source": "PlayersGuide",
+		"stashed": false,
+		"supplyPointCost": null,
+		"techLevel": 4
+	},
+	"type": "equipment"
+}
