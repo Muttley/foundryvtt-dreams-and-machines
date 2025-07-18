@@ -1,0 +1,31 @@
+<div>
+	<span class="label">
+		{{localize "DNM.Labels.Cover"}}
+	</span>
+
+	<div class="grid-3-columns">
+		<select
+			{{#if @root.system.coverHasValue}}
+				class="grid-colspan-2"
+			{{else}}
+				class="grid-colspan-3"
+			{{/if}}
+			name="system.cover.type"
+			{{disabled @root.editModeDisabled}}
+		>
+			{{selectOptions CONFIG.VEHICLE_COVER_TYPES selected=@root.system.cover.type}}
+		</select>
+
+		{{#if @root.system.coverHasValue}}
+			<input
+				class="lockable"
+				data-type="Number"
+				name="system.cover.value"
+				type="number"
+				value="{{system.cover.value}}"
+				{{disabled @root.editModeDisabled}}
+			/>
+		{{/if}}
+	</div>
+</div>
+

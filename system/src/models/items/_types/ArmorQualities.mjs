@@ -1,4 +1,4 @@
-import SimpleQuality from "./qualities/SimpleQuality.mjs";
+import SimpleQuality from "../../_types/SimpleQuality.mjs";
 
 export default function ArmorQualities() {
 	const fields = foundry.data.fields;

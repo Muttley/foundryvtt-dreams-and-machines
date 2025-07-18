@@ -1,4 +1,7 @@
-import { generateSortedData } from "../config.mjs";
+import {
+	generateSortedData,
+	renderTooltips,
+} from "../config.mjs";
 
 export const setupHook = {
 	attach: () => {
@@ -24,6 +27,7 @@ export const setupHook = {
 			}
 
 			generateSortedData();
+			renderTooltips();
 		});
 	},
 };

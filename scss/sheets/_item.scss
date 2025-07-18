@@ -97,4 +97,24 @@
 		grid-template-rows: min-content 1fr;
 		row-gap: 4px;
 	}
+
+	.custom-string {
+		display: grid;
+		align-content: baseline;
+		background-color: $c-offwhite;
+
+		.string-edit {
+			margin: 2px;
+			padding: 2px;
+			text-transform: uppercase;
+			font-weight: bold;
+			text-align: center;
+
+			&:hover {
+				color: $c-secondary;
+				background-color: $c-secondary-highlight;
+				cursor: pointer;
+			}
+		}
+	}
 }

@@ -13,6 +13,8 @@ export default class DnMActorSheetV2
 	static DEFAULT_OPTIONS = {
 		actions: {
 			addItem: this._onAddItem,
+			addString: this._onAddString,
+			editString: this._onEditString,
 			onRoll: this._onRoll,
 			toggleEditMode: this._onToggleEditMode,
 		},
@@ -45,35 +47,35 @@ export default class DnMActorSheetV2
 	}
 
 
-	#attachContextMenus() {
-		// TODO: Change to ContextMenu.create in v13 with jQuery: false
-		new ContextMenu(this.element, '[data-menu="item"]', [
-			{
-				name: "DNM.Labels.Edit",
-				icon: '<i class="fas fa-pencil"></i>',
-				callback: async i => {
-					if (!i.data("uuid")) return;
+	// #attachContextMenus() {
+	// 	// TODO: Change to ContextMenu.create in v13 with jQuery: false
+	// 	new ContextMenu(this.element, '[data-menu="item"]', [
+	// 		{
+	// 			name: "DNM.Labels.Edit",
+	// 			icon: '<i class="fas fa-pencil"></i>',
+	// 			callback: async i => {
+	// 				if (!i.data("uuid")) return;
 
-					const uuid = i.data("uuid");
+	// 				const uuid = i.data("uuid");
 
-					const item = await fromUuid(uuid);
-					item?.sheet?.render(true);
-				},
-			},
-			{
-				name: "DNM.Labels.Delete",
-				icon: '<i class="fas fa-trash"></i>',
-				callback: async i => {
-					if (!i.data("uuid")) return;
+	// 				const item = await fromUuid(uuid);
+	// 				item?.sheet?.render(true);
+	// 			},
+	// 		},
+	// 		{
+	// 			name: "DNM.Labels.Delete",
+	// 			icon: '<i class="fas fa-trash"></i>',
+	// 			callback: async i => {
+	// 				if (!i.data("uuid")) return;
 
-					const uuid = i.data("uuid");
+	// 				const uuid = i.data("uuid");
 
-					const item = await fromUuid(uuid);
-					await item?.delete?.();
-				},
-			},
-		]);
-	}
+	// 				const item = await fromUuid(uuid);
+	// 				await item?.delete?.();
+	// 			},
+	// 		},
+	// 	]);
+	// }
 
 
 	#createDragDropHandlers() {
@@ -151,6 +153,124 @@ export default class DnMActorSheetV2
 
 		const [newItem] = await this.actor.createEmbeddedDocuments("Item", [data]);
 		newItem.sheet.render(true);
+	}
+
+
+	static async _onAddString(event, target) {
+		event.preventDefault();
+		const actorUuid = this.actor.uuid;
+		const dataset = target.dataset;
+
+		let currentValues = [];
+		switch (dataset.key) {
+			case "system.bonds":
+				currentValues = foundry.utils.duplicate(this.actor.system.bonds) ?? [];
+				break;
+			case "system.goals.longTerm":
+				currentValues = foundry.utils.duplicate(this.actor.system.goals.longTerm) ?? [];
+				break;
+			case "system.goals.shortTerm":
+				currentValues = foundry.utils.duplicate(this.actor.system.goals.shortTerm) ?? [];
+				break;
+			case "system.harms":
+				currentValues = foundry.utils.duplicate(this.actor.system.harms) ?? [];
+				break;
+			case "system.truths":
+				currentValues = foundry.utils.duplicate(this.actor.system.truths) ?? [];
+				break;
+			default:
+		}
+
+		dreams.dialog.DialogEditStringV2.createDialog({
+			actorUuid,
+			currentValues,
+			fieldKey: dataset.key,
+			title: dataset.tooltip,
+		});
+	}
+
+
+	async _onDeleteString(event) {
+		if (!this._editModeEnabled) return;
+
+		event.preventDefault();
+
+		const dataset = event.currentTarget.dataset;
+		const index = Number(dataset.index);
+
+		let currentValues = [];
+		switch (dataset.key) {
+			case "system.bonds":
+				currentValues = foundry.utils.duplicate(this.system.bonds) ?? [];
+				break;
+			case "system.goals.longTerm":
+				currentValues = foundry.utils.duplicate(this.system.goals.longTerm) ?? [];
+				break;
+			case "system.goals.shortTerm":
+				currentValues = foundry.utils.duplicate(this.system.goals.shortTerm) ?? [];
+				break;
+			case "system.harms":
+				currentValues = foundry.utils.duplicate(this.system.harms) ?? [];
+				break;
+			case "system.truths":
+				currentValues = foundry.utils.duplicate(this.system.truths) ?? [];
+				break;
+			default:
+		}
+		currentValues.splice(index, 1);
+
+		const updateData = {};
+		updateData[dataset.key] = currentValues;
+
+		this.actor.update(updateData);
+	}
+
+
+	static async _onEditString(event, target) {
+		if (!this._editModeEnabled) return;
+
+		event.preventDefault();
+
+		const dataset = target.dataset;
+		const index = Number(dataset.index);
+
+		let currentValues = [];
+		let title = game.i18n.localize("DNM.Labels.EditString");
+
+		switch (dataset.key) {
+			case "system.bonds":
+				currentValues = foundry.utils.duplicate(this.system.bonds) ?? [];
+				title = game.i18n.localize("DNM.Labels.EditBond");
+				break;
+			case "system.goals.longTerm":
+				currentValues = foundry.utils.duplicate(this.system.goals.longTerm) ?? [];
+				title = game.i18n.localize("DNM.Labels.EditLongTermGoal");
+				break;
+			case "system.goals.shortTerm":
+				currentValues = foundry.utils.duplicate(this.system.goals.shortTerm) ?? [];
+				title = game.i18n.localize("DNM.Labels.EditShortTermGoal");
+				break;
+			case "system.harms":
+				currentValues = foundry.utils.duplicate(this.system.harms) ?? [];
+				title = game.i18n.localize("DNM.Labels.EditHarm");
+				break;
+			case "system.truths":
+				currentValues = this.system.truths ?? [];
+				title = game.i18n.localize("DNM.Labels.EditTruth");
+				break;
+			default:
+		}
+
+		const value = currentValues[index];
+
+		dreams.dialog.DialogEditStringV2.createDialog({
+			actorUuid: this.actor.uuid,
+			currentValues,
+			fieldKey: dataset.key,
+			index,
+			title,
+			value,
+		});
 	}
 
 
@@ -280,12 +400,17 @@ export default class DnMActorSheetV2
 
 	async _onFirstRender(context, options) {
 		await super._onFirstRender(context, options);
-		this.#attachContextMenus();
+		// this.#attachContextMenus();
 	}
 
 
 	_onRender(context, options) {
 		this.#dragDrop.forEach(d => d.bind(this.element));
+
+		const deleteString = this._onDeleteString.bind(this);
+		this.element.querySelectorAll(".string-edit").forEach(entry => {
+			entry.addEventListener("contextmenu", deleteString);
+		});
 	}
 
 
@@ -342,7 +467,9 @@ export default class DnMActorSheetV2
 
 		// Simple npc characters do not have all the attributes and skills of
 		// characters or majorNPCs
-		if (this.actor.type !== "npc") this.getAttributesAndSkillsData(context);
+		if (!["npc", "vehicle"].includes(this.actor.type)) {
+			this.getAttributesAndSkillsData(context);
+		}
 
 		const enrichedFields = this.system.enrichedFields ?? {};
 		for (let key of Object.keys(enrichedFields)) {

@@ -1,0 +1,85 @@
+<section class="tab {{tab.cssClass}}" data-group="primary" data-tab="attributes">
+	<div class="tab-body">
+		<div class="grid-4-columns">
+			<div class="grid-colspan-2">
+				{{!-- TECH LEVEL --}}
+				{{> (template "_shared-partials/number-field")
+					label=(localize "DNM.Labels.TechLevel")
+					name="system.techLevel"
+					value=system.techLevel
+				}}
+			</div>
+
+			{{!-- COIN --}}
+			{{> (template "_shared-partials/number-field")
+				label=(localize "DNM.Labels.Coin")
+				name="system.coin"
+				value=system.coin
+			}}
+
+			{{!-- RARITY --}}
+			{{> (template "_shared-partials/number-field")
+				label=(localize "DNM.Labels.Rarity")
+				name="system.rarity"
+				value=system.rarity
+			}}
+
+			<div class="grid-colspan-4">
+				{{!-- TRUTHS --}}
+				{{> (template "actor/_shared-partials/custom-string-list")
+					addRowLabel=""
+					currentValues=system.truths
+					key="system.truths"
+					sectionTitle=(localize "DNM.Labels.Truths")
+					titleAdd=(localize "DNM.Tooltips.Actor.AddTruth")
+				}}
+			</div>
+
+			{{!-- SCALE --}}
+			{{> (template "_shared-partials/number-field")
+				label=(localize "DNM.Labels.Scale")
+				name="system.scale"
+				value=system.scale
+			}}
+
+			<div class="grid-colspan-2">
+				{{!-- PASSENGERS --}}
+				{{> (template "_shared-partials/number-field")
+					label=(localize "DNM.Labels.Passengers")
+					name="system.passengers"
+					value=system.passengers
+				}}
+			</div>
+
+			{{!-- SPEED --}}
+			{{> (template "_shared-partials/number-field")
+				label=(localize "DNM.Labels.Speed")
+				name="system.speed"
+				value=system.speed
+			}}
+
+			{{!-- PROTECTION --}}
+			{{> (template "_shared-partials/number-field")
+				label=(localize "DNM.Labels.Protection")
+				name="system.protection.value"
+				value=system.protection.value
+			}}
+
+			{{!-- BREAKER --}}
+			{{> (template "_shared-partials/number-field")
+				label=(concat "(" (localize "DNM.QualityName.breaker") ")")
+				name="system.protection.breaker"
+				value=system.protection.breaker
+			}}
+
+			<div class="grid-colspan-2">
+				{{> (template "actor/vehicle/_partials/cover") }}
+			</div>
+
+			<div class="grid-colspan-4">
+				{{> (template "actor/vehicle/_partials/qualities") }}
+			</div>
+		</div>
+	</div>
+</section>
+

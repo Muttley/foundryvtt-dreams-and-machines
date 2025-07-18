@@ -54,6 +54,7 @@ DNM.Labels.Combat: Combat
 DNM.Labels.Complications: Complications
 DNM.Labels.ConfigureOrigin: Configure {origin} Origin
 DNM.Labels.Cost: Cost
+DNM.Labels.Cover: Cover
 DNM.Labels.Current: Current
 DNM.Labels.CurrentShort: Curr.
 DNM.Labels.Damage: Damage
@@ -89,6 +90,7 @@ DNM.Labels.HasProtection: Provides Protection
 DNM.Labels.InjuriesToDefeat: Injuries to Defeat
 DNM.Labels.IsGLIF: Is GLIF
 DNM.Labels.IsWeapon: Is Weapon
+DNM.Labels.LMB: LMB
 DNM.Labels.LongTermGoals: Long-Term
 DNM.Labels.Max: Max
 DNM.Labels.MissingUUID: (Missing UUID)
@@ -98,12 +100,15 @@ DNM.Labels.New: New
 DNM.Labels.Notes: Notes
 DNM.Labels.Or: Or
 DNM.Labels.Origin: Origin
+DNM.Labels.Passengers: Passengers
 DNM.Labels.PersonalThreat: Personal Threat
 DNM.Labels.Protection: Protection
 DNM.Labels.ProtectionBreaker: Protection (Breaker)
 DNM.Labels.Qualities: Qualities
 DNM.Labels.Quantity: Quantity
 DNM.Labels.Rarity: Rarity
+DNM.Labels.RMB: RMB
+DNM.Labels.Scale: Scale
 DNM.Labels.SelectQuality: Select Quality...
 DNM.Labels.SelectSpecialAbility: Select Special Ability...
 DNM.Labels.SelectTalent: Select Talent...
@@ -116,6 +121,7 @@ DNM.Labels.Source: Source
 DNM.Labels.SpecialAbilities: Special Abilities
 DNM.Labels.SpecialAbility: Special Ability
 DNM.Labels.SpecialActions: Special Actions
+DNM.Labels.Speed: Speed
 DNM.Labels.Spirit: Spirit
 DNM.Labels.SpiritPool: Spirit Pool
 DNM.Labels.StartingCoin: Starting Coin
@@ -158,11 +164,14 @@ DNM.QualityName.breaker: Breaker
 DNM.QualityName.bulky: Bulky
 DNM.QualityName.burst: Burst
 DNM.QualityName.covered_x: Covered
+DNM.QualityName.cumbersome: Cumbersome
 DNM.QualityName.enclosed: Enclosed
 DNM.QualityName.environment: Environment
 DNM.QualityName.exposed: Exposed
 DNM.QualityName.handy: Handy
 DNM.QualityName.heavy: Heavy
+DNM.QualityName.high_performance: High-Performance
+DNM.QualityName.hover: Hover
 DNM.QualityName.long_ranged: Long-Ranged
 DNM.QualityName.loud: Loud
 DNM.QualityName.mine: Mine
@@ -173,7 +182,11 @@ DNM.QualityName.powered_break: Powered (Break)
 DNM.QualityName.powered_breather: Powered (Breather)
 DNM.QualityName.powered_special: Powered (Special)
 DNM.QualityName.quiet: Quiet
+DNM.QualityName.resilient_x: Resilient X
+DNM.QualityName.rugged: Rugged
 DNM.QualityName.scary: Scary
+DNM.QualityName.single_seat: Single-Seat
+DNM.QualityName.tough_x: Tough X
 DNM.QualityTooltip.Armor.bulky: The armor is heavy and can impede your movement. The GM may spend 1 Threat to add +1 Difficulty when you make Quickness (Move) tests while wearing this armor.
 DNM.QualityTooltip.Armor.environment: The armor can be sealed to filter out dangerous environmental conditions, such as gas, toxic dust, smoke, chemical fumes, and similar. The Difficulty of any Skill Tests to avoid or resist hazards caused by these environmental conditions is reduced by 1. If the armor is powered, the Difficulty is reduced by 2 instead.
 DNM.QualityTooltip.Armor.handy: The armor is covered in pockets, pouches, and attachment points for tools that make it especially useful. Your maximum Supply Points are increased by +2 while wearing this armor.
@@ -188,6 +201,13 @@ DNM.QualityTooltip.environment: Environment
 DNM.QualityTooltip.exposed: Exposed
 DNM.QualityTooltip.mine: These weapons must be placed as an action, but do not detonate immediately, requiring a Skill Test (Difficulty 1) to determine how well-positioned and concealed they are. Momentum from this Test can increase the damage cost of the mine, but the mine itself does not detonate until an enemy strays too near and detonates it.
 DNM.QualityTooltip.mobile: The armor is designed to allow for maximum mobility. When you spend Spirit to re-roll a d20 on a Skill Test using the Move skill, each point of Spirit spent allows you to re-roll two d20s rather than one.
+DNM.QualityTooltip.Vehicle.cumbersome: The vehicle is bulky and unresponsive. It increases the Difficulty of Skill Tests to move by +1.
+DNM.QualityTooltip.Vehicle.high_performance: The vehicle is powerful and finely-tuned. The pilot may spend 2 Momentum after a successful Skill Test to increase its Speed by +1. Any Test to repair the vehicle increases in Difficulty by +1, due to its finely-tuned nature.
+DNM.QualityTooltip.Vehicle.hover: The vehicle does not touch the surface it travels over, and instead hovers a short height above, suspending itself via magnetic repulsion, gravitic inversion, or some other mechanism. The vehicle ignores all difficult terrain not caused by obstacles and can move freely over both land and water.
+DNM.QualityTooltip.Vehicle.resilient_x: The vehicle is especially difficult to damage. The vehicle has an extra pool of points (equal to X) which may be spent as Spirit (or Threat) to avoid Injuries.
+DNM.QualityTooltip.Vehicle.rugged: Operate tests to repair Rugged vehicles are reduced by Difficulty by -1.
+DNM.QualityTooltip.Vehicle.single_seat: A single-seat vehicle is designed to be operated by a single pilot who also assumes the role of a gunner. The pilot does not suffer the normal penalties for taking both roles.
+DNM.QualityTooltip.Vehicle.tough_x: The vehicle can take more punishment than most. The number of Injuries the vehicle can withstand before being defeated is increased by X.
 DNM.QualityTooltip.Weapon.ammo: The weapon profile describes weapons consumed when they’re used to make an attack, like grenades, or a specific type of ammunition used by a different weapon, such as special arrows used with a bow. Each attack made with an ammo weapon uses up one of that weapon.
 DNM.QualityTooltip.Weapon.breaker: The weapon is especially good at inflicting damage to machines. Armor and NPCs with Protection will list how much Protection they provide against breaker attacks.
 DNM.QualityTooltip.Weapon.burst: The weapon fires several projectiles, causes an explosion covering an area, or otherwise is good at affecting groups of enemies. When firing at a group, additional targets cost 1 Momentum instead of 2.
@@ -241,6 +261,9 @@ DNM.Tooltips.Item.RemoveSelectedItem: Remove Selected Item
 DNM.Tooltips.Sheet.LockSheet: Lock Sheet
 DNM.Tooltips.Sheet.UnlockSheet: Unlock Sheet
 DNM.Tooltips.Warnings.DerivedValue: This is an auto-calculated value that cannot be edited.
+DNM.VehicleCover.covered_x: Covered X
+DNM.VehicleCover.enclosed: Enclosed
+DNM.VehicleCover.exposed: Exposed
 TYPES.Actor.character: Player Character
 TYPES.Actor.major_npc: Major NPC
 TYPES.Actor.npc: NPC

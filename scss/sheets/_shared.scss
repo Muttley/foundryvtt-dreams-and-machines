@@ -150,31 +150,28 @@
 		row-gap: 0.5rem;
 	}
 
-	.strings {
+	.custom-string {
 		display: grid;
 		align-content: baseline;
+		background-color: $c-offwhite;
 
-		.custom-string {
-			background-color: $c-offwhite;
+		.string-edit {
+			margin: 2px;
+			padding: 2px;
+			text-transform: uppercase;
+			font-weight: bold;
+			text-align: center;
 
-			.string-edit {
-				margin: 2px;
-				padding: 2px;
-				text-transform: uppercase;
-				font-weight: bold;
-				text-align: center;
-
-				&:hover {
-					color: $c-character-purple;
-					background-color: $c-character-purple-highlight;
-					cursor: pointer;
-				}
-			}
-
-			.add-string-row {
+			&:hover {
 				color: $c-character-purple;
-				text-align: right;
+				background-color: $c-character-purple-highlight;
+				cursor: pointer;
 			}
+		}
+
+		.add-string-row {
+			color: $c-character-purple;
+			text-align: right;
 		}
 	}
 

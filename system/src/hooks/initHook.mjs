@@ -70,6 +70,7 @@ function registerActorDataModels() {
 	CONFIG.Actor.dataModels.character = actorDataModels.CharacterDataModel;
 	CONFIG.Actor.dataModels.majorNPC = actorDataModels.MajorNPCDataModel;
 	CONFIG.Actor.dataModels.npc = actorDataModels.NPCDataModel;
+	CONFIG.Actor.dataModels.vehicle = actorDataModels.VehicleDataModel;
 }
 
 function registerActors() {
@@ -106,6 +107,15 @@ function registerActorSheets() {
 		actorSheets.NPCSheetV2,
 		{
 			types: ["npc"],
+			makeDefault: true,
+		}
+	);
+
+	foundry.documents.collections.Actors.registerSheet(
+		"dreams-and-machines",
+		actorSheets.VehicleSheetV2,
+		{
+			types: ["vehicle"],
 			makeDefault: true,
 		}
 	);

@@ -1,5 +1,15 @@
 export function registerHandlebarsHelpers() {
 
+	Handlebars.registerHelper("concat", function() {
+		let outStr = "";
+		for (let arg in arguments) {
+			if (typeof arguments[arg] != "object") {
+				outStr += arguments[arg];
+			}
+		}
+		return outStr;
+	});
+
 	Handlebars.registerHelper("fromConfig", function(arg1, arg2) {
 		return CONFIG.DREAMS[arg1][arg2] ? CONFIG.DREAMS[arg1][arg2] : arg2;
 	});
@@ -48,6 +58,10 @@ export function registerHandlebarsHelpers() {
 
 	Handlebars.registerHelper("template", function(arg1) {
 		return templatePath(arg1);
+	});
+
+	Handlebars.registerHelper("tooltip", function(arg1) {
+		return CONFIG.DREAMS.TOOLTIPS[arg1] ?? `Unable to locate tooltip ${name}`;
 	});
 
 }

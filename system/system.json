@@ -2,7 +2,7 @@
 	"id": "dreams-and-machines",
 	"title": "Dreams and Machines",
 	"description": "An unofficial system for playing Dreams and Machines from Modiphius Entertainment Ltd.",
-	"version": "1.2.0",
+	"version": "1.0.0",
 	"compatibility": {
 		"minimum": 13,
 		"verified": 13
@@ -12,7 +12,8 @@
 			"name": "Paul Maskelyne",
 			"discord": "muttley",
 			"email": "mu77ley@gmail.com",
-			"mastodon": "@muttley@dice.camp"
+			"mastodon": "@muttley@dice.camp",
+			"url": "https://www.patreon.com/muttley"
 		},
 		{
 			"name": "Mezryss"
@@ -61,6 +62,18 @@
 				"ASSISTANT": "OWNER"
 			},
 			"flags": {}
+		},
+		{
+			"name": "vehicles",
+			"label": "Vehicles",
+			"path": "packs/vehicles",
+			"type": "Actor",
+			"system": "dreams-and-machines",
+			"ownership": {
+				"PLAYER": "OBSERVER",
+				"ASSISTANT": "OWNER"
+			},
+			"flags": {}
 		}
 	],
 	"packFolders": [
@@ -70,7 +83,8 @@
 			"color": "#5e1966",
 			"packs": [
 				"character_options",
-				"equipment"
+				"equipment",
+				"vehicles"
 			],
 			"folders": [
 				{

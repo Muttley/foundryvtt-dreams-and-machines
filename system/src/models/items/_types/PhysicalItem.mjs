@@ -49,7 +49,7 @@ const PhysicalItem = () => ({
 	}),
 
 	techLevel: new fields.NumberField({
-		initial: 0,
+		initial: 1,
 		integer: true,
 		min: 0,
 		nullable: false,

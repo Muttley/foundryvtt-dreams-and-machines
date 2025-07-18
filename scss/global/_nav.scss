@@ -15,16 +15,14 @@
 		color: black;
 
 		a {
-			width: 12em;
-			padding-left: 8px;
-			padding-right: 8px;
+			line-height: 1.8;
+			width: 11em;
 		}
 
 		.item {
 			background: $c-character-purple-unselected;
 			color: $c-character-purple;
-			border-radius: 16px;
-			flex: none;
+			border-radius: 14px;
 
 			&:hover {
 				color: white;
@@ -40,18 +38,10 @@
 
 .dnm.sheet.item {
 	.sheet-tabs {
-		font-size: 14px;
-		font-family: 'Bruno Ace';
-		font-weight: bold;
-		text-transform: uppercase;
-		border: none;
-		color: black;
 
 		.item {
 			background: $c-secondary-unselected;
 			color: $c-secondary;
-			border-radius: 16px;
-			flex: none;
 
 			&:hover {
 				color: white;

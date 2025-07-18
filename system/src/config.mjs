@@ -6,6 +6,9 @@ export const DREAMS = {};
 globalThis.systemPath = path => `systems/${SYSTEM_ID}/${path ?? ""}`;
 globalThis.templatePath = path => path ? systemPath(`templates/${path}.hbs`) : systemPath("templates");
 
+const TOOLTIP_TEMPLATES = [
+	"edit-delete-mouse-controls",
+];
 
 DREAMS.ARMOR_QUALITIES = {
 	bulky: "DNM.QualityName.bulky",
@@ -81,6 +84,24 @@ DREAMS.SKILLS = {
 };
 
 
+DREAMS.VEHICLE_COVER_TYPES = {
+	enclosed: "DNM.VehicleCover.enclosed",
+	covered_x: "DNM.VehicleCover.covered_x",
+	exposed: "DNM.VehicleCover.exposed",
+};
+
+
+DREAMS.VEHICLE_QUALITIES = {
+	cumbersome: "DNM.QualityName.cumbersome",
+	high_performance: "DNM.QualityName.high_performance",
+	hover: "DNM.QualityName.hover",
+	resilient_x: "DNM.QualityName.resilient_x",
+	rugged: "DNM.QualityName.rugged",
+	single_seat: "DNM.QualityName.single_seat",
+	tough_x: "DNM.QualityName.tough_x",
+};
+
+
 DREAMS.WEAPON_QUALITIES = {
 	ammo: "DNM.QualityName.ammo",
 	breaker: "DNM.QualityName.breaker",
@@ -107,6 +128,7 @@ DREAMS.WEAPON_TYPES = {
 
 
 export function generateSortedData() {
+	dreams.log("Generating sorted config data");
 	DREAMS.ATTRIBUTES_SORTED = [];
 	for (let attribute in DREAMS.ATTRIBUTES) {
 		DREAMS.ATTRIBUTES_SORTED.push({
@@ -125,4 +147,17 @@ export function generateSortedData() {
 		});
 	}
 	DREAMS.SKILLS_SORTED.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+
+export function renderTooltips() {
+	dreams.log("Pre-rendering tooltips");
+
+	DREAMS.TOOLTIPS = {};
+
+	TOOLTIP_TEMPLATES.forEach(async name => {
+		dreams.debug(`Pre-rendering tooltip '${name}'`);
+		const template = templatePath(`tooltip/${name}`);
+		DREAMS.TOOLTIPS[name] = await foundry.applications.handlebars.renderTemplate(template);
+	});
 }

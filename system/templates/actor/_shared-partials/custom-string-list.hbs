@@ -1,28 +1,37 @@
 {{#if sectionTitle}}
 	<span class="label">
-		<a
-			data-action="add-string"
-			data-key="{{key}}"
-			data-tooltip="{{titleAdd}}"
-		>
-			<i class="fa-solid fa-plus"></i>
-		</a>
-		&nbsp;
+		{{#unless @root.editModeDisabled}}
+			<a
+				data-action="addString"
+				data-key="{{key}}"
+				data-tooltip="{{titleAdd}}"
+			>
+				<i class="fa-solid fa-plus"></i>
+			</a>
+			&nbsp;
+		{{/unless}}
 		{{sectionTitle}}
 	</span>
 {{/if}}
-<div class="custom-string">
+<div
+	class="custom-string"
+	{{#unless @root.editModeDisabled}}
+		data-tooltip="{{tooltip "edit-delete-mouse-controls"}}"
+	{{/unless}}
+>
 	{{#if addRowLabel}}
 		<div class="add-string-row">
 			<p class="string-header">
-				<a
-					data-action="add-string"
-					data-key="{{key}}"
-					data-tooltip="{{titleAdd}}"
-				>
-					<i class="fa-solid fa-square-plus"></i>
-				</a>
-				&nbsp;
+				{{#unless @root.editModeDisabled}}
+					<a
+						data-action="addString"
+						data-key="{{key}}"
+						data-tooltip="{{titleAdd}}"
+					>
+						<i class="fa-solid fa-square-plus"></i>
+					</a>
+					&nbsp;
+				{{/unless}}
 				{{addRowLabel}}
 			</p>
 		</div>
@@ -31,7 +40,7 @@
 		{{#each currentValues}}
 			<p
 				class="string-edit"
-				data-action="edit-string"
+				data-action="editString"
 				data-index="{{@index}}"
 				data-key="{{../key}}"
 			>
