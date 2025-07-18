@@ -30,6 +30,7 @@ export default class DnMItemSheetV2
 			case "equipment":
 			case "glif":
 			case "major_npc_action":
+			case "nanogram_pattern":
 			case "origin":
 			case "talent":
 			case "temperament":

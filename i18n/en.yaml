@@ -51,6 +51,7 @@ DNM.Labels.Choices: Choices
 DNM.Labels.ChooseBetween: Choose Between
 DNM.Labels.Coin: Coin
 DNM.Labels.Combat: Combat
+DNM.Labels.Complexity: Complexity
 DNM.Labels.Complications: Complications
 DNM.Labels.ConfigureOrigin: Configure {origin} Origin
 DNM.Labels.Cost: Cost
@@ -69,6 +70,7 @@ DNM.Labels.DicePrompt.Attribute: Attribute
 DNM.Labels.DicePrompt.Complication: Complication Range
 DNM.Labels.DicePrompt.Roll: Roll
 DNM.Labels.DicePrompt.Skill: Skill
+DNM.Labels.Difficulty: Difficulty
 DNM.Labels.Drive: Drive
 DNM.Labels.Edit: Edit
 DNM.Labels.EditBond: Edit Bond
@@ -143,6 +145,7 @@ DNM.Labels.TN: TN
 DNM.Labels.Truth: Truth
 DNM.Labels.Truths: Truths
 DNM.Labels.Unknown: Unknown
+DNM.Labels.UsePatternTest: Use Pattern Test
 DNM.Labels.Value: Value
 DNM.Labels.Weapon.Label: Weapon
 DNM.Labels.Weapon.Melee: Melee
@@ -273,6 +276,7 @@ TYPES.Item.armor: Armor
 TYPES.Item.equipment: Equipment
 TYPES.Item.glif: GLIF
 TYPES.Item.major_npc_action: Major NPC Action
+TYPES.Item.nanogram_pattern: Nanogram Pattern
 TYPES.Item.npc_action: NPC Action
 TYPES.Item.origin: Origin
 TYPES.Item.special_ability: Special Ability

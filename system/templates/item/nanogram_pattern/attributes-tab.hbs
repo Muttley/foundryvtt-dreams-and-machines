@@ -1,0 +1,50 @@
+<section class="tab {{tab.cssClass}}" data-group="primary" data-tab="attributes">
+	<div class="tab-body">
+		<div class="grid-5-columns">
+			<div class="grid-colspan-5">
+				<span class="label">
+					{{localize "DNM.Labels.UsePatternTest"}}
+				</span>
+			</div>
+			<div class="grid-colspan-2">
+				<div>
+					<span class="label">
+						{{localize "DNM.Labels.Attribute"}}
+					</span>
+					<select name="system.attribute" {{disabled editModeDisabled}}>
+						{{selectOptions
+							CONFIG.ATTRIBUTES_SORTED
+							labelAttr="name"
+							localize=false
+							selected=@root.system.attribute
+							valueAttr="key"
+						}}
+					</select>
+				</div>
+			</div>
+
+			<div class="grid-colspan-2">
+				<div>
+					<span class="label">
+						{{localize "DNM.Labels.Skill"}}
+					</span>
+					<select name="system.skill" {{disabled editModeDisabled}}>
+						{{selectOptions
+							CONFIG.SKILLS_SORTED
+							labelAttr="name"
+							localize=false
+							selected=@root.system.skill
+							valueAttr="key"
+						}}
+					</select>
+				</div>
+			</div>
+
+			{{> (template "_shared-partials/number-field")
+				label=(localize "DNM.Labels.Difficulty")
+				name="system.difficulty"
+				value=system.difficulty
+			}}
+		</div>
+	</div>
+</section>

@@ -52,6 +52,18 @@
 			"flags": {}
 		},
 		{
+			"name": "glifs_and_patterns",
+			"label": "GLIFs and Patterns",
+			"path": "packs/glifs_and_patterns",
+			"type": "Item",
+			"system": "dreams-and-machines",
+			"ownership": {
+				"PLAYER": "OBSERVER",
+				"ASSISTANT": "OWNER"
+			},
+			"flags": {}
+		},
+		{
 			"name": "system_documentation",
 			"label": "System Documentation",
 			"path": "packs/system_documentation",
@@ -84,6 +96,7 @@
 			"packs": [
 				"character_options",
 				"equipment",
+				"glifs_and_patterns",
 				"vehicles"
 			],
 			"folders": [

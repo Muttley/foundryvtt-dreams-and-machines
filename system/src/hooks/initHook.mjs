@@ -128,7 +128,9 @@ function registerItemDataModels() {
 	CONFIG.Item.dataModels.archetype = itemDataModels.ArchetypeDataModel;
 	CONFIG.Item.dataModels.armor = itemDataModels.ArmorDataModel;
 	CONFIG.Item.dataModels.equipment = itemDataModels.EquipmentDataModel;
+	CONFIG.Item.dataModels.glif = itemDataModels.GLIFDataModel;
 	CONFIG.Item.dataModels.major_npc_action = itemDataModels.MajorNPCActionDataModel;
+	CONFIG.Item.dataModels.nanogram_pattern = itemDataModels.NanogramPatternDataModel;
 	CONFIG.Item.dataModels.npc_action = itemDataModels.NPCActionDataModel;
 	CONFIG.Item.dataModels.origin = itemDataModels.OriginDataModel;
 	CONFIG.Item.dataModels.special_ability = itemDataModels.SpecialAbilityDataModel;
@@ -180,9 +182,27 @@ function registerItemSheets() {
 
 	foundry.documents.collections.Items.registerSheet(
 		"dreams-and-machines",
+		itemSheets.GLIFSheet,
+		{
+			types: ["glif"],
+			makeDefault: true,
+		}
+	);
+
+	foundry.documents.collections.Items.registerSheet(
+		"dreams-and-machines",
 		itemSheets.MajorNPCActionSheet,
 		{
 			types: ["major_npc_action"],
+			makeDefault: true,
+		}
+	);
+
+	foundry.documents.collections.Items.registerSheet(
+		"dreams-and-machines",
+		itemSheets.NanogramPatternSheet,
+		{
+			types: ["nanogram_pattern"],
 			makeDefault: true,
 		}
 	);
