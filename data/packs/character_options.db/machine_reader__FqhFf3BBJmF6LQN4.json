@@ -1,0 +1,15 @@
+{
+	"_id": "FqhFf3BBJmF6LQN4",
+	"_key": "!items!FqhFf3BBJmF6LQN4",
+	"effects": [
+	],
+	"folder": "ReuZMcs9ti5aeNom",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Machine Reader",
+	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.iqwTMOVYRUex9WLH",
+		"description": "<p>You possess some form of reader lens, which may take the form of a pair of glasses, goggles, a monocle, contact lenses, or other surface onto which a display is projected, and you’ve studied how to read those displays. If this device is lost, damaged, or destroyed, this talent also allows you to construct a replacement.</p><p>When you interact with a computer system using a weaving action, you may receive a visual display from the machine. This allows you to receive a wide range of information from the machine, including spending Momentum to Obtain Information from the machine. This also allows for much more precise and efficient control of computer systems: when you purchase one or more dice on a Skill Test to perform a weaving action, you may spend two additional Spirit to count one of the dice in your dice pool as if it had rolled a 1. This must be done before rolling.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

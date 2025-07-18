@@ -1,0 +1,15 @@
+{
+	"_id": "tnIMeTcKBFHj3FBg",
+	"_key": "!items!tnIMeTcKBFHj3FBg",
+	"effects": [
+	],
+	"folder": "pnwoVJbIoIsjqWZf",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Precision Firepower",
+	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.Pd823NI9MfYWkaHD",
+		"description": "<p>You’ve specialized in taking down large, durable enemies from afar.</p><p>When you make a ranged attack using a weapon with the breaker quality, each Momentum spent increases the cost of the weapon’s damage by +2, rather than +1.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

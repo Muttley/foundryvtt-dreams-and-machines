@@ -1,0 +1,15 @@
+{
+	"_id": "0UThqIP417XqtHMp",
+	"_key": "!items!0UThqIP417XqtHMp",
+	"effects": [
+	],
+	"folder": "UgP8kh59SuTt0pKE",
+	"img": "systems/dreams-and-machines/assets/icons/glif.svg",
+	"name": "Ignore",
+	"system": {
+		"complexity": 1,
+		"description": "<p>This is a developed form of the Spears’ GLIF-markings. Upon seeing this GLIF, the machine ignores any objects or people marked with the GLIF. This effect ends when the machine detects a threat or a hostile action is taken against the machine.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "glif"
+}

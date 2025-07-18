@@ -1,0 +1,17 @@
+{
+	"_id": "7SyxAOOILncLMjiB",
+	"_key": "!items!7SyxAOOILncLMjiB",
+	"effects": [
+	],
+	"folder": "MgQGiBlPBPIPjKGp",
+	"img": "systems/dreams-and-machines/assets/icons/nanogram_pattern.svg",
+	"name": "Interface",
+	"system": {
+		"attribute": "resolve",
+		"description": "<p>Use this Nanogram Pattern with a <strong>Resolve (Operate)</strong> Test, Difficulty 1.</p><p>Select a computer system or robot within a short distance (within the same zone in combat). If the computer system is selected is a NPC, it may oppose this Skill Test, turning it into a contest opposed by the NPC’s <strong>Resolve (Survive)</strong>. If successful, the nanogram cloud establishes a connection with the computer system, allowing you to communicate directly with it, and operate it remotely. Against a hostile NPC computer or robot, this is counted as an attack, inflicting an Injury of Controlled, and with a damage rating equal to your Tech Level and the breaker quality. If an enemy has suffered a Controlled Injury, you may make <strong>Resolve (Operate)</strong> tests to give commands to that NPC, with a Difficulty set by the GM — simpler orders are always easier. This effect remains until you choose to end it (which you may do at the start of your turn), or if the computer system forces you to disconnect (which may happen with an action from a NPC or by the GM spending 2 Threat). While this effect is ongoing, you cannot use any other Nanogram Weaving patterns.</p>",
+		"difficulty": 1,
+		"skill": "operate",
+		"source": "PlayersGuide"
+	},
+	"type": "nanogram_pattern"
+}

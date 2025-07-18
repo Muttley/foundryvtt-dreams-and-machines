@@ -1,0 +1,17 @@
+{
+	"_id": "UEDqJ7fBWr4NPhFl",
+	"_key": "!items!UEDqJ7fBWr4NPhFl",
+	"effects": [
+	],
+	"folder": "MgQGiBlPBPIPjKGp",
+	"img": "systems/dreams-and-machines/assets/icons/nanogram_pattern.svg",
+	"name": "Guise",
+	"system": {
+		"attribute": "insight",
+		"description": "<p>Use this Nanogram Pattern with an <strong>Insight (Operate)</strong> Test, Difficulty 2.</p><p>If successful, cover yourself in a holographic image resembling another person of similar size and proportions to yourself. If you assume the guise of a specific person, you must be able to see them or have an image of them to copy. This guise will hold up to visual inspection and minor physical contact and can modify your voice (if you attempt to recreate a specific voice, you’ll need a recording of their speech). This effect ends instantly if you are attacked, or at the start of any of your turns if you wish to end it. While the effect lasts, you cannot use any other Nanogram Weaving patterns.</p>",
+		"difficulty": 2,
+		"skill": "operate",
+		"source": "PlayersGuide"
+	},
+	"type": "nanogram_pattern"
+}

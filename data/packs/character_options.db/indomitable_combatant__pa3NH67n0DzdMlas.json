@@ -1,0 +1,15 @@
+{
+	"_id": "pa3NH67n0DzdMlas",
+	"_key": "!items!pa3NH67n0DzdMlas",
+	"effects": [
+	],
+	"folder": "pnwoVJbIoIsjqWZf",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Indomitable Combatant",
+	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.Pd823NI9MfYWkaHD",
+		"description": "<p>You face your enemies up-close, staring them in the eyes — or the optics — as you cross blades with them.</p><p>When you inflict an Injury upon an enemy with a melee attack, and they spend Threat to avoid that Injury, you regain Spirit equal to the amount of Threat spent.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

@@ -1,0 +1,15 @@
+{
+	"_id": "5CIhuKrybAUJvrX8",
+	"_key": "!items!5CIhuKrybAUJvrX8",
+	"effects": [
+	],
+	"folder": "ReuZMcs9ti5aeNom",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Haptic Touch",
+	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.iqwTMOVYRUex9WLH",
+		"description": "<p>You’ve obtained or constructed a lightweight glove (or pair of gloves) which contains an element which simulates physical sensations — pressure, vibrations, and the feeling of resistance — allowing you to ‘feel’ the computer interface as you interact with it. This instantaneous feedback allows you to be far more precise in the gestures you use, knowing the sensations that accompany each motion.</p><p>When you attempt a Skill Test to perform a weaving action, you may reduce the Difficulty by 1, to a minimum of 0.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

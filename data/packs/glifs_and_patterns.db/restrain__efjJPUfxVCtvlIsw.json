@@ -1,0 +1,17 @@
+{
+	"_id": "efjJPUfxVCtvlIsw",
+	"_key": "!items!efjJPUfxVCtvlIsw",
+	"effects": [
+	],
+	"folder": "MgQGiBlPBPIPjKGp",
+	"img": "systems/dreams-and-machines/assets/icons/nanogram_pattern.svg",
+	"name": "Restrain",
+	"system": {
+		"attribute": "quickness",
+		"description": "<p>Use this Nanogram Pattern with a <strong>Quickness (Operate)</strong> Test, Difficulty 1.</p><p>Select an enemy within a short distance (within the same zone in combat). If the enemy can withstand multiple injuries before defeat, the Difficulty of this action is equal to the number of injuries that enemy can withstand. If successful, the enemy suffers a restrained Truth, and cannot move until this Truth is removed. While that Truth is in effect, you cannot use any other Nanogram Weaving patterns.</p>",
+		"difficulty": 1,
+		"skill": "operate",
+		"source": "PlayersGuide"
+	},
+	"type": "nanogram_pattern"
+}

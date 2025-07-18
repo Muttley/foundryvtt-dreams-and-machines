@@ -1,0 +1,15 @@
+{
+	"_id": "yppYoFfZNWTjnNLM",
+	"_key": "!items!yppYoFfZNWTjnNLM",
+	"effects": [
+	],
+	"folder": "ReuZMcs9ti5aeNom",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "The Basics of Weaving",
+	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.iqwTMOVYRUex9WLH",
+		"description": "<p>You’ve mastered the fundamental skills of Weaving.</p><p>You may attempt Skill Tests to perform simple weaving actions, and any complex weaving actions for which you’ve discovered the required knowledge fragments. Weaving is described in full in Chapter 7: GLIFs and Weaving, page 177.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

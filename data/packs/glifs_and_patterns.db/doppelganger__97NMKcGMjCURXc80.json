@@ -1,0 +1,17 @@
+{
+	"_id": "97NMKcGMjCURXc80",
+	"_key": "!items!97NMKcGMjCURXc80",
+	"effects": [
+	],
+	"folder": "MgQGiBlPBPIPjKGp",
+	"img": "systems/dreams-and-machines/assets/icons/nanogram_pattern.svg",
+	"name": "Doppelganger",
+	"system": {
+		"attribute": "insight",
+		"description": "<p>Use this Nanogram Pattern with an <strong>Insight (Operate)</strong> Test, Difficulty 2.</p><p>If successful, create a hologram of yourself somewhere nearby (within your zone or an adjacent zone in combat). Each time you take an action, you may move this holographic copy of yourself up to one zone and have it appear to take any actions you want (it cannot actually take real actions), and enemies will regard it as they regard you. If attacked, the holographic double vanishes. You may end the effect on your turn, without requiring an action. While this effect lasts, you cannot use any other Nanogram Weaving patterns.</p>",
+		"difficulty": 2,
+		"skill": "operate",
+		"source": "PlayersGuide"
+	},
+	"type": "nanogram_pattern"
+}

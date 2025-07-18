@@ -1,0 +1,17 @@
+{
+	"_id": "abeVTWhn99hJgsS8",
+	"_key": "!items!abeVTWhn99hJgsS8",
+	"effects": [
+	],
+	"folder": "MgQGiBlPBPIPjKGp",
+	"img": "systems/dreams-and-machines/assets/icons/nanogram_pattern.svg",
+	"name": "Shock",
+	"system": {
+		"attribute": "resolve",
+		"description": "<p>Use this Nanogram Pattern with a <strong>Resolve (Operate)</strong> Test, Difficulty 2.</p><p>If successful, your nanoswarm discharges a potent electrical shock on an enemy nearby (in combat, within your zone). This is counted as an attack; enemies with a reader lens, or otherwise able to see data, can defend against this attack, turning it into a contest opposed by their <strong>Brawn (Survive)</strong>. If the attack is successful, the target suffers a shocked Injury, with a damage rating equal to your Tech Level.</p>",
+		"difficulty": 2,
+		"skill": "operate",
+		"source": "PlayersGuide"
+	},
+	"type": "nanogram_pattern"
+}

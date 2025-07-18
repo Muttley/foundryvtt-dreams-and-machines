@@ -1,0 +1,17 @@
+{
+	"_id": "AKA29kQTNqcNTqdi",
+	"_key": "!items!AKA29kQTNqcNTqdi",
+	"effects": [
+	],
+	"folder": "MgQGiBlPBPIPjKGp",
+	"img": "systems/dreams-and-machines/assets/icons/nanogram_pattern.svg",
+	"name": "Glamour",
+	"system": {
+		"attribute": "insight",
+		"description": "<p>Use this Nanogram Pattern with an <strong>Insight (Operate)</strong> Test, with a Difficulty set by the GM depending on the effect created.</p><p>If successful, create a persistent illusory object somewhere nearby (in combat, within your zone or an adjacent zone). This illusion is a nanogram, appearing as real or unreal as you desire, and able to make sounds and maintain a limited physical presence (touching it gently “feels” real, but it is weightless and cannot support any weight). The size and complexity of the illusion determines the Difficulty — the larger and more complex, the higher Difficulty to create — and the shorter time it can last. The simplest illusions can last hours, while the most complex ones may only last a few seconds, maybe a minute. You may end the illusion at any time (at the start of any of your turns in combat), and you cannot use any other Nanogram Weaving patterns while an illusion is active.</p>",
+		"difficulty": null,
+		"skill": "operate",
+		"source": "PlayersGuide"
+	},
+	"type": "nanogram_pattern"
+}

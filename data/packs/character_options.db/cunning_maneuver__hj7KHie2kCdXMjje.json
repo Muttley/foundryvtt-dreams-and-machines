@@ -1,0 +1,15 @@
+{
+	"_id": "hj7KHie2kCdXMjje",
+	"_key": "!items!hj7KHie2kCdXMjje",
+	"effects": [
+	],
+	"folder": "BpqLo91SqX374FJh",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Cunning Maneuver",
+	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.F66wTKgcd9GChFDD",
+		"description": "<p>With a word or a gesture, your allies move into position. Careful planning and keen focus allow you to outmaneuver your foes.</p><p>At the start of your turn, you may spend Spirit to allow your allies to move. Each point of Spirit you spend, one ally who can see or hear you may move one zone. No ally may move more than one zone on your turn as a result of this.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

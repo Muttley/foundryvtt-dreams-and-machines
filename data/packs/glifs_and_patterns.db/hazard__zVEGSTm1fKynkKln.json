@@ -1,0 +1,15 @@
+{
+	"_id": "zVEGSTm1fKynkKln",
+	"_key": "!items!zVEGSTm1fKynkKln",
+	"effects": [
+	],
+	"folder": "UgP8kh59SuTt0pKE",
+	"img": "systems/dreams-and-machines/assets/icons/glif.svg",
+	"name": "Hazard",
+	"system": {
+		"complexity": 2,
+		"description": "<p>Upon seeing the GLIF, the machine regards the object or person as dangerous. In the case of a marked object, the machine will attempt to destroy the object from a safe distance if possible, or avoid it otherwise. In the case of a marked structure or location, the machine will seek to avoid the location. In the case of a marked person, it will attempt to destroy them, prioritising them above other threats.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "glif"
+}

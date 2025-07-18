@@ -1,0 +1,38 @@
+{
+	"_id": "F66wTKgcd9GChFDD",
+	"_key": "!items!F66wTKgcd9GChFDD",
+	"effects": [
+	],
+	"folder": "iHJU8B3uW6g9jgCV",
+	"img": "systems/dreams-and-machines/assets/icons/archetype.svg",
+	"name": "Firebrand",
+	"system": {
+		"attributeChoices": {
+			"choices": [
+				"might",
+				"insight",
+				"resolve"
+			],
+			"values": [
+			]
+		},
+		"configured": false,
+		"description": "<p>Few and far between are those who can change history, who can — through their own force of personality and will — forge the future with their bare hands. Few and far between are those with the almost supernatural ability to lead others through sheer innate strength of character. Few and far between are those with the burning intelligence to know what path is right and what risks must be taken. But this is what you can do, this is your destiny, for you are a Firebrand. Ever since you were very young you knew you were different. Your friends always looked to you for guidance, for approval. As you grew adults would defer to you, listen to what you had to say, and nod their heads in agreement. You inspire trust. You inspire love. You can see the way ahead at a glance and have the confidence to make it happen. And in this you wield great power. In some this power is seductive — charismatic dictators and tyrannical demagogues are created this way. But not you. You have seen these demons, have heard the sly words they whisper into your ear, but know they will never overthrow you.</p><p>This is an Advanced Archetype, and it cannot be selected until Firebrands have been introduced to a campaign, or with the gamemaster’s permission. You must spend 2 growth at character creation to select this archetype.</p><p><strong>Truth</strong>: The character gains the Truth Firebrand</p><p><strong>Attributes</strong>: Add +3 to one of Might, Insight, or Resolve, add +2 to one of the remaining two, and add +1 to the last of the three.</p><p><strong>Skills</strong>: Add +2 to one of Operate, Study, or Talk. Add +1 to the other two.</p><p><strong>Tech Level</strong>: The character’s Tech Level is increased by +1.</p><p><strong>Spirit</strong>: The character’s Spirit Pool is increased by +3.</p><p><strong>Supply Points</strong>: The character’s Supply Points are unchanged.</p><p><strong>Talent</strong>: Firebrands begin with any two of the following talents: <strong>Direct</strong>, <strong>Contingency Plan</strong>, <strong>Strategize</strong>, or <strong>Cunning Maneuver</strong>.</p><p><strong>Goals</strong>: When you deal the killing blow to a major enemy, or you protect a settlement or group of people from destruction, gain growth.</p><p><strong>Equipment</strong>: One Hand-Made or Security Weapon, Light Armor (TL2 or TL3), Binoculars (TL 2 or TL 3), Communicator (TL 3).</p>",
+		"equipment": "<p>One Hand-Made or Security Weapon, Light Armor (TL2 or TL3), Binoculars (TL 2 or TL 3), Communicator (TL 3).</p>",
+		"goals": "<p>When you deal the killing blow to a major enemy, or you protect a settlement or group of people from destruction, gain growth.</p>",
+		"skillChoices": {
+			"choices": [
+				"operate",
+				"study",
+				"talk"
+			],
+			"values": [
+			]
+		},
+		"source": "PlayersGuide",
+		"spirit": 3,
+		"supplyPoints": 0,
+		"techLevel": 1
+	},
+	"type": "archetype"
+}

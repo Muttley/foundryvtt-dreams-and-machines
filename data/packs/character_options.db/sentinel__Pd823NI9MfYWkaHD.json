@@ -1,0 +1,38 @@
+{
+	"_id": "Pd823NI9MfYWkaHD",
+	"_key": "!items!Pd823NI9MfYWkaHD",
+	"effects": [
+	],
+	"folder": "iHJU8B3uW6g9jgCV",
+	"img": "systems/dreams-and-machines/assets/icons/archetype.svg",
+	"name": "Sentinel",
+	"system": {
+		"attributeChoices": {
+			"choices": [
+				"might",
+				"quickness",
+				"resolve"
+			],
+			"values": [
+			]
+		},
+		"configured": false,
+		"description": "<p>You are an elite warrior who has devoted your life to the protection of the people of Evera. It matters not who they are or where they come from, if they call themselves a citizen of Evera they are worthy of your protection. Your heritage goes back to the days of the War, and there has never been a break in the Sentinels’ safeguarding presence since. You always operate in threes, a sacred Triad, traveling the world with the most advanced vehicles and weapons available. At every settlement the locals repair your equipment and armor, donate the best weapons they have found, and refresh your supplies. They know the sacrifices a Sentinel makes to adopt this life, they know the sacrifices Sentinels make falling in battle, they know you are the principle bulwark between them and the Wakers. But you are not just wandering warriors, for as you pass through you train the local Guardians, and talent-spot for your own successor, knowing full well that death will claim you one day. You tell your other triumvirs of your choice, so on the day you fall they will return and recruit your replacement.</p><p>This is an Advanced Archetype, and it cannot be selected until Sentinels have been introduced to a campaign, or with the gamemaster’s permission. You must spend 2 growth at character creation to select this archetype.</p><p><strong>Truth</strong>: The character gains the Truth <em>Sentinel</em></p><p><strong>Attributes</strong>: Add +3 to one of Might, Quickness, or Resolve, add +2 to one of the remaining two, and add +1 to the last of the three.</p><p><strong>Skills</strong>: Add +2 to one of Fight, Operate, or Talk. Add +1 to the other two.</p><p><strong>Tech Level</strong>: The character’s Tech Level is increased by +2.</p><p><strong>Spirit</strong>: The character’s Spirit Pool is increased by +2.</p><p><strong>Supply Points</strong>: The character’s Supply Points are unchanged.</p><p><strong>Talent</strong>: Sentinels begin with the <strong>Nanobarrier</strong> talent, and one of the following talents: <strong>Precision Firepower</strong>, <strong>Indomitable Combatant</strong>, or <strong>Coordinated Assault</strong>.</p><p><strong>Goals</strong>: When you deal the killing blow to a major enemy, or you protect a settlement or group of people from destruction, gain growth.</p><p><strong>Equipment</strong>: One Hand-Made, Security, or Military Ranged Weapon, One Hand-Made, Security, or Military Melee Weapon, Combat Armor (TL3 or TL4) or Heavy Armor (TL3 or TL4), Tactical Lens (TL 4) or Binoculars (TL 2 or TL 3), Communicator (TL 3).</p>",
+		"equipment": "<p>One Hand-Made, Security, or Military Ranged Weapon, One Hand-Made, Security, or Military Melee Weapon, Combat Armor (TL3 or TL4) or Heavy Armor (TL3 or TL4), Tactical Lens (TL 4) or Binoculars (TL 2 or TL 3), Communicator (TL 3).</p>",
+		"goals": "<p>When you deal the killing blow to a major enemy, or you protect a settlement or group of people from destruction, gain growth.</p>",
+		"skillChoices": {
+			"choices": [
+				"fight",
+				"operate",
+				"talk"
+			],
+			"values": [
+			]
+		},
+		"source": "PlayersGuide",
+		"spirit": 2,
+		"supplyPoints": 0,
+		"techLevel": 2
+	},
+	"type": "archetype"
+}

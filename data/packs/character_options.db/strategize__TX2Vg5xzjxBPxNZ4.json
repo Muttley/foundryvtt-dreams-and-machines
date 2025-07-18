@@ -1,0 +1,15 @@
+{
+	"_id": "TX2Vg5xzjxBPxNZ4",
+	"_key": "!items!TX2Vg5xzjxBPxNZ4",
+	"effects": [
+	],
+	"folder": "BpqLo91SqX374FJh",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Strategize",
+	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.F66wTKgcd9GChFDD",
+		"description": "<p>You can figure out a strategy to overcome most any problem, and you can do it quickly.</p><p>When you create a Truth which represents a plan, an advantageous tactic or maneuver, or knowledge of an opponent’s weakness, spend 1 Momentum to create a second Truth of that sort, representing another part of the plan, tactic, etc.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

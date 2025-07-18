@@ -1,0 +1,15 @@
+{
+	"_id": "cMTfpc7puhxDX4ED",
+	"_key": "!items!cMTfpc7puhxDX4ED",
+	"effects": [
+	],
+	"folder": "UgP8kh59SuTt0pKE",
+	"img": "systems/dreams-and-machines/assets/icons/glif.svg",
+	"name": "Glitch",
+	"system": {
+		"complexity": 2,
+		"description": "<p>Upon seeing the GLIF, the machine seizes up, its processes overwhelmed by a burst of junk data and logic errors. It must spend its next action clearing errors and problems.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "glif"
+}

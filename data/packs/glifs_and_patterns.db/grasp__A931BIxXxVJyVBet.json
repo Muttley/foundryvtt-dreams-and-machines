@@ -1,0 +1,17 @@
+{
+	"_id": "A931BIxXxVJyVBet",
+	"_key": "!items!A931BIxXxVJyVBet",
+	"effects": [
+	],
+	"folder": "MgQGiBlPBPIPjKGp",
+	"img": "systems/dreams-and-machines/assets/icons/nanogram_pattern.svg",
+	"name": "Grasp",
+	"system": {
+		"attribute": "quickness",
+		"description": "<p>Use this Nanogram Pattern with a <strong>Quickness (Operate)</strong> Test, Difficulty 1.</p><p>If successful, choose an object within a short distance (within the same zone in combat), which you could pick up with one hand. You may generate a nanogram field to pick up and move that object as if you were holding it. Fine manipulation is not normally possible, but the GM may permit you to spend Momentum to perform more delicate tasks. This effect cannot produce sufficient force to cause someone harm or restrain a person’s movements. This effect lasts for a few seconds or up to a minute (until the start of your next turn in combat).</p>",
+		"difficulty": 1,
+		"skill": "operate",
+		"source": "PlayersGuide"
+	},
+	"type": "nanogram_pattern"
+}

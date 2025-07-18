@@ -1,0 +1,15 @@
+{
+	"_id": "WRPB8oPLDkxW52US",
+	"_key": "!items!WRPB8oPLDkxW52US",
+	"effects": [
+	],
+	"folder": "BpqLo91SqX374FJh",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Direct",
+	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.F66wTKgcd9GChFDD",
+		"description": "<p>You have a keen tactical mind, and a knack for knowing the right time and place for the right action.</p><p>When you take your action, you can direct an ally to take an action instead. If the ally’s action requires a Skill Test, you count as assisting their Test using your <strong>Insight (Talk)</strong>.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

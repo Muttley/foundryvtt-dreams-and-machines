@@ -1,0 +1,15 @@
+{
+	"_id": "KfcvHMr01BLpE7ZG",
+	"_key": "!items!KfcvHMr01BLpE7ZG",
+	"effects": [
+	],
+	"folder": "BpqLo91SqX374FJh",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Contingency Plan",
+	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.F66wTKgcd9GChFDD",
+		"description": "<p>You make plans. You make backup plans. You make extra plans in case both of those fail.</p><p>When you or an ally fail a Skill Test, add 1 to the group’s Momentum pool.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

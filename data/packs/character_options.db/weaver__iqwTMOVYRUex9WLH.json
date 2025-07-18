@@ -1,0 +1,38 @@
+{
+	"_id": "iqwTMOVYRUex9WLH",
+	"_key": "!items!iqwTMOVYRUex9WLH",
+	"effects": [
+	],
+	"folder": "iHJU8B3uW6g9jgCV",
+	"img": "systems/dreams-and-machines/assets/icons/archetype.svg",
+	"name": "Weaver",
+	"system": {
+		"attributeChoices": {
+			"choices": [
+				"quickness",
+				"insight",
+				"resolve"
+			],
+			"values": [
+			]
+		},
+		"configured": false,
+		"description": "<p>You have spent much of your time studying the secrets and mysteries of Weaving, learning to master that ancient and potent craft, even though you may still have never seen a working Atoma. You revel in the otherwise unseen world of augmented reality controls and information, viewed through your Weaver contact lenses or, if you want a little more style, the flashy Weaver monocles that are all the fashion these days. You use GLIFs, programs that only you can manipulate but that cast an effect into the world. You wield great power through these skills and abilities, but you want more — you strive to uncover ever more weaving patterns, to discover Atoma cubes and, one day, a fully functioning industrial or military Atoma. You tell yourself this drive is not selfish, that you yearn to share these wonders with others who in return will share theirs with you, but you know, deep down, that uncovering the knowledge is the end in itself. Others look upon you with envy, and your skills make you a valuable ally for any adventuring group.</p><p>This is an Advanced Archetype, and it cannot be selected until Weaving has been introduced to a campaign, or with the gamemaster’s permission. You must spend 2 growth at character creation to select this archetype.</p><ul><li><p><strong>Truth</strong>: The character gains the Truth <em>Weaver</em></p></li><li><p><strong>Attributes</strong>: Add +3 to one of Quickness, Insight, Resolve, add +2 to one of the remaining two, and add +1 to the last of the three.</p></li><li><p><strong>Skills</strong>: Add +2 to one of Study, Survive, or Operate. Add +1 to the other two.</p></li><li><p><strong>Tech Level</strong>: The character’s Tech Level is increased by +2.</p></li><li><p><strong>Spirit</strong>: The character’s Spirit Pool is unchanged.</p></li><li><p><strong>Supply Points</strong>: The character has +1 Supply Point.</p></li><li><p><strong>Talent</strong>: Weavers begin with the talent <strong>The Basics of Weaving</strong>, plus one of the following talents: <strong>Machine Reader</strong>, <strong>Haptic Touch</strong>, or <strong>Nanoweaver</strong>.</p></li><li><p><strong>Goals</strong>: When you solve a problem by interacting with technology, obtaining a knowledge fragment, or producing a valuable item using an Atoma device, gain growth.</p></li><li><p><strong>Equipment</strong>: One Hand-Made or Security Weapon, Protective Clothing (TL 3), data storage device, 2 complete weaving patterns, and 4 pattern fragments).</p></li></ul>",
+		"equipment": "<p>One Hand-Made or Security Weapon, Protective Clothing (TL 3), data storage device, 2 complete weaving patterns, and 4 pattern fragments).</p>",
+		"goals": "<p>When you solve a problem by interacting with technology, obtaining a knowledge fragment, or producing a valuable item using an Atoma device, gain growth.</p>",
+		"skillChoices": {
+			"choices": [
+				"operate",
+				"study",
+				"survive"
+			],
+			"values": [
+			]
+		},
+		"source": "PlayersGuide",
+		"spirit": 0,
+		"supplyPoints": 1,
+		"techLevel": 2
+	},
+	"type": "archetype"
+}

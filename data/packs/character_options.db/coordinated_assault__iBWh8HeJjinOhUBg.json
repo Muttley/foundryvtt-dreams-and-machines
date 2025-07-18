@@ -1,0 +1,15 @@
+{
+	"_id": "iBWh8HeJjinOhUBg",
+	"_key": "!items!iBWh8HeJjinOhUBg",
+	"effects": [
+	],
+	"folder": "pnwoVJbIoIsjqWZf",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Coordinated Assault",
+	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.Pd823NI9MfYWkaHD",
+		"description": "<p>You and your comrades are a greater fighting force than the sum of your numbers.</p><p>When you attack an enemy, choose an ally in your zone or an adjacent one. If you spend any Spirit to buy extra dice on your attack, the chosen ally receives the same number of extra dice on their next Skill Test as well, without needing to spend Spirit. The maximum number of extra dice still applies.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

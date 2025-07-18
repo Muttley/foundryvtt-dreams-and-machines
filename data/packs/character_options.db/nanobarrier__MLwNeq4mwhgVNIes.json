@@ -1,0 +1,15 @@
+{
+	"_id": "MLwNeq4mwhgVNIes",
+	"_key": "!items!MLwNeq4mwhgVNIes",
+	"effects": [
+	],
+	"folder": "pnwoVJbIoIsjqWZf",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Nanobarrier",
+	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.Pd823NI9MfYWkaHD",
+		"description": "<p>Your armor is fitted with a compact nanogram projector which can generate short-lived barriers of force, electroshock fields, and bright holographic displays. Such technology is complex, with many secrets, and you’ve been entrusted with the code-phrases and activator-words to control this technology… but also the knowledge that its signals may draw unwanted attention.</p><p>You may activate your Nanobarrier at the start of any action, choosing one of the following options:</p><ul><li><p><strong>Barrier</strong>: Add +1 to the Difficulty of attacks against you or one nearby ally until the start of your next action.</p></li><li><p><strong>Shock</strong>: Until the start of your next action, anyone who fails a melee attack against you suffers a shocked 2 Injury.</p></li><li><p><strong>Display</strong>: Until the start of your next turn, any NPC attacking someone other than you must spend 1 Threat to do so.</p></li></ul><p>The first time you use this ability in a scene, it is free. The second time, it costs 1 Threat. Each time after the second, increase the cost by +1 Threat.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

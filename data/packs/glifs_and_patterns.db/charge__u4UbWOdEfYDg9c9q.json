@@ -1,0 +1,17 @@
+{
+	"_id": "u4UbWOdEfYDg9c9q",
+	"_key": "!items!u4UbWOdEfYDg9c9q",
+	"effects": [
+	],
+	"folder": "MgQGiBlPBPIPjKGp",
+	"img": "systems/dreams-and-machines/assets/icons/nanogram_pattern.svg",
+	"name": "Charge",
+	"system": {
+		"attribute": "resolve",
+		"description": "<p>Use this Nanogram Pattern with a <strong>Resolve (Operate)</strong> Test, Difficulty 2.</p><p>If successful, select a single powered item or weapon within a short distance (within your zone in combat). That item is immediately recharged. Once you have recharged an item, you may not recharge that item again during the same day, for safety reasons.</p>",
+		"difficulty": 2,
+		"skill": "operate",
+		"source": "PlayersGuide"
+	},
+	"type": "nanogram_pattern"
+}

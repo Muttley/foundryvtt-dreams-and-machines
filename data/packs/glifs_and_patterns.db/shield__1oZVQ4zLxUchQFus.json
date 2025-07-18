@@ -1,0 +1,17 @@
+{
+	"_id": "1oZVQ4zLxUchQFus",
+	"_key": "!items!1oZVQ4zLxUchQFus",
+	"effects": [
+	],
+	"folder": "MgQGiBlPBPIPjKGp",
+	"img": "systems/dreams-and-machines/assets/icons/nanogram_pattern.svg",
+	"name": "Shield",
+	"system": {
+		"attribute": "insight",
+		"description": "<p>Use this Nanogram Pattern with an <strong>Insight (Operate)</strong> Test, Difficulty 1.</p><p>If successful, create a protective barrier of force fields, highlighted by holographic light. This shield provides a pool of points which you can use to avoid Injuries instead of spending Spirit. When you create this effect, the pool contains points equal to your Operate skill, +1 per Momentum spent. These points cannot be replenished, and you may not use any other Nanogram Weaving patterns while there are one or more points remaining. You may drop the shield, discarding any remaining points and ending the effect, at the start of any of your turns.</p>",
+		"difficulty": 1,
+		"skill": "operate",
+		"source": "HomeIsWhereTheThreatIs"
+	},
+	"type": "nanogram_pattern"
+}

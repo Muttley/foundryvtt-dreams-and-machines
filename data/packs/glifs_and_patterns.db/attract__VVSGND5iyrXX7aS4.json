@@ -1,0 +1,15 @@
+{
+	"_id": "VVSGND5iyrXX7aS4",
+	"_key": "!items!VVSGND5iyrXX7aS4",
+	"effects": [
+	],
+	"folder": "UgP8kh59SuTt0pKE",
+	"img": "systems/dreams-and-machines/assets/icons/glif.svg",
+	"name": "Attract",
+	"system": {
+		"complexity": 2,
+		"description": "<p>Upon seeing the GLIF, the machine attempts to move to within a few meters of the marked object or person.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "glif"
+}

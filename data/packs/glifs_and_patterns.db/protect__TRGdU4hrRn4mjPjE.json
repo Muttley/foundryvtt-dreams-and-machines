@@ -1,0 +1,15 @@
+{
+	"_id": "TRGdU4hrRn4mjPjE",
+	"_key": "!items!TRGdU4hrRn4mjPjE",
+	"effects": [
+	],
+	"folder": "UgP8kh59SuTt0pKE",
+	"img": "systems/dreams-and-machines/assets/icons/glif.svg",
+	"name": "Protect",
+	"system": {
+		"complexity": 3,
+		"description": "<p>Upon seeing the GLIF, the machine is compelled to prioritize the safety of the marked object or person. It will move near the marked object or person to guard it. If anyone it regards as unknown or hostile approaches the marked object or person too closely (enters the same zone, or in combat), it will attempt to intimidate them the first time, and then attack any who do not withdraw. It can only accept a Protect order from one GLIF at a time, and a Protect GLIF does not mean the machine regards a marked creature as friendly, only as someone who needs to be protected, more akin to a valuable target that needs to be subdued or captured rather than killed.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "glif"
+}

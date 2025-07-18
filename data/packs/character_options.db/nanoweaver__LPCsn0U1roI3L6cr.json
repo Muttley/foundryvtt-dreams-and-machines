@@ -1,0 +1,15 @@
+{
+	"_id": "LPCsn0U1roI3L6cr",
+	"_key": "!items!LPCsn0U1roI3L6cr",
+	"effects": [
+	],
+	"folder": "ReuZMcs9ti5aeNom",
+	"img": "systems/dreams-and-machines/assets/icons/talent.svg",
+	"name": "Nanoweaver",
+	"system": {
+		"archetype": "Compendium.dreams-and-machines.character_options.Item.iqwTMOVYRUex9WLH",
+		"description": "<p>You carry a nanogram controller, a small computer that serves as the “home” for a type of nanogram called a Genius, a personal assistant program that often manifests as a holographic pet or familiar. In a Weaver’s hands, however, a nanogram can be far more than just a personal assistant.</p><p>You are accompanied by a nanogram Genius, which functions as an NPC companion. In addition, you may learn and use nanogram Weaving patterns. If taken during character creation, you may select nanogram patterns and pattern fragments when selecting your starting equipment.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "talent"
+}

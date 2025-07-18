@@ -1,0 +1,15 @@
+{
+	"_id": "CiBi9KsGeIgl5WS2",
+	"_key": "!items!CiBi9KsGeIgl5WS2",
+	"effects": [
+	],
+	"folder": "UgP8kh59SuTt0pKE",
+	"img": "systems/dreams-and-machines/assets/icons/glif.svg",
+	"name": "Discharge",
+	"system": {
+		"complexity": 1,
+		"description": "<p>Upon seeing this GLIF, the machine safely discharges its powered tools and weapons, preventing them from being used until they are recharged.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "glif"
+}

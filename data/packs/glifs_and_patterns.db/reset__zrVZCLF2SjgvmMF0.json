@@ -1,0 +1,15 @@
+{
+	"_id": "zrVZCLF2SjgvmMF0",
+	"_key": "!items!zrVZCLF2SjgvmMF0",
+	"effects": [
+	],
+	"folder": "UgP8kh59SuTt0pKE",
+	"img": "systems/dreams-and-machines/assets/icons/glif.svg",
+	"name": "Reset",
+	"system": {
+		"complexity": 3,
+		"description": "<p>Upon seeing the GLIF, the machine is compelled to hard reboot, shutting down and restarting itself. The machine spends its next action rebooting. After that, it treats the situation as a brand-new scene, and it can be affected by GLIFs it had already been affected by, as a result of the reboot.</p><p>However, the machine regains any spent Personal Threat, and adds +2 to that Personal Threat pool for each Injury it has suffered.</p>",
+		"source": "PlayersGuide"
+	},
+	"type": "glif"
+}

@@ -1,0 +1,17 @@
+{
+	"_id": "gk3OnIDiPtDyIqgN",
+	"_key": "!items!gk3OnIDiPtDyIqgN",
+	"effects": [
+	],
+	"folder": "MgQGiBlPBPIPjKGp",
+	"img": "systems/dreams-and-machines/assets/icons/nanogram_pattern.svg",
+	"name": "Shove",
+	"system": {
+		"attribute": "quickness",
+		"description": "<p>Use this Nanogram Pattern with a <strong>Quickness (Operate)</strong> Test, Difficulty 1.</p><p>Select an enemy within a short distance (within the same zone in combat). If the enemy can withstand multiple injuries before defeat, the Difficulty of this action is equal to the number of injuries that enemy can withstand. If successful, the enemy is pushed away and suffers a knocked prone Truth, which will hinder them until the end of their next turn. This may have greater effects if the target is in a precarious position.</p>",
+		"difficulty": 1,
+		"skill": "operate",
+		"source": "PlayersGuide"
+	},
+	"type": "nanogram_pattern"
+}

@@ -1,0 +1,17 @@
+{
+	"_id": "CcszNBTojJ9kHikm",
+	"_key": "!items!CcszNBTojJ9kHikm",
+	"effects": [
+	],
+	"folder": "MgQGiBlPBPIPjKGp",
+	"img": "systems/dreams-and-machines/assets/icons/nanogram_pattern.svg",
+	"name": "Discharge",
+	"system": {
+		"attribute": "resolve",
+		"description": "<p>Use this Nanogram Pattern with a <strong>Resolve (Operate)</strong> Test, Difficulty 1.</p><p>If successful, select a single powered item or weapon within a short distance (within your zone in combat). That item is immediately depowered, as if it had been discharged, and cannot be used again until it recharges.</p>",
+		"difficulty": 1,
+		"skill": "operate",
+		"source": "PlayersGuide"
+	},
+	"type": "nanogram_pattern"
+}
