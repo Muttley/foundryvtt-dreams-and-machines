@@ -1,0 +1,166 @@
+{
+	"_id": "f2VOqZsjNMBB6Cyb",
+	"_key": "!actors!f2VOqZsjNMBB6Cyb",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/dreams-and-machines/assets/icons/vehicle.svg",
+	"items": [
+	],
+	"name": "Trailbike",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"negative": false,
+			"priority": 0,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"movementAction": null,
+		"name": "Trailbike",
+		"occludable": {
+			"radius": 0
+		},
+		"prependAdjective": false,
+		"randomImg": false,
+		"ring": {
+			"colors": {
+				"background": null,
+				"ring": null
+			},
+			"effects": 1,
+			"enabled": false,
+			"subject": {
+				"scale": 1,
+				"texture": null
+			}
+		},
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": true,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"alphaThreshold": 0.75,
+			"anchorX": 0.5,
+			"anchorY": 0.5,
+			"fit": "contain",
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/dreams-and-machines/assets/tokens/vehicle.webp",
+			"tint": "#ffffff"
+		},
+		"turnMarker": {
+			"animation": null,
+			"disposition": false,
+			"mode": 1,
+			"src": null
+		},
+		"width": 1
+	},
+	"system": {
+		"coin": 7,
+		"cover": {
+			"type": "exposed",
+			"value": 1
+		},
+		"description": "<p>A compact, lightweight motorcycle designed to operate effectively off-road. A single trailbike takes up a space about the same size as a passenger in most vehicles, allowing larger vehicles to carry a smaller scout bike or two.</p>",
+		"passengers": 1,
+		"protection": {
+			"breaker": 0,
+			"value": 0
+		},
+		"qualities": {
+			"cumbersome": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"high_performance": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"hover": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"resilient_x": {
+				"enabled": true,
+				"hasValue": true,
+				"value": 1
+			},
+			"rugged": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"single_seat": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"tough_x": {
+				"enabled": false,
+				"hasValue": true,
+				"value": 1
+			}
+		},
+		"rarity": 3,
+		"scale": 1,
+		"source": "PlayersGuide",
+		"speed": 3,
+		"techLevel": 2,
+		"truths": [
+			"Light All-Terrain Motorbike"
+		]
+	},
+	"type": "vehicle"
+}

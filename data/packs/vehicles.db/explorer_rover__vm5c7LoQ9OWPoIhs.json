@@ -1,0 +1,166 @@
+{
+	"_id": "vm5c7LoQ9OWPoIhs",
+	"_key": "!actors!vm5c7LoQ9OWPoIhs",
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/dreams-and-machines/assets/icons/vehicle.svg",
+	"items": [
+	],
+	"name": "Explorer Rover",
+	"prototypeToken": {
+		"actorLink": false,
+		"alpha": 1,
+		"appendNumber": false,
+		"bar1": {
+			"attribute": null
+		},
+		"bar2": {
+			"attribute": null
+		},
+		"detectionModes": [
+		],
+		"displayBars": 0,
+		"displayName": 0,
+		"disposition": -1,
+		"flags": {
+		},
+		"height": 1,
+		"light": {
+			"alpha": 0.5,
+			"angle": 360,
+			"animation": {
+				"intensity": 5,
+				"reverse": false,
+				"speed": 5,
+				"type": null
+			},
+			"attenuation": 0.5,
+			"bright": 0,
+			"color": null,
+			"coloration": 1,
+			"contrast": 0,
+			"darkness": {
+				"max": 1,
+				"min": 0
+			},
+			"dim": 0,
+			"luminosity": 0.5,
+			"negative": false,
+			"priority": 0,
+			"saturation": 0,
+			"shadows": 0
+		},
+		"lockRotation": false,
+		"movementAction": null,
+		"name": "Explorer Rover",
+		"occludable": {
+			"radius": 0
+		},
+		"prependAdjective": false,
+		"randomImg": false,
+		"ring": {
+			"colors": {
+				"background": null,
+				"ring": null
+			},
+			"effects": 1,
+			"enabled": false,
+			"subject": {
+				"scale": 1,
+				"texture": null
+			}
+		},
+		"rotation": 0,
+		"sight": {
+			"angle": 360,
+			"attenuation": 0.1,
+			"brightness": 0,
+			"color": null,
+			"contrast": 0,
+			"enabled": true,
+			"range": 0,
+			"saturation": 0,
+			"visionMode": "basic"
+		},
+		"texture": {
+			"alphaThreshold": 0.75,
+			"anchorX": 0.5,
+			"anchorY": 0.5,
+			"fit": "contain",
+			"offsetX": 0,
+			"offsetY": 0,
+			"rotation": 0,
+			"scaleX": 1,
+			"scaleY": 1,
+			"src": "systems/dreams-and-machines/assets/tokens/vehicle.webp",
+			"tint": "#ffffff"
+		},
+		"turnMarker": {
+			"animation": null,
+			"disposition": false,
+			"mode": 1,
+			"src": null
+		},
+		"width": 1
+	},
+	"system": {
+		"coin": 9,
+		"cover": {
+			"type": "covered_x",
+			"value": 1
+		},
+		"description": "<p>A rugged, all-terrain vehicle, ideal for traversing the wilderness and the ruins alike.</p>",
+		"passengers": 3,
+		"protection": {
+			"breaker": 2,
+			"value": 3
+		},
+		"qualities": {
+			"cumbersome": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"high_performance": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"hover": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"resilient_x": {
+				"enabled": false,
+				"hasValue": true,
+				"value": 1
+			},
+			"rugged": {
+				"enabled": true,
+				"hasValue": false,
+				"value": 1
+			},
+			"single_seat": {
+				"enabled": false,
+				"hasValue": false,
+				"value": 1
+			},
+			"tough_x": {
+				"enabled": false,
+				"hasValue": true,
+				"value": 1
+			}
+		},
+		"rarity": 3,
+		"scale": 2,
+		"source": "PlayersGuide",
+		"speed": 2,
+		"techLevel": 3,
+		"truths": [
+			"All-Terrain Vehicle"
+		]
+	},
+	"type": "vehicle"
+}
