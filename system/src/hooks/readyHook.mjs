@@ -1,4 +1,6 @@
+
 import listenOnSocket from "../socket.mjs";
+
 
 export const readyHook = {
 	attach: () => {
@@ -7,8 +9,7 @@ export const readyHook = {
 		Hooks.once("ready", async () => {
 			dreams.debug("Running ready hook");
 
-			new dreams.app.MomentumTracker();
-			dreams.app.MomentumTracker.forceRender();
+			dreams.app.MomentumTrackerV2.instance.render({force: true});
 
 			listenOnSocket();
 

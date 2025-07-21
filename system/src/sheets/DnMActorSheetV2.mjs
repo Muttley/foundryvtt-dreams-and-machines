@@ -15,6 +15,7 @@ export default class DnMActorSheetV2
 			addItem: this._onAddItem,
 			addString: this._onAddString,
 			editString: this._onEditString,
+			editItem: this._onEditItem,
 			onRoll: this._onRoll,
 			toggleEditMode: this._onToggleEditMode,
 		},
@@ -226,6 +227,19 @@ export default class DnMActorSheetV2
 	}
 
 
+	static async _onEditItem(event, target) {
+		if (!this._editModeEnabled) return;
+
+		event.preventDefault();
+
+		const {uuid} = target?.dataset ?? undefined;
+
+		if (uuid) {
+			(await fromUuid(uuid))?.sheet?.render({force: true});
+		}
+	}
+
+
 	static async _onEditString(event, target) {
 		if (!this._editModeEnabled) return;
 
@@ -358,6 +372,20 @@ export default class DnMActorSheetV2
 	}
 
 
+	async _onDeleteItem(event) {
+		if (!this._editModeEnabled) return;
+
+		event.preventDefault();
+
+		const {uuid} = event.currentTarget?.dataset ?? undefined;
+
+		if (uuid) {
+			const item = await fromUuid(uuid);
+
+			if (item) item.delete();
+		}
+	}
+
 	async _onDrop(event) {
 		const data = TextEditor.getDragEventData(event);
 		const actor = this.actor;
@@ -410,6 +438,11 @@ export default class DnMActorSheetV2
 		const deleteString = this._onDeleteString.bind(this);
 		this.element.querySelectorAll(".string-edit").forEach(entry => {
 			entry.addEventListener("contextmenu", deleteString);
+		});
+
+		const deleteItem = this._onDeleteItem.bind(this);
+		this.element.querySelectorAll(".item").forEach(entry => {
+			entry.addEventListener("contextmenu", deleteItem);
 		});
 	}
 

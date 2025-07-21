@@ -1,47 +1,47 @@
-<div class="momentum-tracker">
-
+<div>
 	<div class="momentum">
 		<span class="momentum-label">
 			{{localize "DNM.Labels.Momentum"}}
 		</span>
-		<div class="grid-5-columns container">
-			<a class="controls" data-action="decrease" data-type="momentum">
+		<div class="grid-5-columns tracker-container">
+			<a class="controls" data-action="decrementPool" data-type="momentum">
 				<i class="fa-solid fa-minus"></i>
 			</a>
 			<span class="grid-colspan-3 momentum-value">
 				{{momentum}}
 			</span>
-			<a class="controls" data-action="increase" data-type="momentum">
+			<a class="controls" data-action="incrementPool" data-type="momentum">
 				<i class="fa-solid fa-plus"></i>
 			</a>
 		</div>
 	</div>
 
-	<div class="threat">
-		<span class="threat-label">
-			{{localize "DNM.Labels.Threat"}}
-		</span>
-		<div class="grid-5-columns container">
-			{{#if isGM}}
-				<a class="controls" data-action="decrease" data-type="threat">
-					<i class="fa-solid fa-minus"></i>
-				</a>
-			{{/if}}
-			<span
-				{{#if isGM}}
-					class="grid-colspan-3 threat-value"
-				{{else}}
-					class="grid-colspan-5 threat-value"
-				{{/if}}
-			>
-				{{threat}}
+	{{#if threatVisible}}
+		<div class="threat">
+			<span class="threat-label">
+				{{localize "DNM.Labels.Threat"}}
 			</span>
-			{{#if isGM}}
-				<a class="controls" data-action="increase" data-type="threat">
-					<i class="fa-solid fa-plus"></i>
-				</a>
-			{{/if}}
+			<div class="grid-5-columns tracker-container">
+				{{#if isGM}}
+					<a class="controls" data-action="decrementPool" data-type="threat">
+						<i class="fa-solid fa-minus"></i>
+					</a>
+				{{/if}}
+				<span
+					{{#if isGM}}
+						class="grid-colspan-3 threat-value"
+					{{else}}
+						class="grid-colspan-5 threat-value"
+					{{/if}}
+				>
+					{{threat}}
+				</span>
+				{{#if isGM}}
+					<a class="controls" data-action="incrementPool" data-type="threat">
+						<i class="fa-solid fa-plus"></i>
+					</a>
+				{{/if}}
+			</div>
 		</div>
-	</div>
-
+	{{/if}}
 </div>

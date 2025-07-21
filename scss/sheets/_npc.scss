@@ -31,4 +31,12 @@
 			}
 		}
 	}
+	a:hover {
+		text-shadow: none;
+	}
+	.item:hover {
+		color: $c-character-purple;
+		background-color: $c-character-purple-highlight;
+		cursor: pointer;
+	}
 }

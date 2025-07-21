@@ -13,19 +13,25 @@
 		{{localize "DNM.Labels.Weapons"}}
 	</span>
 
-	<ol class="item-list">
+	<ol
+		class="item-list"
+		{{#unless @root.editModeDisabled}}
+			data-tooltip="{{tooltip "edit-delete-mouse-controls"}}"
+		{{/unless}}
+	>
 		{{#if weapons}}
 			{{#each weapons}}
 				<li
 					class="item"
-					data-menu="item"
+					{{#if @root.editModeEnabled}}
+						data-action="editItem"
+					{{else}}
+						data-action="onRoll"
+					{{/if}}
+					data-type="main"
 					data-uuid="{{this.uuid}}"
 				>
-					<a
-						data-action="onRoll"
-						data-type="main"
-						data-uuid="{{this.uuid}}"
-					>
+					<a>
 						<i class="fas fa-dice-d20"></i>
 						<b style="text-transform: uppercase">
 							{{this.name}} ({{this.type}}):

@@ -13,22 +13,28 @@
 		{{localize "DNM.Labels.SpecialAbilities"}}
 	</span>
 
-	<ol class="item-list">
+	<ol
+		class="item-list"
+		{{#unless @root.editModeDisabled}}
+			data-tooltip="{{tooltip "edit-delete-mouse-controls"}}"
+		{{/unless}}
+	>
 		{{#if specialAbilities}}
 			{{#each specialAbilities}}
 				<li
 					class="item"
-					data-menu="item"
+					{{#if @root.editModeEnabled}}
+						data-action="editItem"
+					{{else}}
+						data-action="useSpecialAbility"
+					{{/if}}
 					data-uuid="{{this.uuid}}"
 				>
-					<a
-						data-action="useSpecialAbility"
-						data-uuid="{{uuid}}"
-					>
+					<a>
 						<i class="fas fa-dice-d20"></i>
 						<b style="text-transform: uppercase">{{this.name}}</b>:
 						<em>
-							{{{this.system.description}}}
+							{{{this.enrichedDescription}}}
 						</em>
 					</a>
 				</li>

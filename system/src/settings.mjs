@@ -1,6 +1,7 @@
 import SourceFilterConfig from "./settings/SourceFilterConfig.mjs";
 
 export default function registerSettings() {
+
 	// -------------------
 	//  INTERNAL SETTINGS
 	// -------------------
@@ -21,6 +22,7 @@ export default function registerSettings() {
 		type: Number,
 	});
 
+
 	// -------------------
 	//  CONTENT FILTERING
 	// -------------------
@@ -34,6 +36,22 @@ export default function registerSettings() {
 		restricted: true,
 	});
 	SourceFilterConfig.registerSetting();
+
+
+	// -------------------
+	//  MOMENTUM SETTINGS
+	// -------------------
+	//
+	game.settings.register(SYSTEM_ID, "threatVisibleToPlayers", {
+		name: "Threat Visible to Players",
+		hint: "Enable or Disable the ability for players to view the current Threat level",
+		scope: "world",
+		type: Boolean,
+		config: true,
+		default: false,
+		requiresReload: true,
+	});
+
 
 	// ----------------
 	//  DEBUG SETTINGS
@@ -76,4 +94,5 @@ export default function registerSettings() {
 		default: false,
 		requiresReload: true,
 	});
+
 }

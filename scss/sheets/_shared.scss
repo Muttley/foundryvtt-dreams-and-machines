@@ -4,6 +4,16 @@
 .dnm.sheet {
 	// background: url('../assets/ui/dnm-bg.jpg') repeat;
 
+	a:hover {
+		text-shadow: none;
+	}
+
+	.item:hover {
+		color: $c-character-purple;
+		background-color: $c-character-purple-highlight;
+		cursor: pointer;
+	}
+
 	input[type=checkbox] {
 		@include p-reset;
 
@@ -198,4 +208,6 @@
 	.window-content {
 		@include p-reset;
 	}
+
+
 }

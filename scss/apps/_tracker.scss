@@ -2,29 +2,21 @@
 
 .momentum-tracker {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	width: min-content;
+	margin-bottom: 0.75rem;
+	gap: 0.5rem;
+	pointer-events: all;
 
-	position: absolute;
-	bottom: -6rem;
-	right: 20rem;
-
-	height: 20rem;
-	width: 12rem;
-
-	gap: 1rem;
-
-	z-index: 29;
-
-	.container {
-		width: 100%;
-		gap: 0.25rem;
+	.tracker-container {
+		width: 8rem;
 		align-items: center;
 	}
 
 	.controls {
 		text-align: center;
 		font-size: 1rem;
-		line-height: 1.5rem;
+		line-height: 1;
 		font-weight: 700;
 		color: white;
 
@@ -37,35 +29,37 @@
 	.threat {
 		display: flex;
 		width: 100%;
+		height: min-content;
 		flex-direction: column;
 		align-items: center;
 		gap: 0.25rem;
 		border-radius: 0.5rem;
-		background-color: $c-character-purple;
+		background-color: $c-character-primary;
 		padding: 0.5rem;
+		box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 		&-label {
 			font-size: 1.25rem;
 			line-height: 1.5rem;
 			font-weight: 600;
 			text-transform: uppercase;
-			color: rgb(242, 209, 253);
+			color: rgb(210, 251, 241);
 		}
 
 		&-value {
 			width: 100%;
 			text-align: center;
-			font-size: 1.5rem;
-			line-height: 1.75rem;
-			color: rgb(242, 209, 253);
+			font-size: 1.75rem;
+			line-height: 1;
+			color: rgb(210, 251, 241);
 		}
 	}
 
 	.threat {
-		background-color: $c-character-primary;
+		background-color: $c-character-purple;
 		&-label,
 		&-value {
-			color: rgb(210, 251, 241);
+			color: rgb(242, 209, 253);
 		}
 	}
 }
