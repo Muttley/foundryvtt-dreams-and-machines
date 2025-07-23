@@ -26,6 +26,21 @@ export default class MajorNPCActionDataModel extends foundry.abstract.TypeDataMo
 			...BookSource(),
 			...Description(),
 
+			roll: new fields.SchemaField({
+				min: new fields.NumberField({
+					initial: 1,
+					integer: true,
+					nullable: false,
+					min: 1,
+				}),
+				max: new fields.NumberField({
+					initial: 1,
+					integer: true,
+					nullable: false,
+					min: 1,
+				}),
+			}),
+
 			skillTest: new fields.SchemaField({
 				attribute: new fields.StringField({
 					initial: "—",

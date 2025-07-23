@@ -13,9 +13,11 @@ export default class MajorNPCActionSheet extends DnMItemSheetV2 {
 		attributes: {
 			template: templatePath("item/major_npc_action/attributes-tab"),
 			templates: [
+				"_shared-partials/number-field",
 				"item/major_npc_action/_partials/damage",
 				"item/major_npc_action/_partials/name",
 				"item/major_npc_action/_partials/qualities",
+				"item/major_npc_action/_partials/roll",
 				"item/major_npc_action/_partials/skill-test",
 				"item/major_npc_action/_partials/type",
 				"item/major_npc_action/_partials/weapon",

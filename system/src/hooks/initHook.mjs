@@ -29,6 +29,8 @@ import registerTemplates from "../templates.mjs";
 export async function initHook() {
 	console.debug(`${SYSTEM_NAME} | Running init hook`);
 
+	// CONFIG.debug.hooks = true;
+
 	// Add custom constants for configuration.
 	CONFIG.DREAMS = DREAMS;
 
@@ -43,7 +45,7 @@ export async function initHook() {
 		dialog,
 		utils: DnMUtils,
 		// Logger shortcuts
-		debug: Logger.log,
+		debug: Logger.debug,
 		error: Logger.error,
 		log: Logger.log,
 		warn: Logger.warn,

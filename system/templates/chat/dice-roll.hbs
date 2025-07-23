@@ -8,6 +8,13 @@
 				{{item.name}}
 			{{/if}}
 		</span>
+		{{#if item.system.damage}}
+			<span class="item-damage">
+				{{#each item.system.damage}}
+					{{this.type}} {{this.value}}{{#unless @last}}<br>{{/unless}}
+				{{/each}}
+			</span>
+		{{/if}}
 	{{/if}}
 
 	<span class="chat-description">

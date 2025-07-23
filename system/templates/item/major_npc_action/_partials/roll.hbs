@@ -1,0 +1,17 @@
+<div>
+	<span class="label" style="margin-bottom: 4px;">
+		{{localize "DNM.Labels.RollRange"}}
+	</span>
+	<div class="grid-2-columns">
+		{{> (template "_shared-partials/number-field")
+			label=(localize "DNM.Labels.Min")
+			name="system.roll.min"
+			value=system.roll.min
+		}}
+		{{> (template "_shared-partials/number-field")
+			label=(localize "DNM.Labels.Max")
+			name="system.roll.max"
+			value=system.roll.max
+		}}
+	</div>
+</div>

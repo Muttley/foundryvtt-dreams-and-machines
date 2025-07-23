@@ -11,6 +11,58 @@
  *
  */
 export default class DnMRoller {
+
+	static async performRoll(formula) {
+		dreams.debug(`Rolling bespoke roll: ${formula}`);
+
+		const roll = new Roll(formula);
+		await roll.evaluate();
+
+		if (game.dice3d) {
+			const {whisper, blind } = this.getRollModeSettings();
+			await game.dice3d.showForRoll(roll, game.user, true, whisper, blind);
+		}
+
+		return roll;
+	}
+
+
+	static getRollModeSettings() {
+		const rollMode = game.settings.get("core", "rollMode");
+
+		let blind = false;
+		let whisper = null;
+
+		switch (rollMode) {
+			case "blindroll": {
+				blind = true;
+			}
+			case "gmroll": {
+				const gmList = game.users.filter(user => user.isGM);
+				const gmIDList = [];
+				gmList.forEach(gm => gmIDList.push(gm.id));
+				whisper = gmIDList;
+				break;
+			}
+			case "roll": {
+				const userList = game.users.filter(user => user.active);
+				const userIDList = [];
+				userList.forEach(user => userIDList.push(user.id));
+				whisper = userIDList;
+				break;
+			}
+			case "selfroll": {
+				whisper = [game.user.id];
+				break;
+			}
+			default: {
+				break;
+			}
+		}
+		return { whisper, blind };
+	}
+
+
 	/**
 	 * @param {DnMActor} actor
 	 *
@@ -45,8 +97,8 @@ export default class DnMRoller {
 
 		const npcRoll = fixedTargetNumber + fixedFocus > 0;
 
-		const roll = new Roll(`${numDice}d20`);
-		await roll.evaluate();
+		const roll = await this.performRoll(`${numDice}d20`);
+
 		const result = this.parseRoll({
 			roll,
 			skillValue,

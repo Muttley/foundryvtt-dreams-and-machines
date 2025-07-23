@@ -20,7 +20,7 @@
 		{{/unless}}
 	>
 		{{#if (lookup inventory "weapon")}}
-			{{#each (lookup inventory "weapon")}}
+			{{#each (lookup inventory "weapon") as |weapon|}}
 				<li
 					class="item draggable"
 					{{#if @root.editModeEnabled}}
@@ -29,25 +29,25 @@
 						data-action="onRoll"
 					{{/if}}
 					data-type="main"
-					data-uuid="{{this.uuid}}"
-					data-item-id="{{this.id}}"
+					data-uuid="{{weapon.uuid}}"
+					data-item-id="{{weapon.id}}"
 				>
 					<a>
 						<i class="fas fa-dice-d20"></i>
 						<b class="item-name">
-							{{this.name}} ({{this.system.weaponType}}):
+							{{weapon.name}} ({{weapon.system.weaponType}}):
 						</b>
-						{{#if this.system.damage}}
-							{{#each this.system.damage}}
-								{{ type }} {{ value }}{{#unless @last}},{{else}}.{{/unless}}
+						{{#if weapon.system.damage}}
+							{{#each weapon.system.damage as |damage|}}
+								{{damage.type}} {{damage.value}}{{#unless @last}},{{else}}.{{/unless}}
 							{{/each}}
 						{{else}}
 							&mdash;
 						{{/if}}
-						{{#if this.system.enabledQualities}}
+						{{#if weapon.enabledQualities}}
 							<em>
-								{{#each this.system.enabledQualities}}
-									{{this.name}}{{#unless @last}},{{/unless}}
+								{{#each weapon.enabledQualities as |quality|}}
+									{{quality.name}}{{#unless @last}},{{/unless}}
 								{{/each}}
 							</em>
 						{{else}}

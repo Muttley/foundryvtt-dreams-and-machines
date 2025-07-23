@@ -36,17 +36,6 @@ export default async function registerTemplates() {
 		"systems/dreams-and-machines/templates/actor/character/talents.hbs",
 		"systems/dreams-and-machines/templates/actor/character/traits.hbs",
 		"systems/dreams-and-machines/templates/actor/character/truths.hbs",
-		"systems/dreams-and-machines/templates/actor/major-npc/attributes.hbs",
-		"systems/dreams-and-machines/templates/actor/major-npc/description.hbs",
-		"systems/dreams-and-machines/templates/actor/major-npc/injuries.hbs",
-		"systems/dreams-and-machines/templates/actor/major-npc/notes.hbs",
-		"systems/dreams-and-machines/templates/actor/major-npc/personal-threat.hbs",
-		"systems/dreams-and-machines/templates/actor/major-npc/truths.hbs",
-		"systems/dreams-and-machines/templates/item/_shared-partials/choice-selector.hbs",
-		"systems/dreams-and-machines/templates/item/_shared-partials/coin.hbs",
-		"systems/dreams-and-machines/templates/item/_shared-partials/header.hbs",
-		"systems/dreams-and-machines/templates/item/_shared-partials/source-tab.hbs",
-		"systems/dreams-and-machines/templates/item/_shared-partials/supply-point-cost.hbs",
 	];
 
 	const paths = {};

@@ -75,7 +75,7 @@ export default class DnMItemSheetV2
 			}
 		}
 
-		return itemTabs;
+		return {};
 	}
 
 
@@ -209,18 +209,20 @@ export default class DnMItemSheetV2
 	}
 
 
-	_onRender(context, options) {
-		const me = this;
+	async _onRender(context, options) {
+		super._onRender(context, options);
 
+		const _onSelectChoiceChange = this._onSelectChoiceChange.bind(this);
 		this.element.querySelectorAll("[data-action=selectChoice]").forEach(
 			selected => {
-				selected.addEventListener("change", me._onSelectChoiceChange.bind(me));
+				selected.addEventListener("change", _onSelectChoiceChange);
 			}
 		);
 
+		const _onSelectQualityChange = this._onSelectQualityChange.bind(this);
 		this.element.querySelectorAll("[data-action=selectQuality]").forEach(
 			element => {
-				element.addEventListener("change", me._onSelectQualityChange.bind(me));
+				element.addEventListener("change", _onSelectQualityChange);
 			}
 		);
 	}

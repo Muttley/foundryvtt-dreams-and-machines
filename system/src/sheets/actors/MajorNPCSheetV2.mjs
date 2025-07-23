@@ -1,4 +1,5 @@
 import DnMActorSheetV2 from "../DnMActorSheetV2.mjs";
+import DnMRoller from "../../dice/DnMRoller.mjs";
 
 const TextEditor = foundry.applications.ux.TextEditor.implementation;
 
@@ -7,6 +8,7 @@ export default class MajorNPCSheetV2 extends DnMActorSheetV2 {
 	/** @override */
 	static DEFAULT_OPTIONS = {
 		actions: {
+			onRollMajorAction: this._onRollMajorAction,
 		},
 		classes: ["npc"],
 		form: {
@@ -26,15 +28,20 @@ export default class MajorNPCSheetV2 extends DnMActorSheetV2 {
 		tabs: {
 			template: templatePath("_shared-partials/tabs"),
 		},
+		abilities: {
+			template: templatePath("actor/major-npc/abilities-tab"),
+			templates: [
+				"actor/_shared-partials/special-abilities",
+				"actor/major-npc/_partials/major-npc-actions",
+			].map(path => templatePath(path)),
+		},
 		attributes: {
 			template: templatePath("actor/major-npc/attributes-tab"),
 			templates: [
 				"_shared-partials/number-field",
 				"actor/_shared-partials/custom-string-list",
-				"actor/_shared-partials/special-abilities",
 				"actor/major-npc/_partials/attributes",
 				"actor/major-npc/_partials/injuries",
-				"actor/major-npc/_partials/major-npc-actions",
 				"actor/major-npc/_partials/skills",
 				"actor/major-npc/_partials/threat",
 			].map(path => templatePath(path)),
@@ -56,24 +63,25 @@ export default class MajorNPCSheetV2 extends DnMActorSheetV2 {
 	}
 
 
-	async _onDropItem(event, data) {
-		const item = await super._onDropItem(event, data);
+	static async _onRollMajorAction(event, target) {
+		event.preventDefault();
+		const [, max] = await this._getMajorNpcActionsRollRange();
 
-		if (item && item.type === "major_npc_action") {
-			const actions = this.actor.system?.actions ?? [];
+		const roll = await DnMRoller.performRoll(`d${max}`);
 
-			actions.push({actionUuid: item.uuid, min: 1, max: 1});
+		const result = parseInt(roll.result);
 
-			actions.sort((a, b) => {
-				return a.min - b.min;
-			});
+		const rolledMajorActions = [];
+		for (const action of this.actor.majorNpcActions) {
+			const rollRange = action.system.roll;
 
-			actions.sort((a, b) => {
-				return a.max - b.max;
-			});
-
-			this.actor.update({"system.actions": actions});
+			if (result <= rollRange.max && result >= rollRange.min) {
+				rolledMajorActions.push(action);
+			}
 		}
+
+		dreams.log(rolledMajorActions);
+		// TODO Chat card for result
 	}
 
 
@@ -85,6 +93,19 @@ export default class MajorNPCSheetV2 extends DnMActorSheetV2 {
 	}
 
 
+	async _getMajorNpcActionsRollRange(context) {
+		let min = Infinity;
+		let max = -Infinity;
+
+		for (const action of this.actor.majorNpcActions) {
+			min = min < action.system.roll.min ? min : action.system.roll.min;
+			max = max > action.system.roll.max ? max : action.system.roll.max;
+		}
+
+		return [min, max];
+	}
+
+
 	/** @override */
 	async _preparePartContext(partId, context, options) {
 		await super._preparePartContext(partId, context, options);
@@ -92,8 +113,6 @@ export default class MajorNPCSheetV2 extends DnMActorSheetV2 {
 		switch (partId) {
 			case "attributes":
 				this.getAttributesAndSkillsData(context);
-				context.specialAbilities = await this._prepareSpecialAbilities(context);
-				context.actions = await this._prepareActions(context);
 				break;
 			case "description":
 				context.enrichedDescription = await TextEditor.enrichHTML(

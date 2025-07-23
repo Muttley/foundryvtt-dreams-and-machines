@@ -74,6 +74,11 @@ export default class DnMActor extends Actor {
 	}
 
 
+	get majorNpcActions() {
+		return this.items.filter(i => i.type === "major_npc_action");
+	}
+
+
 	get weapons() {
 		const weapons = this.items.filter(i => i.type === "weapon");
 		return weapons.sort((a, b) => a.name.localeCompare(b.name));

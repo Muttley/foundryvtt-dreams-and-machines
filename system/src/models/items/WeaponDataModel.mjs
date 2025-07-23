@@ -12,16 +12,6 @@ export default class WeaponDataModel extends foundry.abstract.TypeDataModel {
 		};
 	}
 
-	get enabledQualities() {
-		const enabledQualities = [];
-		for (const quality of Object.keys(this.qualities)) {
-			if (this.qualities[quality].enabled) {
-				enabledQualities.push(this.qualities[quality]);
-			}
-		}
-		return enabledQualities;
-	}
-
 	static defineSchema() {
 		const fields = foundry.data.fields;
 

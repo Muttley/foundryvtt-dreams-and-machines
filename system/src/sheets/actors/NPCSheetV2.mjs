@@ -67,11 +67,6 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 		await super._preparePartContext(partId, context, options);
 
 		switch (partId) {
-			case "attributes":
-				context.specialAbilities = await this._prepareSpecialAbilities(context);
-				context.actions = await this._prepareActions(context);
-				context.weapons = await this._prepareWeapons(context);
-				break;
 			case "description":
 				context.enrichedDescription = await TextEditor.enrichHTML(
 					this.system.description, { async: true }

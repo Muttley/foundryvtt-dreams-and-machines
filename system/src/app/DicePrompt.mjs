@@ -231,7 +231,7 @@ export default class DicePrompt extends Application {
 			}
 		}
 
-		await DnMRoller.roll({
+		DnMRoller.roll({
 			actor: this.actor,
 			attribute,
 			skill,
@@ -243,6 +243,6 @@ export default class DicePrompt extends Application {
 			fixedFocus: this.fixedFocus,
 		});
 
-		await this.close();
+		this.close();
 	}
 }

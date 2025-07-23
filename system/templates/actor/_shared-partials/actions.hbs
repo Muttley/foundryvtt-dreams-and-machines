@@ -19,20 +19,19 @@
 			data-tooltip="{{tooltip "edit-delete-mouse-controls"}}"
 		{{/unless}}
 	>
-		{{#if actions}}
-			{{#each actions}}
+		{{#if (lookup inventory "npc_action")}}
+			{{#each (lookup inventory "npc_action")}}
 				<li
 					class="item draggable"
 					{{#if @root.editModeEnabled}}
 						data-action="editItem"
 					{{else}}
-						data-action="useSpecialAbility"
+						data-action="useAction"
 					{{/if}}
 					data-uuid="{{this.uuid}}"
 					data-item-id="{{this.id}}"
 				>
 					<a>
-						<i class="fas fa-dice-d20"></i>
 						<b class="item-name">{{this.name}}</b>:
 						<em>
 							{{{this.enrichedDescription}}}

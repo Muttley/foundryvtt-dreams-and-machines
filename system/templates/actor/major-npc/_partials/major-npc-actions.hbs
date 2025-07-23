@@ -11,10 +11,7 @@
 			&nbsp;
 			{{localize "DNM.Labels.Actions"}}
 		{{else}}
-			<a
-				data-action="onRoll"
-				data-type="major_npc_action"
-			>
+			<a data-action="onRollMajorAction">
 				<i class="fas fa-dice-d20"></i>
 				{{localize "DNM.Labels.Actions"}}
 			</a>
@@ -36,16 +33,17 @@
 					{{else}}
 						data-action="useSpecialAbility"
 					{{/if}}
-					data-uuid="{{this.uuid}}"
 					data-item-id="{{this.id}}"
+					data-uuid="{{this.uuid}}"
 				>
-					<a>
-						<i class="fas fa-dice-d20"></i>
-						<b class="item-name">{{this.name}}</b>:
-						<em>
-							{{{this.enrichedDescription}}}
-						</em>
-					</a>
+					<i class="fas fa-dice-d20"></i>
+					<b class="item-name">
+						[{{this.system.roll.min}}-{{this.system.roll.max}}]
+						{{this.name}}:
+					</b>
+					<em>
+						{{{this.enrichedDescription}}}
+					</em>
 				</li>
 			{{/each}}
 		{{else}}

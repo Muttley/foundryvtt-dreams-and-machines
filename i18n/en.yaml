@@ -21,6 +21,7 @@ DNM.ItemCategories.Industrial: Industrial
 DNM.ItemCategories.Military: Military
 DNM.ItemCategories.Miscellaneous: Miscellaneous
 DNM.ItemCategories.Security: Security
+DNM.Labels.Abilities: Abilities
 DNM.Labels.Action: Action
 DNM.Labels.Actions: Actions
 DNM.Labels.AddActions: Drag some Major NPC Actions onto this sheet to add actions this NPC can perform!
@@ -96,6 +97,7 @@ DNM.Labels.IsWeapon: Is Weapon
 DNM.Labels.LMB: LMB
 DNM.Labels.LongTermGoals: Long-Term
 DNM.Labels.Max: Max
+DNM.Labels.Min: Min
 DNM.Labels.MissingUUID: (Missing UUID)
 DNM.Labels.Momentum: Momentum
 DNM.Labels.Name: Name
@@ -111,6 +113,7 @@ DNM.Labels.Qualities: Qualities
 DNM.Labels.Quantity: Quantity
 DNM.Labels.Rarity: Rarity
 DNM.Labels.RMB: RMB
+DNM.Labels.RollRange: Roll Range
 DNM.Labels.Scale: Scale
 DNM.Labels.SelectQuality: Select Quality...
 DNM.Labels.SelectSpecialAbility: Select Special Ability...

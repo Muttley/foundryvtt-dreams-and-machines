@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 @use "../mixins" as *;
 
-.dnm.sheet {
+.sheet.dnm {
 	nav {
 		margin: 4px;
 	}
@@ -19,14 +19,30 @@
 			width: 11em;
 		}
 
-		.item {
-			background: $c-character-purple-unselected;
-			color: $c-character-purple;
+		.nav-item {
 			border-radius: 14px;
 
-			&:hover {
-				color: white;
-			}
+		}
+
+		.active {
+			background: $c-character-purple;
+			color: white;
+		}
+	}
+
+}
+
+.sheet.dnm.actor {
+	.sheet-tabs {
+
+		a:hover {
+			color: white;
+			text-shadow: 1px 1px 2px black;
+		}
+
+		.nav-item {
+			background: $c-character-purple-unselected;
+			color: $c-character-purple;
 		}
 
 		.active {
@@ -36,16 +52,17 @@
 	}
 }
 
-.dnm.sheet.item {
+.sheet.dnm.item {
 	.sheet-tabs {
 
-		.item {
+		a:hover {
+			color: white;
+			text-shadow: 1px 1px 2px black;
+		}
+
+		.nav-item {
 			background: $c-secondary-unselected;
 			color: $c-secondary;
-
-			&:hover {
-				color: white;
-			}
 		}
 
 		.active {

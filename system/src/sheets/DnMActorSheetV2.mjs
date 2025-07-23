@@ -42,6 +42,70 @@ export default class DnMActorSheetV2
 	}
 
 
+	get tabs() {
+		if (!this.tabGroups.primary) {
+			this.tabGroups.primary = this.defaultTab;
+		}
+
+		switch (this.actor.type) {
+			case "character":
+			case "npc":
+			case "vehicle": {
+				return {
+					attributes: {
+						cssClass: this.tabGroups.primary === "attributes" ? "active" : "",
+						group: "primary",
+						id: "attributes",
+						label: "DNM.Labels.Attributes",
+					},
+					description: {
+						cssClass: this.tabGroups.primary === "description" ? "active" : "",
+						group: "primary",
+						id: "description",
+						label: "DNM.Labels.Description",
+					},
+					source: {
+						cssClass: this.tabGroups.primary === "source" ? "active" : "",
+						group: "primary",
+						id: "source",
+						label: "DNM.Labels.Source",
+					},
+				};
+			}
+			case "major_npc": {
+				return {
+					attributes: {
+						cssClass: this.tabGroups.primary === "attributes" ? "active" : "",
+						group: "primary",
+						id: "attributes",
+						label: "DNM.Labels.Attributes",
+					},
+					abilities: {
+						cssClass: this.tabGroups.primary === "abilities" ? "active" : "",
+						group: "primary",
+						id: "abilities",
+						label: "DNM.Labels.Abilities",
+					},
+					description: {
+						cssClass: this.tabGroups.primary === "description" ? "active" : "",
+						group: "primary",
+						id: "description",
+						label: "DNM.Labels.Description",
+					},
+					source: {
+						cssClass: this.tabGroups.primary === "source" ? "active" : "",
+						group: "primary",
+						id: "source",
+						label: "DNM.Labels.Source",
+					},
+				};
+			}
+		}
+
+		return {};
+	}
+
+
 	static async _onAddItem(event, target) {
 		event.preventDefault();
 
@@ -52,8 +116,9 @@ export default class DnMActorSheetV2
 
 		const data = { name, type};
 
-		const [newItem] = await this.actor.createEmbeddedDocuments("Item", [data]);
-		newItem.sheet.render(true);
+		const [item] = await this.actor.createEmbeddedDocuments("Item", [data]);
+		item.sheet._editModeEnabled = true;
+		item.sheet.render({force: true});
 	}
 
 
@@ -339,26 +404,8 @@ export default class DnMActorSheetV2
 
 		if (!this.tabGroups.primary) this.tabGroups.primary = "attributes";
 
-		context.tabs = {
-			attributes: {
-				cssClass: this.tabGroups.primary === "attributes" ? "active" : "",
-				group: "primary",
-				id: "attributes",
-				label: "DNM.Labels.Attributes",
-			},
-			description: {
-				cssClass: this.tabGroups.primary === "description" ? "active" : "",
-				group: "primary",
-				id: "description",
-				label: "DNM.Labels.Description",
-			},
-			source: {
-				cssClass: this.tabGroups.primary === "source" ? "active" : "",
-				group: "primary",
-				id: "source",
-				label: "DNM.Labels.Source",
-			},
-		};
+		context.tabs = this.tabs;
+
 
 		const enrichedFields = this.system.enrichedFields ?? {};
 		for (let key of Object.keys(enrichedFields)) {
@@ -407,83 +454,29 @@ export default class DnMActorSheetV2
 			}
 
 			item.enrichedDescription = await TextEditor.enrichHTML(
-				this.system.description, { async: true }
+				item.system.description, { async: true }
 			);
 
+			if (item.type === "weapon") {
+				item.enabledQualities = item.getEnabledQualities();
+			}
+
 			inventory[item.type].push(item);
+		}
+
+		if (inventory.major_npc_action) {
+			inventory.major_npc_action =
+				inventory.major_npc_action.sort((a, b) => {
+					return a.system.roll.max - b.system.roll.max;
+				});
+
+			inventory.major_npc_action =
+				inventory.major_npc_action.sort((a, b) => {
+					return a.system.roll.min - b.system.roll.min;
+				});
 		}
 
 		return inventory;
 	}
 
-
-	async _prepareActions(context) {
-		const actions = [];
-
-		for (const action of this.actor.actions) {
-			const enrichedDescription = await TextEditor.enrichHTML(action.system.description);
-
-			const actionData = {
-				enrichedDescription,
-				name: action.name,
-				uuid: action.uuid,
-				id: action.id,
-			};
-
-			actions.push(actionData);
-		}
-
-		return actions;
-	}
-
-
-	async _prepareSpecialAbilities(context) {
-		const actions = [];
-
-		for (const specialAbility of this.actor.specialAbilities) {
-			const enrichedDescription =
-				await TextEditor.enrichHTML(specialAbility.system.description);
-
-			const actionData = {
-				enrichedDescription,
-				name: specialAbility.name,
-				uuid: specialAbility.uuid,
-				id: specialAbility.id,
-			};
-
-			actions.push(actionData);
-		}
-
-		return actions;
-	}
-
-
-	async _prepareWeapons(context) {
-		const weapons = [];
-
-		for (const weapon of this.actor.weapons) {
-			const weaponData = {
-				damage: weapon.system.damage,
-				name: weapon.name,
-				qualities: [],
-				type: CONFIG.DREAMS.WEAPON_TYPES[weapon.system.weaponType],
-				uuid: weapon.uuid,
-				id: weapon.id,
-			};
-
-			for (const key in weapon.system.qualities) {
-				const quality = weapon.system.qualities[key] ?? {};
-
-				if (!quality.enabled) continue;
-
-				quality.name = game.i18n.localize(`DNM.QualityName.${key}`);
-
-				weaponData.qualities.push(quality);
-			}
-
-			weapons.push(weaponData);
-		}
-
-		return weapons;
-	}
 }

@@ -76,6 +76,18 @@
 		background-color: white;;
 	}
 
+	.item-damage {
+		border-radius: 0.375rem;
+		border-style: solid;
+		border-color: $c-chat;
+		border-width: 1px;
+		text-align: center;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $c-complication;
+		background-color: white;
+	}
+
 	.qualities {
 		font-size: 0.875rem;
 		line-height: 1.25rem;

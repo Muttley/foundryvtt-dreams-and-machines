@@ -23,31 +23,6 @@ export default class MajorNPCDataModel
 			...Skills(),
 			...Truths(),
 
-			actions: new fields.ArrayField(
-				new fields.SchemaField({
-					actionUuid: new fields.DocumentUUIDField({
-						blank: false,
-						nullable: false,
-					}),
-					min: new fields.NumberField({
-						initial: 1,
-						integer: true,
-						nullable: false,
-						min: 1,
-					}),
-					max: new fields.NumberField({
-						initial: 1,
-						integer: true,
-						nullable: false,
-						min: 1,
-					}),
-				}),
-				{
-					initial: [],
-					nullable: false,
-				}
-			),
-
 			injuries: new fields.SchemaField({
 				current: new fields.NumberField({
 					initial: 0,
