@@ -1,13 +1,11 @@
-import DnMItem from "../documents/DnMItem.mjs";
-
 const {api, sheets} = foundry.applications;
+
+const TextEditor = foundry.applications.ux.TextEditor.implementation;
 
 export default class DnMActorSheetV2
 	extends api.HandlebarsApplicationMixin(sheets.ActorSheetV2) {
 
 	_editModeEnabled = false;
-
-	#dragDrop = this.#createDragDropHandlers();
 
 	/** @override */
 	static DEFAULT_OPTIONS = {
@@ -20,16 +18,17 @@ export default class DnMActorSheetV2
 			toggleEditMode: this._onToggleEditMode,
 		},
 		classes: ["sheet", "dnm", "actor"],
-		dragDrop: [{dragSelector: ".draggable", dropSelector: null}],
 		form: {
 			submitOnChange: true,
 		},
 		position: {
-			// height: 600,
 			height: "auto",
 			width: 800,
 		},
 		tag: "form",
+		window: {
+			resizable: true,
+		},
 	};
 
 
@@ -38,107 +37,8 @@ export default class DnMActorSheetV2
 	}
 
 
-	get dragDrop() {
-		return this.#dragDrop;
-	}
-
-
 	get system() {
 		return this.actor.system;
-	}
-
-
-	// #attachContextMenus() {
-	// 	// TODO: Change to ContextMenu.create in v13 with jQuery: false
-	// 	new ContextMenu(this.element, '[data-menu="item"]', [
-	// 		{
-	// 			name: "DNM.Labels.Edit",
-	// 			icon: '<i class="fas fa-pencil"></i>',
-	// 			callback: async i => {
-	// 				if (!i.data("uuid")) return;
-
-	// 				const uuid = i.data("uuid");
-
-	// 				const item = await fromUuid(uuid);
-	// 				item?.sheet?.render(true);
-	// 			},
-	// 		},
-	// 		{
-	// 			name: "DNM.Labels.Delete",
-	// 			icon: '<i class="fas fa-trash"></i>',
-	// 			callback: async i => {
-	// 				if (!i.data("uuid")) return;
-
-	// 				const uuid = i.data("uuid");
-
-	// 				const item = await fromUuid(uuid);
-	// 				await item?.delete?.();
-	// 			},
-	// 		},
-	// 	]);
-	// }
-
-
-	#createDragDropHandlers() {
-		return this.options.dragDrop.map(d => {
-			d.permissions = {
-				dragstart: this._canDragStart.bind(this),
-				drop: this._canDragDrop.bind(this),
-			};
-			d.callbacks = {
-				dragstart: this._onDragStart.bind(this),
-				dragover: this._onDragOver.bind(this),
-				drop: this._onDrop.bind(this),
-			};
-			return new DragDrop(d);
-		});
-	}
-
-
-	_canDragDrop(selector) {
-		return this.isEditable;
-	}
-
-
-	_canDragStart(selector) {
-		return this.isEditable;
-	}
-
-
-	_getEmbeddedDocument(target) {
-		const docRow = target.closest("[data-document-class]");
-
-		if (docRow.dataset.documentClass === "Item") {
-			return this.actor.items.get(docRow.dataset.itemId);
-		}
-		else if (docRow.dataset.documentClass === "ActiveEffect") {
-			const parent =
-				docRow.dataset.parentId === this.actor.id
-					? this.actor
-					: this.actor.items.get(docRow?.dataset.parentId);
-
-			return parent.effects.get(docRow?.dataset.effectId);
-		}
-		else {
-			return console.warn("Could not find document class");
-		}
-	}
-
-
-	_onDragOver(event) {}
-
-
-	_onDragStart(event) {
-		const docRow = event.currentTarget.closest("[data-document-class]");
-		if ("link" in event.target.dataset) return;
-
-		// Chained operation
-		let dragData = this._getEmbeddedDocument(docRow)?.toDragData();
-
-		if (!dragData) return;
-
-		// Set data transfer
-		event.dataTransfer.setData("text/plain", JSON.stringify(dragData));
 	}
 
 
@@ -304,8 +204,8 @@ export default class DnMActorSheetV2
 		const rollData = {
 			actor: this.actor,
 			attribute: "",
-			fixedFocus: 0,
-			fixedTargetNumber: 0,
+			fixedFocus: undefined,
+			fixedTargetNumber: undefined,
 			item,
 			rollTitle: "",
 			skill: "",
@@ -386,54 +286,17 @@ export default class DnMActorSheetV2
 		}
 	}
 
-	async _onDrop(event) {
-		const data = TextEditor.getDragEventData(event);
-		const actor = this.actor;
-
-		const allowed = Hooks.call("dropActorSheetData", actor, this, data);
-
-		if (allowed === false) return;
-
-		switch (data.type) {
-			case "ActiveEffect":
-			case "Actor":
-			case "Folder":
-				break;
-			case "Item":
-				return this._onDropItem(event, data);
-		}
-	}
-
 
 	async _onDropItem(event, data) {
-		if (!this.actor.isOwner) return false;
-
-		const item = await DnMItem.fromDropData(data);
-
-		if (!this.allowedItems.includes(item.type)) return false;
-
-		// Handle item sorting within the same Actor
-		if (this.actor.uuid === item.parent?.uuid) return this._onSortItem(event, item);
-
-		// Create the owned item
-		return this._onDropItemCreate(item, event);
+		if (this.allowedItems.includes(data.type)) {
+			return super._onDropItem(event, data);
+		}
+		return false;
 	}
 
 
-	async _onDropItemCreate(itemData, event) {
-		itemData = itemData instanceof Array ? itemData : [itemData];
-		return this.actor.createEmbeddedDocuments("Item", itemData);
-	}
-
-
-	async _onFirstRender(context, options) {
-		await super._onFirstRender(context, options);
-		// this.#attachContextMenus();
-	}
-
-
-	_onRender(context, options) {
-		this.#dragDrop.forEach(d => d.bind(this.element));
+	async _onRender(context, options) {
+		await super._onRender(context, options);
 
 		const deleteString = this._onDeleteString.bind(this);
 		this.element.querySelectorAll(".string-edit").forEach(entry => {
@@ -469,7 +332,6 @@ export default class DnMActorSheetV2
 		context.actor = this.actor;
 		context.effects = context.data.effects;
 		context.items = context.data.items;
-		context.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
 		context.systemSource = this.actor.system._source;
 		context.systemFields = this.document.system.schema.fields;
 
@@ -498,12 +360,6 @@ export default class DnMActorSheetV2
 			},
 		};
 
-		// Simple npc characters do not have all the attributes and skills of
-		// characters or majorNPCs
-		if (!["npc", "vehicle"].includes(this.actor.type)) {
-			this.getAttributesAndSkillsData(context);
-		}
-
 		const enrichedFields = this.system.enrichedFields ?? {};
 		for (let key of Object.keys(enrichedFields)) {
 			enrichedFields[key] = await TextEditor.enrichHTML(
@@ -515,7 +371,49 @@ export default class DnMActorSheetV2
 
 		context.allSources = await dreams.compendiums.sources();
 
+		context.inventory = await this._prepareInventory();
+
 		return context;
+	}
+
+
+	getAttributesAndSkillsData(context) {
+		context.attributes = [];
+		for (const attribute of Object.keys(CONFIG.DREAMS.ATTRIBUTES)) {
+			context.attributes.push({
+				key: attribute,
+				label: CONFIG.DREAMS.ATTRIBUTES[attribute],
+				value: this.system.attributes[attribute].value,
+			});
+		}
+
+		context.skills = [];
+		for (const skill of Object.keys(CONFIG.DREAMS.SKILLS)) {
+			context.skills.push({
+				key: skill,
+				label: CONFIG.DREAMS.SKILLS[skill],
+				value: this.system.skills[skill],
+			});
+		}
+	}
+
+
+	async _prepareInventory() {
+		const inventory = {};
+
+		for (const item of this.actor.items) {
+			if (!inventory[item.type]) {
+				inventory[item.type] = [];
+			}
+
+			item.enrichedDescription = await TextEditor.enrichHTML(
+				this.system.description, { async: true }
+			);
+
+			inventory[item.type].push(item);
+		}
+
+		return inventory;
 	}
 
 
@@ -529,6 +427,28 @@ export default class DnMActorSheetV2
 				enrichedDescription,
 				name: action.name,
 				uuid: action.uuid,
+				id: action.id,
+			};
+
+			actions.push(actionData);
+		}
+
+		return actions;
+	}
+
+
+	async _prepareSpecialAbilities(context) {
+		const actions = [];
+
+		for (const specialAbility of this.actor.specialAbilities) {
+			const enrichedDescription =
+				await TextEditor.enrichHTML(specialAbility.system.description);
+
+			const actionData = {
+				enrichedDescription,
+				name: specialAbility.name,
+				uuid: specialAbility.uuid,
+				id: specialAbility.id,
 			};
 
 			actions.push(actionData);
@@ -548,6 +468,7 @@ export default class DnMActorSheetV2
 				qualities: [],
 				type: CONFIG.DREAMS.WEAPON_TYPES[weapon.system.weaponType],
 				uuid: weapon.uuid,
+				id: weapon.id,
 			};
 
 			for (const key in weapon.system.qualities) {

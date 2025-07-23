@@ -22,17 +22,18 @@
 		{{#if actions}}
 			{{#each actions}}
 				<li
-					class="item"
+					class="item draggable"
 					{{#if @root.editModeEnabled}}
 						data-action="editItem"
 					{{else}}
 						data-action="useSpecialAbility"
 					{{/if}}
 					data-uuid="{{this.uuid}}"
+					data-item-id="{{this.id}}"
 				>
 					<a>
 						<i class="fas fa-dice-d20"></i>
-						<b style="text-transform: uppercase">{{this.name}}</b>:
+						<b class="item-name">{{this.name}}</b>:
 						<em>
 							{{{this.enrichedDescription}}}
 						</em>

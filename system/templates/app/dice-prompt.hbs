@@ -17,6 +17,7 @@
 			{{else}}
 				<select name="attribute">
 					{{#select attribute}}
+						<option value="">&mdash;</option>
 						{{#each attributes}}
 							<option value="{{name}}">
 								{{label}} ({{value}})

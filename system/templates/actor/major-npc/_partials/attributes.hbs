@@ -1,0 +1,25 @@
+<div class="grid-4-columns">
+	{{#each attributes}}
+		<div>
+			<span class="label">
+				<a
+					data-action="onRoll"
+					data-attribute="{{this.key}}"
+				>
+					<i class="fas fa-dice-d20"></i>
+					{{label}}
+				</a>
+			</span>
+
+			<input
+				class="lockable"
+				data-type="Number"
+				name="system.attributes.{{this.key}}.value"
+				placeholder="&mdash;"
+				type="number"
+				value="{{this.value}}"
+				{{disabled @root.editModeDisabled}}
+			/>
+		</div>
+	{{/each}}
+</div>

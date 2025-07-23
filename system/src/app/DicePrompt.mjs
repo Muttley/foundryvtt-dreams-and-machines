@@ -12,7 +12,7 @@ export default class DicePrompt extends Application {
 	 */
 	static promptForRoll({
 		actor,
-		attribute = "insight",
+		attribute,
 		fixedFocus,
 		fixedTargetNumber,
 		item,
@@ -49,7 +49,7 @@ export default class DicePrompt extends Application {
 	/**
 	 * @type {?string}
 	 */
-	attribute = "insight";
+	attribute = "";
 
 	rollTitle = "";
 
@@ -113,7 +113,7 @@ export default class DicePrompt extends Application {
 		return {
 			...super.getData(options),
 			actor: this.actor,
-			attribute: this.attribute ?? "insight",
+			attribute: this.attribute,
 			attributes,
 			skill: this.skill,
 			skills,

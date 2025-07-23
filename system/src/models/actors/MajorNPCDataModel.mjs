@@ -1,4 +1,6 @@
+import BookSource from "../items/_types/BookSource.mjs";
 import CharacterAttributes from "../_types/CharacterAttributes.mjs";
+import Description from "../_types/Description.mjs";
 import Skills from "../_types/Skills.mjs";
 import Truths from "../_types/Truths.mjs";
 
@@ -15,25 +17,36 @@ export default class MajorNPCDataModel
 		const fields = foundry.data.fields;
 
 		return {
+			...BookSource(),
 			...CharacterAttributes(),
+			...Description(),
 			...Skills(),
 			...Truths(),
 
-			threat: new fields.SchemaField({
-				current: new fields.NumberField({
-					initial: 0,
-					integer: true,
-					nullable: false,
-					min: 0,
+			actions: new fields.ArrayField(
+				new fields.SchemaField({
+					actionUuid: new fields.DocumentUUIDField({
+						blank: false,
+						nullable: false,
+					}),
+					min: new fields.NumberField({
+						initial: 1,
+						integer: true,
+						nullable: false,
+						min: 1,
+					}),
+					max: new fields.NumberField({
+						initial: 1,
+						integer: true,
+						nullable: false,
+						min: 1,
+					}),
 				}),
-
-				max: new fields.NumberField({
-					initial: 0,
-					integer: true,
+				{
+					initial: [],
 					nullable: false,
-					min: 0,
-				}),
-			}),
+				}
+			),
 
 			injuries: new fields.SchemaField({
 				current: new fields.NumberField({
@@ -51,15 +64,22 @@ export default class MajorNPCDataModel
 				}),
 			}),
 
-			notes: new fields.HTMLField({
-				initial: "",
-				nullable: false,
+			threat: new fields.SchemaField({
+				current: new fields.NumberField({
+					initial: 0,
+					integer: true,
+					nullable: false,
+					min: 0,
+				}),
+
+				max: new fields.NumberField({
+					initial: 0,
+					integer: true,
+					nullable: false,
+					min: 0,
+				}),
 			}),
 
-			description: new fields.HTMLField({
-				initial: "",
-				nullable: false,
-			}),
 		};
 	}
 

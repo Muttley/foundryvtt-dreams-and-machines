@@ -2,7 +2,7 @@ import DnMActorSheetV2 from "../DnMActorSheetV2.mjs";
 
 const TextEditor = foundry.applications.ux.TextEditor.implementation;
 
-export default class NPCSheetV2 extends DnMActorSheetV2 {
+export default class MajorNPCSheetV2 extends DnMActorSheetV2 {
 
 	/** @override */
 	static DEFAULT_OPTIONS = {
@@ -13,7 +13,7 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 			submitOnChange: true,
 		},
 		position: {
-			width: 586,
+			width: 700,
 		},
 	};
 
@@ -27,13 +27,16 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 			template: templatePath("_shared-partials/tabs"),
 		},
 		attributes: {
-			template: templatePath("actor/npc/attributes-tab"),
+			template: templatePath("actor/major-npc/attributes-tab"),
 			templates: [
-				"actor/_shared-partials/actions",
+				"_shared-partials/number-field",
+				"actor/_shared-partials/custom-string-list",
 				"actor/_shared-partials/special-abilities",
-				"actor/npc/_partials/attributes",
-				"actor/npc/_partials/truth",
-				"actor/npc/_partials/weapons",
+				"actor/major-npc/_partials/attributes",
+				"actor/major-npc/_partials/injuries",
+				"actor/major-npc/_partials/major-npc-actions",
+				"actor/major-npc/_partials/skills",
+				"actor/major-npc/_partials/threat",
 			].map(path => templatePath(path)),
 		},
 		description: {
@@ -47,10 +50,30 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 
 	get allowedItems() {
 		return [
-			"npc_action",
+			"major_npc_action",
 			"special_ability",
-			"weapon",
 		];
+	}
+
+
+	async _onDropItem(event, data) {
+		const item = await super._onDropItem(event, data);
+
+		if (item && item.type === "major_npc_action") {
+			const actions = this.actor.system?.actions ?? [];
+
+			actions.push({actionUuid: item.uuid, min: 1, max: 1});
+
+			actions.sort((a, b) => {
+				return a.min - b.min;
+			});
+
+			actions.sort((a, b) => {
+				return a.max - b.max;
+			});
+
+			this.actor.update({"system.actions": actions});
+		}
 	}
 
 
@@ -68,9 +91,9 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 
 		switch (partId) {
 			case "attributes":
+				this.getAttributesAndSkillsData(context);
 				context.specialAbilities = await this._prepareSpecialAbilities(context);
 				context.actions = await this._prepareActions(context);
-				context.weapons = await this._prepareWeapons(context);
 				break;
 			case "description":
 				context.enrichedDescription = await TextEditor.enrichHTML(

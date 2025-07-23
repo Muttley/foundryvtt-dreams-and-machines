@@ -13,7 +13,13 @@ export default class WeaponDataModel extends foundry.abstract.TypeDataModel {
 	}
 
 	get enabledQualities() {
-		return this.qualities.filter(q => q.enabled);
+		const enabledQualities = [];
+		for (const quality of Object.keys(this.qualities)) {
+			if (this.qualities[quality].enabled) {
+				enabledQualities.push(this.qualities[quality]);
+			}
+		}
+		return enabledQualities;
 	}
 
 	static defineSchema() {

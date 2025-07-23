@@ -1,0 +1,26 @@
+<div>
+	<span
+		class="label"
+		data-tooltip="{{localize "DNM.Labels.Current"}} / {{localize "DNM.Labels.Max"}}"
+	>
+		{{localize "DNM.Labels.Defeat"}}
+	</span>
+	<div class="grid-2-columns">
+		<input
+			class="lockable"
+			data-type="Number"
+			name="system.injuries.current"
+			type="number"
+			value="{{system.injuries.current}}"
+		/>
+		<input
+			class="lockable"
+			data-type="Number"
+			name="system.injuries.max"
+			type="number"
+			value="{{system.injuries.max}}"
+			{{disabled @root.editModeDisabled}}
+		/>
+	</div>
+</div>
+

@@ -68,7 +68,7 @@ export async function initHook() {
  */
 function registerActorDataModels() {
 	CONFIG.Actor.dataModels.character = actorDataModels.CharacterDataModel;
-	CONFIG.Actor.dataModels.majorNPC = actorDataModels.MajorNPCDataModel;
+	CONFIG.Actor.dataModels.major_npc = actorDataModels.MajorNPCDataModel;
 	CONFIG.Actor.dataModels.npc = actorDataModels.NPCDataModel;
 	CONFIG.Actor.dataModels.vehicle = actorDataModels.VehicleDataModel;
 }
@@ -95,9 +95,9 @@ function registerActorSheets() {
 
 	foundry.documents.collections.Actors.registerSheet(
 		"dreams-and-machines",
-		actorSheets.MajorNPCSheet,
+		actorSheets.MajorNPCSheetV2,
 		{
-			types: ["majorNPC"],
+			types: ["major_npc"],
 			makeDefault: true,
 		}
 	);

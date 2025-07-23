@@ -1,6 +1,6 @@
 @use "../mixins" as *;
 
-$columns: 6;
+$columns: 10;
 
 %grid-styles {
 	@include p-reset;

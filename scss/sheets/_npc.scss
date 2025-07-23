@@ -3,6 +3,14 @@
 
 .dnm.sheet.actor.npc {
 
+	a {
+		cursor: pointer;
+
+		&:hover {
+			text-shadow: none;
+		}
+	}
+
 	.label {
 		background-color: $c-character-purple;
 	}
@@ -31,12 +39,5 @@
 			}
 		}
 	}
-	a:hover {
-		text-shadow: none;
-	}
-	.item:hover {
-		color: $c-character-purple;
-		background-color: $c-character-purple-highlight;
-		cursor: pointer;
-	}
+
 }

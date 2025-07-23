@@ -1,0 +1,26 @@
+<div>
+	<span
+		class="label"
+		data-tooltip="{{localize "DNM.Labels.Current"}} / {{localize "DNM.Labels.Max"}}"
+	>
+		{{localize "DNM.Labels.PersonalThreat"}}
+	</span>
+	<div class="grid-2-columns">
+		<input
+			class="lockable"
+			data-type="Number"
+			name="system.threat.current"
+			type="number"
+			value="{{system.threat.current}}"
+		/>
+		<input
+			class="lockable"
+			data-type="Number"
+			name="system.threat.max"
+			type="number"
+			value="{{system.threat.max}}"
+			{{disabled @root.editModeDisabled}}
+		/>
+	</div>
+</div>
+

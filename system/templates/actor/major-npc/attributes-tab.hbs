@@ -1,0 +1,26 @@
+<section class="tab {{tab.cssClass}}" data-group="primary" data-tab="attributes">
+	<div class="tab-body">
+		<div class="grid-2-columns">
+			{{> (template "actor/major-npc/_partials/threat") }}
+			{{> (template "actor/major-npc/_partials/injuries") }}
+
+		</div>
+
+		{{> (template "actor/_shared-partials/custom-string-list")
+			addRowLabel=""
+			currentValues=system.truths
+			key="system.truths"
+			sectionTitle=(localize "DNM.Labels.Truths")
+			titleAdd=(localize "DNM.Tooltips.Actor.AddTruth")
+		}}
+
+		{{> (template "actor/major-npc/_partials/attributes") }}
+		{{> (template "actor/major-npc/_partials/skills") }}
+
+		<div class="grid-2-columns">
+			{{> (template "actor/_shared-partials/special-abilities") }}
+			{{> (template "actor/major-npc/_partials/major-npc-actions") }}
+		</div>
+	</div>
+</section>
+

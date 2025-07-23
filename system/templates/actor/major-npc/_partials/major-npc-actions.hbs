@@ -3,14 +3,22 @@
 		{{#if @root.editModeEnabled}}
 			<a
 				data-action="addItem"
-				data-item-type="weapon"
+				data-item-type="major_npc_action"
 				{{disabled @root.editModeDisabled}}
 			>
 				<i class="fa-solid fa-plus"></i>
 			</a>
 			&nbsp;
+			{{localize "DNM.Labels.Actions"}}
+		{{else}}
+			<a
+				data-action="onRoll"
+				data-type="major_npc_action"
+			>
+				<i class="fas fa-dice-d20"></i>
+				{{localize "DNM.Labels.Actions"}}
+			</a>
 		{{/if}}
-		{{localize "DNM.Labels.Weapons"}}
 	</span>
 
 	<ol
@@ -19,40 +27,24 @@
 			data-tooltip="{{tooltip "edit-delete-mouse-controls"}}"
 		{{/unless}}
 	>
-		{{#if (lookup inventory "weapon")}}
-			{{#each (lookup inventory "weapon")}}
+		{{#if (lookup inventory "major_npc_action")}}
+			{{#each (lookup inventory "major_npc_action")}}
 				<li
 					class="item draggable"
 					{{#if @root.editModeEnabled}}
 						data-action="editItem"
 					{{else}}
-						data-action="onRoll"
+						data-action="useSpecialAbility"
 					{{/if}}
-					data-type="main"
 					data-uuid="{{this.uuid}}"
 					data-item-id="{{this.id}}"
 				>
 					<a>
 						<i class="fas fa-dice-d20"></i>
-						<b class="item-name">
-							{{this.name}} ({{this.system.weaponType}}):
-						</b>
-						{{#if this.system.damage}}
-							{{#each this.system.damage}}
-								{{ type }} {{ value }}{{#unless @last}},{{else}}.{{/unless}}
-							{{/each}}
-						{{else}}
-							&mdash;
-						{{/if}}
-						{{#if this.system.enabledQualities}}
-							<em>
-								{{#each this.system.enabledQualities}}
-									{{this.name}}{{#unless @last}},{{/unless}}
-								{{/each}}
-							</em>
-						{{else}}
-							&mdash;
-						{{/if}}
+						<b class="item-name">{{this.name}}</b>:
+						<em>
+							{{{this.enrichedDescription}}}
+						</em>
 					</a>
 				</li>
 			{{/each}}
