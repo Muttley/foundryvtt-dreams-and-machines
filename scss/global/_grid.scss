@@ -6,7 +6,7 @@ $columns: 10;
 	@include p-reset;
 	display: grid;
 	align-content: baseline;
-	grid-gap: 4px;
+	gap: 0.25em;
 }
 
 @mixin grid-colspan {

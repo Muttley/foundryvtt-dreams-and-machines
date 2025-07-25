@@ -11,6 +11,7 @@ DNM.Combat.CombatantsTurnDone: Turn Completed
 DNM.Combat.CombatantsTurnNotDone: Turn Not Completed
 DNM.Combat.CombatHasNotStarted: Combat Has Not Started
 DNM.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
+DNM.Error.NoAttributeSelectedForRolling: No Attribute Selected for Rolling
 DNM.Exhaustion.Breathless: Breathless
 DNM.Exhaustion.Confused: Confused
 DNM.Exhaustion.Despairing: Despairing

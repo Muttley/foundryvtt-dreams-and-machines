@@ -55,11 +55,15 @@
 		}
 
 		.failure {
-			opacity: 0.4;
+			opacity: 0.3;
 		}
 
 		.complication {
 			color: $c-complication;
+		}
+
+		.critical {
+			color: $c-critical;
 		}
 	}
 

@@ -2,11 +2,11 @@ export default class Logger {
 	static DEBUG_ENABLED = null;
 
 	static debug(...args) {
-		if (this.DEBUG_ENABLED === null) {
-			this.DEBUG_ENABLED = game.settings.get(SYSTEM_ID, "debugEnabled");
+		if (Logger.DEBUG_ENABLED === null) {
+			Logger.DEBUG_ENABLED = game.settings.get(SYSTEM_ID, "debugEnabled");
 		}
 
-		if (this.DEBUG_ENABLED) console.debug(`${SYSTEM_NAME} |`, ...args);
+		if (Logger.DEBUG_ENABLED) console.debug(`${SYSTEM_NAME} |`, ...args);
 	}
 
 	static error(...args) {

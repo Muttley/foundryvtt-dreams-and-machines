@@ -29,7 +29,7 @@
 			align-self: right;
 			font-size: 1.5rem;
 			line-height: 1;
-			color: black;
+			color: $c-input-text;
 		}
 	}
 
@@ -44,14 +44,14 @@
 		border: none;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
-		color: black;
+		color: $c-input-text;
 
 		&:focus {
 			box-shadow: 0 0 5px $c-character-purple;
 		}
 
 		&::placeholder {
-			color: black;
+			color: $c-input-text;
 		}
 	}
 

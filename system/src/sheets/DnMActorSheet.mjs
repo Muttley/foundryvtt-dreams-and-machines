@@ -261,7 +261,7 @@ export default class DnMActorSheet extends foundry.appv1.sheets.ActorSheet {
 			item = await fromUuid(itemUuid);
 		}
 
-		dreams.app.DicePrompt.promptForRoll({
+		dreams.app.DicePromptV2.promptForRoll({
 			actor: this.actor,
 			attribute,
 			skill,

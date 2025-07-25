@@ -292,7 +292,7 @@ export default class DnMActorSheetV2
 				rollData.skill = dataset.skill;
 		}
 
-		dreams.app.DicePrompt.promptForRoll(rollData);
+		dreams.app.DicePromptV2.promptForRoll(rollData);
 	}
 
 

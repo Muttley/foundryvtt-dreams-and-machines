@@ -1,18 +1,10 @@
+@use "../abstracts/" as *;
 @use "../mixins" as *;
 
 .dnm {
 	.window-content {
 		@include p-reset;
-
-		// display: flex;
-		// flex-direction: column;
-		// flex-wrap: nowrap;
-		// justify-content: flex-start;
-		// padding: 8px;
-		// color: var(--color-text-dark-primary);
-		// overflow-y: auto;
-		// overflow-x: hidden;
-		color: black;
+		color: $c-input-text;
 
 		background: url('../assets/ui/dnm-bg.jpg') repeat;
 	}

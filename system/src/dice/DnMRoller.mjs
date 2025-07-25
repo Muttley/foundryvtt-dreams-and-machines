@@ -1,15 +1,5 @@
-/**
- * @typedef {object} ParsedResultFace
- *
- * @property {number} face
- * @property {boolean} isCritical
- * @property {boolean} isSuccess
- * @property {boolean} isComplication
- */
+const renderTemplate = foundry.applications.handlebars.renderTemplate;
 
-/**
- *
- */
 export default class DnMRoller {
 
 	static async performRoll(formula) {
@@ -154,24 +144,24 @@ export default class DnMRoller {
 				if (result.result <= targetNumber) {
 					successes += 1;
 					isSuccess = true;
-					tooltip = game.i18n.localize("DNM.Roll.Success");
+					tooltip = "DNM.Roll.Success";
 				}
 				else {
 					isFail = true;
-					tooltip = game.i18n.localize("DNM.Roll.Fail");
+					tooltip = "DNM.Roll.Fail";
 				}
 
 				if (result.result <= skillValue) {
 					successes += 1;
 					isCritical = true;
-					tooltip = game.i18n.localize("DNM.Roll.Critical");
+					tooltip = "DNM.Roll.Critical";
 				}
 
 				if (result.result >= complicationRange) {
 					complications += 1;
 					isComplication = true;
 					isFail = false;
-					tooltip = game.i18n.localize("DNM.Roll.Complication");
+					tooltip = "DNM.Roll.Complication";
 				}
 
 				results.push({

@@ -113,7 +113,7 @@
 
 	<div class="dice-list">
 		{{#each results}}
-			<div style="position: relative;" data-tooltip="{{tooltip}}">
+			<div style="position: relative;" data-tooltip="{{this.tooltip}}">
 				<i class="fat fa-dice-d20 dice-icon"></i>
 				<div
 					{{#if isFail}}
@@ -123,7 +123,11 @@
 						class="dice-number complication"
 					{{/if}}
 					{{#if isSuccess}}
-						class="dice-number"
+						{{#if isCritical}}
+							class="dice-number critical"
+						{{else}}
+							class="dice-number"
+						{{/if}}
 					{{/if}}
 				>
 					{{face}}

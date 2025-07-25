@@ -22,14 +22,14 @@
 	}
 
 	.truth {
-		input[type="text"] {
+		input[type=text] {
 			font-weight: 600;
 			font-size: 1.25rem;
 			background: white;
 			text-align: center;
 			border: none;
 			text-transform: uppercase;
-			color: black;
+			color: $c-input-text;
 
 			&:focus {
 				text-transform: none;
