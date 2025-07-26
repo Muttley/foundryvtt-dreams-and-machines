@@ -1,0 +1,39 @@
+<section class="tab {{tab.cssClass}}" data-group="primary" data-tab="attributes">
+	<div class="tab-body">
+		<div class="grid-3-columns">
+			{{> (template "actor/character/_partials/spirit")}}
+
+			{{!-- GROWTH --}}
+			{{> (template "_shared-partials/number-field")
+				alwaysUnlocked="true"
+				label=(localize "DNM.Labels.Growth")
+				name="system.growth"
+				value=system.growth
+			}}
+		</div>
+		<div class="grid-2-columns">
+			<div>
+				{{> actor/_shared-partials/custom-string-list
+					addRowLabel=""
+					currentValues=system.truths
+					key="system.truths"
+					sectionTitle=(localize "DNM.Labels.Truths")
+					titleAdd=(localize "DNM.Tooltips.Actor.AddTruth")
+				}}
+			</div>
+
+			<div>
+				{{> actor/_shared-partials/custom-string-list
+					addRowLabel=""
+					currentValues=system.harms
+					key="system.harms"
+					sectionTitle=(localize "DNM.Labels.Harms")
+					titleAdd=(localize "DNM.Tooltips.Actor.AddHarm")
+				}}
+			</div>
+		</div>
+		{{> (template "actor/_shared-partials/attributes") }}
+		{{> (template "actor/_shared-partials/skills") }}
+	</div>
+</section>
+

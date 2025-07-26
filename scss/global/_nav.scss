@@ -52,6 +52,26 @@
 	}
 }
 
+.sheet.dnm.actor.character {
+	.sheet-tabs.tabs.character {
+
+		a:hover {
+			color: white;
+			text-shadow: 1px 1px 2px black;
+		}
+
+		.nav-item {
+			background: $c-character-primary-unselected;
+			color: $c-character-primary;
+		}
+
+		.active {
+			background: $c-character-primary;
+			color: white;
+		}
+	}
+}
+
 .sheet.dnm.item {
 	.sheet-tabs {
 

@@ -4,15 +4,23 @@ import Goals from "../_types/Goals.mjs";
 import Harms from "../_types/Harms.mjs";
 import Skills from "../_types/Skills.mjs";
 import Truths from "../_types/Truths.mjs";
+import Description from "../_types/Description.mjs";
 
 export default class CharacterDataModel
 	extends foundry.abstract.TypeDataModel {
+
+	get enrichedFields() {
+		return {
+			description: this.description,
+		};
+	}
 
 	static defineSchema() {
 		const fields = foundry.data.fields;
 
 		return {
 			...CharacterAttributes(),
+			...Description(),
 			...Goals(),
 			...Skills(),
 			...Truths(),
@@ -32,7 +40,7 @@ export default class CharacterDataModel
 			}),
 
 			spirit: new fields.SchemaField({
-				value: new fields.NumberField({
+				current: new fields.NumberField({
 					initial: 0,
 					integer: true,
 					min: 0,
@@ -47,7 +55,7 @@ export default class CharacterDataModel
 			}),
 
 			supplyPoints: new fields.SchemaField({
-				value: new fields.NumberField({
+				current: new fields.NumberField({
 					initial: 0,
 					integer: true,
 					min: 0,

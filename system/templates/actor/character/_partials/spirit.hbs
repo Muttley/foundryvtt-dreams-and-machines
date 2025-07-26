@@ -1,0 +1,29 @@
+<div class="grid-colspan-2">
+	<span
+		class="label"
+		data-tooltip="{{localize "DNM.Labels.Current"}} / {{localize "DNM.Labels.Max"}}"
+	>
+		{{localize "DNM.Labels.Spirit"}}
+	</span>
+	<div class="grid-2-columns">
+		<input
+			class="lockable"
+			data-type="Number"
+			name="system.spirit.current"
+			type="number"
+			{{#ifCond system.spirit.current "<=" 0}}
+				style="color: darkred;"
+			{{/ifCond}}
+			value="{{system.spirit.current}}"
+		/>
+		<input
+			class="lockable"
+			data-type="Number"
+			name="system.spirit.max"
+			type="number"
+			value="{{system.spirit.max}}"
+			{{disabled @root.editModeDisabled}}
+		/>
+	</div>
+</div>
+

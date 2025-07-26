@@ -75,14 +75,7 @@ export default class VehicleSheetV2 extends DnMActorSheetV2 {
 			case "attributes":
 				await this._prepareVehicleQualities(context);
 				break;
-			case "description":
-				context.enrichedDescription = await TextEditor.enrichHTML(
-					this.system.description, { async: true }
-				);
-				break;
 		}
-
-		context.tab = context.tabs[partId];
 
 		return context;
 	}

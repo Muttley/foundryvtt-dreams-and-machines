@@ -1,0 +1,49 @@
+<section class="tab {{tab.cssClass}}" data-group="primary" data-tab="background">
+	<div class="tab-body">
+		<div class="grid-2-columns">
+			<div class="strings">
+				<span class="label">
+					{{localize "DNM.Labels.CharacterTruths"}}
+				</span>
+
+				{{> (template "actor/_shared-partials/background-item")
+					item=origin
+					label=(localize "DNM.Labels.Origin")
+					placeholder=(localize "DNM.Labels.AddOrigin")
+				}}
+
+				{{> (template "actor/_shared-partials/background-item")
+					item=archetype
+					label=(localize "DNM.Labels.Archetype")
+					placeholder=(localize "DNM.Labels.AddArchetype")
+				}}
+
+				{{> (template "actor/_shared-partials/background-item")
+					item=temperament
+					label=(localize "DNM.Labels.Temperament")
+					placeholder=(localize "DNM.Labels.AddTemperament")
+				}}
+
+				<div class="strings">
+
+					{{> actor/_shared-partials/custom-string-list
+						addRowLabel=""
+						currentValues=system.bonds
+						key="system.bonds"
+						sectionTitle=(localize "DNM.Labels.Bonds")
+						titleAdd=(localize "DNM.Tooltips.Actor.AddBond")
+					}}
+
+				</div>
+
+				{{> (template "actor/character/_partials/goals") }}
+			</div>
+			<div>
+				{{> (template "actor/character/_partials/archetype-goal") }}
+				{{> (template "actor/character/_partials/attitude") }}
+				{{> (template "actor/character/_partials/exhaustion") }}
+			</div>
+		</div>
+	</div>
+</section>
+

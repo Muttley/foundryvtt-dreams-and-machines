@@ -1,0 +1,23 @@
+<section class="tab {{tab.cssClass}}" data-group="primary" data-tab="equipment">
+	<div class="tab-body">
+		<div class="grid-4-columns">
+			{{> (template "actor/character/_partials/supply-points")}}
+
+			{{!-- TECH LEVEL --}}
+			{{> (template "_shared-partials/number-field")
+				label=(localize "DNM.Labels.TechLevel")
+				name="system.techLevel"
+				value=system.techLevel
+			}}
+
+			{{!-- COIN --}}
+			{{> (template "_shared-partials/number-field")
+				alwaysUnlocked="true"
+				label=(localize "DNM.Labels.Coin")
+				name="system.coin"
+				value=system.coin
+			}}
+		</div>
+	</div>
+</section>
+

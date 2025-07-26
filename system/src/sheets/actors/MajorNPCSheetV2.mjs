@@ -1,8 +1,6 @@
 import DnMActorSheetV2 from "../DnMActorSheetV2.mjs";
 import DnMRoller from "../../dice/DnMRoller.mjs";
 
-const TextEditor = foundry.applications.ux.TextEditor.implementation;
-
 export default class MajorNPCSheetV2 extends DnMActorSheetV2 {
 
 	/** @override */
@@ -34,20 +32,23 @@ export default class MajorNPCSheetV2 extends DnMActorSheetV2 {
 				"actor/_shared-partials/special-abilities",
 				"actor/major-npc/_partials/major-npc-actions",
 			].map(path => templatePath(path)),
+			classes: ["scrollable"],
 		},
 		attributes: {
 			template: templatePath("actor/major-npc/attributes-tab"),
 			templates: [
 				"_shared-partials/number-field",
+				"actor/_shared-partials/attributes",
 				"actor/_shared-partials/custom-string-list",
-				"actor/major-npc/_partials/attributes",
+				"actor/_shared-partials/skills",
 				"actor/major-npc/_partials/injuries",
-				"actor/major-npc/_partials/skills",
 				"actor/major-npc/_partials/threat",
 			].map(path => templatePath(path)),
+			classes: ["scrollable"],
 		},
 		description: {
 			template: templatePath("_shared-partials/description-tab"),
+			classes: ["scrollable"],
 		},
 		source: {
 			template: templatePath("_shared-partials/source-tab"),
@@ -114,14 +115,7 @@ export default class MajorNPCSheetV2 extends DnMActorSheetV2 {
 			case "attributes":
 				this.getAttributesAndSkillsData(context);
 				break;
-			case "description":
-				context.enrichedDescription = await TextEditor.enrichHTML(
-					this.system.description, { async: true }
-				);
-				break;
 		}
-
-		context.tab = context.tabs[partId];
 
 		return context;
 	}

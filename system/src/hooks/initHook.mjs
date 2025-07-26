@@ -88,7 +88,7 @@ function registerActors() {
 function registerActorSheets() {
 	foundry.documents.collections.Actors.registerSheet(
 		"dreams-and-machines",
-		actorSheets.CharacterSheet,
+		actorSheets.CharacterSheetV2,
 		{
 			types: ["character"],
 			makeDefault: true,

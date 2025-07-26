@@ -45,6 +45,7 @@ DNM.Labels.Attitude: Attitude
 DNM.Labels.Attribute: Attribute
 DNM.Labels.AttributeChoices: Attribute Choices
 DNM.Labels.Attributes: Attributes
+DNM.Labels.Background: Background
 DNM.Labels.Bond: Bond
 DNM.Labels.Bonds: Bonds
 DNM.Labels.Category: Category

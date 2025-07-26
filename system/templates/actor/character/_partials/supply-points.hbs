@@ -1,0 +1,26 @@
+<div class="grid-colspan-2">
+	<span
+		class="label"
+		data-tooltip="{{localize "DNM.Labels.Current"}} / {{localize "DNM.Labels.Max"}}"
+	>
+		{{localize "DNM.Labels.SupplyPoints"}}
+	</span>
+	<div class="grid-2-columns">
+		<input
+			class="lockable"
+			data-type="Number"
+			name="system.supplyPoints.current"
+			type="number"
+			value="{{system.supplyPoints.current}}"
+		/>
+		<input
+			class="lockable"
+			data-type="Number"
+			name="system.supplyPoints.max"
+			type="number"
+			value="{{system.supplyPoints.max}}"
+			{{disabled @root.editModeDisabled}}
+		/>
+	</div>
+</div>
+

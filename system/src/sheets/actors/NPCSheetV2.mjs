@@ -1,7 +1,5 @@
 import DnMActorSheetV2 from "../DnMActorSheetV2.mjs";
 
-const TextEditor = foundry.applications.ux.TextEditor.implementation;
-
 export default class NPCSheetV2 extends DnMActorSheetV2 {
 
 	/** @override */
@@ -35,12 +33,15 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 				"actor/npc/_partials/truth",
 				"actor/npc/_partials/weapons",
 			].map(path => templatePath(path)),
+			classes: ["scrollable"],
 		},
 		description: {
 			template: templatePath("_shared-partials/description-tab"),
+			classes: ["scrollable"],
 		},
 		source: {
 			template: templatePath("_shared-partials/source-tab"),
+			classes: ["scrollable"],
 		},
 	};
 
@@ -54,28 +55,20 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 	}
 
 
-	/** @override */
-	async _prepareContext(options={}) {
-		const context = await super._prepareContext(options);
+	// /** @override */
+	// async _prepareContext(options={}) {
+	// 	const context = await super._prepareContext(options);
 
-		return context;
-	}
+	// 	return context;
+	// }
 
 
-	/** @override */
-	async _preparePartContext(partId, context, options) {
-		await super._preparePartContext(partId, context, options);
+	// /** @override */
+	// async _preparePartContext(partId, context, options) {
+	// 	await super._preparePartContext(partId, context, options);
 
-		switch (partId) {
-			case "description":
-				context.enrichedDescription = await TextEditor.enrichHTML(
-					this.system.description, { async: true }
-				);
-				break;
-		}
+	// 	context.tab = context.tabs[partId];
 
-		context.tab = context.tabs[partId];
-
-		return context;
-	}
+	// 	return context;
+	// }
 }

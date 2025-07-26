@@ -9,6 +9,8 @@
 		placeholder="&mdash;"
 		type="number"
 		value="{{value}}"
-		{{disabled @root.editModeDisabled}}
+		{{#unless alwaysUnlocked}}
+			{{disabled @root.editModeDisabled}}
+		{{/unless}}
 	/>
 </div>

@@ -17,7 +17,7 @@ export default class DnMActorSheetV2
 			onRoll: this._onRoll,
 			toggleEditMode: this._onToggleEditMode,
 		},
-		classes: ["sheet", "dnm", "actor"],
+		classes: ["dnm", "actor"],
 		form: {
 			submitOnChange: true,
 		},
@@ -48,7 +48,34 @@ export default class DnMActorSheetV2
 		}
 
 		switch (this.actor.type) {
-			case "character":
+			case "character": {
+				return {
+					attributes: {
+						cssClass: this.tabGroups.primary === "attributes" ? "active" : "",
+						group: "primary",
+						id: "attributes",
+						label: "DNM.Labels.Attributes",
+					},
+					background: {
+						cssClass: this.tabGroups.primary === "background" ? "active" : "",
+						group: "primary",
+						id: "background",
+						label: "DNM.Labels.Background",
+					},
+					equipment: {
+						cssClass: this.tabGroups.primary === "equipment" ? "active" : "",
+						group: "primary",
+						id: "equipment",
+						label: "DNM.Labels.Equipment",
+					},
+					description: {
+						cssClass: this.tabGroups.primary === "description" ? "active" : "",
+						group: "primary",
+						id: "description",
+						label: "DNM.Labels.Description",
+					},
+				};
+			}
 			case "npc":
 			case "vehicle": {
 				return {
@@ -383,10 +410,14 @@ export default class DnMActorSheetV2
 
 		context.CONFIG = CONFIG.DREAMS;
 
+		// Keep sheets unlocked if debug enabled
+		const debugEnabled = game.settings.get(SYSTEM_ID, "debugEnabled");
+
+		context.editModeEnabled = debugEnabled ? true : this._editModeEnabled;
+		context.editModeDisabled = !context._editModeEnabled;
+
 		context.cssClass = isEditable ? "editable" : "locked";
 		context.editable = isEditable;
-		context.editModeEnabled = this._editModeEnabled;
-		context.editModeDisabled = !this._editModeEnabled;
 		context.document = this.document;
 		context.data = data;
 		context.limited = this.document.limited;
@@ -420,6 +451,13 @@ export default class DnMActorSheetV2
 
 		context.inventory = await this._prepareInventory();
 
+		return context;
+	}
+
+
+	async _preparePartContext(partId, context, options) {
+		await super._preparePartContext(partId, context, options);
+		context.tab = context.tabs[partId];
 		return context;
 	}
 

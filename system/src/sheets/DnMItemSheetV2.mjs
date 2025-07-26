@@ -90,14 +90,14 @@ export default class DnMItemSheetV2
 			toggleQuality: DnMItemSheetV2._onToggleQuality,
 			toggleSkillChoice: DnMItemSheetV2._onToggleSkillChoice,
 		},
-		classes: ["sheet", "dnm", "item"],
+		classes: ["dnm", "item"],
 		form: {
 			closeOnSubmit: false,
 			submitOnChange: true,
 		},
 		position: {
-			height: "auto",
 			width: 600,
+			height: 500,
 		},
 		tag: "form",
 	};

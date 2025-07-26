@@ -1,10 +1,7 @@
 @use "../abstracts" as *;
 @use "../mixins" as *;
 
-.dnm.sheet.actor.character {
-	min-width: 830px;
-	min-height: 760px;
-
+.sheet.dnm.actor.character {
 	input[type="number"]:focus {
 		box-shadow: 0 0 5px $c-character-primary;
 	}
@@ -124,6 +121,32 @@
 		color: $c-character-primary;
 
 		text-transform: uppercase;
+	}
+
+	.custom-string {
+		display: grid;
+		align-content: baseline;
+		background-color: $c-offwhite;
+
+		.string-edit {
+			margin: 2px;
+			padding: 2px;
+			text-transform: uppercase;
+			font-weight: bold;
+			text-align: center;
+			font-size: 1em;
+
+			&:hover {
+				color: $c-character-primary;
+				background-color: $c-character-primary-highlight;
+				cursor: pointer;
+			}
+		}
+
+		.add-string-row {
+			color: $c-character-primary;
+			text-align: right;
+		}
 	}
 
 	.string-header {
