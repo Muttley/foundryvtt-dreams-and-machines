@@ -10,23 +10,25 @@
 			data-menu="item"
 			data-uuid="{{uuid}}"
 		>
-			{{#if (or (eq system.weaponType 'Melee') (eq system.weaponType 'MeleeRanged'))}}
-				<a
-					data-action="roll"
-					data-attribute="might"
-					data-skill="fight"
-					data-uuid="{{this.uuid}}"
-				>
-					<i class="fas fa-sword"></i>
-				</a>
-			{{/if}}
+			{{#if item.system.equipped}}
+				{{#if (or (eq system.weaponType 'Melee') (eq system.weaponType 'MeleeRanged'))}}
+					<a
+						data-action="roll"
+						data-attribute="might"
+						data-skill="fight"
+						data-uuid="{{this.uuid}}"
+					>
+						<i class="fas fa-sword"></i>
+					</a>
+				{{/if}}
 
-			{{#if (or (eq system.weaponType 'Ranged') (eq system.weaponType 'MeleeRanged'))}}
-				<a
-					data-action="roll"
-					data-attribute="quickness"
-					data-skill="fight"
-					data-uuid="{{uuid}}"><i class="fas fa-bow-arrow"></i></a>
+				{{#if (or (eq system.weaponType 'Ranged') (eq system.weaponType 'MeleeRanged'))}}
+					<a
+						data-action="roll"
+						data-attribute="quickness"
+						data-skill="fight"
+						data-uuid="{{uuid}}"><i class="fas fa-bow-arrow"></i></a>
+				{{/if}}
 			{{/if}}
 
 			<a

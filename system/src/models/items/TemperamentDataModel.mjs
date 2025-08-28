@@ -1,9 +1,10 @@
 import AttributeSingleChoice from "./_types/AttributeSingleChoice.mjs";
 import BookSource from "./_types/BookSource.mjs";
 import Description from "../_types/Description.mjs";
+import ItemBaseDataModel from "../ItemBaseDataModel.mjs";
 import SkillBonusChoices from "./_types/SkillBonusChoices.mjs";
 
-export default class TemperamentDataModel extends foundry.abstract.TypeDataModel {
+export default class TemperamentDataModel extends ItemBaseDataModel {
 
 	get enrichedFields() {
 		return {

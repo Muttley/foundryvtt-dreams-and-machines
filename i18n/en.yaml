@@ -12,6 +12,7 @@ DNM.Combat.CombatantsTurnNotDone: Turn Not Completed
 DNM.Combat.CombatHasNotStarted: Combat Has Not Started
 DNM.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
 DNM.Error.NoAttributeSelectedForRolling: No Attribute Selected for Rolling
+DNM.Error.NoTokensSelected: You must have at least one token selected when executing this macro.
 DNM.Exhaustion.Breathless: Breathless
 DNM.Exhaustion.Confused: Confused
 DNM.Exhaustion.Despairing: Despairing
@@ -48,6 +49,7 @@ DNM.Labels.Attributes: Attributes
 DNM.Labels.Background: Background
 DNM.Labels.Bond: Bond
 DNM.Labels.Bonds: Bonds
+DNM.Labels.Carried: Carried
 DNM.Labels.Category: Category
 DNM.Labels.CharacterTruths: Character Truths
 DNM.Labels.Choices: Choices
@@ -69,6 +71,8 @@ DNM.Labels.Delete: Delete
 DNM.Labels.DeleteQuality: Delete Quality
 DNM.Labels.Description: Description
 DNM.Labels.Dialog.Add: Add
+DNM.Labels.Dialog.ConfirmDelete.Prompt: Are you sure you wish to delete this item?
+DNM.Labels.Dialog.ConfirmDelete.Title: Delete Item?
 DNM.Labels.Dialog.Save: Save
 DNM.Labels.DicePrompt.Attribute: Attribute
 DNM.Labels.DicePrompt.Complication: Complication Range
@@ -120,6 +124,7 @@ DNM.Labels.Scale: Scale
 DNM.Labels.SelectQuality: Select Quality...
 DNM.Labels.SelectSpecialAbility: Select Special Ability...
 DNM.Labels.SelectTalent: Select Talent...
+DNM.Labels.SendToChat: Send to Chat
 DNM.Labels.ShortTermGoals: Short-Term
 DNM.Labels.Skill: Skill
 DNM.Labels.SkillChoices: Skill Choices
@@ -135,6 +140,7 @@ DNM.Labels.SpiritPool: Spirit Pool
 DNM.Labels.StartingCoin: Starting Coin
 DNM.Labels.StartingGear: Starting Gear
 DNM.Labels.StartTyping: Start Typing...
+DNM.Labels.Stashed: Stashed
 DNM.Labels.Successes: Successes
 DNM.Labels.Supply: Supply
 DNM.Labels.SupplyPointCost: Supply Point Cost
@@ -148,6 +154,8 @@ DNM.Labels.Temperament: Temperament
 DNM.Labels.Threat: Threat
 DNM.Labels.TL: TL
 DNM.Labels.TN: TN
+DNM.Labels.ToggleEquipped: Toggle Equipped
+DNM.Labels.ToggleStashed: Toggle Stashed
 DNM.Labels.Truth: Truth
 DNM.Labels.Truths: Truths
 DNM.Labels.Unknown: Unknown
@@ -266,6 +274,8 @@ DNM.Tooltips.Actor.AddHarm: Add Harm
 DNM.Tooltips.Actor.AddLongTermGoal: Add Long-Term Goal
 DNM.Tooltips.Actor.AddShortTermGoal: Add Short-Term Goal
 DNM.Tooltips.Actor.AddTruth: Add Truth
+DNM.Tooltips.Item.DecreaseQuantity: Decrease Quantity
+DNM.Tooltips.Item.IncreaseQuantity: Increase Quantity
 DNM.Tooltips.Item.RemoveSelectedItem: Remove Selected Item
 DNM.Tooltips.Sheet.LockSheet: Lock Sheet
 DNM.Tooltips.Sheet.UnlockSheet: Unlock Sheet

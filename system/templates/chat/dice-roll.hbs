@@ -15,6 +15,33 @@
 				{{/each}}
 			</span>
 		{{/if}}
+		{{#if item.system.weapon.damage}}
+			<span class="item-damage">
+				{{#each item.system.weapon.damage}}
+					{{this.type}} {{this.value}}{{#unless @last}}<br>{{/unless}}
+				{{/each}}
+			</span>
+		{{/if}}
+		{{#if (and item item.system.isWeapon)}}
+			<span class="result-item" style="grid-column: span 2">
+				<span class="result-item-header">
+					{{localize "DNM.Labels.Qualities" }}
+				</span>
+				<span class="qualities">
+					{{#if item.enabledQualities}}
+						<em>
+							{{#each item.enabledQualities as |quality|}}
+								<span
+									data-tooltip="{{localize (concat "DNM.QualityTooltip.Weapon." quality.key)}}"
+								>{{quality.name}}{{#if @last}}.{{else}},{{/if}}</span>
+							{{/each}}
+						</em>
+					{{else}}
+						&mdash;
+					{{/if}}
+				</span>
+			</span>
+		{{/if}}
 	{{/if}}
 
 	<span class="chat-description">
@@ -68,47 +95,6 @@
 			</span>
 			{{complications}}
 		</span>
-
-		{{#if (and item item.system.isWeapon)}}
-			<span class="result-item">
-				<span class="result-item-header">
-					{{localize "DNM.Labels.Damage" }}
-				</span>
-				<span class="qualities">
-					{{#if item.system.weapon.damageQualities}}
-						{{#each item.system.weapon.damageQualities}}
-							<span class="quality">
-								<em>{{label}}{{#if (gt rating 0)}} {{rating}}{{/if}}</em>
-							</span>
-							{{#unless @last}}
-								<span>
-									{{localize "DNM.Labels.Weapon.or"}}
-								</span>
-							{{/unless}}
-						{{/each}}
-					{{else}}
-						&mdash;
-					{{/if}}
-				</span>
-			</span>
-
-			<span class="result-item">
-				<span class="result-item-header">
-					{{localize "DNM.Labels.Qualities" }}
-				</span>
-				<span class="qualities">
-					{{#if item.system.weapon.qualities}}
-						{{#each item.system.weapon.qualities}}
-							<span class="quality">
-								<em>{{label}}{{#if (gt rating 0)}} {{ rating }}{{/if}}{{#unless @last}},{{/unless}}</em>
-							</span>
-						{{/each}}
-					{{else}}
-						&mdash;
-					{{/if}}
-				</span>
-			</span>
-		{{/if}}
 	</span>
 
 	<div class="dice-list">

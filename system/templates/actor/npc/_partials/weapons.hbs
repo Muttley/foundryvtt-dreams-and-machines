@@ -13,12 +13,7 @@
 		{{localize "DNM.Labels.Weapons"}}
 	</span>
 
-	<ol
-		class="item-list"
-		{{#unless @root.editModeDisabled}}
-			data-tooltip="{{tooltip "edit-delete-mouse-controls"}}"
-		{{/unless}}
-	>
+	<ol class="item-list">
 		{{#if (lookup inventory "weapon")}}
 			{{#each (lookup inventory "weapon") as |weapon|}}
 				<li

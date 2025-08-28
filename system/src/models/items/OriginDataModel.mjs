@@ -1,19 +1,14 @@
+import AttributeChoices from "./_types/AttributeChoices.mjs";
 import BasicAttributes from "./_types/BasicAttributes.mjs";
 import BookSource from "./_types/BookSource.mjs";
 import Configured from "./_types/Configured.mjs";
 import Description from "../_types/Description.mjs";
-import AttributeChoices from "./_types/AttributeChoices.mjs";
+import ItemBaseDataModel from "../ItemBaseDataModel.mjs";
 import SkillChoices from "./_types/SkillChoices.mjs";
 import Skills from "../_types/Skills.mjs";
 import SpecialAbilityChoices from "./_types/SpecialAbilityChoices.mjs";
 
-export default class OriginDataModel extends foundry.abstract.TypeDataModel {
-
-	get enrichedFields() {
-		return {
-			description: this.description,
-		};
-	}
+export default class OriginDataModel extends ItemBaseDataModel {
 
 	static defineSchema() {
 		const fields = foundry.data.fields;

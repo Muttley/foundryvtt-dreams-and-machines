@@ -3,13 +3,13 @@
 
 .sheet.dnm {
 
-	a {
-		cursor: pointer;
+	// a {
+	// 	cursor: pointer;
 
-		&:hover {
-			text-shadow: none;
-		}
-	}
+	// 	&:hover {
+	// 		text-shadow: none;
+	// 	}
+	// }
 
 	b.item-name {
 		text-transform: uppercase;
@@ -63,10 +63,62 @@
 		margin-top: 0.5em;
 	}
 
-	ol.item-list{
+	ol.item-list {
 		@include p-reset;
 		padding: 0.5rem;
 		background-color: $c-offwhite;
+
+		li {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			padding: 2px 4px;
+			// border-bottom: 1px solid black;
+
+			&.item.draggable.zero-remaining {
+				text-decoration: line-through;
+				color: var(--inactive-control);
+			}
+
+			.actions {
+				flex: 0 0 120px;
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+
+				a {
+					color: var(--inactive-control);
+
+					&.active {
+						color: var(--active-control);
+					}
+				}
+			}
+
+			.hideable {
+				p {
+					margin-top: 8px;
+					margin-left: 8px;
+				}
+			}
+
+			.item-name {
+				flex: 3;
+				overflow: hidden;
+				align-items: center;
+
+				b {
+					text-transform: uppercase;
+				}
+			}
+
+			.quantity {
+				flex: 0 0 80px;
+				text-align: center;
+				font-size: 13px;
+			}
+		}
 
 		p {
 			@include p-reset;
@@ -148,10 +200,10 @@
 
 	.sheet-header {
 		display: grid;
-		grid-template-columns: min-content 1fr min-content;
+		grid-template-columns: min-content 1fr max-content;
 		padding: 0.25rem;
 		align-items: center;
-		gap: 1rem;
+		gap: 0.25rem;
 		background-color: black;
 
 		img.item-image,
@@ -162,7 +214,7 @@
 	}
 
 	.sheet-header-control {
-		padding: 8px;
+		padding: 4px;
 		color: white;
 		text-shadow: 1px 1px 2px black;
 	}

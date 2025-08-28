@@ -1,4 +1,4 @@
-const renderTemplate = foundry.applications.handlebars.renderTemplate;
+// const renderTemplate = foundry.applications.handlebars.renderTemplate;
 
 export default class DnMRoller {
 
@@ -9,7 +9,7 @@ export default class DnMRoller {
 		await roll.evaluate();
 
 		if (game.dice3d) {
-			const {whisper, blind } = this.getRollModeSettings();
+			const {whisper, blind} = ChatMessage.applyRollMode({}, game.settings.get("core", "rollMode"));
 			await game.dice3d.showForRoll(roll, game.user, true, whisper, blind);
 		}
 
@@ -17,60 +17,6 @@ export default class DnMRoller {
 	}
 
 
-	static getRollModeSettings() {
-		const rollMode = game.settings.get("core", "rollMode");
-
-		let blind = false;
-		let whisper = null;
-
-		switch (rollMode) {
-			case "blindroll": {
-				blind = true;
-			}
-			case "gmroll": {
-				const gmList = game.users.filter(user => user.isGM);
-				const gmIDList = [];
-				gmList.forEach(gm => gmIDList.push(gm.id));
-				whisper = gmIDList;
-				break;
-			}
-			case "roll": {
-				const userList = game.users.filter(user => user.active);
-				const userIDList = [];
-				userList.forEach(user => userIDList.push(user.id));
-				whisper = userIDList;
-				break;
-			}
-			case "selfroll": {
-				whisper = [game.user.id];
-				break;
-			}
-			default: {
-				break;
-			}
-		}
-		return { whisper, blind };
-	}
-
-
-	/**
-	 * @param {DnMActor} actor
-	 *
-	 * @param {object} attribute
-	 * @param {string} attribute.label
-	 * @param {number} attribute.value
-	 *
-	 * @param {object|undefined} skill
-	 * @param {string} skill.label
-	 * @param {number} skill.value
-	 *
-	 * @param {number} numDice
-	 * @param {number} complicationRange
-	 * @param {number|undefined} fixedTargetNumber A fixed Target Number to use.
-	 * @param {number|undefined} fixedFocus A fixed Focus Number to use.
-	 * @param {DnMItem|undefined} item An optional item (usually a weapon) to
-	 *                                 include along with the roll.
-	 */
 	static async roll({
 		actor,
 		attribute,
@@ -89,47 +35,36 @@ export default class DnMRoller {
 
 		const roll = await this.performRoll(`${numDice}d20`);
 
-		const result = this.parseRoll({
+		const {successes, complications, results} = this.parseRoll({
 			roll,
 			skillValue,
 			targetNumber,
 			complicationRange,
 		});
 
-		const template = await renderTemplate("systems/dreams-and-machines/templates/chat/dice-roll.hbs", {
-			...result,
+		const data = {
 			attribute: attribute?.label,
 			complicationRange,
+			complications,
 			isGM: game.user.isGM,
 			item,
 			npcRoll,
+			results,
 			rollTitle,
 			skill: skill?.label,
 			skillValue,
+			successes,
 			targetNumber,
-		});
+		};
 
-		await ChatMessage.create({
-			user: game.userId,
-			speaker: { actor: actor?.id },
-			rollMode: game.settings.get("core", "rollMode"),
-			content: template,
-			roll,
-		});
+		dreams.chat.renderRollMessage(actor, data);
 	}
 
-	/**
-	 * @param {Roll} roll
-	 * @param {number} skillValue
-	 * @param {number} targetNumber
-	 * @param {number} complicationRange
-	 */
+
 	static parseRoll({ roll, skillValue, targetNumber, complicationRange }) {
 		let successes = 0;
 		let complications = 0;
-		/**
-		 * @type {ParsedResultFace[]}
-		 */
+
 		const results = [];
 
 		roll.dice.forEach(term => {

@@ -13,17 +13,31 @@
 		value="{{document.name}}"
 		{{disabled editModeDisabled}}
 	/>
-	<a class="sheet-header-control" data-action="toggleEditMode">
-		{{#if editModeEnabled}}
-			<i
-				class="fa-solid fa-lock-open"
-				data-tooltip="DNM.Tooltips.Sheet.LockSheet"
-			></i>
-		{{else}}
-			<i
-				class="fa-solid fa-lock"
-				data-tooltip="DNM.Tooltips.Sheet.UnlockSheet"
-			></i>
+	<div>
+		{{#if isItem}}
+			<a
+				class="sheet-header-control"
+				data-action="sendToChat"
+				data-uuid="{{document.uuid}}"
+			>
+				<i
+					class="fa-solid fa-message"
+					data-tooltip="DNM.Labels.SendToChat"
+				></i>
+			</a>
 		{{/if}}
-	</a>
+		<a class="sheet-header-control" data-action="toggleEditMode">
+			{{#if editModeEnabled}}
+				<i
+					class="fa-solid fa-lock-open"
+					data-tooltip="DNM.Tooltips.Sheet.LockSheet"
+				></i>
+			{{else}}
+				<i
+					class="fa-solid fa-lock"
+					data-tooltip="DNM.Tooltips.Sheet.UnlockSheet"
+				></i>
+			{{/if}}
+		</a>
+	</div>
 </header>

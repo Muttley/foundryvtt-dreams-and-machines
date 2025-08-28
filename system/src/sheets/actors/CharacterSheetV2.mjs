@@ -40,10 +40,12 @@ export default class CharacterSheetV2 extends DnMActorSheetV2 {
 			template: templatePath("actor/character/background-tab"),
 			templates: [
 				"actor/_shared-partials/background-item",
+				"actor/_shared-partials/custom-string-list",
 				"actor/character/_partials/archetype-goal",
 				"actor/character/_partials/attitude",
 				"actor/character/_partials/exhaustion",
 				"actor/character/_partials/goals",
+				"actor/character/_partials/talents",
 			].map(path => templatePath(path)),
 			classes: ["scrollable"],
 		},
@@ -52,6 +54,10 @@ export default class CharacterSheetV2 extends DnMActorSheetV2 {
 			templates: [
 				"_shared-partials/number-field",
 				"actor/_shared-partials/custom-string-list",
+				"actor/character/_partials/equipment",
+				"actor/character/_partials/equipment/armor",
+				"actor/character/_partials/equipment/equipment",
+				"actor/character/_partials/equipment/weapon",
 				"actor/character/_partials/supply-points",
 			].map(path => templatePath(path)),
 			classes: ["scrollable"],

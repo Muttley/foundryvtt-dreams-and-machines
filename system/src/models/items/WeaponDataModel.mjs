@@ -1,16 +1,16 @@
 import BookSource from "./_types/BookSource.mjs";
 import Damage from "./_types/Damage.mjs";
 import Description from "../_types/Description.mjs";
+import ItemBaseDataModel from "../ItemBaseDataModel.mjs";
 import PhysicalItem from "./_types/PhysicalItem.mjs";
 import WeaponQualities from "./_types/WeaponQualities.mjs";
 
-export default class WeaponDataModel extends foundry.abstract.TypeDataModel {
+export default class WeaponDataModel extends ItemBaseDataModel {
 
-	get enrichedFields() {
-		return {
-			description: this.description,
-		};
+	get isWeapon() {
+		return true;
 	}
+
 
 	static defineSchema() {
 		const fields = foundry.data.fields;
@@ -32,4 +32,5 @@ export default class WeaponDataModel extends foundry.abstract.TypeDataModel {
 			}),
 		};
 	}
+
 }

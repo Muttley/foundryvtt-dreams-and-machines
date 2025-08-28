@@ -1,15 +1,10 @@
 import BookSource from "./_types/BookSource.mjs";
 import Damage from "./_types/Damage.mjs";
 import Description from "../_types/Description.mjs";
+import ItemBaseDataModel from "../ItemBaseDataModel.mjs";
 import WeaponQualities from "./_types/WeaponQualities.mjs";
 
-export default class MajorNPCActionDataModel extends foundry.abstract.TypeDataModel {
-
-	get enrichedFields() {
-		return {
-			description: this.description,
-		};
-	}
+export default class MajorNPCActionDataModel extends ItemBaseDataModel {
 
 	get hasSkillTest() {
 		return this.skillTest.attribute !== "—" && this.skillTest.skill !== "—";

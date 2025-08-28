@@ -16,20 +16,20 @@ import * as app from "../app/_module.mjs";
 import { registerCombatTracker } from "../combat/CombatTracker2d20V2.mjs";
 import { registerFonts } from "../fonts.mjs";
 import { registerHandlebarsHelpers } from "../handlebars.mjs";
+import { registerTextEditorEnrichers } from "../enrichers.mjs";
 
+import DnMChat from "../system/DnMChat.mjs";
 import DnMCompendiums from "../system/DnMCompendiums.mjs";
 import DnMHooks from "../system/DnMHooks.mjs";
 import DnMUtils from "../utils/DnMUtils.mjs";
 import Logger from "../utils/Logger.mjs";
 
 import registerSettings from "../settings.mjs";
-import registerTemplates from "../templates.mjs";
 
 
 export async function initHook() {
 	console.debug(`${SYSTEM_NAME} | Running init hook`);
 
-	// CONFIG.debug.hooks = true;
 
 	// Add custom constants for configuration.
 	CONFIG.DREAMS = DREAMS;
@@ -41,6 +41,7 @@ export async function initHook() {
 	// accessible in global contexts.
 	globalThis.dreams = {
 		app,
+		chat: DnMChat,
 		compendiums: DnMCompendiums,
 		dialog,
 		utils: DnMUtils,
@@ -53,6 +54,9 @@ export async function initHook() {
 
 	registerSettings();
 
+	const debugEnabled = game.settings.get(SYSTEM_ID, "debugEnabled");
+	if (debugEnabled) CONFIG.debug.hooks = true;
+
 	registerActors();
 	registerItems();
 
@@ -60,7 +64,7 @@ export async function initHook() {
 
 	registerFonts();
 	registerHandlebarsHelpers();
-	registerTemplates();
+	registerTextEditorEnrichers();
 
 	DnMHooks.attach();
 }

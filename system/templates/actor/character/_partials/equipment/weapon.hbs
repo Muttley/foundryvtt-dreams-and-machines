@@ -1,0 +1,128 @@
+<li
+	{{#ifEq item.system.quantity 0}}
+		class="item draggable zero-remaining"
+	{{else}}
+		class="item draggable"
+	{{/ifEq}}
+	data-action="showDescription"
+	data-item-id="{{item.id}}"
+	data-menu="item"
+	data-uuid="{{item.uuid}}"
+>
+
+	<div class="item-name">
+		<b>
+			{{item.name}}
+			{{#if (gt system.techLevel 0)}}
+				(TL-{{ system.techLevel }},
+				{{localize (concat "DNM.Labels.Weapon." system.weaponType)}})
+			{{else}}
+				({{localize (concat "DNM.Labels.Weapon." system.weaponType)}})
+			{{/if}}
+			{{#ifCond item.system.quantity ">" 1}}
+				<span style="text-transform: lowercase;">(x{{item.system.quantity}})</span>
+			{{/ifCond}}
+		</b>
+		{{#if item.system.damage}}
+			<em>
+				{{#each item.system.damage}}
+					<span>{{this.type}} {{this.value}}{{#if @last}}.{{else}},{{/if}}</span>
+				{{/each}}
+			</em>
+		{{/if}}
+		{{#if item.enabledQualities}}
+			<em>
+				{{#each item.enabledQualities as |quality|}}
+					<span
+						data-tooltip="{{localize (concat "DNM.QualityTooltip.Weapon." quality.key)}}"
+					>{{quality.name}}{{#if @last}}.{{else}},{{/if}}</span>
+				{{/each}}
+			</em>
+		{{/if}}
+		<em class="hideable hidden">
+			{{{item.enrichedDescription}}}
+		</em>
+	</div>
+	<div class="quantity">
+		{{#if @root.editModeEnabled}}
+			<a
+				data-action="itemDecrement"
+				data-uuid="{{item.uuid}}"
+				data-tooltip="{{localize 'DNM.Tooltips.Item.DecreaseQuantity'}}"
+			>
+				<i class="fa-regular fa-minus fa-xs"></i>
+			</a>
+
+			{{item.system.quantity}}
+
+			<a
+				data-action="itemIncrement"
+				data-uuid="{{item.uuid}}"
+				data-tooltip="{{localize 'DNM.Tooltips.Item.IncreaseQuantity'}}"
+			>
+				<i class="fa-regular fa-plus fa-xs"></i>
+			</a>
+		{{/if}}
+	</div>
+	<div class="actions">
+		{{#if item.system.equipped}}
+			{{#if (or (eq item.system.weaponType 'Melee') (eq item.system.weaponType 'MeleeRanged'))}}
+				<a
+					class="active"
+					data-action="onRoll"
+					data-skill="fight"
+					data-uuid="{{item.uuid}}"
+					data-attribute="might"
+				>
+					<i class="fas fa-sword"></i>
+					&nbsp;
+				</a>
+			{{/if}}
+
+			{{#if (or (eq item.system.weaponType 'Ranged') (eq item.system.weaponType 'MeleeRanged'))}}
+				<a
+					class="active"
+					data-action="onRoll"
+					data-skill="fight"
+					data-uuid="{{item.uuid}}"
+					data-attribute="quickness"
+				>
+					<i class="fas fa-bow-arrow"></i>
+					&nbsp;
+				</a>
+			{{/if}}
+		{{/if}}
+
+
+		{{#unless item.system.stashed}}
+			<a
+				{{#if item.system.equipped}}
+					class="active"
+				{{else}}
+					class="inactive"
+				{{/if}}
+				data-action="toggleEquipped"
+				data-uuid="{{item.uuid}}"
+				data-tooltip="{{localize "DNM.Labels.ToggleEquipped"}}"
+			>
+				<i class="fas fa-user-shield"></i>
+				&nbsp;
+			</a>
+		{{/unless}}
+
+		{{#unless item.system.equipped}}
+			<a
+				{{#if item.system.stashed}}
+					class="active"
+				{{else}}
+					class="inactive"
+				{{/if}}
+				data-action="toggleStashed"
+				data-uuid="{{item.uuid}}"
+				data-tooltip="{{localize "DNM.Labels.ToggleStashed"}}"
+			>
+				<i class="fas fa-box"></i>
+			</a>
+		{{/unless}}
+	</div>
+</li>

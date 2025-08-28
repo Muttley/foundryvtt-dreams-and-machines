@@ -14,3 +14,10 @@ $c-secondary-highlight: rgba(54 148 136 / 0.1);
 $c-secondary-selected: rgb(35, 97, 89);
 $c-secondary-unselected: rgba(54 148 136 / 0.3);
 $c-secondary: rgb(54, 148, 136);
+$inactive-control: rgba(0 0 0 / 0.4) !default;
+$active-control: rgba(0 0 0 / 1.0) !default;
+
+:root {
+	--inactive-control: #{$inactive-control};
+	--active-control: #{$active-control};
+}

@@ -18,6 +18,7 @@
 		font-family: 'Bruno Ace';
 		text-shadow: unset;
 	}
+
 }
 
 .narrow-text-field {
@@ -32,4 +33,18 @@
 	&.editing {
 		height: 15em;
 	}
+}
+
+.skill-roll-request {
+	text-transform: uppercase;
+	// line-height: 1.5;
+	font-weight: bold;
+	// background-color: black;
+	// color: white;
+
+	a:hover {
+	    text-shadow: 0 0 8px var(--color-shadow-primary);
+	}
+
+
 }

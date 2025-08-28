@@ -18,12 +18,7 @@
 		{{/if}}
 	</span>
 
-	<ol
-		class="item-list"
-		{{#unless @root.editModeDisabled}}
-			data-tooltip="{{tooltip "edit-delete-mouse-controls"}}"
-		{{/unless}}
-	>
+	<ol class="item-list">
 		{{#if (lookup inventory "major_npc_action")}}
 			{{#each (lookup inventory "major_npc_action")}}
 				<li
@@ -31,17 +26,16 @@
 					{{#if @root.editModeEnabled}}
 						data-action="editItem"
 					{{else}}
-						data-action="useSpecialAbility"
+						data-action="showDescription"
 					{{/if}}
 					data-item-id="{{this.id}}"
 					data-uuid="{{this.uuid}}"
 				>
-					<i class="fas fa-dice-d20"></i>
 					<b class="item-name">
-						[{{this.system.roll.min}}-{{this.system.roll.max}}]
-						{{this.name}}:
+						{{this.name}}
 					</b>
-					<em>
+					<em>({{this.system.roll.min}}-{{this.system.roll.max}})</em>
+					<em class="hideable hidden">
 						{{{this.enrichedDescription}}}
 					</em>
 				</li>

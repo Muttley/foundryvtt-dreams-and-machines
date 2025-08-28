@@ -10,6 +10,7 @@ export function registerHandlebarsHelpers() {
 		return outStr;
 	});
 
+
 	Handlebars.registerHelper("fromConfig", function(arg1, arg2) {
 		return CONFIG.DREAMS[arg1][arg2] ? CONFIG.DREAMS[arg1][arg2] : arg2;
 	});
@@ -48,6 +49,16 @@ export function registerHandlebarsHelpers() {
 	});
 
 
+	Handlebars.registerHelper("ifEq", function(arg1, arg2, options) {
+		return arg1 === arg2 ? options.fn(this) : options.inverse(this);
+	});
+
+
+	Handlebars.registerHelper("ifNeq", function(arg1, arg2, options) {
+		return arg1 !== arg2 ? options.fn(this) : options.inverse(this);
+	});
+
+
 	Handlebars.registerHelper("select", function(selected, options) {
 		const escapedValue = RegExp.escape(Handlebars.escapeExpression(selected));
 		const rgx = new RegExp(` value=["']${escapedValue}["']`);
@@ -59,6 +70,7 @@ export function registerHandlebarsHelpers() {
 	Handlebars.registerHelper("template", function(arg1) {
 		return templatePath(arg1);
 	});
+
 
 	Handlebars.registerHelper("tooltip", function(arg1) {
 		return CONFIG.DREAMS.TOOLTIPS[arg1] ?? `Unable to locate tooltip ${name}`;

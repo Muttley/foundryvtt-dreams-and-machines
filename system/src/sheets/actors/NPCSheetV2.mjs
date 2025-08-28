@@ -28,6 +28,7 @@ export default class NPCSheetV2 extends DnMActorSheetV2 {
 			template: templatePath("actor/npc/attributes-tab"),
 			templates: [
 				"actor/_shared-partials/actions",
+				"actor/_shared-partials/custom-string-list",
 				"actor/_shared-partials/special-abilities",
 				"actor/npc/_partials/attributes",
 				"actor/npc/_partials/truth",

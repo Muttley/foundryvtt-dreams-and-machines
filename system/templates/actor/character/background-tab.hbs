@@ -24,9 +24,15 @@
 					placeholder=(localize "DNM.Labels.AddTemperament")
 				}}
 
+				{{> (template "actor/character/_partials/archetype-goal") }}
+				{{> (template "actor/character/_partials/attitude") }}
+				{{> (template "actor/character/_partials/exhaustion") }}
+
+			</div>
+			<div>
 				<div class="strings">
 
-					{{> actor/_shared-partials/custom-string-list
+					{{> (template "actor/_shared-partials/custom-string-list")
 						addRowLabel=""
 						currentValues=system.bonds
 						key="system.bonds"
@@ -37,11 +43,7 @@
 				</div>
 
 				{{> (template "actor/character/_partials/goals") }}
-			</div>
-			<div>
-				{{> (template "actor/character/_partials/archetype-goal") }}
-				{{> (template "actor/character/_partials/attitude") }}
-				{{> (template "actor/character/_partials/exhaustion") }}
+				{{> (template "actor/character/_partials/talents") }}
 			</div>
 		</div>
 	</div>

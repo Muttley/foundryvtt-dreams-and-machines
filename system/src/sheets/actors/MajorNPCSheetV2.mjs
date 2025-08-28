@@ -31,6 +31,7 @@ export default class MajorNPCSheetV2 extends DnMActorSheetV2 {
 			templates: [
 				"actor/_shared-partials/special-abilities",
 				"actor/major-npc/_partials/major-npc-actions",
+				"actor/_shared-partials/custom-string-list",
 			].map(path => templatePath(path)),
 			classes: ["scrollable"],
 		},
@@ -81,8 +82,10 @@ export default class MajorNPCSheetV2 extends DnMActorSheetV2 {
 			}
 		}
 
-		dreams.log(rolledMajorActions);
-		// TODO Chat card for result
+		for (const action of rolledMajorActions) {
+			await action.sendToChat();
+			await action.triggerMajorNpcActionRoll();
+		}
 	}
 
 

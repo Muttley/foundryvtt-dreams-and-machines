@@ -85,6 +85,7 @@ export default class DnMItemSheetV2
 			addDamageType: DnMItemSheetV2._onAddDamageType,
 			deleteChoice: DnMItemSheetV2._deleteChoiceItem,
 			deleteDamageType: DnMItemSheetV2._onDeleteDamageType,
+			sendToChat: DnMItemSheetV2._onSendToChat,
 			toggleAttributeChoice: DnMItemSheetV2._onToggleAttributeChoice,
 			toggleEditMode: DnMItemSheetV2._onToggleEditMode,
 			toggleQuality: DnMItemSheetV2._onToggleQuality,
@@ -309,6 +310,13 @@ export default class DnMItemSheetV2
 	}
 
 
+	static async _onSendToChat(event, target) {
+		event.preventDefault();
+		const item = await fromUuid(target.dataset.uuid);
+		if (item) item.sendToChat();
+	}
+
+
 	static async _onToggleAttributeChoice(event, target) {
 		event.preventDefault();
 		this.#toggleAttributeChoice(target.dataset.attributeId);
@@ -345,15 +353,15 @@ export default class DnMItemSheetV2
 
 		const isEditable = this.isEditable;
 
+		context.isActor = this.document.documentName === "Actor";
+		context.isItem = this.document.documentName === "Item";
+
 		context.CONFIG = CONFIG.DREAMS;
 		context.cssClass = isEditable ? "editable" : "locked";
 		context.editable = isEditable;
 
-		// Keep sheets unlocked if debug enabled
-		const debugEnabled = game.settings.get(SYSTEM_ID, "debugEnabled");
-
-		context.editModeEnabled = debugEnabled ? true : this._editModeEnabled;
-		context.editModeDisabled = !context.editModeEnabled;
+		context.editModeEnabled = isEditable && this._editModeEnabled;
+		context.editModeDisabled = !(isEditable && this._editModeEnabled);
 
 		context.document = this.document;
 

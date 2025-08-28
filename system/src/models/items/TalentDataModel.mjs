@@ -1,13 +1,8 @@
 import BookSource from "./_types/BookSource.mjs";
 import Description from "../_types/Description.mjs";
+import ItemBaseDataModel from "../ItemBaseDataModel.mjs";
 
-export default class TalentDataModel extends foundry.abstract.TypeDataModel {
-
-	get enrichedFields() {
-		return {
-			description: this.description,
-		};
-	}
+export default class TalentDataModel extends ItemBaseDataModel {
 
 	static defineSchema() {
 		const fields = foundry.data.fields;

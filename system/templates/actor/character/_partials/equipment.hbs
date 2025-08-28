@@ -1,0 +1,97 @@
+<div>
+	<span class="label">
+		{{localize "DNM.Labels.Equipped"}}
+	</span>
+
+	<ol class="item-list">
+		{{#if (lookup inventory "equipped")}}
+			{{#each (lookup inventory "equipped") as |item|}}
+				{{#ifEq item.type "weapon"}}
+					{{> (template "actor/character/_partials/equipment/weapon")
+						item=item
+					}}
+				{{/ifEq}}
+				{{#ifEq item.type "armor"}}
+					{{> (template "actor/character/_partials/equipment/armor")
+						item=item
+					}}
+				{{/ifEq}}
+				{{#ifEq item.type "equipment"}}
+					{{> (template "actor/character/_partials/equipment/equipment")
+						item=item
+					}}
+				{{/ifEq}}
+			{{/each}}
+		{{else}}
+			<div class="placeholder">
+				{{localize "DNM.Placeholders.None"}}
+			</div>
+		{{/if}}
+	</ol>
+</div>
+
+
+<div>
+	<span class="label">
+		{{localize "DNM.Labels.Carried"}}
+	</span>
+
+	<ol class="item-list">
+		{{#if (lookup inventory "carried")}}
+			{{#each (lookup inventory "carried") as |item|}}
+				{{#ifEq item.type "weapon"}}
+					{{> (template "actor/character/_partials/equipment/weapon")
+						item=item
+					}}
+				{{/ifEq}}
+				{{#ifEq item.type "armor"}}
+					{{> (template "actor/character/_partials/equipment/armor")
+						item=item
+					}}
+				{{/ifEq}}
+				{{#ifEq item.type "equipment"}}
+					{{> (template "actor/character/_partials/equipment/equipment")
+						item=item
+					}}
+				{{/ifEq}}
+			{{/each}}
+		{{else}}
+			<div class="placeholder">
+				{{localize "DNM.Placeholders.None"}}
+			</div>
+		{{/if}}
+	</ol>
+</div>
+
+
+<div>
+	<span class="label">
+		{{localize "DNM.Labels.Stashed"}}
+	</span>
+
+	<ol class="item-list">
+		{{#if (lookup inventory "stashed")}}
+			{{#each (lookup inventory "stashed") as |item|}}
+				{{#ifEq item.type "weapon"}}
+					{{> (template "actor/character/_partials/equipment/weapon")
+						item=item
+					}}
+				{{/ifEq}}
+				{{#ifEq item.type "armor"}}
+					{{> (template "actor/character/_partials/equipment/armor")
+						item=item
+					}}
+				{{/ifEq}}
+				{{#ifEq item.type "equipment"}}
+					{{> (template "actor/character/_partials/equipment/equipment")
+						item=item
+					}}
+				{{/ifEq}}
+			{{/each}}
+		{{else}}
+			<div class="placeholder">
+				{{localize "DNM.Placeholders.None"}}
+			</div>
+		{{/if}}
+	</ol>
+</div>

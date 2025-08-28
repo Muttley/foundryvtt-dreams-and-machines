@@ -13,7 +13,7 @@
 		</div>
 		<div class="grid-2-columns">
 			<div>
-				{{> actor/_shared-partials/custom-string-list
+				{{> (template "actor/_shared-partials/custom-string-list")
 					addRowLabel=""
 					currentValues=system.truths
 					key="system.truths"
@@ -23,7 +23,7 @@
 			</div>
 
 			<div>
-				{{> actor/_shared-partials/custom-string-list
+				{{> (template "actor/_shared-partials/custom-string-list")
 					addRowLabel=""
 					currentValues=system.harms
 					key="system.harms"

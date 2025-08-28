@@ -4,7 +4,6 @@
 			<a
 				data-action="addItem"
 				data-item-type="special_ability"
-				{{disabled @root.editModeDisabled}}
 			>
 				<i class="fa-solid fa-plus"></i>
 			</a>
@@ -13,12 +12,7 @@
 		{{localize "DNM.Labels.SpecialAbilities"}}
 	</span>
 
-	<ol
-		class="scrollable item-list"
-		{{#unless @root.editModeDisabled}}
-			data-tooltip="{{tooltip "edit-delete-mouse-controls"}}"
-		{{/unless}}
-	>
+	<ol class="item-list">
 		{{#if (lookup inventory "special_ability")}}
 			{{#each (lookup inventory "special_ability")}}
 				<li
@@ -33,7 +27,7 @@
 				>
 					<a>
 						<b class="item-name">
-							{{this.name}}:
+							{{this.name}}
 						</b>
 						<em>
 							{{{this.enrichedDescription}}}

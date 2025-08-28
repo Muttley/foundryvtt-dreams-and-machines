@@ -69,6 +69,7 @@ export default class ConfigureOrigin
 		}
 	}
 
+
 	async _prepareContext() {
 		if (this.#firstRun) await this.#onFirstRun();
 

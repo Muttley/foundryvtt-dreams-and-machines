@@ -2,10 +2,11 @@ import AttributeBonusChoices from "./_types/AttributeBonusChoices.mjs";
 import BookSource from "./_types/BookSource.mjs";
 import Configured from "./_types/Configured.mjs";
 import Description from "../_types/Description.mjs";
+import ItemBaseDataModel from "../ItemBaseDataModel.mjs";
 import SkillBonusChoices from "./_types/SkillBonusChoices.mjs";
 
 export default class ArchetypeDataModel
-	extends foundry.abstract.TypeDataModel {
+	extends ItemBaseDataModel {
 
 	get enrichedFields() {
 		return {
