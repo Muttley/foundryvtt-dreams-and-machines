@@ -6,6 +6,54 @@ export default class DnMUtils {
 	}
 
 
+	// Work out which actor to use.  If the user clicking the link is the GM and
+	// they have tokens selected then use these.
+	//
+	// Players always use their own character Actor.
+	//
+	static async getActors() {
+		let actors = [];
+
+		if (game.user.isGM) {
+			for (const token of canvas.tokens.controlled) {
+				actors.push(token.actor);
+			}
+		}
+		else {
+			actors.push(game.user.character);
+		}
+
+		return actors;
+	}
+
+
+	// Work out the current Actor.
+	// If the user is the GM then use the current token they have selected.
+	//
+	static async getCurrentActor() {
+		let actor = null;
+
+		if (game.user.isGM) {
+			const controlledTokenCount = canvas.tokens.controlled.length;
+			if (controlledTokenCount > 0) {
+				if (controlledTokenCount !== 1) {
+					return ui.notifications.warn(
+						game.i18n.localize("DNM.Error.MoreThanOneTokenSelected")
+					);
+				}
+				else {
+					actor = canvas.tokens.controlled[0].actor;
+				}
+			}
+		}
+		else {
+			actor = game.user.character;
+		}
+
+		return actor;
+	}
+
+
 	/**
 	 * Creates de-duplicated lists of Selected and Unselected Items.
 	 *

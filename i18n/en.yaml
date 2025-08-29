@@ -13,6 +13,7 @@ DNM.Combat.CombatHasNotStarted: Combat Has Not Started
 DNM.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
 DNM.Error.NoAttributeSelectedForRolling: No Attribute Selected for Rolling
 DNM.Error.NoTokensSelected: You must have at least one token selected when executing this macro.
+DNM.Error.MoreThanOneTokenSelected: You have more than one token selected.
 DNM.Exhaustion.Breathless: Breathless
 DNM.Exhaustion.Confused: Confused
 DNM.Exhaustion.Despairing: Despairing

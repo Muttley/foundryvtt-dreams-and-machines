@@ -53,29 +53,8 @@ export function registerTextEditorEnrichers() {
 }
 
 
-// Work out which actor to use.  If the user clicking the link is the GM and
-// they have tokens selected then use these.
-//
-// Players always use their own character Actor.
-//
-async function getActors() {
-	let actors = [];
-
-	if (game.user.isGM) {
-		for (const token of canvas.tokens.controlled) {
-			actors.push(token.actor);
-		}
-	}
-	else {
-		actors.push(game.user.character);
-	}
-
-	return actors;
-}
-
-
 async function triggerSkillRollRequest(options) {
-	const actors = await getActors();
+	const actors = await dreams.utils.getActors();
 
 	if (actors.length <= 0) {
 		return ui.notifications.warn(
