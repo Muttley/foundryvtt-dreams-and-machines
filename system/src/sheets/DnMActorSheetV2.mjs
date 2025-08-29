@@ -12,7 +12,6 @@ export default class DnMActorSheetV2
 		actions: {
 			addItem: this._onAddItem,
 			addString: this._onAddString,
-			// editItem: this._onEditItem,
 			editString: this._onEditString,
 			itemDecrement: this._onItemDecrement,
 			itemIncrement: this._onItemIncrement,
@@ -567,7 +566,6 @@ export default class DnMActorSheetV2
 	async _prepareContext(options={}) {
 		const context = await super._prepareContext(options);
 
-		// const data = this.document.toObject(false);
 		const isEditable = this.isEditable;
 
 		context.isActor = this.documentName === "Actor";
@@ -579,19 +577,8 @@ export default class DnMActorSheetV2
 		context.editModeDisabled = !(isEditable && this._editModeEnabled);
 
 		context.cssClass = isEditable ? "editable" : "locked";
-		// context.editable = isEditable;
 		context.document = this.document;
-		// context.data = data;
-		// context.limited = this.document.limited;
-		// context.options = this.options;
-		// context.owner = this.document.isOwner;
-		// context.title = this.title;
-
-		// context.actor = this.actor;
-		// context.effects = context.data.effects;
-		// context.items = context.data.items;
-		// context.systemSource = this.actor.system._source;
-		// context.systemFields = this.document.system.schema.fields;
+		context.systemSource = this.actor.system._source;
 
 		context.system = this.system;
 

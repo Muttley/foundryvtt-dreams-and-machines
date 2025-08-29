@@ -2,11 +2,12 @@ export default class DnMItem extends Item {
 
 	get chatTemplate() {
 		switch (this.type) {
+			case "major_npc_action":
+				return templatePath("chat/items/major_npc_action");
 			case "archetype":
 			case "armor":
 			case "equipment":
 			case "glif":
-			case "major_npc_action":
 			case "nanogram_pattern":
 			case "npc_action":
 			case "origin":
@@ -53,9 +54,27 @@ export default class DnMItem extends Item {
 	}
 
 
+	async getChatDataFor_major_npc_action(data) {
+		data.item.enabledQualities = this.getEnabledQualities();
+		data.item.hasSkillTest = this.system.hasSkillTest;
+		data.item.isWeapon = this.system.isWeapon;
+	}
+
+
 	async sendToChat() {
-		const data = foundry.utils.duplicate(this);
-		delete data.type;
+		const data = {
+			item: foundry.utils.duplicate(this.toObject()),
+		};
+
+		// Call any type-specific methods for this item type to gather
+		// additional data for the chat message
+		//
+		const functionName = `getChatDataFor_${this.type}`;
+
+		if (typeof this[functionName] === "function") {
+			dreams.debug(`Calling Item type-specific method ${functionName}()`);
+			await this[functionName](data);
+		}
 
 		dreams.chat.renderItemCardMessage(this.actor, data, this.chatTemplate);
 	}

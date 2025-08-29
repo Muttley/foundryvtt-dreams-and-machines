@@ -67,18 +67,26 @@ export default class MajorNPCSheetV2 extends DnMActorSheetV2 {
 
 	static async _onRollMajorAction(event, target) {
 		event.preventDefault();
-		const [, max] = await this._getMajorNpcActionsRollRange();
-
-		const roll = await DnMRoller.performRoll(`d${max}`);
-
-		const result = parseInt(roll.result);
 
 		const rolledMajorActions = [];
-		for (const action of this.actor.majorNpcActions) {
-			const rollRange = action.system.roll;
 
-			if (result <= rollRange.max && result >= rollRange.min) {
-				rolledMajorActions.push(action);
+		if (target.dataset.uuid) {
+			const action = await fromUuid(target.dataset.uuid);
+			if (action) rolledMajorActions.push(action);
+		}
+		else {
+			const [, max] = await this._getMajorNpcActionsRollRange();
+
+			const roll = await DnMRoller.performRoll(`d${max}`);
+
+			const result = parseInt(roll.result);
+
+			for (const action of this.actor.majorNpcActions) {
+				const rollRange = action.system.roll;
+
+				if (result <= rollRange.max && result >= rollRange.min) {
+					rolledMajorActions.push(action);
+				}
 			}
 		}
 

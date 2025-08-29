@@ -31,10 +31,16 @@
 					data-item-id="{{this.id}}"
 					data-uuid="{{this.uuid}}"
 				>
+					<a data-action="onRollMajorAction" data-uuid="{{this.uuid}}">
+						<i class="fas fa-dice-d20"></i>
+					</a>
+					&nbsp;
 					<b class="item-name">
 						{{this.name}}
 					</b>
-					<em>({{this.system.roll.min}}-{{this.system.roll.max}})</em>
+					<em style="text-align: right;">
+						({{this.system.roll.min}}-{{this.system.roll.max}})
+					</em>
 					<em class="hideable hidden">
 						{{{this.enrichedDescription}}}
 					</em>
